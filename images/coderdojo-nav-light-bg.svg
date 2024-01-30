@@ -1,0 +1,17 @@
+<svg viewBox="0 0 30 78" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd">
+    <path d="M0 0h28.844v80.022H0z" style="fill:yellow"/>
+<clipPath id="a">
+    <path d="M0 0h28.844v80.022H0z"/>
+</clipPath>
+
+<g clip-path="url(#a)">
+    <clipPath id="b">
+    <path d="M-.059-.748h29.304v81H-.059z"/>
+    </clipPath>
+    <g clip-path="url(#b)">
+        <path d="M-257.26 79.807h261c6.406-32.533 16.732-62.402 25.505-81l-16.005.001-270.5.499v80.5Z" style="fill:#fff;fill-rule:nonzero;stroke:#fefefe;stroke-width:1px"/>
+    </g>
+
+    <path style="fill:#ebebeb;stroke:#fff;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5" d="M-1.898-1.171h31.364V.555H-1.898zM-27.259 79.641H3.88v1.726h-31.139z"/>
+</g>
+</svg>

@@ -1,0 +1,194 @@
+body {
+  background-color: #642580;
+  padding: 0;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  max-width: 60vw;
+  margin: 0 auto;
+  padding-bottom: 20vh;
+}
+
+/* navbar */
+.navbar {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  color: white;
+  text-align: center;
+}
+.navbar-left {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 50%;
+  height: inherit;
+  background-color: white;
+}
+
+.logo {
+  background-color: white;
+  height: 5vh;
+  width: fit-content;
+  padding-right: 20px;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  background-color: #71458c;
+  padding-right: 12vw;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding-right: 5vw;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  padding: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: large;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+  color: #1a1a1a !important;
+  border-radius: 15px;
+  background-color: whitesmoke;
+  border: 4px solid #642580;
+  font-weight: 600;
+}
+
+.navbar-button:hover {
+  background-color: white;
+  color: #642580 !important;
+  font-weight: 800;
+  border: 4px solid white;
+  text-decoration: none !important;
+}
+
+.call-to-action {
+  display: flex;
+
+  gap: 5vw;
+  justify-content: center;
+  background-color: #71458c;
+  padding: 10px;
+}
+
+.button-action {
+  display: block;
+  border-radius: 90px;
+  border: 5px #642580 solid;
+  background-color: #41bac1;
+  font-size: x-large;
+  /* color: #642580; */
+  font-weight: 800;
+  padding: 20px;
+}
+
+.button-action:hover {
+  border: 5px #ed684a solid;
+}
+
+.sponsors-list {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  gap: 5px;
+}
+
+.sponsor-logo {
+  background-color: white;
+  /* width: 50%; */
+  height: 50%;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* Footer   */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4vh;
+  padding-top: 8px;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+}
+
+/* Home Page  */
+.hero {
+  margin-top: 20vh;
+  display: flex;
+  color: white;
+  align-self: center;
+}
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  font-size: larger;
+}
+
+.hero-right {
+  display: flex;
+}
+
+.button {
+}
+
+/* Animations */
+@keyframes glowPulse {
+  0% {
+    color: DeepSkyBlue;
+  }
+  25% {
+    color: Pink;
+  }
+  50% {
+    color: LightGreen;
+  }
+  75% {
+    color: darkorange;
+  }
+  100% {
+    color: DeepSkyBlue;
+  }
+}
+
+.myCoolText {
+  animation-name: glowPulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
