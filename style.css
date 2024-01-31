@@ -37,7 +37,7 @@ main {
   background-color: white;
   height: 5vh;
   width: fit-content;
-  padding-right: 20px;
+  padding-right: 5px;
 }
 
 .navbar-right {
@@ -191,4 +191,27 @@ main {
   animation-name: glowPulse;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+}
+
+/* Fonts  */
+.font-coderdojo {
+  font-family: "League Gothic", sans-serif;
+  font-size: xx-large !important;
+  color: lime;
+  border-bottom: 3px solid lime;
+}
+
+.logo-text {
+  font-family: "League Gothic", sans-serif;
+  font-size: x-large;
+  color: #1a1a1a;
+  padding-right: 10px;
+}
+
+/* Mentors Page  */
+.signup {
+  display: flex;
+  background-color: #41bac1;
+  margin-top: 20vh;
+  padding: 5vh 5vh 5vh 5vh;
 }
