@@ -29,4 +29,6 @@ This site aims to build off the [HTML and CSS CoderDojo Projects](https://projec
 - [ ] Add About Page
 - [ ] Add Privacy Page
 - [x] Configure Mentor Signup API
+- [x] Add Mentor Signup form
+- [ ] Hide Mentor Signup form on submission
 - [ ] Configure Get in Touch API
