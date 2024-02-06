@@ -15,14 +15,16 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <section class="navbar">
+    <nav class="navbar">
       <div class="navbar-left">
-        <img
-          class="logo"
-          src="images/CoderDojo Roundel (light bg).svg"
-          width="100%"
-          height="100%" />
-        <span class="logo-text">CarrickDojo</span>
+        <a href="/" class="logo">
+          <img
+            class="logo-image"
+            src="images/CoderDojo Roundel (light bg).svg"
+            width="100%"
+            height="100%" />
+          <span class="logo-text">CarrickDojo</span>
+        </a>
       </div>
       <div class="navbar-right">
         <ul>
@@ -37,10 +39,10 @@
           <span class="myCoolText"> Tickets</span></a
         >
       </div>
-    </section>
+    </nav>
 
     <main class="main">
-      <section class="hero">
+      <section class="section hero" style="">
         <article class="hero-left">
           <p class="">
             Coder Dojo: A global movement of free volunteer coding clubs where
@@ -67,30 +69,39 @@
         </div>
       </section>
 
-      <section class="call-to-action">
-        <div class="button-action">
-          Become a <span class="myCoolText">Ninja</span>.
-        </div>
-        <div class="button-action myCoolText">Become a mentor.</div>
-      </section>
+      <div
+        style="padding: 5vh 0; background-color: var(--coder-main-dark)"
+        class="">
+        <section class="section call-to-action">
+          <div class="button-action">
+            Become a <span class="myCoolText">Ninja</span>.
+          </div>
+          <div class="button-action myCoolText">Become a mentor.</div>
+        </section>
+      </div>
 
-      <section class="sponsors-list">
-        <img src="images/the-hive-logo.png" alt="" class="sponsor-logo" />
-        <img src="images/breffni-frc-logo.png" alt="" class="sponsor-logo" />
-        <img
-          src="images/leitrim-development-company-logo.png"
-          alt=""
-          class="sponsor-logo" />
-        <img src="images/ncycs-logo.png" alt="" class="sponsor-logo" />
-      </section>
+      <div
+        style="padding: 5vh 0; background-color: var(--coder-secondary)"
+        class="">
+        <section class="sponsors-list">
+          <img src="images/the-hive-logo.png" alt="" class="sponsor-logo" />
+          <img src="images/breffni-frc-logo.png" alt="" class="sponsor-logo" />
+          <img
+            src="images/leitrim-development-company-logo.png"
+            alt=""
+            class="sponsor-logo" />
+          <img src="images/ncycs-logo.png" alt="" class="sponsor-logo" />
+        </section>
+      </div>
     </main>
-    <section class="footer">
-      © 2024 |
+
+    <footer class="footer">
+      <a href="/oursite.html" class=""> © 2024</a> |
 
       <span class="">
         Carrick Dojo is branch of the CoderDojo Foundation (CRO No: 524255 a
         registered charity: CHY 20812)</span
       >
-    </section>
+    </footer>
   </body>
 </html>

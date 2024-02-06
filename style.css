@@ -1,26 +1,55 @@
+:root {
+  --coder-main: #642580;
+  --coder-main-light: #9537be;
+  --coder-main-dark: #57206f;
+  --coder-secondary: #41bac1;
+  --coder-accent: #ed684a;
+  --coder-white: rgb(245, 245, 245);
+  --coder-black: rgb(26, 26, 26);
+}
 body {
-  background-color: #642580;
+  background-color: var(--coder-main);
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  gap: 5vh;
-  max-width: 60vw;
-  margin: 0 auto;
-  padding-bottom: 20vh;
+  margin-top: 10vh;
+}
+
+nav {
+  position: fixed;
+  height: 10vh;
+}
+
+footer {
+  height: 5vh;
+}
+
+.footer {
+  width: 100%;
+  padding-top: 8px;
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+}
+
+.section {
+  max-width: 60%;
+  margin: 1vh auto;
 }
 
 /* navbar */
 .navbar {
-  position: fixed;
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+
   color: white;
   text-align: center;
 }
@@ -34,10 +63,28 @@ main {
 }
 
 .logo {
-  background-color: white;
-  height: 5vh;
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+  padding: 0 !important;
+  height: 7vh;
   width: fit-content;
-  padding-right: 5px;
+  margin: 0 0.5vw;
+}
+
+.logo-text {
+  font-family: "League Gothic", sans-serif;
+  font-size: xx-large !important;
+  color: var(--coder-black);
+}
+
+.logo-image {
+}
+
+.logo:hover .logo-image {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 .navbar-right {
@@ -46,7 +93,7 @@ main {
   align-items: center;
   width: inherit;
   height: inherit;
-  background-color: #71458c;
+  background-color: var(--coder-main-light);
   padding-right: 12vw;
 }
 
@@ -92,28 +139,26 @@ main {
   text-decoration: none !important;
 }
 
+/* Home Page */
+
 .call-to-action {
   display: flex;
-
   gap: 5vw;
   justify-content: center;
-  background-color: #71458c;
-  padding: 10px;
 }
 
 .button-action {
   display: block;
   border-radius: 90px;
-  border: 5px #642580 solid;
-  background-color: #41bac1;
+  border: 0.5vw solid var(--coder-main);
+  background-color: var(--coder-secondary);
   font-size: x-large;
-  /* color: #642580; */
   font-weight: 800;
   padding: 20px;
 }
 
 .button-action:hover {
-  border: 5px #ed684a solid;
+  border: 0.5vw solid var(--coder-accent);
 }
 
 .sponsors-list {
@@ -125,29 +170,12 @@ main {
 
 .sponsor-logo {
   background-color: white;
-  /* width: 50%; */
   height: 50%;
   border-radius: 10px;
   padding: 5px;
 }
 
-/* Footer   */
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4vh;
-  padding-top: 8px;
-  background-color: #1a1a1a;
-  color: white;
-  text-align: center;
-}
-
-/* Home Page  */
 .hero {
-  margin-top: 20vh;
   display: flex;
   color: white;
   align-self: center;
@@ -169,26 +197,35 @@ main {
 }
 
 /* Animations */
-@keyframes glowPulse {
+@keyframes colorChanger {
   0% {
-    color: DeepSkyBlue;
-  }
-  25% {
-    color: Pink;
+    color: var(--coder-main);
   }
   50% {
-    color: LightGreen;
-  }
-  75% {
-    color: darkorange;
+    color: var(--coder-accent);
   }
   100% {
-    color: DeepSkyBlue;
+    color: var(--coder-main);
   }
 }
 
 .myCoolText {
-  animation-name: glowPulse;
+  animation-name: colorChanger;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation-name: spin;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
@@ -197,21 +234,55 @@ main {
 .font-coderdojo {
   font-family: "League Gothic", sans-serif;
   font-size: xx-large !important;
-  color: lime;
-  border-bottom: 3px solid lime;
-}
-
-.logo-text {
-  font-family: "League Gothic", sans-serif;
-  font-size: x-large;
-  color: #1a1a1a;
-  padding-right: 10px;
 }
 
 /* Mentors Page  */
-.signup {
+.mentor-signup {
   display: flex;
-  background-color: #41bac1;
-  margin-top: 20vh;
-  padding: 5vh 5vh 5vh 5vh;
+  flex-direction: column;
+  gap: 5px;
+  background-color: var(--coder-secondary);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.mentor-info {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.mentor-image {
+  width: 20vw;
+  background-color: var(--coder-main);
+  border-radius: 2vw;
+}
+
+.mentor-form {
+  display: flex;
+  gap: 2vw;
+}
+
+.signup-form {
+  display: flex;
+  gap: 0.2rem;
+  width: 50%;
+  flex-direction: column;
+}
+
+.signup-image {
+  display: flex;
+  width: 50%;
+  border-radius: 15px;
+}
+
+.signup-button {
+  padding: 1rem;
+  background-color: var(--coder-accent);
+  margin-top: 2rem;
+}
+
+.signup-button:hover {
+  background-color: #f19124;
+  text-decoration: underline;
 }
