@@ -15,21 +15,21 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <section class="navbar">
+    <nav class="navbar">
       <div class="navbar-left">
-        <a href="/" class="">
+        <a href="/" class="logo">
           <img
-            class="logo"
+            class="logo-image"
             src="images/CoderDojo Roundel (light bg).svg"
             width="100%"
             height="100%" />
-          <span class="logo-text">CarrickDojo</span></a
-        >
+          <span class="logo-text">CarrickDojo</span>
+        </a>
       </div>
       <div class="navbar-right">
         <ul>
           <li><a class="" href="/">Ninja Registration</a></li>
-          <li><a href="/">Mentors</a></li>
+          <li style="border-bottom: 0.5rem solid #ed684a">Mentors</li>
           <li><a href="/">Links</a></li>
           <li><a href="/">Resources</a></li>
           <li><a href="/">About</a></li>
@@ -39,36 +39,99 @@
           <span class="myCoolText"> Tickets</span></a
         >
       </div>
-    </section>
+    </nav>
 
     <main class="main">
-      <section class="signup">
-        <form>
-          <label for="email">Email Address:</label><br />
-          <input
-            type="text"
-            id="email"
-            name="email"
-            value="hello@carrickdojo.com" /><br />
-          <label for="name">Name</label><br />
-          <input type="text" id="name" name="name" value="" />
-          <input type="button" onclick="submitForm()" value="Join Us" />
-        </form>
+      <section class="section mentor-signup">
+        <div class="mentor-info">
+          <img src="images/LEDs.png" class="mentor-image" alt="" />
+          <div class="">
+            <p class="">
+              To cater for our group in Carrick On Shannon, we are looking for
+              extra mentors to join our team of volunteers. It’s a great
+              opportunity to get involved in a fun, creative, and worthwhile
+              youth movement.
+            </p>
+            <p class="">
+              Want to share your coding talents? CoderDojo is a free computer
+              club to teach young people how to code and we’re always on the
+              lookout for talented coding volunteers. At a CoderDojo, young
+              people learn how to write code, develop websites, apps, games and
+              more. Dojos are setup, run by and taught by volunteers. All this
+              is completely free to participants.
+            </p>
+            <p class="">
+              We are looking for admin mentors too just to help out with
+              managing the kids and helping with setup etc..
+            </p>
+            <p class="">
+              If you have any coding experience or other skills that would be
+              useful to CoderDojo, and would like to apply to become a mentor,
+              please complete this form.
+            </p>
+            <hr style="color: var(--coder-accent)" />
+          </div>
+        </div>
+
+        <div class="mentor-form">
+          <form class="signup-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="" /><br />
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" value="" /><br />
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" value="" /><br />
+
+            <label for="info">Relevant Information:</label>
+            <textarea
+              rows="10"
+              cols="30"
+              id="info"
+              name="info"
+              value=""></textarea
+            ><br />
+
+            <label for="avail"> General Availability:</label>
+            <input type="text" id="avail" name="avail" value="" /><br />
+            <!-- 
+            <span>
+              <label for="children"
+                >Will you have children attending CoderDojo:</label
+              >
+              <input type="checkbox" id="children" name="children" value="" />
+            </span> -->
+
+            <input
+              type="button"
+              class="signup-button font-coderdojo"
+              onclick="submitForm()"
+              value="Join Us" />
+          </form>
+          <img
+            src="images/CoderDojo_Contact_Us.jpg"
+            alt=""
+            class="signup-image" />
+        </div>
       </section>
     </main>
-    <section class="footer">
+    <footer class="footer">
       © 2024 |
 
       <span class="">
         Carrick Dojo is branch of the CoderDojo Foundation (CRO No: 524255 a
         registered charity: CHY 20812)</span
       >
-    </section>
+    </footer>
 
     <script>
       function submitForm() {
+        let name = document.getElementById("name").value
         let email = document.getElementById("email").value
-        let subject = document.getElementById("name").value
+        let phone = document.getElementById("phone").value
+        let info = document.getElementById("info").value
+        let avail = document.getElementById("avail").value
 
         fetch(
           "https://bvawggfvdl.execute-api.eu-west-1.amazonaws.com/prod/mentor-signup",
@@ -79,8 +142,11 @@
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              subject: subject,
+              name: name,
               email: email,
+              phone: phone,
+              info: info,
+              avail: avail,
             }),
           }
         ).then(async (response) => {

@@ -18,7 +18,9 @@ This site aims to build off the [HTML and CSS CoderDojo Projects](https://projec
 - [x] Add a style.css page
 - [x] Create the site layout
 - [x] Format the logo
+- [ ] Create root css variables from CoderDojo style guide
 - [ ] Add a responsive css page for mobile screens
+- [ ] Ensure accessibility
 - [ ] Add Ninja Registration Page
 - [x] Add Mentor Page
 - [ ] Add Links Page
@@ -27,4 +29,4 @@ This site aims to build off the [HTML and CSS CoderDojo Projects](https://projec
 - [ ] Add About Page
 - [ ] Add Privacy Page
 - [x] Configure Mentor Signup API
-- [x] Configure Get in Touch API
+- [ ] Configure Get in Touch API
