@@ -1,9 +1,12 @@
+@import "animations.css";
+
 :root {
   --coder-main: #642580;
   --coder-main-light: #9537be;
   --coder-main-dark: #57206f;
   --coder-secondary: #41bac1;
   --coder-accent: #ed684a;
+  --coder-accent-light: #f0836a;
   --coder-white: rgb(245, 245, 245);
   --coder-black: rgb(26, 26, 26);
 }
@@ -196,40 +199,6 @@ footer {
 .button {
 }
 
-/* Animations */
-@keyframes colorChanger {
-  0% {
-    color: var(--coder-main);
-  }
-  50% {
-    color: var(--coder-accent);
-  }
-  100% {
-    color: var(--coder-main);
-  }
-}
-
-.myCoolText {
-  animation-name: colorChanger;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.spinner {
-  animation-name: spin;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-
 /* Fonts  */
 .font-coderdojo {
   font-family: "League Gothic", sans-serif;
@@ -283,6 +252,6 @@ footer {
 }
 
 .signup-button:hover {
-  background-color: #f19124;
+  background-color: var(--coder-accent-light);
   text-decoration: underline;
 }

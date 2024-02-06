@@ -1,0 +1,33 @@
+/* Animations */
+@keyframes colorChanger {
+  0% {
+    color: var(--coder-main);
+  }
+  50% {
+    color: var(--coder-accent);
+  }
+  100% {
+    color: var(--coder-main);
+  }
+}
+
+.myCoolText {
+  animation-name: colorChanger;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
