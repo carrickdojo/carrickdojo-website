@@ -1,0 +1,69 @@
+body {
+  /* background-color: lime !important; */
+}
+
+nav {
+  position: flex;
+  width: 100%;
+  height: 10vh;
+}
+
+.navbar {
+  display: flex;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  height: 5vh;
+  background-color: white;
+}
+
+.navbar-right {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-links {
+  display: none;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  background-color: lime;
+  text-decoration: none;
+  list-style: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+  padding: 0 !important;
+  height: 4vh;
+  width: fit-content;
+  margin: 0 0.5vw;
+  text-decoration: none !important;
+}
+
+.logo-image {
+  height: 5vh;
+}
+.logo-text {
+  font-family: coderDojoBrandLogo;
+  font-size: xx-large !important;
+  color: var(--coder-black);
+}
+
+.mobile-nav-icon {
+  height: 5vh;
+  /* padding-right: 5vw; */
+}
+
+.mobile-hidden {
+  display: none !important;
+}

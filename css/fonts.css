@@ -1,0 +1,18 @@
+@font-face {
+  font-family: coderDojoBrandLogo;
+  font-weight: 400;
+  src: url(../fonts/LeagueGothic-Regular.ttf);
+}
+
+@font-face {
+  font-family: bodyText;
+  font-weight: 400;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: emphasis;
+  font-weight: 700;
+  /* font-weight: bold; */
+  src: url(../fonts/Lato-Bold.ttf);
+}
