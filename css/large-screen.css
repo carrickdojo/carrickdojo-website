@@ -1,71 +1,27 @@
-.mobile-only {
-  display: none;
+section {
 }
 
-/* Navbar  */
-
-nav {
-  position: flex;
-  width: 100%;
-  background-image: linear-gradient(
-    to right,
-    white,
-    white,
-    white,
-    var(--coder-main-light),
-    var(--coder-main-light)
-  );
-  height: 10vh;
-}
-
-/* navbar */
-.navbar {
+.container {
   display: flex;
-  max-width: 66%;
-  justify-content: center;
-  align-items: center;
+  max-width: 70%;
   margin: 0 auto;
-  padding: 0;
-  text-align: center;
-}
-.navbar-left {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  width: 25%;
-  height: 10vh;
-  background-color: white;
+  gap: 1rem;
 }
 
-.navbar-right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 75%;
-  height: 10vh;
-  background-color: var(--coder-main-light);
+.content-image {
+  width: 20vw;
 }
 
-/* Logo Parts  */
 .logo {
   display: flex;
+  width: 20vw;
   align-items: center;
   gap: 0.5vw;
   padding: 0 !important;
-  height: 7vh;
+  height: 4vh;
   width: fit-content;
   margin: 0 0.5vw;
   text-decoration: none !important;
-}
-
-.logo-text {
-  font-family: coderDojoBrandLogo;
-  font-size: xx-large !important;
-  color: var(--coder-black);
-}
-
-.logo-image {
-  height: 10vh;
 }
 
 .logo:hover .logo-image {
@@ -74,21 +30,53 @@ nav {
   animation-iteration-count: infinite;
 }
 
-/* Links Parts  */
-.navbar-links {
+.logo-image {
+  height: 5vh;
+}
+.logo-text {
+  font-family: coderDojoBrandLogo;
+  font-size: xx-large !important;
+  color: var(--coder-black);
 }
 
-.navbar ul {
-  list-style-type: none;
+nav {
+  display: flex;
+  background-image: linear-gradient(
+    to right,
+    white,
+    white,
+    white,
+    var(--coder-main-light),
+    var(--coder-main-light)
+  );
+  width: 100%;
+  height: 10vh;
 }
 
-.navbar li {
-  display: inline;
-  font-family: emphasis;
-  padding: 0.5vw;
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 70%;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  margin: 0 auto;
+  padding: 0;
 }
 
-.navbar .navbar-links a {
+.desktop-hidden {
+  display: none;
+}
+
+.desktop-navbar-right {
+  display: flex;
+  align-items: center;
+  background-color: var(--coder-main-light);
+  gap: 5vw;
+}
+
+.desktop-navbar-right .desktop-navbar-links a {
   color: var(--coder-white);
   text-decoration: none;
   box-shadow: 0px 5px var(--coder-main-light);
@@ -96,36 +84,25 @@ nav {
   margin: 0.5em;
 }
 
-.navbar .navbar-links a:hover {
+.desktop-navbar-right .desktop-navbar-links a:hover {
   box-shadow: 0px 10px var(--coder-accent);
 }
 
-.navbar .navbar-links a.current {
+.desktop-navbar-right .desktop-navbar-links a.active {
   color: var(--coder-accent) !important;
   box-shadow: 0px 10px var(--coder-accent);
   font-family: boldText !important;
   font-size: large;
 }
 
-/* Button Parts */
-.navbar-button {
+.desktop-navbar-button a {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 0.5vw;
-  padding: 0.5vw;
-  border-radius: 0.5vw;
-  background-color: whitesmoke;
-  border: 0.25vw solid white;
-  font-weight: 600;
-  transition: border 0.6s linear;
+  align-items: center;
+  height: 5vh;
+  font-size: large;
 }
 
-.navbar-button:hover {
-  background-color: white;
-  color: var(--coder-main) !important;
-  font-weight: 800;
-  border: 0.25vw solid var(--coder-main);
-  text-decoration: none !important;
+.desktop-navbar-button a:hover {
   cursor: pointer;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CarrickDojo</title>
+    <title>Ninjas</title>
 
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
@@ -68,68 +68,20 @@
         <a href="/about.html">About</a>
       </div>
     </nav>
+    <div style="padding-left: 16px">
+      <h2>Responsive Topnav Example</h2>
+      <p>Resize the browser window to see how it works.</p>
+    </div>
 
-    <main class="main">
-      <section class="section hero" style="">
-        <article class="hero-left">
-          <p class="">
-            Coder Dojo: A global movement of free volunteer coding clubs where
-            young people learn to code, hack, develop websites, apps, games &
-            more!
-          </p>
-          <p class="">
-            We are running in <b>Carrick-On-Shannon</b> from Jan 2015. We want
-            to bring to the community an environment where children from 7 to 17
-            years old can share passions for coding and learning experience.
-          </p>
-          <p class="">
-            We really work to encourage creativity and having fun in a relaxed,
-            social environment while our children learn to communicate using the
-            languages of the future.
-          </p>
-        </article>
-        <div class="hero-right">
-          <img
-            src="images/CoderDojo Split (dark bg).svg"
-            alt="CoderDojo Logo"
-            width="400"
-            height="400" />
-        </div>
-      </section>
-
-      <div
-        style="padding: 5vh 0; background-color: var(--coder-main-dark)"
-        class="">
-        <section class="section call-to-action">
-          <div class="button-action">
-            Become a <span class="myCoolText">Ninja</span>.
-          </div>
-          <div class="button-action myCoolText">Become a mentor.</div>
-        </section>
-      </div>
-
-      <div
-        style="padding: 5vh 0; background-color: var(--coder-secondary)"
-        class="">
-        <section class="sponsors-list">
-          <img src="images/the-hive-logo.png" alt="" class="sponsor-logo" />
-          <img src="images/breffni-frc-logo.png" alt="" class="sponsor-logo" />
-          <img
-            src="images/leitrim-development-company-logo.png"
-            alt=""
-            class="sponsor-logo" />
-          <img src="images/ncycs-logo.png" alt="" class="sponsor-logo" />
-        </section>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <a href="/oursite.html" class=""> © 2024</a> |
-
-      <span class="">
-        Carrick Dojo is branch of the CoderDojo Foundation (CRO No: 524255 a
-        registered charity: CHY 20812)</span
-      >
-    </footer>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav")
+        if (x.className === "topnav") {
+          x.className += " responsive"
+        } else {
+          x.className = "topnav"
+        }
+      }
+    </script>
   </body>
 </html>
