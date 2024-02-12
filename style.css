@@ -16,6 +16,7 @@
   --coder-white: rgb(245, 245, 245);
   --coder-black: rgb(26, 26, 26);
 }
+
 html,
 body {
   background-color: var(--coder-main);
@@ -39,9 +40,15 @@ footer {
   margin-top: auto;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--coder-white);
   background-color: #1a1a1a;
-  height: 10vh;
+  /* height: 20vh; */
+  min-height: 20vh;
+}
+
+button a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Home Page */
