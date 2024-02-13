@@ -220,7 +220,7 @@ footer {
 
 .footer-about {
   font-size: small;
-  color: gray;
+  color: var(--coder-white);
 }
 
 .footer-social {
