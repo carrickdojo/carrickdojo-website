@@ -34,7 +34,7 @@ main {
   flex-direction: column;
   /* margin-top: 10vh; */
 }
-
+/* 
 footer {
   display: flex;
   margin-top: auto;
@@ -42,9 +42,8 @@ footer {
   align-items: center;
   color: var(--coder-white);
   background-color: #1a1a1a;
-  /* height: 20vh; */
   min-height: 20vh;
-}
+} */
 
 button a {
   text-decoration: none;

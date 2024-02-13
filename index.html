@@ -11,6 +11,8 @@
   <body>
     <!-- Our navigation is responsive and will display diffent elements based on the css classes -->
     <!-- Each page will have very similar navigation, however we need to set the active page class  -->
+    <!-- ----- Note -----  -->
+    <!-- Link to example code with notes:  https://www.w3schools.com/howto/howto_js_topnav_responsive.asp  -->
     <!-- There are two sets of links to change if we want to add a page, the large screen links and the small screen links  -->
     <nav>
       <div class="navbar">
@@ -48,24 +50,23 @@
 
         <!-- This is the mobile navigation button  -->
         <!-- When clicked, the showMobileNavFunction code at the bottom will run  -->
-        <div class="desktop-hidden" id="mobileNavButton">
-          <a
-            href="javascript:void(0);"
-            style="background-color: var(--coder-main-dark); padding: 0.5rem"
-            class="icon"
-            onclick="showMobileNavFunction()">
+        <div class="desktop-hidden mobile-nav-icon">
+          <a href="javascript:void(0);" onclick="showMobileNavFunction()">
             <img src="images/icons/hamburger.svg" alt="" />
           </a>
         </div>
       </div>
       <!-- The mobile screen links  -->
       <!-- These are only seen on small screens  -->
-      <div class="desktop-hidden mobile-nav-links" id="mobileNav">
-        <a href="/mentors.html" class="active">Our Dojo</a>
-        <a href="/ninjas.html">Ninjas</a>
-        <a href="/mentors.html">Mentors</a>
-        <a href="/privacy.html">Projects</a>
-        <a href="/about.html">About</a>
+      <div class="desktop-hidden">
+        <div class="mobile-nav" id="mobile-nav">
+          <a href="/" class="active">Home</a>
+          <a href="/mentors.html">Our Dojo</a>
+          <a href="/ninjas.html">Ninjas</a>
+          <a href="/mentors.html">Mentors</a>
+          <a href="/privacy.html">Projects</a>
+          <a href="/about.html">About</a>
+        </div>
       </div>
     </nav>
 
@@ -136,6 +137,9 @@
         </div>
       </section>
     </main>
+
+    <!-- Our Footer section does not change across our site  -->
+    <!-- When creating a new page, we can copy the entire footer element  -->
     <footer>
       <div class="footer-content">
         <div class="footer-left">
@@ -220,14 +224,20 @@
           </div>
         </div>
       </div>
-      <!-- <div class="container">
-        <a href="/oursite.html" class=""> © 2024</a> |
-
-        <span class="">
-          Carrick Dojo is branch of the CoderDojo Foundation (CRO No: 524255 a
-          registered charity: CHY 20812)</span
-        >
-      </div> -->
     </footer>
+
+    <!-- This is our javascript function to show and hide the mobile nav -->
+    <!-- We get the element with the id of mobile-nav and assign it to the variable -->
+    <!-- We then check the className of the variable and either add open, or set back to the default  -->
+    <script>
+      function showMobileNavFunction() {
+        var x = document.getElementById("mobile-nav")
+        if (x.className === "mobile-nav") {
+          x.className += " open"
+        } else {
+          x.className = "mobile-nav"
+        }
+      }
+    </script>
   </body>
 </html>

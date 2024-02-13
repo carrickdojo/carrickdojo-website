@@ -11,6 +11,8 @@
   <body>
     <!-- Our navigation is responsive and will display diffent elements based on the css classes -->
     <!-- Each page will have very similar navigation, however we need to set the active page class  -->
+    <!-- ----- Note -----  -->
+    <!-- Link to example code with notes:  https://www.w3schools.com/howto/howto_js_topnav_responsive.asp  -->
     <!-- There are two sets of links to change if we want to add a page, the large screen links and the small screen links  -->
     <nav>
       <div class="navbar">
@@ -48,24 +50,23 @@
 
         <!-- This is the mobile navigation button  -->
         <!-- When clicked, the showMobileNavFunction code at the bottom will run  -->
-        <div class="desktop-hidden" id="mobileNavButton">
-          <a
-            href="javascript:void(0);"
-            style="background-color: var(--coder-main-dark); padding: 0.5rem"
-            class="icon"
-            onclick="showMobileNavFunction()">
+        <div class="desktop-hidden mobile-nav-icon">
+          <a href="javascript:void(0);" onclick="showMobileNavFunction()">
             <img src="images/icons/hamburger.svg" alt="" />
           </a>
         </div>
       </div>
       <!-- The mobile screen links  -->
       <!-- These are only seen on small screens  -->
-      <div class="desktop-hidden mobile-nav-links" id="mobileNav">
-        <a href="/mentors.html">Our Dojo</a>
-        <a href="/ninjas.html">Ninjas</a>
-        <a href="/mentors.html" class="active">Mentors</a>
-        <a href="/privacy.html">Projects</a>
-        <a href="/about.html">About</a>
+      <div class="desktop-hidden">
+        <div class="mobile-nav" id="mobile-nav">
+          <a href="/">Home</a>
+          <a href="/mentors.html">Our Dojo</a>
+          <a href="/ninjas.html">Ninjas</a>
+          <a href="/mentors.html" class="active">Mentors</a>
+          <a href="/privacy.html">Projects</a>
+          <a href="/about.html">About</a>
+        </div>
       </div>
     </nav>
 
@@ -144,15 +145,96 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      © 2024 |
 
-      <span class="">
-        Carrick Dojo is branch of the CoderDojo Foundation (CRO No: 524255 a
-        registered charity: CHY 20812)</span
-      >
+    <!-- Our Footer section does not change across our site  -->
+    <!-- When creating a new page, we can copy the entire footer element  -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-links">
+            <div class="footer-column">
+              <div class="footer-heading">About CoderDojo</div>
+
+              <a href="https://coderdojo.com/news">The CoderDojo Blog</a>
+              <a href="about.html">Our Dojo</a>
+              <a href="/">Registering and Tickets</a>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-heading">Projects</div>
+              <a href="/">Raspberry Pi Projects</a>
+              <a href="/">CoderDojo Projects</a>
+              <a href="/">Scratch</a>
+              <a href="https://online.coolestprojects.org/">Coolest Projects</a>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-heading">Supporting Us</div>
+              <a href="/">Becoming a Mentor</a>
+              <a href="/">Volunteering and Helping Out</a>
+              <a href="/">Donations</a>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-heading">Policies and Guidelines</div>
+              <a href="/">Privacy Policy</a>
+              <a href="/">Site Information</a>
+              <a href="/">Dojo Charter</a>
+              <a href="">Internet Policy</a>
+            </div>
+          </div>
+          <div class="footer-licence">
+            <img
+              src="images/icons/cc.svg"
+              class="icon-small"
+              alt="Creative Commons" />
+            <div>
+              This site is open and public project. Feel free to examine the
+              code and reuse any bits you like. All images have been created by
+              CoderDojo, the Hello World Foundation or the Raspberry Pi
+              Foundation.
+            </div>
+          </div>
+          <div class="footer-about">
+            Carrick-on-Shannon CoderClub (CarrickDojo) is branch of the
+            CoderDojo Foundation (CRO No: 524255 a registered charity: CHY
+            20812)
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-social">
+            <div class="footer-icon-small">
+              <a href="mailto:hello@carrickdojo.com">
+                <img src="images/icons/email.svg" class="icon-small" alt=""
+              /></a>
+            </div>
+            <div class="footer-icon-small">
+              <a href="https://github.com/carrickdojo">
+                <img src="images/icons/github.svg" class="icon-small" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="footer-foundation">
+            <div class="foundation-icons">
+              <img
+                src="images/CoderDojo Roundel (light bg).svg"
+                alt=""
+                class="footer-icon-big" />
+              <img
+                src="images/raspberry-pi.svg"
+                alt=""
+                class="footer-icon-big" />
+            </div>
+            <div class="">
+              CarrickDojo is a branch of CoderDojo. CoderDojo is part of the
+              Raspberry Pi Foundation. Find out more
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
+    <!-- This is our javascript function to submit our mentor signup to our AWS API-->
     <script>
       function submitForm() {
         let name = document.getElementById("name").value
@@ -184,6 +266,20 @@
           }
           return response.ok
         })
+      }
+    </script>
+
+    <!-- This is our javascript function to show and hide the mobile nav -->
+    <!-- We get the element with the id of mobile-nav and assign it to the variable -->
+    <!-- We then check the className of the variable and either add open, or set back to the default  -->
+    <script>
+      function showMobileNavFunction() {
+        var x = document.getElementById("mobile-nav")
+        if (x.className === "mobile-nav") {
+          x.className += " open"
+        } else {
+          x.className = "mobile-nav"
+        }
       }
     </script>
   </body>
