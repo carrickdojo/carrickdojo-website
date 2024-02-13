@@ -7,6 +7,7 @@
     <title>CarrickDojo - Mentors</title>
 
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="css/mentor-form.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <!-- Our navigation is responsive and will display diffent elements based on the css classes -->
@@ -70,11 +71,11 @@
       </div>
     </nav>
 
-    <main class="main">
-      <section class="section mentor-signup">
-        <div class="mentor-info">
-          <img src="images/LEDs.png" class="mentor-image" alt="" />
-          <div class="">
+    <main>
+      <section>
+        <div class="container">
+          <img src="images/LEDs.png" class="article-image" alt="" />
+          <article class="">
             <p class="">
               To cater for our group in Carrick On Shannon, we are looking for
               extra mentors to join our team of volunteers. It’s a great
@@ -99,10 +100,12 @@
               please complete this form.
             </p>
             <hr style="color: var(--coder-accent)" />
-          </div>
+          </article>
         </div>
+      </section>
 
-        <div class="mentor-form">
+      <section style="background-color: var(--coder-secondary)">
+        <div class="container">
           <form class="signup-form">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" value="" /><br />
@@ -124,13 +127,6 @@
 
             <label for="avail"> General Availability:</label>
             <input type="text" id="avail" name="avail" value="" /><br />
-            <!-- 
-            <span>
-              <label for="children"
-                >Will you have children attending CoderDojo:</label
-              >
-              <input type="checkbox" id="children" name="children" value="" />
-            </span> -->
 
             <input
               type="button"

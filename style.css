@@ -20,6 +20,7 @@
 html,
 body {
   background-color: var(--coder-main);
+  color: var(--coder-white);
   font-family: ourMainText, sans-serif;
   padding: 0;
   margin: 0;
@@ -32,18 +33,7 @@ main {
   display: flex;
   height: max-content;
   flex-direction: column;
-  /* margin-top: 10vh; */
 }
-/* 
-footer {
-  display: flex;
-  margin-top: auto;
-  justify-content: center;
-  align-items: center;
-  color: var(--coder-white);
-  background-color: #1a1a1a;
-  min-height: 20vh;
-} */
 
 button a {
   text-decoration: none;
@@ -51,7 +41,6 @@ button a {
 }
 
 /* Home Page */
-
 .call-to-action {
   display: flex;
   gap: 5vw;
@@ -105,55 +94,4 @@ button a {
 }
 
 .button {
-}
-
-/* Mentors Page  */
-.mentor-signup {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background-color: var(--coder-secondary);
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-.mentor-info {
-  display: flex;
-  margin-bottom: 2rem;
-  gap: 2rem;
-}
-
-.mentor-image {
-  width: 20vw;
-  background-color: var(--coder-main);
-  border-radius: 2vw;
-}
-
-.mentor-form {
-  display: flex;
-  gap: 2vw;
-}
-
-.signup-form {
-  display: flex;
-  gap: 0.2rem;
-  width: 50%;
-  flex-direction: column;
-}
-
-.signup-image {
-  display: flex;
-  width: 50%;
-  border-radius: 15px;
-}
-
-.signup-button {
-  padding: 1rem;
-  background-color: var(--coder-accent);
-  margin-top: 2rem;
-}
-
-.signup-button:hover {
-  background-color: var(--coder-accent-light);
-  text-decoration: underline;
 }

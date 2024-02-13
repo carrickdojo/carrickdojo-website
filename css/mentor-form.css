@@ -1,0 +1,57 @@
+/* .mentor-signup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: var(--coder-secondary);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.mentor-info {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.mentor-image {
+  width: 20vw;
+  background-color: var(--coder-main);
+  border-radius: 2vw;
+}
+
+.mentor-form {
+  display: flex;
+  gap: 2vw;
+} */
+
+.signup-form {
+  display: flex;
+  gap: 0.2rem;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  .signup-image {
+    width: 80% !important;
+    margin: 0 auto;
+  }
+}
+
+.signup-image {
+  width: 50%;
+  border-radius: 15px;
+}
+
+.signup-button {
+  padding: 2rem;
+  background-color: var(--coder-accent);
+  border-radius: 2rem;
+  margin-top: 2rem;
+}
+
+.signup-button:hover {
+  background-color: var(--coder-accent-light);
+  text-decoration: underline;
+}
