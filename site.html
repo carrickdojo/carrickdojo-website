@@ -73,20 +73,56 @@
     </nav>
 
     <main class="main">
-      <section style="background-color: var(--coder-main)">
+      <section class="bg-main-dark">
         <div class="container">
           <article>
-            <b>Privacy Policy</b>
+            <b>Site Information</b>
+            <p>This site is currently under development.</p>
             <p>
-              Our website does not use cookies, fingerprinting or tracking of
-              any kind.
+              The goal of this website is to incorporate some of HTML and CSS
+              projects from the
+              <a href="https://projects.raspberrypi.org/en/pathways/web-intro">
+                CoderDojo</a
+              >
+              and
+              <a
+                href="https://projects.raspberrypi.org/en/collections/html_and_css">
+                Raspberry Pi projects</a
+              >
+              page.
             </p>
+
+            <ul>
+              <li>
+                The website code is stored in
+                <a href="https://github.com/carrickdojo/carrickdojo-website">
+                  a Github reposistory</a
+                >.
+              </li>
+              <li>
+                Everytime our main website reposistory is updated, our website
+                is built and deployed to
+                <a href="https://vercel.com/"> Vercel</a> (a web hosting company
+                with a very good free plan)
+              </li>
+              <li>
+                The mentor form uses an AWS API endpoint to run an AWS Lambda
+                function to email the
+                <a href="mailto:hello@carrickdojo.com">
+                  hello@carrickdojo.com</a
+                >
+                address and the address supplied by the user. While the AWS
+                hosted part is quite an advanced concept, the API utilizes a
+                standard HTML post to submit the data.
+              </li>
+            </ul>
+
             <hr />
           </article>
 
           <img
-            src="images/Monitor_Coding.png"
-            alt="Coming soon"
+            src="images/Globe_Smiling.png"
+            alt="Site Information"
             class="article-image" />
         </div>
       </section>

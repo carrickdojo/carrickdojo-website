@@ -15,6 +15,32 @@
   --coder-black: rgb(26, 26, 26);
 }
 
+/* helpers */
+.bg-main {
+  background-color: var(--coder-main);
+}
+
+.bg-main-light {
+  background-color: var(--coder-main-light);
+}
+
+.bg-main-dark {
+  background-color: var(--coder-main-dark);
+  color: var(--coder-white);
+}
+
+.bg-main-dark a {
+  color: var(--coder-white);
+}
+
+.bg-secondary {
+  background-color: var(--coder-secondary);
+}
+
+.bg-accent {
+  background-color: var(--coder-accent);
+}
+
 html,
 body {
   background-color: var(--coder-main);
