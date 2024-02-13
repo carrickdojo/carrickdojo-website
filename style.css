@@ -59,7 +59,7 @@ button a {
   border: 0.5vw solid var(--coder-accent);
 }
 
-.sponsors-list {
+/* .sponsors-list {
   display: flex;
   justify-content: center;
   padding: 5px;
@@ -71,7 +71,7 @@ button a {
   height: 50%;
   border-radius: 10px;
   padding: 5px;
-}
+} */
 
 .hero {
   display: flex;

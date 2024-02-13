@@ -17,6 +17,12 @@ article {
   width: 20vw;
 }
 
+.article-emphasis-text {
+  font-family: coderDojoBrandLogo;
+  font-size: xx-large;
+  text-align: center;
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -31,7 +37,7 @@ article {
   width: 20vw;
 }
 
-/* Site Logo  */
+/* Our Site Logo  */
 .logo {
   display: flex;
   width: 20vw;
@@ -57,6 +63,20 @@ article {
   font-family: coderDojoBrandLogo;
   font-size: xx-large !important;
   color: var(--coder-black);
+}
+
+/* Sponsor Logos  */
+.sponsor-logo {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.sponsor-logos {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /* Navigation elements  */

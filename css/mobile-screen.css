@@ -2,6 +2,26 @@ section {
   /* background-color: var(--coder-accent); */
 }
 
+article {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.article-image {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.article-emphasis-text {
+  font-family: coderDojoBrandLogo;
+  font-size: xx-large;
+  text-align: center;
+}
+
 .container {
   display: flex;
   gap: 1rem;
@@ -13,6 +33,7 @@ section {
   width: 100%;
 }
 
+/* Our Site Logo  */
 .logo {
   display: flex;
   align-items: center;
@@ -29,6 +50,22 @@ section {
   font-family: coderDojoBrandLogo;
   font-size: xx-large !important;
   color: var(--coder-black);
+}
+
+/* Sponsor Logos  */
+.sponsor-logo {
+  margin: 0 auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 60vw;
+}
+.sponsor-logos {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
 }
 
 nav {
@@ -49,6 +86,7 @@ nav {
 }
 
 .mobile-nav {
+  display: none;
   overflow: hidden;
   background-color: var(--coder-main-light);
 }
@@ -83,22 +121,16 @@ nav {
   color: white;
 }
 
-.mobile-nav a:not(:first-child) {
-  display: none;
-}
 .mobile-nav a.icon {
   float: right;
   display: block;
 }
 
 .mobile-nav.open {
+  display: block;
   position: relative;
 }
-.mobile-nav.open .icon {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+
 .mobile-nav.open a {
   float: none;
   display: block;

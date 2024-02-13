@@ -11,7 +11,9 @@
   <body>
     <!-- Our navigation is responsive and will display diffent elements based on the css classes -->
     <!-- Each page will have very similar navigation, however we need to set the active page class  -->
-    <!-- ----- Note -----  -->
+    <!-- ---------------- -->
+    <!-- ----- Note ----- -->
+    <!-- ---------------- -->
     <!-- Link to example code with notes:  https://www.w3schools.com/howto/howto_js_topnav_responsive.asp  -->
     <!-- There are two sets of links to change if we want to add a page, the large screen links and the small screen links  -->
     <nav>
@@ -19,7 +21,7 @@
         <a href="/" class="logo">
           <img
             class="logo-image"
-            src="images/CoderDojo Roundel (light bg).svg"
+            src="images/logos/coderdojo-roundel.svg"
             width="100%"
             height="100%" />
           <span class="logo-text">CarrickDojo</span>
@@ -33,17 +35,17 @@
             class=""
             style="height: 10vh" />
           <div class="desktop-navbar-links">
-            <a href="/mentors.html">Our Dojo</a>
+            <a href="/projects.html">Projects</a>
             <a href="/ninjas.html">Ninjas</a>
             <a href="/mentors.html">Mentors</a>
-            <a href="/privacy.html">Projects</a>
-            <a href="/about.html">About</a>
+            <a href="/belts.html">Belts and Badges</a>
+            <a href="/about.html">About Our Dojo</a>
           </div>
 
           <button class="desktop-navbar-button">
             <a>
-              <img src="images/ticket.svg" alt="Join Our Dojo" />
-              <span class="myCoolText"> Join</span></a
+              <img src="images/icons/ticket.svg" alt="Join Our Dojo" />
+              <span class="myCoolText"> Tickets</span></a
             >
           </button>
         </div>
@@ -52,7 +54,7 @@
         <!-- When clicked, the showMobileNavFunction code at the bottom will run  -->
         <div class="desktop-hidden mobile-nav-icon">
           <a href="javascript:void(0);" onclick="showMobileNavFunction()">
-            <img src="images/icons/hamburger.svg" alt="" />
+            <img src="images/icons/hamburger.svg" alt="Mobile nav menu" />
           </a>
         </div>
       </div>
@@ -61,11 +63,11 @@
       <div class="desktop-hidden">
         <div class="mobile-nav" id="mobile-nav">
           <a href="/" class="active">Home</a>
-          <a href="/mentors.html">Our Dojo</a>
+          <a href="/projects.html">Projects</a>
           <a href="/ninjas.html">Ninjas</a>
           <a href="/mentors.html">Mentors</a>
-          <a href="/privacy.html">Projects</a>
-          <a href="/about.html">About</a>
+          <a href="/belts.html">Belts and Badges</a>
+          <a href="/about.html">About Our Dojo</a>
         </div>
       </div>
     </nav>
@@ -74,18 +76,18 @@
       <section style="background-color: var(--coder-main)">
         <div class="container">
           <article>
-            <p class="">
+            <p>
               Coder Dojo: A global movement of free volunteer coding clubs where
               young people learn to code, hack, develop websites, apps, games &
               more!
             </p>
-            <p class="">
+            <p>
               We are running in <b>Carrick-On-Shannon</b> from Jan 2015. We want
               to bring to the community an environment where children from 7 to
               17 years old can share passions for coding and learning
               experience.
             </p>
-            <p class="">
+            <p>
               We really work to encourage creativity and having fun in a
               relaxed, social environment while our children learn to
               communicate using the languages of the future.
@@ -93,7 +95,7 @@
           </article>
 
           <img
-            src="images/CoderDojo Split (dark bg).svg"
+            src="images/logos/coderdojo-split.svg"
             alt="CoderDojo Logo"
             class="article-image" />
         </div>
@@ -101,7 +103,10 @@
 
       <section style="background-color: var(--coder-main-dark)">
         <div class="container">
-          <img src="images/Spaceship.png" alt="" class="content-image" />
+          <img
+            src="images/Spaceship.png"
+            alt="join us section"
+            class="content-image" />
           <button class="button-action">
             <a href="/index.html" class="">
               Become a <span class="myCoolText">Ninja</span>.</a
@@ -115,25 +120,44 @@
 
       <section style="background-color: var(--coder-secondary)">
         <div class="container">
-          <div class="logo-text">
-            <b>
+          <article>
+            <span class="article-emphasis-text">
               A huge thanks to all the amazing sponsors of our Dojo and to all
-              the volunteers for their help and assistance.</b
+              the volunteers for their help and assistance.</span
             >
-          </div>
+          </article>
           <img
             src="images/Star.png"
             alt="CoderDojo Logo"
             class="article-image" />
         </div>
         <div class="container">
-          <img src="images/the-hive-logo.png" alt="" class="sponsor-logo" />
-          <img src="images/breffni-frc-logo.png" alt="" class="sponsor-logo" />
-          <img
-            src="images/leitrim-development-company-logo.png"
-            alt=""
-            class="sponsor-logo" />
-          <img src="images/ncycs-logo.png" alt="" class="sponsor-logo" />
+          <div class="sponsor-logos">
+            <a href="https://the-hive.ie/">
+              <img
+                src="images/logos/sponsors/the-hive-logo.png"
+                alt="The Hive"
+                class="sponsor-logo"
+            /></a>
+            <a href="https://www.breffnifrc.ie/">
+              <img
+                src="images/logos/sponsors/breffni-frc-logo.png"
+                alt="Breffni Family Resource Centre"
+                class="sponsor-logo" />
+            </a>
+            <a href="https://www.ldco.ie/">
+              <img
+                src="images/logos/sponsors/leitrim-development-company-logo.png"
+                alt=""
+                class="sponsor-logo" />
+            </a>
+            <a href="http://www.ncycs.ie/">
+              <img
+                src="images/logos/sponsors/ncycs-logo.png"
+                alt=""
+                class="sponsor-logo" />
+            </a>
+          </div>
         </div>
       </section>
     </main>
@@ -146,32 +170,39 @@
           <div class="footer-links">
             <div class="footer-column">
               <div class="footer-heading">About CoderDojo</div>
-
+              <a href="https://coderdojo.com/en/about">What is CoderDojo?</a>
               <a href="https://coderdojo.com/news">The CoderDojo Blog</a>
-              <a href="about.html">Our Dojo</a>
+              <a href="about.html">Our Dojo and Champian</a>
               <a href="/">Registering and Tickets</a>
             </div>
 
             <div class="footer-column">
               <div class="footer-heading">Projects</div>
-              <a href="/">Raspberry Pi Projects</a>
-              <a href="/">CoderDojo Projects</a>
-              <a href="/">Scratch</a>
+              <a href="https://projects.raspberrypi.org/en/projects"
+                >Raspberry Pi Projects</a
+              >
+              <a href="https://projects.raspberrypi.org/en/coderdojo"
+                >CoderDojo Projects</a
+              >
               <a href="https://online.coolestprojects.org/">Coolest Projects</a>
+              <a href="https://scratch.mit.edu/users/CarrickDojo/"
+                >Our Scratch Projects</a
+              >
             </div>
 
             <div class="footer-column">
               <div class="footer-heading">Supporting Us</div>
-              <a href="/">Becoming a Mentor</a>
+              <a href="/mentors.html">Becoming a Mentor</a>
               <a href="/">Volunteering and Helping Out</a>
-              <a href="/">Donations</a>
+              <a href="/">Sponsors and Donations</a>
+              <a href="/">Gifting Laptops and Hardware</a>
             </div>
 
             <div class="footer-column">
               <div class="footer-heading">Policies and Guidelines</div>
-              <a href="/">Privacy Policy</a>
+              <a href="privacy.html">Privacy Policy</a>
               <a href="/">Site Information</a>
-              <a href="/">Dojo Charter</a>
+              <a href="https://coderdojo.com/en/charter">CoderDojo Charter</a>
               <a href="">Internet Policy</a>
             </div>
           </div>
@@ -197,24 +228,30 @@
           <div class="footer-social">
             <div class="footer-icon-small">
               <a href="mailto:hello@carrickdojo.com">
-                <img src="images/icons/email.svg" class="icon-small" alt=""
+                <img
+                  src="images/icons/email.svg"
+                  class="icon-small"
+                  alt="Email CarrickDojo"
               /></a>
             </div>
             <div class="footer-icon-small">
               <a href="https://github.com/carrickdojo">
-                <img src="images/icons/github.svg" class="icon-small" alt=""
+                <img
+                  src="images/icons/github.svg"
+                  class="icon-small"
+                  alt="Our Github"
               /></a>
             </div>
           </div>
           <div class="footer-foundation">
             <div class="foundation-icons">
               <img
-                src="images/CoderDojo Roundel (light bg).svg"
-                alt=""
+                src="images/logos/coderdojo-roundel.svg"
+                alt="CoderDojo logo"
                 class="footer-icon-big" />
               <img
-                src="images/raspberry-pi.svg"
-                alt=""
+                src="images/logos/raspberry-pi.svg"
+                alt="Raspberry Pi logo"
                 class="footer-icon-big" />
             </div>
             <div class="">
