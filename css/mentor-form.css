@@ -6,6 +6,17 @@
   flex-direction: column;
 }
 
+.signup-form .submitted {
+  display: none !important;
+}
+
+.signup-form-thanks {
+  display: none;
+}
+.signup-form-thanks .submitted {
+  display: flex;
+}
+
 @media screen and (max-width: 600px) {
   .signup-image {
     width: 80% !important;

@@ -19,7 +19,7 @@ This site aims to build off the [HTML and CSS CoderDojo Projects](https://projec
 - [x] Create the site layout
 - [x] Format the logo
 - [ ] Create root css variables from CoderDojo style guide
-- [ ] Add a responsive css page for mobile screens
+- [x] Add a responsive css page for mobile screens
 - [ ] Ensure accessibility
 - [ ] Add Ninja Registration Page
 - [x] Add Mentor Page

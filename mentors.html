@@ -43,7 +43,9 @@
           </div>
 
           <button class="desktop-navbar-button">
-            <a>
+            <a
+              href="https://www.carrickdojo.com/event/feb6th-2/"
+              title="Get tickets to the next meetup">
               <img src="images/icons/ticket.svg" alt="Join Our Dojo" />
               <span class="myCoolText"> Tickets</span></a
             >
@@ -106,7 +108,7 @@
 
       <section style="background-color: var(--coder-secondary)">
         <div class="container">
-          <form class="signup-form">
+          <form class="signup-form" id="signup-form">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" value="" /><br />
 
@@ -134,6 +136,9 @@
               onclick="submitForm()"
               value="Join Us" />
           </form>
+          <div class="signup-form-thanks" id="signup-form-thanks">
+            Thanks for getting in touch
+          </div>
           <img
             src="images/CoderDojo_Contact_Us.jpg"
             alt=""
@@ -252,10 +257,19 @@
         let info = document.getElementById("info").value
         let avail = document.getElementById("avail").value
 
+        console.log("Form submitted")
+        let signupform = document.getElementById("signup-form")
+        let thanks = document.getElementById("signup-form-thanks")
+        signupform.classList.add("submitted")
+        thanks.classList.add("submitted")
+        // thanks.className += " submitted"
+        console.log("Form should be gone now...")
+
         fetch(
           "https://bvawggfvdl.execute-api.eu-west-1.amazonaws.com/prod/mentor-signup",
           {
             method: "POST",
+            mode: "no-cors",
             headers: {
               Accept: "application/json",
               "Content-Type": "application/json",
