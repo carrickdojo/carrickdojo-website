@@ -9,6 +9,7 @@ section {
 article {
   display: flex;
   height: 100%;
+  padding: 1vw;
   justify-content: center;
   flex-direction: column;
 }

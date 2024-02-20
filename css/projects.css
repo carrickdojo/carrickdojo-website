@@ -102,7 +102,6 @@
   background-position: center;
   height: 15vh;
   width: 15vw;
-  /* padding-right: 1vw; */
   display: inline-block;
   content: " ";
   vertical-align: middle;
@@ -123,7 +122,7 @@
 
 .note {
   display: flex;
-  background-color: var(--coder-main-dark);
+  background-color: var(--coder-main-light);
   color: var(--coder-white);
   font-size: large;
   text-align: center;
@@ -132,6 +131,10 @@
   width: 40vw;
   color: " ";
   margin: 0 auto;
+}
+
+.note a {
+  color: var(--coder-white);
 }
 
 .note::before {
