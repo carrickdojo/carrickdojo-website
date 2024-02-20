@@ -174,3 +174,37 @@
   padding: 1vw;
   margin: 0 auto;
 }
+
+.small-card {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  width: 20vw;
+  height: 30vh;
+  border: 0.5rem solid var(--coder-main-dark);
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    to top left,
+    var(--coder-secondary),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-accent)
+  );
+}
+
+.small-card a {
+  text-decoration: none;
+  color: var(--coder-white);
+}
+
+.small-card img {
+  max-width: 20vw;
+  max-height: 10vh;
+  margin: 0 auto;
+  display: block;
+}
+
+.small-card p {
+  text-align: center;
+}
