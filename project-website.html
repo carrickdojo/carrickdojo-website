@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarrickDojo - Projects</title>
+    <link rel="icon" href="images/logos/coderdojo-roundel.svg" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- Our navigation is responsive and will display diffent elements based on the css classes -->
+    <!-- Each page will have very similar navigation, however we need to set the active page class  -->
+    <!-- ---------------- -->
+    <!-- ----- Note ----- -->
+    <!-- ---------------- -->
+    <!-- Link to example code with notes:  https://www.w3schools.com/howto/howto_js_topnav_responsive.asp  -->
+    <!-- There are two sets of links to change if we want to add a page, the large screen links and the small screen links  -->
+    <nav>
+      <div class="navbar">
+        <a href="/" class="logo">
+          <img
+            class="logo-image"
+            src="images/logos/coderdojo-roundel.svg"
+            alt="CarrickDojo Logo" />
+          <span class="logo-text">CarrickDojo</span>
+        </a>
+        <!-- The large screen links -->
+        <!-- These are only seen on large screens  -->
+        <div class="mobile-hidden desktop-navbar-right" id="desktopNav">
+          <img
+            src="images/white-curve.png"
+            alt="Border curve"
+            style="height: 10vh" />
+          <div class="desktop-navbar-links">
+            <a href="/projects.html" class="active">Projects</a>
+            <a href="/ninjas.html">Ninjas</a>
+            <a href="/mentors.html">Mentors</a>
+            <a href="/belts.html">Belts and Badges</a>
+            <a href="/about.html">About Our Dojo</a>
+          </div>
+
+          <button class="desktop-navbar-button">
+            <a
+              href="https://www.carrickdojo.com/event/feb6th-2/"
+              title="Get tickets to the next meetup">
+              <img src="images/icons/ticket.svg" alt="Join Our Dojo" />
+              <span class="myCoolText"> Tickets</span></a
+            >
+          </button>
+        </div>
+
+        <!-- This is the mobile navigation button  -->
+        <!-- When clicked, the showMobileNavFunction code at the bottom will run  -->
+        <div class="desktop-hidden mobile-nav-icon">
+          <a href="javascript:void(0);" onclick="showMobileNavFunction()">
+            <img src="images/icons/hamburger.svg" alt="Mobile nav menu" />
+          </a>
+        </div>
+      </div>
+      <!-- The mobile screen links  -->
+      <!-- These are only seen on small screens  -->
+      <div class="desktop-hidden">
+        <div class="mobile-nav" id="mobile-nav">
+          <a href="/projects.html" class="active">Projects</a>
+          <a href="/ninjas.html">Ninjas</a>
+          <a href="/mentors.html">Mentors</a>
+          <a href="/belts.html">Belts and Badges</a>
+          <a href="/about.html">About Our Dojo</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main">
+      <div class="bg-main">
+        <div class="container">
+          <div class="project">
+            <div class="project-sidebar">
+              <a href="#background">Project Background</a>
+              <a href="#goals">Project Goals</a>
+              <a href="#design">Designing Our Site</a>
+              <a href="#site-layout">Site Layout</a>
+              <a href="#">Hosting</a>
+              <a href="#">Git and Github</a>
+              <a href="#">Tools and Editors</a>
+              <a href="#">Website Hosting</a>
+              <a href="#">Testing Our Site</a>
+              <a href="#">Project Outcome</a>
+            </div>
+            <div class="project-content">
+              <div class="">
+                <div class="project-title">A New Carrick Dojo Website</div>
+
+                <div class="project-section" id="background">
+                  <span class="section-title">Project Background</span>
+                  <p>
+                    This is a very big project to rebuild the CarrickDojo
+                    website. It incorporates lots of little HTML and CSS
+                    projects from the CoderDojo and RaspberryPi Project pages.
+                  </p>
+                  <p>
+                    This project needs a good bit more documenting and will be
+                    updated over the next few weeks.
+                  </p>
+                </div>
+                <div class="project-section" id="goals">
+                  <span class="section-title">Project Goals</span>
+                  <ul>
+                    <li>
+                      Redevelop the website in HTML and CSS to better align with
+                      the Raspberry Pi Web Design projects.
+                    </li>
+                    <li>
+                      Ensure best practices with a child-first led approach to
+                      data and accessibility.
+                    </li>
+                    <li>
+                      Design the website with a similar style to the CoderDojo
+                      foundation website.
+                    </li>
+                    <li>
+                      Document the website development and maintainence from
+                      first-principles with the aim of Ninja's being able to get
+                      further involved.
+                    </li>
+                  </ul>
+                </div>
+                <div class="project-section" id="design">
+                  <span class="section-title">Designing Our Site</span>
+                  <p>
+                    The most important part of any project is the planning and
+                    design part.
+                  </p>
+                  <p>
+                    For this project we are going to take the content from our
+                    existing website and incorporate the styles and branding of
+                    the CoderDojo foundation.
+                  </p>
+                  <p>
+                    Picking colours and fonts is fun but there is a lot to
+                    consider. We need to choose colours and fonts that allow us
+                    to easily read text.
+                  </p>
+                  <p>
+                    <span>
+                      The
+                      <a
+                        href="https://company-51033.frontify.com/d/E6KNDhunr9mR/coderdojo-style-guide-1460385526"
+                        >CoderDojo Style Guide</a
+                      >
+                      gives us lots of useful information on the
+                      <a
+                        href="https://coolors.co/57206f-642580-70298e-9537be-41bac1-ed684a-f0836a">
+                        CoderDojo Colour Pallete</a
+                      >
+                      , the logo and the different fonts used by the foundation
+                      when creating content.</span
+                    >
+                  </p>
+                  <p>
+                    Using these colours, we can create CSS variables for our the
+                    colours so we will use on all our pages.
+                    <img
+                      src="images/projects/project-website/01-styling-our-css-variables.webp"
+                      alt="" />
+                  </p>
+                  <div class="example">
+                    <span>
+                      Lots of the newer Raspberry Pi Projects use varibales,
+                      check out the
+                      <a
+                        href="https://projects.raspberrypi.org/en/projects/editor-anime-expressions/editor">
+                        anime expressions project</a
+                      >
+                      in the the new editor.</span
+                    >
+                  </div>
+                  <p>
+                    <span>
+                      We have placed the fonts we would like to use in our fonts
+                      folder and set up the CSS font weighting (how
+                      <b>bold</b> it is).</span
+                    >
+                    <img
+                      src="images/projects/project-website/02-styling-our-css-fonts.webp"
+                      alt="" />
+                  </p>
+                </div>
+                <div class="project-section" id="site-layout">
+                  <span class="section-title">Our Site Layout</span>
+                  <p>
+                    When we make a website, we need to think about how our
+                    content will look for the user on their device.
+                  </p>
+                  <p>
+                    For our site, we need to make sure our site looks good for
+                    people on small screens (like mobile phones) and for people
+                    with big screens (laptops and desktop computer monitors).
+                  </p>
+                  <div class="example">
+                    <span>
+                      This is called responsive design and is covered in lots of
+                      Raspberry Pi Web Design Projects for example,
+                      <a
+                        href="https://projects.raspberrypi.org/en/projects/cd-sebento-htmlcss-3/6"
+                        >the Birdwatch 3 Project</a
+                      >.</span
+                    >
+                  </div>
+                  <p>
+                    For our site, we are going to use two css seperate files
+                    depending on if the user is on a big screen or a small
+                    screen.
+                  </p>
+                  <p>
+                    <span
+                      >In our default.css file; we tell the browser to load a
+                      large screen css file if the minimum width is 768 pixels;
+                      or a small screen css file if the maximum width the
+                      browser has is 480 pixels.
+                    </span>
+                    <img
+                      src="images/projects/project-website/03-styling-our-css-responsive.webp"
+                      alt="" />
+                  </p>
+                  <p>
+                    These files will have the navigation and footer elements
+                    that are specific to big screens and little screens.
+                  </p>
+                  <p>
+                    On a big screen we want the user to have buttons for all our
+                    main pages in the navigation, however on small screens there
+                    is not enough space for this.
+                  </p>
+                  <p>
+                    <span>
+                      On small screen, we have a <b>hamburger button</b>, and
+                      when this is clicked, they will see the links to our
+                      pages.
+                    </span>
+                  </p>
+                  <p>
+                    The main content uses a wrapper, to rearrange the content
+                    for big and small screens.
+                  </p>
+                  <p>
+                    The footer can be spread out on a big screen, but on a small
+                    screen we want the links in a column.
+                  </p>
+
+                  <div class="note">
+                    Modern web development uses reusable components that are
+                    like code blocks in Scratch. <br />We have a few limitations
+                    as our site is HTML and CSS; and we will need to copy the
+                    layout code (the navigation and footer) into each page we
+                    create.
+                  </div>
+                </div>
+                <p class="">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam ac lacus ut augue euismod tristique. Duis aliquam
+                  turpis nulla, id semper nisl tempor ac. Ut nibh turpis,
+                  viverra vel turpis vitae, semper fermentum lorem. Duis lacinia
+                  ipsum malesuada ipsum aliquam, eu laoreet nisi ultricies.
+                  Curabitur pretium rhoncus massa, porta semper turpis pretium
+                  non. Pellentesque habitant morbi tristique senectus et netus
+                  et malesuada fames ac turpis egestas. Cras feugiat lorem vel
+                  imperdiet dictum. Nullam eleifend felis at ipsum mollis, vitae
+                  feugiat ipsum volutpat. Nam eget augue nec metus sagittis
+                  sodales sed sit amet massa. Ut sed tellus rhoncus, congue
+                  lectus tincidunt, viverra nisl. Mauris pellentesque gravida
+                  efficitur. Donec eu eros sed tellus tristique mattis lobortis
+                  eu mi. Vivamus in semper lectus. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit. Etiam consequat turpis metus, sit
+                  amet sagittis risus pellentesque in. Mauris ligula eros,
+                  vestibulum at dolor a, lacinia molestie arcu. Proin tempus
+                  augue id lectus luctus tristique. In vulputate sem massa, a
+                  auctor ante luctus vitae. Quisque vel libero vel justo
+                  volutpat gravida non feugiat leo. Proin hendrerit iaculis
+                  tellus, sit amet molestie risus ultricies eu. Pellentesque
+                  euismod lorem ut facilisis vehicula. Integer magna lacus,
+                  finibus vitae justo sed, luctus convallis lacus. Quisque lacus
+                  eros, dignissim et quam vel, auctor lobortis felis. Interdum
+                  et malesuada fames ac ante ipsum primis in faucibus. Nulla
+                  vulputate enim eu orci sodales, sit amet ullamcorper ipsum
+                  vestibulum. Etiam tempus massa arcu, nec tincidunt justo
+                  viverra ac. In ullamcorper, diam bibendum feugiat consectetur,
+                  ante justo elementum dolor, eu facilisis diam quam a arcu.
+                  Integer rhoncus tincidunt sem quis elementum. In sagittis
+                  libero non sagittis ornare. Nam sit amet convallis quam, quis
+                  efficitur nunc. Nam dui felis, sagittis eu rhoncus ac,
+                  interdum nec tellus. Nam dictum velit at mi tincidunt, non
+                  sollicitudin massa aliquet. Nunc sit amet placerat risus.
+                  Vestibulum maximus velit a sollicitudin feugiat. Nunc eros ex,
+                  consequat sed fermentum et, egestas et nisi. Mauris ultricies
+                  quis velit in suscipit. Ut ut velit sodales, ullamcorper leo
+                  at, vulputate tellus. Nulla tristique justo sit amet porttitor
+                  condimentum. Pellentesque habitant morbi tristique senectus et
+                  netus et malesuada fames ac turpis egestas. Curabitur urna mi,
+                  bibendum vitae sem ultrices, volutpat sollicitudin est.
+                  Suspendisse at erat nulla. Praesent vitae placerat leo, vitae
+                  consectetur eros. Mauris vehicula scelerisque tempor. Donec
+                  dapibus ultrices orci, egestas molestie libero feugiat nec.
+                  Maecenas eu lectus ultricies, tincidunt neque ac, congue
+                  sapien. Aliquam magna neque, posuere eget urna eget, interdum
+                  sagittis leo. Maecenas ac nulla leo. Duis eleifend ante quis
+                  lectus tristique, vitae commodo diam congue. Sed porttitor
+                  velit quam, non mollis leo dignissim quis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Our Footer section does not change across our site  -->
+    <!-- When creating a new page, we can copy the entire footer element  -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-links">
+            <div class="footer-column">
+              <div class="footer-heading">About CoderDojo</div>
+              <a href="https://coderdojo.com/en/about">What is CoderDojo?</a>
+              <a href="https://coderdojo.com/news">The CoderDojo Blog</a>
+              <a href="about.html">Our Dojo and Champian</a>
+              <a href="/">Registering and Tickets</a>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-heading">Projects</div>
+              <a href="https://projects.raspberrypi.org/en/projects"
+                >Raspberry Pi Projects</a
+              >
+              <a href="https://projects.raspberrypi.org/en/coderdojo"
+                >CoderDojo Projects</a
+              >
+              <a href="https://online.coolestprojects.org/">Coolest Projects</a>
+              <a href="https://scratch.mit.edu/users/CarrickDojo/"
+                >Our Scratch Projects</a
+              >
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-heading">Supporting Us</div>
+              <a href="/mentors.html">Becoming a Mentor</a>
+              <a href="/">Volunteering and Helping Out</a>
+              <a href="/">Sponsors and Donations</a>
+              <a href="/">Gifting Laptops and Hardware</a>
+            </div>
+
+            <div class="footer-column">
+              <div class="footer-heading">Policies and Guidelines</div>
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="/site.html">Site Information</a>
+              <a href="https://coderdojo.com/en/charter">CoderDojo Charter</a>
+              <a href="">Internet Policy</a>
+            </div>
+          </div>
+          <div class="footer-licence">
+            <img
+              src="images/icons/cc.svg"
+              class="icon-small"
+              alt="Creative Commons" />
+            <div>
+              This site is open source and a public project. Feel free to
+              examine the code and reuse any bits you like. All images have been
+              created by CoderDojo, the Hello World Foundation or the Raspberry
+              Pi Foundation.
+            </div>
+          </div>
+          <div class="footer-about">
+            Carrick-on-Shannon CoderClub (CarrickDojo) is branch of the
+            CoderDojo Foundation (CRO No: 524255 a registered charity: CHY
+            20812)
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-social">
+            <div class="footer-icon-small">
+              <a href="mailto:hello@carrickdojo.com">
+                <img
+                  src="images/icons/email.svg"
+                  class="icon-small"
+                  alt="Email CarrickDojo"
+              /></a>
+            </div>
+            <div class="footer-icon-small">
+              <a href="https://github.com/carrickdojo">
+                <img
+                  src="images/icons/github.svg"
+                  class="icon-small"
+                  alt="Our Github"
+              /></a>
+            </div>
+          </div>
+          <div class="footer-foundation">
+            <div class="foundation-icons">
+              <img
+                src="images/logos/coderdojo-roundel.svg"
+                alt="CoderDojo logo"
+                class="footer-icon-big" />
+              <img
+                src="images/logos/raspberry-pi.svg"
+                alt="Raspberry Pi logo"
+                class="footer-icon-big" />
+            </div>
+            <div class="">
+              CarrickDojo is a branch of CoderDojo. CoderDojo is part of the
+              Raspberry Pi Foundation.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- This is our javascript function to show and hide the mobile nav -->
+    <!-- We get the element with the id of mobile-nav and assign it to the variable -->
+    <!-- We then check the className of the variable and either add open, or set back to the default  -->
+    <script>
+      function showMobileNavFunction() {
+        var x = document.getElementById("mobile-nav")
+        if (x.className === "mobile-nav") {
+          x.className += " open"
+        } else {
+          x.className = "mobile-nav"
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+.project {
+  display: flex;
+  width: 100%;
+  background-color: var(--coder-main-light);
+}
+
+.project-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 13vw;
+  padding: 1vw 1vw 0 1vw;
+  position: fixed;
+  background-color: var(--coder-main-light);
+}
+
+.project-sidebar a {
+  padding: 0.4rem;
+  text-decoration: none;
+  color: var(--coder-white);
+  display: block;
+  align-items: center;
+}
+
+.project-sidebar a::before {
+  background-image: url("../images/icons/circle-dashed.svg");
+  background-size: 2.5vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 2.5vh;
+  width: 2.5vh;
+  padding-right: 1vw;
+  display: inline-block;
+  content: " ";
+}
+
+.project-sidebar a:hover {
+  color: var(--coder-secondary);
+  border-bottom: 0.4vw solid var(--coder-secondary);
+}
+
+.project-content {
+  display: flex;
+  padding: 1vw;
+  margin: 1vw;
+  margin-left: 15vw;
+  flex-direction: column;
+  background-color: var(--coder-white);
+  color: var(--coder-black);
+}
+
+.project-title {
+  text-align: center;
+  font-family: emphasis;
+  font-size: x-large;
+}
+
+.section-title {
+  text-align: center;
+  font-size: x-large;
+  border-bottom: 0.2vw solid var(--coder-secondary);
+  background-color: var(--coder-secondary);
+}
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  margin: 2vw 0;
+  padding: 1vw;
+  border: 0.2vw solid var(--coder-secondary);
+}
+
+.project-section p {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-section p img {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  border: 0.2vw solid var(--coder-secondary);
+}
+
+.example {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--coder-accent);
+  color: var(--coder-white);
+  font-size: larger;
+  text-align: center;
+  padding: 2vh;
+  width: 40vw;
+  border-radius: 1rem;
+  margin: 0 auto;
+}
+
+.example::before {
+  background-image: url("../images/icons/trophy.svg");
+  background-size: 10vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15vh;
+  width: 15vw;
+  /* padding-right: 1vw; */
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+.example::after {
+  background-image: url("../images/Group_Hug.png");
+  background-size: 15vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15vh;
+  width: 15vw;
+  padding-left: 1vw;
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+.note {
+  display: flex;
+  background-color: var(--coder-main-dark);
+  color: var(--coder-white);
+  font-size: large;
+  text-align: center;
+  padding: 2vh;
+  border-radius: 1rem;
+  width: 40vw;
+  color: " ";
+  margin: 0 auto;
+}
+
+.note::before {
+  background-image: url("../images/Circle_Girl.png");
+  background-size: 15vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15vh;
+  width: 15vw;
+  padding-right: 1vw;
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+.note::after {
+  background-image: url("../images/icons/star.svg");
+  background-size: 12vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15vh;
+  width: 15vw;
+  padding-right: 1vw;
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
