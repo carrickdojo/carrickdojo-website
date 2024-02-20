@@ -97,23 +97,26 @@
 
 .example::before {
   background-image: url("../images/icons/trophy.svg");
-  background-size: 10vh;
+  background-size: 5vw 10vw;
   background-repeat: no-repeat;
   background-position: center;
   height: 15vh;
-  width: 15vw;
+  width: 25vw;
   display: inline-block;
   content: " ";
   vertical-align: middle;
+  /* border: 1px solid lime; */
 }
 
 .example::after {
   background-image: url("../images/Group_Hug.png");
-  background-size: 15vh;
+  background-color: var(--coder-secondary);
+  border-radius: 100%;
+  background-size: 6vw 6vw;
   background-repeat: no-repeat;
   background-position: center;
   height: 15vh;
-  width: 15vw;
+  width: 25vw;
   padding-left: 1vw;
   display: inline-block;
   content: " ";
@@ -124,7 +127,7 @@
   display: flex;
   background-color: var(--coder-main-light);
   color: var(--coder-white);
-  font-size: large;
+  /* font-size: large; */
   text-align: center;
   padding: 2vh;
   border-radius: 1rem;
@@ -139,11 +142,11 @@
 
 .note::before {
   background-image: url("../images/Circle_Girl.png");
-  background-size: 15vh;
+  background-size: 6vw 8vw;
   background-repeat: no-repeat;
   background-position: center;
   height: 15vh;
-  width: 15vw;
+  width: 25vw;
   padding-right: 1vw;
   display: inline-block;
   content: " ";
@@ -152,13 +155,22 @@
 
 .note::after {
   background-image: url("../images/icons/star.svg");
-  background-size: 12vh;
+  background-size: 6vw 6vw;
   background-repeat: no-repeat;
   background-position: center;
   height: 15vh;
-  width: 15vw;
+  width: 25vw;
   padding-right: 1vw;
   display: inline-block;
   content: " ";
   vertical-align: middle;
+}
+
+.vercel {
+  display: block;
+  height: fit-content;
+  width: 20vw;
+  background-color: var(--coder-black);
+  padding: 1vw;
+  margin: 0 auto;
 }

@@ -159,20 +159,6 @@ button a {
   border: 0.5vw solid var(--coder-accent);
 }
 
-/* .sponsors-list {
-  display: flex;
-  justify-content: center;
-  padding: 5px;
-  gap: 5px;
-}
-
-.sponsor-logo {
-  background-color: white;
-  height: 50%;
-  border-radius: 10px;
-  padding: 5px;
-} */
-
 .hero {
   display: flex;
   color: white;
@@ -189,7 +175,4 @@ button a {
 
 .hero-right {
   display: flex;
-}
-
-.button {
 }
