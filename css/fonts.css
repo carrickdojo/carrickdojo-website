@@ -15,3 +15,26 @@
   font-weight: 700;
   src: url(../fonts/Lato-Bold.ttf);
 }
+
+@font-face {
+  font-family: marker;
+  font-weight: 400;
+  src: url(../fonts/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+  font-family: marker2;
+  font-weight: 400;
+  src: url(../fonts/coming-soon-latin-400-normal.ttf);
+}
+
+.text-marker {
+  font-family: marker;
+  letter-spacing: 0.2rem;
+  font-size: larger;
+}
+.text-marker2 {
+  font-family: marker2;
+  letter-spacing: 0.1rem;
+  font-size: larger;
+}

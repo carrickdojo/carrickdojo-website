@@ -208,3 +208,27 @@
 .small-card p {
   text-align: center;
 }
+
+.whiteboard {
+  background-image: url("../images/whiteboard-stickers.webp");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 800px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.whiteboard p {
+  width: 600px;
+  display: block;
+  text-align: center;
+}
+
+.image-big {
+  width: 800px;
+}
