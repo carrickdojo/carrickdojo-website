@@ -93,9 +93,10 @@ Classes for changing the images, icons and logos styles.
 .logo {
   display: block;
   height: fit-content;
-  width: 10rem;
+  width: 8rem;
+  height: 8rem;
   padding: 1rem;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 .logo-wide {
@@ -106,6 +107,10 @@ Classes for changing the images, icons and logos styles.
   margin: 0 auto;
 }
 
+.image-big {
+  width: 800px;
+}
+
 /* 
 -------------
 Button Helper Classes 
@@ -113,14 +118,20 @@ Classes for our buttons.
 -------------
  */
 
+main > button {
+  height: 5rem;
+}
+
 button a {
   text-decoration: none;
   cursor: pointer;
 }
 
+/* Specific Site Buttons */
 .button-action {
   display: block;
   border-radius: 2rem;
+  height: 5rem;
   border: 0.5rem solid var(--coder-secondary);
   background-color: var(--coder-secondary);
   padding: 1rem;
@@ -132,51 +143,159 @@ button a {
 
 /* 
 -------------
+Alignment Helper Classes 
+Classes for our lining things up.
+-------------
+ */
+.align-center {
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+-------------
 Utility classes
 Site wide classes for displaying different blocks of content like examples, codeblocks and notes.
 -------------
  */
 
-.example {
+.small-card {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--coder-accent);
+  padding: 1rem;
+  flex-direction: column;
+  width: 20vw;
+  height: 30vh;
+  border: 0.5rem solid var(--coder-main-dark);
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    to top left,
+    var(--coder-secondary),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-accent)
+  );
+}
+
+.small-card a {
+  text-decoration: none;
   color: var(--coder-white);
-  font-size: larger;
+}
+
+.small-card img {
+  max-width: 20vw;
+  max-height: 10vh;
+  margin: 0 auto;
+  display: block;
+}
+
+.small-card p {
   text-align: center;
-  padding: 2vh;
-  width: 40vw;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card-badges {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.card-badge {
+  display: inline-block;
+  padding: 0.5rem;
   border-radius: 1rem;
+  border: 0.25rem solid var(--coder-white);
+  margin: 0.25rem;
+}
+
+.card-small {
+  width: 20rem;
+  height: 20rem;
+}
+
+@media (max-width: 480px) {
+  .card-small {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+.card-information {
+}
+
+.card-information::after {
+  background-image: url("../images/Star.png");
+  background-size: 10rem 10rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12rem;
+  height: 80%;
+  height: 15rem;
+  width: 20rem;
+  padding-right: 1vw;
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+  .card-information::after {
+    display: none;
+  }
+}
+
+/* Other Elements */
+.factoid {
+  display: flex;
+  width: 40rem;
+  align-items: center;
+  border: 0.25rem solid var(--coder-secondary);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  text-align: center;
   margin: 0 auto;
 }
 
-.example::before {
-  background-image: url("../images/icons/trophy.svg");
-  background-size: 5vw 10vw;
+.factoid::before {
+  background-image: url("../images/Dog.png");
+  background-size: 8rem;
   background-repeat: no-repeat;
   background-position: center;
-  height: 15vh;
-  width: 25vw;
+  height: 8rem;
+  width: 8rem;
   display: inline-block;
   content: " ";
   vertical-align: middle;
-  /* border: 1px solid lime; */
+  margin: 0 auto;
 }
 
-.example::after {
-  background-image: url("../images/Group_Hug.png");
-  background-color: var(--coder-secondary);
-  border-radius: 100%;
-  background-size: 6vw 6vw;
+.whiteboard {
+  background-image: url("../images/whiteboard-stickers.webp");
+  background-size: 800px 600px;
   background-repeat: no-repeat;
-  background-position: center;
-  height: 15vh;
-  width: 25vw;
-  padding-left: 1vw;
-  display: inline-block;
-  content: " ";
-  vertical-align: middle;
+  background-position: top;
+  width: 800px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.whiteboard p {
+  width: 600px;
+  display: block;
+  text-align: center;
 }
 
 .note {
@@ -221,115 +340,44 @@ Site wide classes for displaying different blocks of content like examples, code
   vertical-align: middle;
 }
 
-.small-card {
+.example {
   display: flex;
-  padding: 1rem;
-  flex-direction: column;
-  width: 20vw;
-  height: 30vh;
-  border: 0.5rem solid var(--coder-main-dark);
-  border-radius: 0.5rem;
-  background-image: linear-gradient(
-    to top left,
-    var(--coder-secondary),
-    var(--coder-main),
-    var(--coder-main),
-    var(--coder-main),
-    var(--coder-accent)
-  );
-}
-
-.small-card a {
-  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--coder-accent);
   color: var(--coder-white);
-}
-
-.small-card img {
-  max-width: 20vw;
-  max-height: 10vh;
-  margin: 0 auto;
-  display: block;
-}
-
-.small-card p {
+  font-size: larger;
   text-align: center;
-}
-
-.whiteboard {
-  background-image: url("../images/whiteboard-stickers.webp");
-  background-size: 800px 600px;
-  background-repeat: no-repeat;
-  background-position: top;
-  width: 800px;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.whiteboard p {
-  width: 600px;
-  display: block;
-  text-align: center;
-}
-
-.image-big {
-  width: 800px;
-}
-
-.factoid {
-  display: flex;
-  width: 40rem;
-  align-items: center;
-  border: 0.25rem solid var(--coder-secondary);
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  text-align: center;
+  padding: 2vh;
+  width: 40vw;
+  border-radius: 1rem;
   margin: 0 auto;
 }
 
-.factoid::before {
-  background-image: url("../images/Dog.png");
-  background-size: 8rem;
+.example::before {
+  background-image: url("../images/icons/trophy.svg");
+  background-size: 5vw 10vw;
   background-repeat: no-repeat;
   background-position: center;
-  height: 8rem;
-  width: 8rem;
+  height: 15vh;
+  width: 25vw;
   display: inline-block;
   content: " ";
   vertical-align: middle;
-  margin: 0 auto;
+  /* border: 1px solid lime; */
 }
 
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  padding: 1rem;
-  text-align: center;
-}
-
-.card-information {
-}
-
-.card-information::after {
-  background-image: url("../images/Star.png");
-  background-size: 10rem 10rem;
+.example::after {
+  background-image: url("../images/Group_Hug.png");
+  background-color: var(--coder-secondary);
+  border-radius: 100%;
+  background-size: 6vw 6vw;
   background-repeat: no-repeat;
   background-position: center;
-  height: 15rem;
-  width: 20rem;
-  padding-right: 1vw;
+  height: 15vh;
+  width: 25vw;
+  padding-left: 1vw;
   display: inline-block;
   content: " ";
   vertical-align: middle;
-}
-
-@media (max-width: 480px) {
-  .card-information::after {
-    display: none;
-  }
 }
