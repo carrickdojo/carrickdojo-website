@@ -1,4 +1,4 @@
-# Carrick-on-Shannon Coderdojo Club Website
+# Carrick-on-Shannon CoderDojo Club Website
 
 ## About this Site
 

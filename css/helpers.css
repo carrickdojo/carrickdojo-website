@@ -79,6 +79,12 @@ Classes for changing the colour palette of an element.
   color: black;
 }
 
+.colours-white-black a {
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+
 /* 
 -------------
 Image Helper Classes 
@@ -108,7 +114,13 @@ Classes for changing the images, icons and logos styles.
 }
 
 .image-big {
-  width: 800px;
+  width: 600px;
+}
+
+@media (max-width: 480px) {
+  .image-big {
+    width: 200px;
+  }
 }
 
 /* 
@@ -150,6 +162,10 @@ Classes for our lining things up.
 .align-center {
   align-items: center;
   justify-content: center;
+}
+
+article {
+  padding: 1rem;
 }
 
 /* 
