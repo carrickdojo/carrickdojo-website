@@ -18,7 +18,7 @@
     <!-- There are two sets of links to change if we want to add a page, the large screen links and the small screen links  -->
     <nav>
       <div class="navbar">
-        <a href="/" class="logo">
+        <a href="/" class="our-logo">
           <img
             class="logo-image"
             src="images/logos/coderdojo-roundel.svg"
@@ -75,25 +75,31 @@
       <div class="bg-main">
         <div class="container">
           <div class="project">
-            <div class="project-sidebar">
+            <aside class="project-sidebar">
               <a href="#background">Project Background</a>
               <a href="#goals">Project Goals</a>
-              <a href="#tools">Tools and Editors</a>
+              <details>
+                <summary>
+                  <a href="#web">The Web and HTML</a>
+                </summary>
+                <a href="">The Web</a>
+                <a href="">Creating HTML</a>
+                <a href="">Code Editors</a>
+              </details>
               <a href="#design">Designing Our Site</a>
               <a href="#site-layout">Our Site Layout</a>
               <a href="#git">Collaboration and Git</a>
-              <a href="#domain">Our Domain Name</a>
               <a href="#hosting">Website Hosting</a>
-
+              <a href="#domain">Our Domain Name</a>
               <a href="#testing">Testing Our Site</a>
               <a href="#outcome">Project Outcome</a>
-            </div>
+            </aside>
             <div class="project-content">
               <div class="">
                 <div class="project-title">A New Carrick Dojo Website</div>
 
                 <div class="project-section" id="background">
-                  <span class="section-title">Project Background</span>
+                  <span class="project-section-title">Project Background</span>
                   <p>
                     This is a very big project to rebuild the CarrickDojo
                     website.
@@ -123,7 +129,7 @@
                   </p>
                 </div>
                 <div class="project-section" id="goals">
-                  <span class="section-title">Project Goals</span>
+                  <span class="project-section-title">Project Goals</span>
                   <ul>
                     <li>
                       Redevelop the website in HTML and CSS to better align with
@@ -145,8 +151,8 @@
                   </ul>
                 </div>
 
-                <div class="project-section" id="tools">
-                  <span class="section-title">Web Tools and Editors</span>
+                <div class="project-section" id="web">
+                  <span class="project-section-title">The Web and HTML</span>
 
                   <h2>The World Wide Web</h2>
                   <p>
@@ -252,6 +258,18 @@
                     file name after the last dot) of HTML.
                   </p>
                   <p>
+                    HTML is a very forgiving. This means, if you make a mistake
+                    with the HTML syntax, the browser will still try and display
+                    the content. This makes it easier for people new to
+                    computers to get started.
+                  </p>
+                  <div class="note">
+                    When HTML was released, a lot of computer scientists at the
+                    time thought it was very bad the code would continue to run
+                    if a bug was found and that only an error message should be
+                    displayed.
+                  </div>
+                  <p>
                     Every computer can create plain text files, and we can
                     create web pages in any text editor; however there are tools
                     that make web development easier and more accurate.
@@ -315,7 +333,7 @@
                 </div>
 
                 <div class="project-section" id="design">
-                  <span class="section-title">Designing Our Site</span>
+                  <span class="project-section-title">Designing Our Site</span>
                   <p>
                     The most important part of any project is the planning and
                     design part.
@@ -456,7 +474,9 @@
                 </div>
 
                 <div class="project-section" id="git">
-                  <span class="section-title">Collaboration and Git</span>
+                  <span class="project-section-title"
+                    >Collaboration and Git</span
+                  >
                   <p>
                     Git is a system designed to help people collaborate (work
                     together) on shared files and code.
@@ -528,13 +548,28 @@
                     website will be able to access.
                   </p>
                   <p>
-                    There are three big Git hosting services out there: Github,
-                    Bitbucket and Gitlab.
+                    There are lots of Git hosting services out there; the
+                    biggest three are: Github, Bitbucket and Gitlab.
                   </p>
-                  <div class="">
-                    <img src="images/logos/github.svg" alt="" />
-                    <img src="images/logos/bitbucket.svg" alt="" />
-                    <img src="images/logos/gitlab.svg" alt="" />
+                  <div class="flex-row">
+                    <a href="">
+                      <img
+                        src="images/logos/github.svg"
+                        alt="Github logo"
+                        class="logo"
+                    /></a>
+                    <a href="">
+                      <img
+                        src="images/logos/bitbucket.svg"
+                        alt="Bitbucket logo"
+                        class="logo"
+                    /></a>
+                    <a href="">
+                      <img
+                        src="images/logos/gitlab.svg"
+                        alt="Gitlab"
+                        class="logo"
+                    /></a>
                   </div>
 
                   <p>
@@ -569,11 +604,43 @@
                 </div>
 
                 <div class="project-section" id="domain">
-                  <span class="section-title">Our Domain Name</span>
+                  <span class="project-section-title">Our Domain Name</span>
+                  <p>
+                    Our domain name is carrickdojo.com; our first Dojo Champion
+                    registered the domain on Friday 21st of November 2014.
+                  </p>
+
+                  <p>
+                    Domain names provide us a way to create helpful names for
+                    Internet resources so we can easily remember them.
+                  </p>
+                  <div class="factoid colours-vibrant">
+                    Domain names are older than webpages and one of the key
+                    parts of the Internet.
+                  </div>
+
+                  <p>
+                    It is a lot easier for me to tell people our website is at
+                    www.carrickdojo.com and not 76.76.21.9.
+                  </p>
+                  <p>
+                    To understand this more, we need to learn a little bit about
+                    the Domain Naming System (normally just called DNS).
+                  </p>
+
+                  <p></p>
+
+                  <h1>Domain Naming Service</h1>
+                  <p>DNS</p>
+                  <p>
+                    When computers talk to each other over the Internet, they
+                    all use the Internet Protocol (IP) a set of rules everyone
+                    agreed to.
+                  </p>
                 </div>
 
                 <div class="project-section" id="hosting">
-                  <span class="section-title">Our Website Hosting</span>
+                  <span class="project-section-title">Our Website Hosting</span>
                   <p>
                     Every website needs a server for hosting and there are lots
                     of things to consider with web hosting.
@@ -631,7 +698,7 @@
                   <a href="https://vercel.com/">
                     <img
                       src="images/logos/vercel.svg"
-                      class="vercel"
+                      class="logo-wide colours-black-white"
                       alt="vercel logo"
                   /></a>
 
@@ -650,11 +717,11 @@
                 </div>
 
                 <div class="project-section" id="testing">
-                  <span class="section-title">Testing Our Site</span>
+                  <span class="project-section-title">Testing Our Site</span>
                 </div>
 
                 <div class="project-section" id="outcome">
-                  <span class="section-title">Project Outcome</span>
+                  <span class="project-section-title">Project Outcome</span>
                 </div>
               </div>
             </div>

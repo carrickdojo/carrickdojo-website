@@ -1,48 +1,48 @@
+/* 
+---------------------
+Project Pages Classes
+These are all specific to the project pages with the sidebar 
+--------------------- 
+*/
+
 .project {
   display: flex;
-  width: 100%;
+  width: 90vw;
+  margin: 0 auto;
   background-color: var(--coder-main-light);
 }
 
 .project-sidebar {
   display: flex;
   flex-direction: column;
-  width: 13vw;
+  width: 50rem;
+  background-color: lime;
+  /* width: 13vw; */
   padding: 1vw 1vw 0 1vw;
-  position: fixed;
-  background-color: var(--coder-main-light);
+  /* position: fixed; */
+  /* background-color: var(--coder-main-light); */
 }
 
 .project-sidebar a {
-  padding: 0.4rem;
+  /* padding: 0.4rem; */
   text-decoration: none;
   color: var(--coder-white);
-  display: block;
   align-items: center;
 }
 
-.project-sidebar a::before {
-  background-image: url("../images/icons/circle-dashed.svg");
-  background-size: 2.5vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 2.5vh;
-  width: 2.5vh;
-  padding-right: 1vw;
-  display: inline-block;
-  content: " ";
+.project-sidebar details > a {
+  display: block;
 }
 
 .project-sidebar a:hover {
   color: var(--coder-secondary);
-  border-bottom: 0.4vw solid var(--coder-secondary);
 }
 
 .project-content {
   display: flex;
-  padding: 1vw;
-  margin: 1vw;
-  margin-left: 15vw;
+  /* padding: 1vw; */
+  /* margin: 1vw;
+  margin-left: 15vw; */
   flex-direction: column;
   background-color: var(--coder-white);
   color: var(--coder-black);
@@ -54,19 +54,19 @@
   font-size: x-large;
 }
 
-.section-title {
-  text-align: center;
-  font-size: x-large;
-  border-bottom: 0.2vw solid var(--coder-secondary);
-  background-color: var(--coder-secondary);
-}
-
 .project-section {
   display: flex;
   flex-direction: column;
   margin: 2vw 0;
   padding: 1vw;
   border: 0.2vw solid var(--coder-secondary);
+}
+
+.project-section-title {
+  text-align: center;
+  font-size: x-large;
+  border-bottom: 0.2vw solid var(--coder-secondary);
+  background-color: var(--coder-secondary);
 }
 
 .project-section p {
@@ -79,156 +79,4 @@
   width: fit-content;
   margin: 0 auto;
   border: 0.2vw solid var(--coder-secondary);
-}
-
-.example {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--coder-accent);
-  color: var(--coder-white);
-  font-size: larger;
-  text-align: center;
-  padding: 2vh;
-  width: 40vw;
-  border-radius: 1rem;
-  margin: 0 auto;
-}
-
-.example::before {
-  background-image: url("../images/icons/trophy.svg");
-  background-size: 5vw 10vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 15vh;
-  width: 25vw;
-  display: inline-block;
-  content: " ";
-  vertical-align: middle;
-  /* border: 1px solid lime; */
-}
-
-.example::after {
-  background-image: url("../images/Group_Hug.png");
-  background-color: var(--coder-secondary);
-  border-radius: 100%;
-  background-size: 6vw 6vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 15vh;
-  width: 25vw;
-  padding-left: 1vw;
-  display: inline-block;
-  content: " ";
-  vertical-align: middle;
-}
-
-.note {
-  display: flex;
-  background-color: var(--coder-main-light);
-  color: var(--coder-white);
-  /* font-size: large; */
-  text-align: center;
-  padding: 2vh;
-  border-radius: 1rem;
-  width: 40vw;
-  color: " ";
-  margin: 0 auto;
-}
-
-.note a {
-  color: var(--coder-white);
-}
-
-.note::before {
-  background-image: url("../images/Circle_Girl.png");
-  background-size: 6vw 8vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 15vh;
-  width: 25vw;
-  padding-right: 1vw;
-  display: inline-block;
-  content: " ";
-  vertical-align: middle;
-}
-
-.note::after {
-  background-image: url("../images/icons/star.svg");
-  background-size: 6vw 6vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 15vh;
-  width: 25vw;
-  padding-right: 1vw;
-  display: inline-block;
-  content: " ";
-  vertical-align: middle;
-}
-
-.vercel {
-  display: block;
-  height: fit-content;
-  width: 20vw;
-  background-color: var(--coder-black);
-  padding: 1vw;
-  margin: 0 auto;
-}
-
-.small-card {
-  display: flex;
-  padding: 1rem;
-  flex-direction: column;
-  width: 20vw;
-  height: 30vh;
-  border: 0.5rem solid var(--coder-main-dark);
-  border-radius: 0.5rem;
-  background-image: linear-gradient(
-    to top left,
-    var(--coder-secondary),
-    var(--coder-main),
-    var(--coder-main),
-    var(--coder-main),
-    var(--coder-accent)
-  );
-}
-
-.small-card a {
-  text-decoration: none;
-  color: var(--coder-white);
-}
-
-.small-card img {
-  max-width: 20vw;
-  max-height: 10vh;
-  margin: 0 auto;
-  display: block;
-}
-
-.small-card p {
-  text-align: center;
-}
-
-.whiteboard {
-  background-image: url("../images/whiteboard-stickers.webp");
-  background-size: 800px 600px;
-  background-repeat: no-repeat;
-  background-position: top;
-  width: 800px;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-  margin: 0 auto;
-}
-.whiteboard p {
-  width: 600px;
-  display: block;
-  text-align: center;
-}
-
-.image-big {
-  width: 800px;
 }

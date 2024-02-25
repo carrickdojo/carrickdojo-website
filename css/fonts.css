@@ -38,3 +38,15 @@
   letter-spacing: 0.1rem;
   font-size: larger;
 }
+
+.text-emphasis-big {
+  font-family: emphasis;
+  font-weight: 900;
+  font-size: x-large;
+}
+
+.text-marker-big {
+  font-family: marker2;
+  letter-spacing: 0.1rem;
+  font-size: x-large;
+}

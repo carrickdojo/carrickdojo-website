@@ -1,0 +1,335 @@
+/* 
+--------------
+Helper Classes
+These are classes used across the site and on all screen sizes to change the look and style of specific elements 
+--------------
+*/
+
+/* 
+-------------
+Colour Helper Classes 
+Classes for changing the colour palette of an element.
+-------------
+ */
+.colours-main {
+  background-color: var(--coder-main);
+  color: var(--coder-white);
+}
+
+.colours-main-light {
+  background-color: var(--coder-main-light);
+  color: var(--coder-white);
+  /* note - using the CoderDojo light purple and the small white text, will fail a contrast accessibility */
+  font-size: large;
+}
+
+.colours-main-dark {
+  background-color: var(--coder-main-dark);
+  color: var(--coder-white);
+}
+
+.colours-main-dark a {
+  color: var(--coder-white);
+}
+
+.colours-secondary {
+  /* background-color: var(--coder-secondary); */
+  background-image: linear-gradient(
+    to bottom,
+    var(--coder-accent),
+    var(--coder-accent),
+    var(--coder-accent),
+    var(--coder-secondary),
+    var(--coder-secondary)
+  );
+  color: var(--coder-black);
+}
+
+.colours-accent {
+  /* background-color: var(--coder-accent); */
+  background-image: linear-gradient(
+    to bottom,
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-accent)
+  );
+  color: var(--coder-white);
+}
+
+.colours-vibrant {
+  background-color: lime;
+  border-color: #57206f;
+  color: darkorchid;
+}
+
+.colours-terminal {
+  background-color: var(--coder-black);
+  border-color: silver;
+  color: lime;
+}
+
+.colours-black-white {
+  background-color: black;
+  color: white;
+}
+
+.colours-white-black {
+  background-color: white;
+  color: black;
+}
+
+/* 
+-------------
+Image Helper Classes 
+Classes for changing the images, icons and logos styles.
+-------------
+ */
+
+.rounded-small {
+  border-radius: 0.5rem;
+}
+
+.logo {
+  display: block;
+  height: fit-content;
+  width: 10rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.logo-wide {
+  display: block;
+  height: fit-content;
+  width: 15rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+/* 
+-------------
+Button Helper Classes 
+Classes for our buttons.
+-------------
+ */
+
+button a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-action {
+  display: block;
+  border-radius: 2rem;
+  border: 0.5rem solid var(--coder-secondary);
+  background-color: var(--coder-secondary);
+  padding: 1rem;
+}
+
+.button-action:hover {
+  border: 0.5rem solid var(--coder-accent);
+}
+
+/* 
+-------------
+Utility classes
+Site wide classes for displaying different blocks of content like examples, codeblocks and notes.
+-------------
+ */
+
+.example {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--coder-accent);
+  color: var(--coder-white);
+  font-size: larger;
+  text-align: center;
+  padding: 2vh;
+  width: 40vw;
+  border-radius: 1rem;
+  margin: 0 auto;
+}
+
+.example::before {
+  background-image: url("../images/icons/trophy.svg");
+  background-size: 5vw 10vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15vh;
+  width: 25vw;
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+  /* border: 1px solid lime; */
+}
+
+.example::after {
+  background-image: url("../images/Group_Hug.png");
+  background-color: var(--coder-secondary);
+  border-radius: 100%;
+  background-size: 6vw 6vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15vh;
+  width: 25vw;
+  padding-left: 1vw;
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+.note {
+  display: flex;
+  background-color: var(--coder-main-light);
+  color: var(--coder-white);
+  text-align: center;
+  padding: 2vh;
+  border-radius: 1rem;
+  width: 40vw;
+  color: " ";
+  margin: 0 auto;
+}
+
+.note a {
+  color: var(--coder-white);
+}
+
+.note::before {
+  background-image: url("../images/Circle_Girl.png");
+  background-size: 6vw 8vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15vh;
+  width: 25vw;
+  padding-right: 1vw;
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+.note::after {
+  background-image: url("../images/icons/star.svg");
+  background-size: 6vw 6vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15vh;
+  width: 25vw;
+  padding-right: 1vw;
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+.small-card {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  width: 20vw;
+  height: 30vh;
+  border: 0.5rem solid var(--coder-main-dark);
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    to top left,
+    var(--coder-secondary),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-accent)
+  );
+}
+
+.small-card a {
+  text-decoration: none;
+  color: var(--coder-white);
+}
+
+.small-card img {
+  max-width: 20vw;
+  max-height: 10vh;
+  margin: 0 auto;
+  display: block;
+}
+
+.small-card p {
+  text-align: center;
+}
+
+.whiteboard {
+  background-image: url("../images/whiteboard-stickers.webp");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 800px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.whiteboard p {
+  width: 600px;
+  display: block;
+  text-align: center;
+}
+
+.image-big {
+  width: 800px;
+}
+
+.factoid {
+  display: flex;
+  width: 40rem;
+  align-items: center;
+  border: 0.25rem solid var(--coder-secondary);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.factoid::before {
+  background-image: url("../images/Dog.png");
+  background-size: 8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 8rem;
+  width: 8rem;
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-information {
+}
+
+.card-information::after {
+  background-image: url("../images/Star.png");
+  background-size: 10rem 10rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15rem;
+  width: 20rem;
+  padding-right: 1vw;
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+  .card-information::after {
+    display: none;
+  }
+}
