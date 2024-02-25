@@ -7,6 +7,11 @@
     <title>CarrickDojo - Projects</title>
     <link rel="icon" href="images/logos/coderdojo-roundel.svg" />
     <link href="default.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
   </head>
   <body>
     <!-- Our navigation is responsive and will display different elements based on the css classes -->
@@ -95,7 +100,7 @@
               <a href="#outcome">Project Outcome</a>
             </aside>
             <div class="project-content">
-              <div class="">
+              <article class="">
                 <div class="project-title">A New Carrick Dojo Website</div>
 
                 <div class="project-section" id="background">
@@ -128,6 +133,7 @@
                     goal!
                   </p>
                 </div>
+
                 <div class="project-section" id="goals">
                   <span class="project-section-title">Project Goals</span>
                   <ul>
@@ -281,14 +287,17 @@
                     This is a great tool for getting started and is used in
                     newer projects.
                   </p>
-                  <div class="card">
-                    <a href="https://editor.raspberrypi.org/en/">
+                  <div class="card card-small colours-white-black">
+                    <a
+                      href="https://editor.raspberrypi.org/en/"
+                      target="_blank">
                       <img
                         src="images/logos/codeeditor-logo.svg"
-                        alt="coderdojo logo" />
+                        alt="Code Editor logo"
+                        class="logo" />
 
                       <p>
-                        The Raspberry Pi CodeEditor for creating HTML/CSS or
+                        The new Raspberry Pi CodeEditor for creating HTML/CSS or
                         Python projects.
                       </p>
                     </a>
@@ -367,10 +376,12 @@
                   <p>
                     Using these colours, we can create CSS variables for our the
                     colours so we will use on all our pages.
-                    <img
-                      src="images/projects/project-website/01-styling-our-css-variables.webp"
-                      alt="" />
                   </p>
+
+                  <img
+                    src="images/projects/project-website/01-styling-our-css-variables.webp"
+                    alt=""
+                    class="image-big" />
                   <div class="example">
                     <span>
                       Lots of the newer Raspberry Pi Projects use variables,
@@ -388,13 +399,16 @@
                       folder and set up the CSS font weighting (how
                       <b>bold</b> it is).</span
                     >
-                    <img
-                      src="images/projects/project-website/02-styling-our-css-fonts.webp"
-                      alt="" />
                   </p>
+
+                  <img
+                    src="images/projects/project-website/02-styling-our-css-fonts.webp"
+                    alt=""
+                    class="image-big" />
                 </div>
+
                 <div class="project-section" id="site-layout">
-                  <span class="section-title">Our Site Layout</span>
+                  <span class="project-section-title">Our Site Layout</span>
                   <p>
                     When we make a website, we need to think about how our
                     content will look for the user on their device.
@@ -420,16 +434,15 @@
                     screen.
                   </p>
                   <p>
-                    <span
-                      >In our default.css file; we tell the browser to load a
-                      large screen css file if the minimum width is 768 pixels;
-                      or a small screen css file if the maximum width the
-                      browser has is 480 pixels.
-                    </span>
-                    <img
-                      src="images/projects/project-website/03-styling-our-css-responsive.webp"
-                      alt="" />
+                    In our default.css file; we tell the browser to load a large
+                    screen css file if the minimum width is 768 pixels; or a
+                    small screen css file if the maximum width the browser has
+                    is 480 pixels.
                   </p>
+                  <img
+                    src="images/projects/project-website/03-styling-our-css-responsive.webp"
+                    alt=""
+                    class="image-big" />
                   <p>
                     These files will have the navigation and footer elements
                     that are specific to big screens and little screens.
@@ -477,6 +490,7 @@
                   <span class="project-section-title"
                     >Collaboration and Git</span
                   >
+                  <h2>Git</h2>
                   <p>
                     Git is a system designed to help people collaborate (work
                     together) on shared files and code.
@@ -499,7 +513,7 @@
                     >
                   </p>
                   <hr />
-                  <div class="whiteboard text-marker2">
+                  <div class="whiteboard text-marker-big">
                     <p>
                       Linus Torvalds started developing Git for all the people
                       working on the Linux kernel code. The Linux kernel has
@@ -547,28 +561,30 @@
                     repository, that all the people in the Dojo working on the
                     website will be able to access.
                   </p>
+
+                  <h2>Git Hosting</h2>
                   <p>
                     There are lots of Git hosting services out there; the
                     biggest three are: Github, Bitbucket and Gitlab.
                   </p>
-                  <div class="flex-row">
-                    <a href="">
+                  <div class="wrapper">
+                    <a href="https://github.com/">
                       <img
                         src="images/logos/github.svg"
                         alt="Github logo"
-                        class="logo"
+                        class="logo colours-white-black rounded-small"
                     /></a>
-                    <a href="">
+                    <a href="https://bitbucket.org/">
                       <img
                         src="images/logos/bitbucket.svg"
                         alt="Bitbucket logo"
-                        class="logo"
+                        class="logo colours-white-black rounded-small"
                     /></a>
-                    <a href="">
+                    <a href="https://gitlab.com/">
                       <img
                         src="images/logos/gitlab.svg"
                         alt="Gitlab"
-                        class="logo"
+                        class="logo colours-white-black rounded-small"
                     /></a>
                   </div>
 
@@ -583,7 +599,7 @@
 
                   <div class="note">Github Accounts!!!!</div>
 
-                  <h3>Code Licence</h3>
+                  <h2>Licencing Code</h2>
                   <p>
                     When sharing code, one of the questions will be on the type
                     of licence. Software licensing is very complex and always
@@ -628,10 +644,8 @@
                     the Domain Naming System (normally just called DNS).
                   </p>
 
-                  <p></p>
+                  <h2>Domain Naming Service</h2>
 
-                  <h1>Domain Naming Service</h1>
-                  <p>DNS</p>
                   <p>
                     When computers talk to each other over the Internet, they
                     all use the Internet Protocol (IP) a set of rules everyone
@@ -723,7 +737,7 @@
                 <div class="project-section" id="outcome">
                   <span class="project-section-title">Project Outcome</span>
                 </div>
-              </div>
+              </article>
             </div>
           </div>
         </div>
@@ -843,6 +857,9 @@
           x.className = "mobile-nav"
         }
       }
+    </script>
+    <script>
+      hljs.highlightAll()
     </script>
   </body>
 </html>

@@ -85,6 +85,11 @@ Classes for changing the colour palette of an element.
   text-decoration: none;
 }
 
+.filter-green {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+    brightness(118%) contrast(119%);
+}
+
 /* 
 -------------
 Image Helper Classes 
@@ -114,12 +119,14 @@ Classes for changing the images, icons and logos styles.
 }
 
 .image-big {
-  width: 600px;
+  width: 720px;
+  margin: 0 auto;
 }
 
 @media (max-width: 480px) {
   .image-big {
-    width: 200px;
+    width: 240px;
+    margin: 0 auto;
   }
 }
 
@@ -234,6 +241,7 @@ Site wide classes for displaying different blocks of content like examples, code
 }
 
 .card-small {
+  display: flex;
   width: 20rem;
   height: 20rem;
 }
@@ -314,6 +322,19 @@ Site wide classes for displaying different blocks of content like examples, code
   text-align: center;
 }
 
+@media (max-width: 480px) {
+  .whiteboard {
+    width: 300px;
+    height: 225px;
+    background-size: 300px 225px;
+  }
+
+  .whiteboard p {
+    width: 240px;
+    font-size: 10px !important;
+  }
+}
+
 .note {
   display: flex;
   background-color: var(--coder-main-light);
@@ -358,42 +379,43 @@ Site wide classes for displaying different blocks of content like examples, code
 
 .example {
   display: flex;
+
   justify-content: center;
   align-items: center;
-  background-color: var(--coder-accent);
+  background-image: linear-gradient(
+    to right,
+    var(--coder-accent),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-main)
+  );
   color: var(--coder-white);
   font-size: larger;
   text-align: center;
-  padding: 2vh;
-  width: 40vw;
+  padding: 1rem;
   border-radius: 1rem;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 .example::before {
-  background-image: url("../images/icons/trophy.svg");
-  background-size: 5vw 10vw;
+  background-image: url("../images/Star.png");
+  background-size: 8rem 8rem;
   background-repeat: no-repeat;
   background-position: center;
-  height: 15vh;
-  width: 25vw;
+  height: 8rem;
+  width: 8rem;
+
   display: inline-block;
   content: " ";
   vertical-align: middle;
-  /* border: 1px solid lime; */
 }
 
-.example::after {
-  background-image: url("../images/Group_Hug.png");
-  background-color: var(--coder-secondary);
-  border-radius: 100%;
-  background-size: 6vw 6vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 15vh;
-  width: 25vw;
-  padding-left: 1vw;
-  display: inline-block;
-  content: " ";
-  vertical-align: middle;
+@media (max-width: 480px) {
+  .example::before {
+    display: none;
+  }
+}
+
+.example a {
+  color: white;
 }

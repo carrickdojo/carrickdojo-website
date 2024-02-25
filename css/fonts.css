@@ -50,3 +50,10 @@
   letter-spacing: 0.1rem;
   font-size: x-large;
 }
+
+@media (max-width: 480px) {
+  .text-marker-big {
+    letter-spacing: 0;
+    font-size: small;
+  }
+}

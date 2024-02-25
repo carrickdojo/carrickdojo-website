@@ -16,15 +16,16 @@ These are all specific to the project pages with the sidebar
   display: flex;
   flex-direction: column;
   width: 50rem;
-  background-color: lime;
-  /* width: 13vw; */
   padding: 1vw 1vw 0 1vw;
-  /* position: fixed; */
-  /* background-color: var(--coder-main-light); */
+}
+
+@media (max-width: 480px) {
+  .project-sidebar {
+    display: none;
+  }
 }
 
 .project-sidebar a {
-  /* padding: 0.4rem; */
   text-decoration: none;
   color: var(--coder-white);
   align-items: center;
@@ -40,12 +41,14 @@ These are all specific to the project pages with the sidebar
 
 .project-content {
   display: flex;
-  /* padding: 1vw; */
-  /* margin: 1vw;
-  margin-left: 15vw; */
   flex-direction: column;
   background-color: var(--coder-white);
   color: var(--coder-black);
+}
+
+@media (max-width: 480px) {
+  .project-content {
+  }
 }
 
 .project-title {
