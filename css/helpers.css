@@ -140,6 +140,14 @@ Image Helper Classes
 Classes for changing the images, icons and logos styles.
 -------------
  */
+.logo-tiny {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transform: translateY(0.1rem);
+}
 
 .logo {
   display: block;

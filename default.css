@@ -36,6 +36,19 @@ main {
   flex-direction: column;
 }
 
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  background-color: darkred;
+  text-align: center;
+}
+
+.heading a {
+  color: var(--coder-white);
+}
+
 /* common components  */
 /* .wrap {
   display: flex;
