@@ -111,6 +111,31 @@ Classes for changing the colour palette of an element.
 
 /* 
 -------------
+Table Helper Classes 
+Classes for changing the images, icons and logos styles.
+-------------
+ */
+table {
+  background-color: var(--coder-main-dark);
+  color: var(--coder-white);
+  width: 100%;
+}
+th {
+  text-align: left;
+}
+tr > td {
+  background-color: var(--coder-main-light);
+}
+
+@media (max-width: 480px) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* 
+-------------
 Image Helper Classes 
 Classes for changing the images, icons and logos styles.
 -------------
@@ -200,6 +225,12 @@ Classes for our lining things up.
 
 article {
   padding: 1rem;
+}
+
+@media (max-width: 480px) {
+  article {
+    /* padding: 3rem; */
+  }
 }
 
 /* 
@@ -376,7 +407,15 @@ Site wide classes for displaying different blocks of content like examples, code
 .note {
   display: flex;
   align-items: center;
-  background-color: var(--coder-secondary);
+  /* background-color: var(--coder-secondary); */
+  background-image: linear-gradient(
+    to right,
+    var(--coder-secondary),
+    var(--coder-main),
+    var(--coder-main-dark),
+    var(--coder-main),
+    var(--coder-secondary)
+  );
   color: var(--coder-white);
   text-align: center;
   padding: 1rem;
@@ -446,8 +485,8 @@ Site wide classes for displaying different blocks of content like examples, code
   background-size: 8rem 8rem;
   background-repeat: no-repeat;
   background-position: center;
-  height: 8rem;
-  width: 8rem;
+  height: 10rem;
+  width: 10rem;
 
   display: inline-block;
   content: " ";

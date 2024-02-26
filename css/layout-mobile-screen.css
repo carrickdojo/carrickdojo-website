@@ -15,6 +15,10 @@ section {
   gap: 1rem;
 }
 
+.article {
+  padding: 2rem;
+}
+
 /* article {
   display: flex;
   height: 100%;
