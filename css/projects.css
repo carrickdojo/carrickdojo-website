@@ -7,16 +7,19 @@ These are all specific to the project pages with the sidebar
 
 .project {
   display: flex;
-  width: 90vw;
-  margin: 0 auto;
+  width: 100%;
   background-color: var(--coder-main-light);
 }
 
 .project-sidebar {
   display: flex;
+  position: fixed;
+  padding-top: 2rem;
+  padding-left: 2rem;
   flex-direction: column;
-  width: 50rem;
-  padding: 1vw 1vw 0 1vw;
+  gap: 0.2rem;
+  width: 20%;
+  height: 100%;
 }
 
 @media (max-width: 480px) {
@@ -33,6 +36,7 @@ These are all specific to the project pages with the sidebar
 
 .project-sidebar details > a {
   display: block;
+  padding-left: 2rem;
 }
 
 .project-sidebar a:hover {
@@ -40,7 +44,12 @@ These are all specific to the project pages with the sidebar
 }
 
 .project-content {
+  margin-left: 20%;
   display: flex;
+  width: 80%;
+  align-content: space-between;
+  height: 100%;
+  padding: 0.5rem;
   flex-direction: column;
   background-color: var(--coder-white);
   color: var(--coder-black);
@@ -48,33 +57,20 @@ These are all specific to the project pages with the sidebar
 
 @media (max-width: 480px) {
   .project-content {
+    width: 100%;
+    margin-left: 0%;
   }
-}
-
-.project-title {
-  text-align: center;
-  font-family: emphasis;
-  font-size: x-large;
 }
 
 .project-section {
   display: flex;
   flex-direction: column;
-  margin: 2vw 0;
-  padding: 1vw;
-  border: 0.2vw solid var(--coder-secondary);
-}
-
-.project-section-title {
-  text-align: center;
-  font-size: x-large;
-  border-bottom: 0.2vw solid var(--coder-secondary);
-  background-color: var(--coder-secondary);
 }
 
 .project-section p {
   display: flex;
   flex-direction: column;
+  padding-left: 2rem;
 }
 
 .project-section p img {

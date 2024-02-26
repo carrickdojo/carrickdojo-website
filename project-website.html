@@ -81,585 +81,664 @@
         <div class="container">
           <div class="project">
             <aside class="project-sidebar">
-              <a href="#background">Project Background</a>
-              <a href="#goals">Project Goals</a>
+              <details>
+                <summary>
+                  <a href="#background">Project Goals</a>
+                </summary>
+                <a href="#background">Project Background</a>
+                <a href="#goals">Project Goals</a>
+              </details>
               <details>
                 <summary>
                   <a href="#web">The Web and HTML</a>
                 </summary>
-                <a href="">The Web</a>
-                <a href="">Creating HTML</a>
-                <a href="">Code Editors</a>
+                <a href="#the-web">The Web</a>
+                <a href="#creating-html">Creating HTML</a>
+                <a href="#code-editors">Code Editors</a>
+                <a href="#creating-css">Creating CSS</a>
               </details>
-              <a href="#design">Designing Our Site</a>
-              <a href="#site-layout">Our Site Layout</a>
-              <a href="#git">Collaboration and Git</a>
-              <a href="#hosting">Website Hosting</a>
-              <a href="#domain">Our Domain Name</a>
-              <a href="#testing">Testing Our Site</a>
-              <a href="#outcome">Project Outcome</a>
+              <details>
+                <summary>
+                  <a href="#design">Designing Our Site</a>
+                </summary>
+                <a href="#planning">Planning</a>
+                <a href="#fonts-colours">Picking Fonts and Colours</a>
+                <a href="#variables">Setting Our Site Variables</a>
+              </details>
+              <details>
+                <summary>
+                  <a href="#site-layout">Our Site Layout</a>
+                </summary>
+                <a href="#responsive">Responsive Design</a>
+                <a href="#fonts-colours">Different Screen Sizes</a>
+                <a href="#our-layout">Our Page Layout</a>
+                <a href="#main-section">The Main Section</a>
+                <a href="#folder-structure">Our Folder Layout</a>
+              </details>
+
+              <details>
+                <summary>
+                  <a href="#git">Collaboration and Git</a>
+                </summary>
+                <a href="#what-is-git">What is Git?</a>
+                <a href="#git-hosting">Git Hosting</a>
+                <a href="#our-git">Our Git Repository</a>
+                <a href="#code-licence">Licencing Code</a>
+              </details>
+
+              <details>
+                <summary>
+                  <a href="#hosting">Website Hosting</a>
+                </summary>
+                <a href="#hosting-considerations">Hosting Considerations</a>
+                <a href="#our-hosting">Our Website Hosting</a>
+              </details>
+
+              <details>
+                <summary>
+                  <a href="#domain-names">Domain Names</a>
+                </summary>
+                <a href="#our-domain-name">Our Domain Name</a>
+                <a href="#dns">Domain Naming Service</a>
+                <a href="#domain-registrars">Domain Registrars</a>
+                <a href="#our-dns">Our DNS Records</a>
+              </details>
+
+              <details>
+                <summary>
+                  <a href="#testing">Testing Our Website</a>
+                </summary>
+
+                <a href="#checks">Website Checks</a>
+                <a href="#testing-tools">Testing Tools</a>
+              </details>
+
+              <details>
+                <summary>
+                  <a href="#outcome">Project Outcome</a>
+                </summary>
+
+                <a href="#project-outcome">Our New Website</a>
+                <a href="#possible-improvements">Future Plans</a>
+              </details>
             </aside>
+
             <div class="project-content">
-              <article class="">
-                <div class="project-title">A New Carrick Dojo Website</div>
+              <div class="project-section" id="background">
+                <h1 class="text-emboss">A New Carrick Dojo Website</h1>
+                <h2 class="project-section-title">Project Background</h2>
+                <p>
+                  This is a very big project to rebuild the CarrickDojo website.
+                </p>
+                <img src="images/Group_Hug.png" alt="" class="image-big" />
+                <p>
+                  With our website's 10 year birthday coming this year. We are
+                  looking to move away from Wordpress for our website, and
+                  create a new site based on the Raspberry Pi Web Design
+                  Projects that can be administered by the Ninjas directly.
+                </p>
+                <p>
+                  There is a wealth of amazing resources from CoderDojo and the
+                  Raspberry Pi projects pages on web design. We hope to create a
+                  site that builds on them, and provides some additional
+                  information on how and why we host our site.
+                </p>
+                <p>
+                  The code behind the websites we view was generated by a
+                  computer. By writing the CarrickDojo.com in clean HTML and
+                  CSS, Ninja's can inspect the pages and follow the code.
+                </p>
 
-                <div class="project-section" id="background">
-                  <span class="project-section-title">Project Background</span>
-                  <p>
-                    This is a very big project to rebuild the CarrickDojo
-                    website.
-                  </p>
-                  <p>
-                    With our website's 10 year birthday coming this year. We are
-                    looking to move away from Wordpress for our website, and
-                    create a new site based on the Raspberry Pi Web Design
-                    Projects that can be administered by the Ninjas directly.
-                  </p>
-                  <p>
-                    There is a wealth of amazing resources from CoderDojo and
-                    the Raspberry Pi projects pages on web design. We hope to
-                    create a site that builds on them, and provides some
-                    additional information on how and why we host our site.
-                  </p>
-                  <p>
-                    The code behind the websites we view was generated by a
-                    computer. By writing the CarrickDojo.com in clean HTML and
-                    CSS, Ninja's can inspect the pages and follow the code.
-                  </p>
+                <p>
+                  At the moment this is just a big overview of our website,
+                  however making a step-by-step guide to our website is a goal!
+                </p>
+              </div>
 
-                  <p>
-                    At the moment this is just a big overview of our website,
-                    however making a step-by-step guide to our website is a
-                    goal!
-                  </p>
-                </div>
+              <div class="project-section" id="goals">
+                <h1 class="project-section-title">Project Goals</h1>
+                <ul>
+                  <li>
+                    Redevelop the website in HTML and CSS to better align with
+                    the Raspberry Pi Web Design projects.
+                  </li>
+                  <li>
+                    Ensure best practices with a child-first led approach to
+                    data and accessibility.
+                  </li>
+                  <li>
+                    Design the website with a similar style to the CoderDojo
+                    foundation website.
+                  </li>
+                  <li>
+                    Document the website development and maintenance from
+                    first-principles with the aim of Ninja's being able to get
+                    further involved.
+                  </li>
+                </ul>
+              </div>
 
-                <div class="project-section" id="goals">
-                  <span class="project-section-title">Project Goals</span>
-                  <ul>
-                    <li>
-                      Redevelop the website in HTML and CSS to better align with
-                      the Raspberry Pi Web Design projects.
-                    </li>
-                    <li>
-                      Ensure best practices with a child-first led approach to
-                      data and accessibility.
-                    </li>
-                    <li>
-                      Design the website with a similar style to the CoderDojo
-                      foundation website.
-                    </li>
-                    <li>
-                      Document the website development and maintenance from
-                      first-principles with the aim of Ninja's being able to get
-                      further involved.
-                    </li>
-                  </ul>
-                </div>
+              <div class="project-section" id="web">
+                <h1 class="project-section-title">The Web and HTML</h1>
 
-                <div class="project-section" id="web">
-                  <span class="project-section-title">The Web and HTML</span>
-
-                  <h2>The World Wide Web</h2>
-                  <p>
-                    Before we jump into our site, we should also have a think
-                    about the why and how?
-                  </p>
-                  <h3>Why?</h3>
-                  <p>
-                    In the late 1980's lots of people where sharing their work
-                    with each other by sending text files over the Internet.
-                    They wanted a way to share files that could link
-                    (hyperlinks) to other peoples files.
-                  </p>
-                  <p>
-                    <span>
-                      The World Wide Web was developed at CERN (The European
-                      Organization for Nuclear Research) by Tim Berners-Lee and
-                      his team between 1989-1991. In
-                      <a href="https://www.w3.org/History/1989/proposal.html">
-                        the proposal</a
-                      >, Tim lays out the need and the benefits of linked
-                      information systems and hypertext. His idea of "a web of
-                      notes with links (like references) between them".</span
-                    >
-                  </p>
-
-                  <h3>How?</h3>
-
-                  <p>There are four keys parts to the world wide web.</p>
-                  <ul>
-                    <li>
-                      <b>The browser</b> - this is software for our computers
-                      for viewing webpages. For me this is Firefox (Brave,
-                      Chrome, Edge, Safari and Opera and all browsers)
-                    </li>
-                    <li>
-                      <b>The web pages</b> - these are the HTML (Hypertext
-                      Markup Language) files we create for our websites
-                      containing the information we want to share (you are
-                      currently visiting the HTML page called
-                      project-website.html)
-                    </li>
-                    <li>
-                      <b>The server</b> - the server is where we put our
-                      webpages (this website is using a Vercel server with more
-                      detail in the hosting section)
-                    </li>
-                    <li>
-                      <b>The web protocol</b> - a protocol is a set of rules to
-                      follow. The HyperText Transfer Protocol is a set of rules
-                      used by browsers and web servers to communicate and
-                      transfer the HTML pages over the Internet (this website
-                      uses HTTPS a secure HTTP connection)
-                    </li>
-                  </ul>
-
-                  <p>
-                    <span>
-                      The World Wide Web was originally created for use within
-                      CERN, however they realised other people would pay to use
-                      it. CERN licenced the World Wide Web for the first few
-                      years competing with other linked information systems. In
-                      April 1993,
-                      <a href="https://cds.cern.ch/record/1164399/">
-                        CERN released the World Wide Web</a
-                      >
-                      into the public domain. Thousands of websites popped up
-                      within a year.</span
-                    >
-                  </p>
-                  <ul>
-                    <li>The first ever website went live in August, 1991</li>
-                    <li>
-                      The milestone of 1 billion websites was reached in
-                      September 2014
-                    </li>
-                    <li>
-                      There were around 1.2 billion websites at the end of 2023
-                    </li>
-                    <li>
-                      There were around 200 million active websites at the end
-                      of 2023 (about 4/5 of websites are inactive)
-                    </li>
-                    <li>
-                      Approximately 150,000 new websites are created everyday
-                    </li>
-                  </ul>
-                  <p>
-                    The Web is an essential part of the modern world and
-                    everyday, the majority of people in the world use it. When
-                    developing websites, learning the history helps us to
-                    understand why things are as they are. The original idea of
-                    the web never considered using images (and definitely not
-                    video); over the last three decades, countless people have
-                    extended the Web beyond anything that was originally
-                    considered.
-                  </p>
-
-                  <h2>Creating HTML Files</h2>
-                  <p>
-                    A HTML is a simple, plain text file written in a particular
-                    way (syntax) that has a file extension (the last bit of the
-                    file name after the last dot) of HTML.
-                  </p>
-                  <p>
-                    HTML is a very forgiving. This means, if you make a mistake
-                    with the HTML syntax, the browser will still try and display
-                    the content. This makes it easier for people new to
-                    computers to get started.
-                  </p>
-                  <div class="note">
-                    When HTML was released, a lot of computer scientists at the
-                    time thought it was very bad the code would continue to run
-                    if a bug was found and that only an error message should be
-                    displayed.
-                  </div>
-                  <p>
-                    Every computer can create plain text files, and we can
-                    create web pages in any text editor; however there are tools
-                    that make web development easier and more accurate.
-                  </p>
-                  <p>
-                    There are multiple tools for creating HTML pages online.
-                    Many of the older Raspberry Pi Web Design projects used
-                    Trinket; however a newer tool has recently been launched.
-                    This is a great tool for getting started and is used in
-                    newer projects.
-                  </p>
-                  <div class="card card-small colours-white-black">
-                    <a
-                      href="https://editor.raspberrypi.org/en/"
-                      target="_blank">
-                      <img
-                        src="images/logos/codeeditor-logo.svg"
-                        alt="Code Editor logo"
-                        class="logo" />
-
-                      <p>
-                        The new Raspberry Pi CodeEditor for creating HTML/CSS or
-                        Python projects.
-                      </p>
-                    </a>
-                  </div>
-                  <h3>Code Editor</h3>
-                  <p>
-                    A code editor is a piece of software used by a programmers
-                    for writing code. They generally contain lots of different
-                    tools and features for checking for code mistakes and making
-                    writing code faster.
-                  </p>
-                  <p>
-                    For working on websites, my preference is Visual Studio
-                    Code, a free, open source, and cross-platform code editor
-                    created by Microsoft.
-                  </p>
-
-                  <img
-                    src="images/projects/project-website/04-tools-visual-studio-code.webp"
-                    alt=""
-                    class="image-big" />
-
-                  <p>
-                    Anyone can write an extension (extra code and functionality)
-                    for Visual Studio Code and there are lots of really useful
-                    tools written by other programmers.
-                  </p>
-                  <ul>
-                    <li>
-                      Live Server - this allows us to quickly create a webserver
-                      on our computer so we can test our code.
-                    </li>
-                    <li>
-                      Github Integration - we can share our code with the rest
-                      of our team easily (full details in the Git section)
-                    </li>
-                    <li>
-                      Prettier - makes our code look nice with different colours
-                      for elements and tags.
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="project-section" id="design">
-                  <span class="project-section-title">Designing Our Site</span>
-                  <p>
-                    The most important part of any project is the planning and
-                    design part.
-                  </p>
-                  <p>
-                    For this project we are going to take the content from our
-                    existing website and incorporate the styles and branding of
-                    the CoderDojo foundation.
-                  </p>
-                  <p>
-                    Picking colours and fonts is fun but there is a lot to
-                    consider. We need to choose colours and fonts that allow us
-                    to easily read text.
-                  </p>
-                  <p>
-                    <span>
-                      The
-                      <a
-                        href="https://company-51033.frontify.com/d/E6KNDhunr9mR/coderdojo-style-guide-1460385526"
-                        >CoderDojo Style Guide</a
-                      >
-                      gives us lots of useful information on the
-                      <a
-                        href="https://coolors.co/57206f-642580-70298e-9537be-41bac1-ed684a-f0836a">
-                        CoderDojo Colour Palette</a
-                      >
-                      , the logo and the different fonts used by the foundation
-                      when creating content.</span
-                    >
-                  </p>
-                  <p>
-                    Using these colours, we can create CSS variables for our the
-                    colours so we will use on all our pages.
-                  </p>
-
-                  <img
-                    src="images/projects/project-website/01-styling-our-css-variables.webp"
-                    alt=""
-                    class="image-big" />
-                  <div class="example">
-                    <span>
-                      Lots of the newer Raspberry Pi Projects use variables,
-                      check out the
-                      <a
-                        href="https://projects.raspberrypi.org/en/projects/editor-anime-expressions/editor">
-                        anime expressions project</a
-                      >
-                      in the the new editor.</span
-                    >
-                  </div>
-                  <p>
-                    <span>
-                      We have placed the fonts we would like to use in our fonts
-                      folder and set up the CSS font weighting (how
-                      <b>bold</b> it is).</span
-                    >
-                  </p>
-
-                  <img
-                    src="images/projects/project-website/02-styling-our-css-fonts.webp"
-                    alt=""
-                    class="image-big" />
-                </div>
-
-                <div class="project-section" id="site-layout">
-                  <span class="project-section-title">Our Site Layout</span>
-                  <p>
-                    When we make a website, we need to think about how our
-                    content will look for the user on their device.
-                  </p>
-                  <p>
-                    For our site, we need to make sure our site looks good for
-                    people on small screens (like mobile phones) and for people
-                    with big screens (laptops and desktop computer monitors).
-                  </p>
-                  <div class="example">
-                    <span>
-                      This is called responsive design and is covered in lots of
-                      Raspberry Pi Web Design Projects for example,
-                      <a
-                        href="https://projects.raspberrypi.org/en/projects/cd-sebento-htmlcss-3/6"
-                        >the Birdwatch 3 Project</a
-                      >.</span
-                    >
-                  </div>
-                  <p>
-                    For our site, we are going to use two separate CSS files
-                    depending on if the user is on a big screen or a small
-                    screen.
-                  </p>
-                  <p>
-                    In our default.css file; we tell the browser to load a large
-                    screen css file if the minimum width is 768 pixels; or a
-                    small screen css file if the maximum width the browser has
-                    is 480 pixels.
-                  </p>
-                  <img
-                    src="images/projects/project-website/03-styling-our-css-responsive.webp"
-                    alt=""
-                    class="image-big" />
-                  <p>
-                    These files will have the navigation and footer elements
-                    that are specific to big screens and little screens.
-                  </p>
-                  <p>
-                    On a big screen we want the user to have buttons for all our
-                    main pages in the navigation, however on small screens there
-                    is not enough space for this.
-                  </p>
-                  <p>
-                    <span>
-                      On small screen, we have a <b>hamburger button</b>, and
-                      when this is clicked, they will see the links to our
-                      pages.
-                    </span>
-                  </p>
-                  <p>
-                    The main content uses a wrapper, to rearrange the content
-                    for big and small screens.
-                  </p>
-                  <p>
-                    The footer can be spread out on a big screen, but on a small
-                    screen we want the links in a column.
-                  </p>
-
-                  <div class="note">
-                    Modern web development uses reusable components that are
-                    like code blocks in Scratch. <br />We have a few limitations
-                    as our site is HTML and CSS; and we will need to copy the
-                    layout code (the navigation and footer) into each page we
-                    create.
-                  </div>
-                  <p>
-                    We have all our individual html pages at the root of our
-                    website project and folders for the fonts, css and images.
-                  </p>
-                  <p>
-                    We have tried to follow the same folder structure and naming
-                    conventions as used on the newer Raspberry Pi Web Design
-                    Projects.
-                  </p>
-                </div>
-
-                <div class="project-section" id="git">
-                  <span class="project-section-title"
-                    >Collaboration and Git</span
+                <h2 id="the-web">The World Wide Web</h2>
+                <p>
+                  Our website is for sharing information with anyone who wants
+                  to know more about what we are and what we do.
+                </p>
+                <p>
+                  Before we jump into creating a web site, we need to know a
+                  little bit about what web sites are, why they were created
+                  like they are and how can people make their own webs pages.
+                </p>
+                <h3>Why did we need webpages?</h3>
+                <p>
+                  In the late 1980's lots of people where sharing their work
+                  with each other by sending text files over the Internet. They
+                  wanted a way to share files that could link (hyperlinks) to
+                  other peoples files.
+                </p>
+                <p>
+                  <span>
+                    The World Wide Web was developed at CERN (The European
+                    Organization for Nuclear Research) by Tim Berners-Lee and
+                    his team between 1989-1991. In
+                    <a href="https://www.w3.org/History/1989/proposal.html">
+                      the proposal</a
+                    >, Tim lays out the need and the benefits of linked
+                    information systems and hypertext. His idea of "a web of
+                    notes with links (like references) between them".</span
                   >
-                  <h2>Git</h2>
-                  <p>
-                    Git is a system designed to help people collaborate (work
-                    together) on shared files and code.
-                  </p>
-                  <p>
-                    Git is a version control system. This means if someone
-                    changes a file it records the differences between the new
-                    version and the old version, and maintains a history.
-                  </p>
-                  <p>
-                    <span>
-                      A Git Repository (a repo) is folder or collection of files
-                      that are being tracked with Git. All the files HTML and
-                      CSS files for this website are in our
-                      <a
-                        href="https://github.com/carrickdojo/carrickdojo-website">
-                        Website Git Repository</a
-                      >
-                      on Github.</span
+                </p>
+
+                <h3>How do webpages work?</h3>
+
+                <p>There are four keys parts to the world wide web.</p>
+                <ul>
+                  <li>
+                    <b>The browser</b> - this is software for our computers for
+                    viewing webpages. For me this is Firefox (Brave, Chrome,
+                    Edge, Safari and Opera and all browsers)
+                  </li>
+                  <li>
+                    <b>The web pages</b> - these are the HTML (Hypertext Markup
+                    Language) files we create for our websites containing the
+                    information we want to share (you are currently visiting the
+                    HTML page called project-website.html)
+                  </li>
+                  <li>
+                    <b>The server</b> - the server is where we put our webpages
+                    (this website is using a Vercel server with more detail in
+                    the hosting section)
+                  </li>
+                  <li>
+                    <b>The web protocol</b> - a protocol is a set of rules to
+                    follow. The HyperText Transfer Protocol is a set of rules
+                    used by browsers and web servers to communicate and transfer
+                    the HTML pages over the Internet (this website uses HTTPS a
+                    secure HTTP connection)
+                  </li>
+                </ul>
+
+                <p>
+                  <span>
+                    The World Wide Web was originally created for use within
+                    CERN, however they realised other people would pay to use
+                    it. CERN licenced the World Wide Web for the first few years
+                    competing with other linked information systems. In April
+                    1993,
+                    <a href="https://cds.cern.ch/record/1164399/">
+                      CERN released the World Wide Web</a
                     >
-                  </p>
-                  <hr />
-                  <div class="whiteboard text-marker-big">
-                    <p>
-                      Linus Torvalds started developing Git for all the people
-                      working on the Linux kernel code. The Linux kernel has
-                      over 80 million lines of code and everyday an average
-                      10,000 lines get added to the codebase [Feb 2024].
-                    </p>
+                    into the public domain. Thousands of websites popped up
+                    within a year.</span
+                  >
+                </p>
+                <ul>
+                  <li>The first ever website went live in August, 1991</li>
+                  <li>
+                    The milestone of 1 billion websites was reached in September
+                    2014
+                  </li>
+                  <li>
+                    There were around 1.2 billion websites at the end of 2023
+                  </li>
+                  <li>
+                    There were around 200 million active websites at the end of
+                    2023 (about 4/5 of websites are inactive)
+                  </li>
+                  <li>
+                    Approximately 150,000 new websites are created everyday
+                  </li>
+                </ul>
+                <p>
+                  The Web is an essential part of the modern world and everyday,
+                  the majority of people in the world use it. When developing
+                  websites, learning the history helps us to understand why
+                  things are as they are. The original idea of the web never
+                  considered using images (and definitely not video); over the
+                  last three decades, countless people have extended the Web
+                  beyond anything that was originally considered.
+                </p>
+
+                <h2 id="creating-html">Creating HTML Files</h2>
+                <p>
+                  A HTML is a simple, plain text file written in a particular
+                  way (syntax) that has a file extension (the last bit of the
+                  file name after the last dot) of HTML.
+                </p>
+                <p>
+                  HTML is a very forgiving. This means, if you make a mistake
+                  with the HTML syntax, the browser will still try and display
+                  the content. This makes it easier for people new to computers
+                  to get started.
+                </p>
+                <div class="note">
+                  When HTML was released, a lot of computer scientists at the
+                  time thought it was very bad the code would continue to run if
+                  a bug was found and that only an error message should be
+                  displayed.
+                </div>
+                <p>
+                  Every computer can create plain text files, and we can create
+                  web pages in any text editor; however there are tools that
+                  make web development easier and more accurate.
+                </p>
+                <h2 id="code-editors">Code Editors</h2>
+                <p>
+                  There are multiple tools for creating HTML pages online. Many
+                  of the older Raspberry Pi Web Design projects used Trinket;
+                  however a newer tool has recently been launched. This is a
+                  great tool for getting started and is used in newer projects.
+                </p>
+                <div class="card card-small colours-white-black">
+                  <a href="https://editor.raspberrypi.org/en/" target="_blank">
+                    <img
+                      src="images/logos/codeeditor-logo.svg"
+                      alt="Code Editor logo"
+                      class="logo" />
 
                     <p>
-                      Every two or three months, all the changes made by the
-                      thousands of people working on the Linux kernel are merged
-                      together and a new Linux kernel is released. Linus is the
-                      only person who can merge patches into the mainline Linux
-                      kernel repository.
+                      The new Raspberry Pi CodeEditor for creating HTML/CSS or
+                      Python projects.
                     </p>
-                  </div>
-                  <p>
-                    Git is free and open source. It is shared for everyone in
-                    the world to use (and modify if they want).
-                  </p>
-
-                  <p>
-                    There are lots of companies that provide storage for Git
-                    repositories on the Internet. As Git is free and open
-                    source, we can easily move Git repositories from one server
-                    to another; however there are a few things we need to think
-                    about before signing up to any Internet service.
-                  </p>
-                  <ul>
-                    <li>What exactly are we looking for?</li>
-                    <li>
-                      Is it easy to learn about and are there guides and
-                      documents?
-                    </li>
-                    <li>Is the service is Europe?</li>
-                    <li>Do we need a credit card or phone?</li>
-                    <li>Is the service one we trust and know about?</li>
-                    <li>
-                      Have we checked the Internet for reviews and
-                      recommendations?
-                    </li>
-                  </ul>
-
-                  <p>
-                    We are looking for a place to store our Website Git
-                    repository, that all the people in the Dojo working on the
-                    website will be able to access.
-                  </p>
-
-                  <h2>Git Hosting</h2>
-                  <p>
-                    There are lots of Git hosting services out there; the
-                    biggest three are: Github, Bitbucket and Gitlab.
-                  </p>
-                  <div class="wrapper">
-                    <a href="https://github.com/">
-                      <img
-                        src="images/logos/github.svg"
-                        alt="Github logo"
-                        class="logo colours-white-black rounded-small"
-                    /></a>
-                    <a href="https://bitbucket.org/">
-                      <img
-                        src="images/logos/bitbucket.svg"
-                        alt="Bitbucket logo"
-                        class="logo colours-white-black rounded-small"
-                    /></a>
-                    <a href="https://gitlab.com/">
-                      <img
-                        src="images/logos/gitlab.svg"
-                        alt="Gitlab"
-                        class="logo colours-white-black rounded-small"
-                    /></a>
-                  </div>
-
-                  <p>
-                    Github is the largest and most used. It was bought by
-                    Microsoft in 2018 for $7.5 Billion.
-                  </p>
-                  <p>
-                    We have decided to use Github for hosting our Git
-                    repository.
-                  </p>
-
-                  <div class="note">Github Accounts!!!!</div>
-
-                  <h2>Licencing Code</h2>
-                  <p>
-                    When sharing code, one of the questions will be on the type
-                    of licence. Software licensing is very complex and always
-                    changing because every country have their own rules.
-                  </p>
-                  <p>
-                    As our Website is something that might help other Ninjas,
-                    Dojos or people making websites; we are going to share the
-                    code with everyone and allow anyone to use and make changes
-                    to suit them.
-                  </p>
-                  <p>
-                    We are going to use the Creative Commons license for the
-                    project. This means everyone can share, copy and use are
-                    code; but no one should start charging money if they do copy
-                    some of it.
-                  </p>
+                  </a>
                 </div>
 
-                <div class="project-section" id="domain">
-                  <span class="project-section-title">Our Domain Name</span>
-                  <p>
-                    Our domain name is carrickdojo.com; our first Dojo Champion
-                    registered the domain on Friday 21st of November 2014.
-                  </p>
+                <p>
+                  A code editor is a piece of software used by a programmers for
+                  writing code. They generally contain lots of different tools
+                  and features for checking for code mistakes and making writing
+                  code faster.
+                </p>
+                <p>
+                  For working on websites, my preference is Visual Studio Code,
+                  a free, open source, and cross-platform code editor created by
+                  Microsoft.
+                </p>
 
-                  <p>
-                    Domain names provide us a way to create helpful names for
-                    Internet resources so we can easily remember them.
-                  </p>
-                  <div class="factoid colours-vibrant">
-                    Domain names are older than webpages and one of the key
-                    parts of the Internet.
-                  </div>
+                <img
+                  src="images/projects/project-website/04-tools-visual-studio-code.webp"
+                  alt=""
+                  class="image-big" />
 
-                  <p>
-                    It is a lot easier for me to tell people our website is at
-                    www.carrickdojo.com and not 76.76.21.9.
-                  </p>
-                  <p>
-                    To understand this more, we need to learn a little bit about
-                    the Domain Naming System (normally just called DNS).
-                  </p>
+                <p>
+                  Anyone can write an extension (extra code and functionality)
+                  for Visual Studio Code and there are lots of really useful
+                  tools written by other programmers.
+                </p>
+                <ul>
+                  <li>
+                    Live Server - this allows us to quickly create a webserver
+                    on our computer so we can test our code.
+                  </li>
+                  <li>
+                    Github Integration - we can share our code with the rest of
+                    our team easily (full details in the Git section)
+                  </li>
+                  <li>
+                    Prettier - makes our code look nice with different colours
+                    for elements and tags.
+                  </li>
+                </ul>
 
-                  <h2>Domain Naming Service</h2>
+                <h2 id="creating-css">Creating CSS Files</h2>
+                <p>
+                  Just like HTML, CSS is a simple, plain text file written in a
+                  particular way (syntax) that has a file extension (the last
+                  bit of the file name after the last dot) of CSS.
+                </p>
+                <p>
+                  All our content goes in the HTML page and we use HTML tags to
+                  layout it out on our page. For example, this paragraph is
+                  written within our HTML file.
+                </p>
+                <p>CSS is used apply style to the content in our HTML files.</p>
+                <div class="whiteboard">
+                  <span class="text-rainbow text-marker-big">CSS is Cool</span>
+                </div>
+              </div>
 
-                  <p>
-                    When computers talk to each other over the Internet, they
-                    all use the Internet Protocol (IP) a set of rules everyone
-                    agreed to.
-                  </p>
+              <div class="project-section" id="design">
+                <h1 class="project-section-title">Designing Our Site</h1>
+                <h2 id="planning">Planning Phase</h2>
+                <p>
+                  The most important part of any project is the planning and
+                  design part.
+                </p>
+                <p>
+                  For this project we are going to take the content from our
+                  existing website and incorporate the styles and branding of
+                  the CoderDojo foundation.
+                </p>
+
+                <h2 id="fonts-colours">Picking Fonts and Colours</h2>
+                <p>
+                  Picking colours and fonts is fun but there is a lot to
+                  consider. We need to choose colours and fonts that allow us to
+                  easily read text.
+                </p>
+                <p>
+                  <span>
+                    The
+                    <a
+                      href="https://company-51033.frontify.com/d/E6KNDhunr9mR/coderdojo-style-guide-1460385526"
+                      >CoderDojo Style Guide</a
+                    >
+                    gives us lots of useful information on the
+                    <a
+                      href="https://coolors.co/57206f-642580-70298e-9537be-41bac1-ed684a-f0836a">
+                      CoderDojo Colour Palette</a
+                    >
+                    , the logo and the different fonts used by the foundation
+                    when creating content.</span
+                  >
+                </p>
+
+                <h2 id="variables">Setting Our Site Variables</h2>
+                <p>
+                  Using these colours, we can create CSS variables for our the
+                  colours so we will use on all our pages.
+                </p>
+
+                <img
+                  src="images/projects/project-website/01-styling-our-css-variables.webp"
+                  alt=""
+                  class="image-big" />
+
+                <p>
+                  <span>
+                    We have placed the fonts we would like to use in our fonts
+                    folder and set up the CSS font weighting (how
+                    <b>bold</b> it is).</span
+                  >
+                </p>
+
+                <img
+                  src="images/projects/project-website/02-styling-our-css-fonts.webp"
+                  alt=""
+                  class="image-big" />
+
+                <div class="example">
+                  <span>
+                    Lots of the newer Raspberry Pi Projects use variables, check
+                    out the
+                    <a
+                      href="https://projects.raspberrypi.org/en/projects/editor-anime-expressions/editor">
+                      anime expressions project</a
+                    >
+                    in the the new editor.</span
+                  >
+                </div>
+              </div>
+
+              <div class="project-section" id="site-layout">
+                <h1 class="project-section-title">Our Site Layout</h1>
+                <h2 id="responsive">Responsive Design</h2>
+                <p>
+                  When we make a website, we need to think about how our content
+                  will look for the user on their device.
+                </p>
+                <p>
+                  For our site, we need to make sure our site looks good for
+                  people on small screens (like mobile phones) and for people
+                  with big screens (laptops and desktop computer monitors).
+                </p>
+                <div class="example">
+                  <span>
+                    This is called responsive design and is covered in lots of
+                    Raspberry Pi Web Design Projects for example,
+                    <a
+                      href="https://projects.raspberrypi.org/en/projects/cd-sebento-htmlcss-3/6"
+                      >the Birdwatch 3 Project</a
+                    >.</span
+                  >
                 </div>
 
-                <div class="project-section" id="hosting">
-                  <span class="project-section-title">Our Website Hosting</span>
+                <h2>Working With Different Screen Sizes</h2>
+                <p>
+                  For our site, we are going to use two separate CSS files
+                  depending on if the user is on a big screen or a small screen.
+                </p>
+                <p>
+                  In our default.css file; we tell the browser to load a large
+                  screen css file if the minimum width is 768 pixels; or a small
+                  screen css file if the maximum width the browser has is 480
+                  pixels.
+                </p>
+
+                <img
+                  src="images/projects/project-website/03-styling-our-css-responsive.webp"
+                  alt=""
+                  class="image-big" />
+                <p>
+                  These files will have the navigation and footer elements that
+                  are specific to big screens and little screens.
+                </p>
+
+                <h2 id="our-layout">Our Layout</h2>
+
+                <p>
+                  On a big screen we want the user to have buttons for all our
+                  main pages in the navigation, however on small screens there
+                  is not enough space for this.
+                </p>
+                <p>
+                  <span>
+                    On small screen, we have a <b>hamburger button</b>, and when
+                    this is clicked, they will see the links to our pages.
+                  </span>
+                </p>
+                <p>
+                  The main content uses a wrapper, to rearrange the content for
+                  big and small screens.
+                </p>
+                <p>
+                  The footer can be spread out on a big screen, but on a small
+                  screen we want the links in a column.
+                </p>
+
+                <h2 id="main-section">The Main Section</h2>
+                <p>
+                  <span>
+                    When creating a new site, we can copy everything from one of
+                    the other pages and then replace everything within the<b>
+                      "main" </b
+                    >section with our new content.
+                  </span>
+                </p>
+                <p>
+                  <span>
+                    We will need to make two changes to the navigation. We need
+                    to set our <b>"active"</b> class on the main nav and the
+                    mobile nav.</span
+                  >
+                </p>
+
+                <div class="note text-emphasis-big text-emboss shadow-small">
+                  Modern web development uses reusable components that are like
+                  code blocks in Scratch. <br />We have a few limitations as our
+                  site is HTML and CSS; and we will need to copy the layout code
+                  (the navigation and footer) into each page we create.
+                </div>
+
+                <h2 id="folder-structure">
+                  Our Folder Layout (folder structure)
+                </h2>
+                <p>
+                  We have all our individual html pages at the root of our
+                  website project and folders for the fonts, css and images.
+                </p>
+                <p>
+                  We have tried to follow the same folder structure and naming
+                  conventions as used on the newer Raspberry Pi Web Design
+                  Projects.
+                </p>
+              </div>
+
+              <div class="project-section" id="git">
+                <h1 class="project-section-title">Collaboration and Git</h1>
+                <h2 id="what-is-git">What is Git?</h2>
+                <p>
+                  Git is a system designed to help people collaborate (work
+                  together) on shared files and code.
+                </p>
+                <p>
+                  Git is a version control system. This means if someone changes
+                  a file it records the differences between the new version and
+                  the old version, and maintains a history.
+                </p>
+                <p>
+                  <span>
+                    A Git Repository (a repo) is folder or collection of files
+                    that are being tracked with Git. All the files HTML and CSS
+                    files for this website are in our
+                    <a
+                      href="https://github.com/carrickdojo/carrickdojo-website">
+                      Website Git Repository</a
+                    >
+                    on Github.</span
+                  >
+                </p>
+                <hr />
+                <div class="whiteboard text-marker-big">
                   <p>
-                    Every website needs a server for hosting and there are lots
-                    of things to consider with web hosting.
+                    Linus Torvalds started developing Git for all the people
+                    working on the Linux kernel code. The Linux kernel has over
+                    80 million lines of code and everyday an average 10,000
+                    lines get added to the codebase [Feb 2024].
                   </p>
-                  <div class="note">
+
+                  <p>
+                    Every two or three months, all the changes made by the
+                    thousands of people working on the Linux kernel are merged
+                    together and a new Linux kernel is released. Linus is the
+                    only person who can merge patches into the mainline Linux
+                    kernel repository.
+                  </p>
+                </div>
+                <p>
+                  Git is free and open source. It is shared for everyone in the
+                  world to use (and modify if they want).
+                </p>
+
+                <h2 id="git-hosting">Git Hosting</h2>
+                <p>
+                  There are lots of companies that provide storage for Git
+                  repositories on the Internet. As Git is free and open source,
+                  we can easily move Git repositories from one server to
+                  another; however there are a few things we need to think about
+                  before signing up to any Internet service.
+                </p>
+                <ul>
+                  <li>What exactly are we looking for?</li>
+                  <li>
+                    Is it easy to learn about and are there guides and
+                    documents?
+                  </li>
+                  <li>Is the service is Europe?</li>
+                  <li>Do we need a credit card or phone?</li>
+                  <li>Is the service one we trust and know about?</li>
+                  <li>
+                    Have we checked the Internet for reviews and
+                    recommendations?
+                  </li>
+                </ul>
+
+                <p>
+                  We are looking for a place to store our Website Git
+                  repository, that all the people in the Dojo working on the
+                  website will be able to access.
+                </p>
+
+                <p>
+                  There are lots of Git hosting services out there; the biggest
+                  three are: Github, Bitbucket and Gitlab.
+                </p>
+                <div class="wrapper">
+                  <a href="https://github.com/">
+                    <img
+                      src="images/logos/github.svg"
+                      alt="Github logo"
+                      class="logo colours-white-black rounded-small"
+                  /></a>
+                  <a href="https://bitbucket.org/">
+                    <img
+                      src="images/logos/bitbucket.svg"
+                      alt="Bitbucket logo"
+                      class="logo colours-white-black rounded-small"
+                  /></a>
+                  <a href="https://gitlab.com/">
+                    <img
+                      src="images/logos/gitlab.svg"
+                      alt="Gitlab"
+                      class="logo colours-white-black rounded-small"
+                  /></a>
+                </div>
+
+                <h2 id="our-git">Our Website Git Repository</h2>
+                <p>
+                  Github is the largest and most used. It was bought by
+                  Microsoft in 2018 for $7.5 Billion.
+                </p>
+                <p>
+                  We have decided to use Github for hosting our Git repository.
+                </p>
+
+                <div class="note">
+                  Github Accounts!!!! Github does not explicitly prevent
+                  children from creating Github accounts however given their
+                  scale and social communication features
+                </div>
+
+                <h2 id="code-licence">Licencing Code</h2>
+                <p>
+                  When sharing code, one of the questions will be on the type of
+                  licence. Software licensing is very complex and always
+                  changing because every country have their own rules.
+                </p>
+                <p>
+                  As our Website is something that might help other Ninjas,
+                  Dojos or people making websites; we are going to share the
+                  code with everyone and allow anyone to use and make changes to
+                  suit them.
+                </p>
+                <p>
+                  We are going to use the Creative Commons license for the
+                  project. This means everyone can share, copy and use are code;
+                  but no one should start charging money if they do copy some of
+                  it.
+                </p>
+              </div>
+
+              <div class="project-section" id="hosting">
+                <h1 class="project-section-title">Our Website Hosting</h1>
+                <p>
+                  Every website needs a server for hosting and there are lots of
+                  things to consider with web hosting.
+                </p>
+                <div class="whiteboard text-marker2">
+                  <p>
                     <span>
                       Websites often serve <b>dynamic</b> content, this means
                       they are two-way, where the user sends information to the
@@ -669,75 +748,130 @@
                       Our site is HTML and CSS and considered <b> static</b>;
                       this makes it remarkably easy to host.</span
                     >
-                  </div>
-
-                  <ul>
-                    <li>
-                      Traffic - we are probably not going to have a huge amount
-                      of people visiting our site at once.
-                    </li>
-                    <li>
-                      Security - we need to make sure the connection of our
-                      webserver is secure, this means we need to use https and
-                      not just http.
-                    </li>
-                    <li>
-                      Administration - this means looking after the hosting for
-                      as long as it is up. As we are all volunteers, we need to
-                      make sure our hosting is well documented and has
-                      instructions that anyone can follow.
-                    </li>
-                    <li>
-                      Costs - there are lots of free options for hosting static
-                      websites, additionally as a not-for-profit organisation,
-                      many of the large technology companies are happy to
-                      provide us free resources.
-                    </li>
-                    <li>
-                      Location - we want to make sure our website is hosted in
-                      the European Union as there are lots of rules about moving
-                      data outside of the EU. Luckily, Ireland hosts all the
-                      major cloud companies and has lots of little service
-                      providers.
-                    </li>
-                  </ul>
-
-                  <hr />
-                  <p>
-                    For the development of the site, we have decided to use
-                    Vercel. Vercel are the developers of Next.Js and provide a
-                    very good free tier offering that does not require a credit
-                    card.
                   </p>
-                  <a href="https://vercel.com/">
-                    <img
-                      src="images/logos/vercel.svg"
-                      class="logo-wide colours-black-white"
-                      alt="vercel logo"
-                  /></a>
-
-                  <ul>
-                    <u> Key reasons for going with Vercel:</u>
-                    <li>
-                      The free tier hobby account should meet our traffic needs.
-                    </li>
-                    <li>
-                      Integration with Github - when we update our Website Git
-                      Repo, Vercel will see the changes, and deploy a new
-                      version of our site.
-                    </li>
-                    <li>Following Domain Verification, HTTPS is automatic.</li>
-                  </ul>
                 </div>
 
-                <div class="project-section" id="testing">
-                  <span class="project-section-title">Testing Our Site</span>
+                <h2 id="hosting-considerations">
+                  Website Hosting Considerations
+                </h2>
+                <ul>
+                  <li>
+                    Traffic - we are probably not going to have a huge amount of
+                    people visiting our site at once.
+                  </li>
+                  <li>
+                    Security - we need to make sure the connection of our
+                    webserver is secure, this means we need to use https and not
+                    just http.
+                  </li>
+                  <li>
+                    Administration - this means looking after the hosting for as
+                    long as it is up. As we are all volunteers, we need to make
+                    sure our hosting is well documented and has instructions
+                    that anyone can follow.
+                  </li>
+                  <li>
+                    Costs - there are lots of free options for hosting static
+                    websites, additionally as a not-for-profit organisation,
+                    many of the large technology companies are happy to provide
+                    us free resources.
+                  </li>
+                  <li>
+                    Location - we want to make sure our website is hosted in the
+                    European Union as there are lots of rules about moving data
+                    outside of the EU. Luckily, Ireland hosts all the major
+                    cloud companies and has lots of little service providers.
+                  </li>
+                </ul>
+
+                <h2 id="our-hosting">Our Website Hosting</h2>
+                <p>
+                  For the development of the site, we have decided to use
+                  Vercel. Vercel are the developers of Next.Js and provide a
+                  very good free tier offering that does not require a credit
+                  card.
+                </p>
+                <a href="https://vercel.com/">
+                  <img
+                    src="images/logos/vercel.svg"
+                    class="logo-wide colours-black-white"
+                    alt="vercel logo"
+                /></a>
+
+                <ul>
+                  <u> Key reasons for going with Vercel:</u>
+                  <li>
+                    The free tier hobby account should meet our traffic needs.
+                  </li>
+                  <li>
+                    Integration with Github - when we update our Website Git
+                    Repo, Vercel will see the changes, and deploy a new version
+                    of our site.
+                  </li>
+                  <li>Following Domain Verification, HTTPS is automatic.</li>
+                </ul>
+              </div>
+
+              <div class="project-section" id="domain-names">
+                <h1 class="project-section-title">Domain Names</h1>
+
+                <h2 id="#our-domain-name">Our Domain Name</h2>
+                <p>
+                  Our domain name is carrickdojo.com; our first Dojo Champion
+                  registered the domain on Friday 21st of November 2014.
+                </p>
+
+                <p>
+                  Domain names provide us a way to create helpful names for
+                  Internet resources so we can easily remember them.
+                </p>
+                <div class="factoid">
+                  Domain names are older than webpages and one of the key parts
+                  of the Internet.
                 </div>
 
-                <div class="project-section" id="outcome">
-                  <span class="project-section-title">Project Outcome</span>
-                </div>
-              </article>
+                <p>
+                  It is a lot easier for me to tell people our website is at
+                  www.carrickdojo.com and not 76.76.21.9.
+                </p>
+                <p>
+                  To understand this more, we need to learn a little bit about
+                  the Domain Naming System (normally just called DNS).
+                </p>
+
+                <h2 id="dns">Domain Naming Service</h2>
+
+                <p>
+                  When computers talk to each other over the Internet, they all
+                  use the Internet Protocol (IP) a set of rules everyone agreed
+                  to.
+                </p>
+
+                <h2 id="domain-registrars">Domain Registrars</h2>
+                <p></p>
+
+                <h2 id="our-dns">Updating Our DNS</h2>
+                <p>
+                  We need to update our DNS records to point to the server that
+                  hosts our web page.
+                </p>
+              </div>
+
+              <div class="project-section" id="testing">
+                <h1 class="project-section-title">Testing Our Site</h1>
+
+                <h2 id="checks">Checking Everything Works</h2>
+                <h2 id="testing-tools">Testing Tools</h2>
+              </div>
+
+              <div class="project-section" id="outcome">
+                <h1 class="project-section-title">Project Outcome</h1>
+
+                <h2 id="project-outcome">Our New Website</h2>
+                <h2 id="possible-improvements">
+                  Possible Future Improvements for Our Site
+                </h2>
+              </div>
             </div>
           </div>
         </div>

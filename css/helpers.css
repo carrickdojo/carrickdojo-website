@@ -5,6 +5,14 @@ These are classes used across the site and on all screen sizes to change the loo
 --------------
 */
 
+.rounded-small {
+  border-radius: 0.5rem;
+}
+
+.shadow-small {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 /* 
 -------------
 Colour Helper Classes 
@@ -33,7 +41,11 @@ Classes for changing the colour palette of an element.
 }
 
 .colours-secondary {
-  /* background-color: var(--coder-secondary); */
+  background-color: var(--coder-secondary);
+  color: var(--coder-black);
+}
+
+.colours-secondary-grad {
   background-image: linear-gradient(
     to bottom,
     var(--coder-accent),
@@ -46,7 +58,10 @@ Classes for changing the colour palette of an element.
 }
 
 .colours-accent {
-  /* background-color: var(--coder-accent); */
+  background-color: var(--coder-accent);
+  color: var(--coder-white);
+}
+.colours-accent-grad {
   background-image: linear-gradient(
     to bottom,
     var(--coder-main),
@@ -96,10 +111,6 @@ Image Helper Classes
 Classes for changing the images, icons and logos styles.
 -------------
  */
-
-.rounded-small {
-  border-radius: 0.5rem;
-}
 
 .logo {
   display: block;
@@ -302,6 +313,17 @@ Site wide classes for displaying different blocks of content like examples, code
   margin: 0 auto;
 }
 
+@media (max-width: 480px) {
+  .factoid::before {
+    display: block;
+    width: 100%;
+    background-size: 5rem;
+  }
+  .factoid {
+    width: auto;
+  }
+}
+
 .whiteboard {
   background-image: url("../images/whiteboard-stickers.webp");
   background-size: 800px 600px;
@@ -337,12 +359,11 @@ Site wide classes for displaying different blocks of content like examples, code
 
 .note {
   display: flex;
-  background-color: var(--coder-main-light);
+  align-items: center;
+  background-color: var(--coder-secondary);
   color: var(--coder-white);
   text-align: center;
-  padding: 2vh;
-  border-radius: 1rem;
-  width: 40vw;
+  padding: 1rem;
   color: " ";
   margin: 0 auto;
 }
@@ -352,29 +373,36 @@ Site wide classes for displaying different blocks of content like examples, code
 }
 
 .note::before {
-  background-image: url("../images/Circle_Girl.png");
-  background-size: 6vw 8vw;
+  background-image: url("../images/stars-and-lightning-reversed.svg");
+  background-size: 10rem 10rem;
   background-repeat: no-repeat;
   background-position: center;
-  height: 15vh;
-  width: 25vw;
-  padding-right: 1vw;
+  height: 10rem;
+  width: 20rem;
+  padding-right: 1rem;
   display: inline-block;
   content: " ";
   vertical-align: middle;
 }
 
 .note::after {
-  background-image: url("../images/icons/star.svg");
-  background-size: 6vw 6vw;
+  background-image: url("../images/stars-and-lightning.svg");
+  background-size: 10rem 10rem;
   background-repeat: no-repeat;
   background-position: center;
-  height: 15vh;
-  width: 25vw;
-  padding-right: 1vw;
+  height: 10rem;
+  width: 20rem;
+  padding-right: 1rem;
   display: inline-block;
   content: " ";
   vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+  .note::before,
+  .note::after {
+    display: none;
+  }
 }
 
 .example {
