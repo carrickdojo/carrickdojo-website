@@ -239,7 +239,7 @@ Utility classes
 Site wide classes for displaying different blocks of content like examples, codeblocks and notes.
 -------------
  */
-
+/* 
 .small-card {
   display: flex;
   padding: 1rem;
@@ -272,7 +272,7 @@ Site wide classes for displaying different blocks of content like examples, code
 
 .small-card p {
   text-align: center;
-}
+} */
 
 .card {
   display: flex;
@@ -319,6 +319,7 @@ Site wide classes for displaying different blocks of content like examples, code
   background-size: 10rem 10rem;
   background-repeat: no-repeat;
   background-position: center;
+  animation: jelly 1s infinite;
   width: 12rem;
   height: 80%;
   height: 15rem;
