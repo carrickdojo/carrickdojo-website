@@ -11,6 +11,86 @@ These are classes used across the site and on all screen sizes to change the loo
 .pad-bottom {
   padding-bottom: 1rem;
 }
+.pad-left {
+  padding-left: 1rem;
+}
+
+.pad-right {
+  padding-right: 1rem;
+}
+
+.pad-all {
+  padding: 1rem;
+}
+
+.format-image-article {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  /* background-color: lime; */
+}
+.format-image-article article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 60%;
+  max-width: 60%;
+  font-size: larger;
+  gap: 1rem;
+  /* text-align: center; */
+  /* background-color: red; */
+}
+.format-image-article img {
+}
+
+.format-tight {
+  /* padding: 0.2rem; */
+  /* padding-left: 0.4rem; */
+  gap: 0;
+}
+
+.format-tight article {
+  /* display: block; */
+  width: 80%;
+  margin: auto;
+}
+
+.format-tight h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+}
+
+.format-tight h1 {
+  width: auto;
+  background-color: var(--coder-main-dark);
+  font-size: xx-large;
+  /* filter: invert(100%);
+  backdrop-filter: invert(100%); */
+}
+
+.format-tight h2 {
+  width: auto;
+  background-color: var(--coder-secondary);
+  padding-right: 0.4rem;
+  padding: 0.2rem;
+  text-align: center;
+
+  /* filter: invert(100%);
+  backdrop-filter: invert(100%); */
+}
+
+.format-tight p {
+  padding: 0;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  line-height: 1.2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
 
 .rounded-small {
   border-radius: 0.5rem;
@@ -120,9 +200,27 @@ Classes for changing the colour palette of an element.
   text-decoration: none;
 }
 
+.filter-white {
+  filter: invert(99%) sepia(4%) saturate(2140%) hue-rotate(303deg)
+    brightness(115%) contrast(100%);
+}
 .filter-green {
   filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
     brightness(118%) contrast(119%);
+}
+.filter-coder-main {
+  filter: invert(20%) sepia(19%) saturate(6161%) hue-rotate(262deg)
+    brightness(90%) contrast(97%);
+}
+
+.filter-coder-secondary {
+  filter: invert(94%) sepia(15%) saturate(5311%) hue-rotate(147deg)
+    brightness(81%) contrast(82%);
+}
+
+.filter-coder-accent {
+  filter: invert(57%) sepia(20%) saturate(7496%) hue-rotate(333deg)
+    brightness(99%) contrast(87%);
 }
 
 /* 
@@ -202,6 +300,18 @@ Classes for changing the images, icons and logos styles.
 @media (max-width: 480px) {
   .image-medium {
     width: 160px;
+    margin: 0 auto;
+  }
+}
+
+.image-small {
+  width: 160px;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .image-medium {
+    width: 60px;
     margin: 0 auto;
   }
 }
