@@ -15,6 +15,23 @@ section {
   gap: 1rem;
 }
 
+.grid-wrapper {
+  display: grid;
+  width: auto;
+  gap: 1em;
+
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 25rem));
+}
+
+.grow {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
 .article {
   padding: 2rem;
 }
