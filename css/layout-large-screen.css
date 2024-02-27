@@ -3,8 +3,8 @@ section {
   flex-direction: column;
   max-width: 70%;
   margin: 0 auto;
-  padding: 1rem 0;
-  gap: 1rem;
+  /* padding: 1rem 0; */
+  /* gap: 1rem; */
 }
 
 .wrapper {

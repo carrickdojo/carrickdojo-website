@@ -4,6 +4,13 @@ Helper Classes
 These are classes used across the site and on all screen sizes to change the look and style of specific elements 
 --------------
 */
+.pad-top {
+  padding-top: 1rem;
+}
+
+.pad-bottom {
+  padding-bottom: 1rem;
+}
 
 .rounded-small {
   border-radius: 0.5rem;
