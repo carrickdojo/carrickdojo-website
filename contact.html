@@ -7,6 +7,7 @@
     <title>CarrickDojo - Contact Us</title>
     <link rel="icon" href="images/logos/coderdojo-roundel.svg" />
     <link href="default.css" rel="stylesheet" type="text/css" />
+    <link href="css/forms.css" rel="stylesheet" type="text/css" />
   </head>
   <div class="heading">
     <img src="images/icons/construction.svg" alt="" class="logo-tiny" /><span>
@@ -80,8 +81,125 @@
       </div>
     </nav>
 
-    <main class="main">
-      <div class="colours-main-dark">CONTACT</div>
+    <main>
+      <div class="colours-main pad-all">
+        <section class="colours-white-black rounded-small pad-all">
+          <div class="wrap-image-form">
+            <img
+              src="images/CoderDojo_Contact_Us.jpg"
+              alt=""
+              class="image-big rounded-small" />
+
+            <form class="flex" id="contact-form">
+              <h1>Get in touch</h1>
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" value="" /><br />
+
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" value="" /><br />
+
+              <label for="phone">Your Phone Number</label>
+              <input type="tel" id="phone" name="phone" value="" /><br />
+
+              <label for="subject">Subject</label>
+              <select
+                id="subject"
+                onchange=" this.dataset.chosen = this.value; ">
+                <option selected="selected" value="sub0">
+                  Please select a subject:
+                </option>
+                <option value="sub1">Join our Dojo</option>
+                <option value="sub2">Become a Mentor</option>
+                <option value="sub3">Volunteer at our Dojo</option>
+                <option value="sub4">Make a data enquiry</option>
+                <option value="sub5">Raise a Safeguarding concern</option>
+                <option value="sub6">Give Feedback</option>
+                <option value="sub7">Something else</option>
+              </select>
+
+              <span class="selected-message sub0">
+                Please select a subject for your message.
+              </span>
+              <span class="selected-message sub1">
+                Super! Joining our Dojo is a great idea.
+              </span>
+              <span class="selected-message sub2">
+                Awesome! It’s thanks to people like you that CoderDojo is able
+                to reach and impact young people all around the world.
+              </span>
+              <span class="selected-message sub3">
+                Amazing! There are lots of ways to volunteer with our Dojo.
+              </span>
+              <span class="selected-message sub4">
+                Privacy is super important! It is best to ask for a callback for
+                data queries, please do not use this form to submit anyone
+                else's personal information.
+              </span>
+              <span class="selected-message sub5"
+                ><span>
+                  We take safeguarding concerns very seriously and will
+                  endeavour to respond as a matter of urgency. <br />
+                  Please read our
+                  <a href="/safeguarding.html#reporting"
+                    >safeguarding page for more information.</a
+                  ><br />
+                  Please do not use this form to submit anyone else's personal
+                  information</span
+                >
+              </span>
+              <span class="selected-message sub6">
+                We would love to hear ways to improve our club and welcome all
+                feedback.
+              </span>
+              <span class="selected-message sub7">
+                Something else on your mind? How are you doing today?
+              </span>
+
+              <label for="message">Your Message</label>
+              <textarea
+                rows="10"
+                cols="30"
+                id="message"
+                name="message"
+                value=""></textarea
+              ><br />
+
+              <input
+                type="button"
+                class="signup-button font-coderdojo"
+                onclick="submitForm()"
+                value="Send Message" />
+            </form>
+
+            <div
+              class="form-submitted-feedback text-marker-big rounded-small hidden"
+              id="form-submitted-feedback">
+              <p>Thanks for getting in touch</p>
+
+              <p class="emoji-x-large">🚀</p>
+
+              <p>
+                You should shortly receive an email with the information
+                provided as sent to CarrickDojo.
+              </p>
+              <p>We will endeavour to get back to you soon.</p>
+            </div>
+          </div>
+          <div class="example text-marker-big">
+            <div>
+              <p>A note on our Contact Form:</p>
+              <p>
+                Our website is very basic and our contact form has been
+                described as <b> a clever bit of a hack</b>.
+              </p>
+              <p>
+                We have further details on how it works
+                <a href="/site.html#contact-form"> here</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
     <!-- Our Footer section does not change across our site  -->
@@ -186,6 +304,53 @@
         </div>
       </div>
     </footer>
+
+    <!-- This is our javascript function to submit our contact form to our AWS API-->
+    <script>
+      function submitForm() {
+        let name = document.getElementById("name").value
+        let email = document.getElementById("email").value
+        let phone = document.getElementById("phone").value
+        let subjectFull = document.getElementById("subject")
+        let subject = subjectFull.options[subjectFull.selectedIndex].text
+        let message = document.getElementById("message").value
+
+        console.log("Form submitted")
+        let contactFormD = document.getElementById("contact-form")
+        let feedbackDiv = document.getElementById("form-submitted-feedback")
+        contactFormDiv.classList.remove("flex")
+        contactFormDiv.classList.add("hidden")
+        feedbackDiv.classList.remove("hidden")
+        feedbackDiv.classList.add("flex")
+
+        console.log("Form should be gone now...")
+
+        fetch(
+          "https://bvawggfvdl.execute-api.eu-west-1.amazonaws.com/prod/mentor-signup",
+          {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: name,
+              email: email,
+              phone: phone,
+              info: message,
+              avail: subject,
+            }),
+          }
+        ).then(async (response) => {
+          await response.json()
+          if (!response.ok) {
+            return
+          }
+          return response.ok
+        })
+      }
+    </script>
 
     <!-- This is our javascript function to show and hide the mobile nav -->
     <!-- We get the element with the id of mobile-nav and assign it to the variable -->

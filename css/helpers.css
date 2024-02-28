@@ -1,4 +1,21 @@
-/* 
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.emoji-x-large {
+  font-size: 5rem;
+}
+
+/*
+
 --------------
 Helper Classes
 These are classes used across the site and on all screen sizes to change the look and style of specific elements 
@@ -106,10 +123,6 @@ h4 {
 
 .center {
   margin: 0 auto;
-}
-
-.block {
-  display: block;
 }
 
 .line-thick-big {

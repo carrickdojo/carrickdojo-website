@@ -209,18 +209,56 @@
                 src="/images/logos/raspberry-pi-colour.svg"
                 alt=""
                 class="image-x-small filter-gold ticker-item" />
-              <!-- <div class="hitem">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </div>
-              <div class="hitem">Aliquam consequat varius consequat.</div>
-              <div class="hitem">
-                Fusce dapibus turpis vel nisi malesuada sollicitudin.
-              </div>
-              <div class="hitem">
-                Pellentesque auctor molestie orci ut blandit.
-              </div> -->
             </div>
           </div>
+        </section>
+      </div>
+
+      <div class="colours-main" id="contact-form">
+        <section>
+          <article
+            class="colours-terminal font-terminal text-x-large rounded-small">
+            <h1>How our Contact Form Works:</h1>
+            <p>
+              Our form is a very simple interface to an API we setup on AWS. We
+              have an AWS REST API that this form will POST the form contents
+              to.
+            </p>
+            <p>
+              Within the AWS Cloud. the API calls an AWS Lambda function passing
+              the data along
+            </p>
+            <p>
+              The Lambda creates a very small server on AWS using AWS Linux and
+              applies a layer with Nodemailer. It then executes a small piece of
+              Javascript code that will import Nodemailer, format the data
+              received into an email, and sends that email to the Coder Dojo
+              champion and the email address entered.
+            </p>
+            <p>
+              This should all take approximately one and a half seconds. If it
+              takes more than 5 seconds it will fail and no emails will be sent.
+              This is yet to happen and should appear in our logs if it does.
+            </p>
+            <p>
+              We use an Outlook.com mailbox specifically for the contact us form
+              and our Lambda function connects to it over SMTP using Nodemailer
+              for sending the email.
+            </p>
+            <p>
+              The form lacks validation. This means we are not checking the data
+              entered is valid and if an incorrect email address is entered, the
+              notification will not be sent.
+            </p>
+          </article>
+        </section>
+      </div>
+      <div class="colours-black-white pad-all">
+        <section>
+          <img
+            src="images/LEDs.png"
+            alt="Site Information"
+            class="image-small" />
         </section>
       </div>
 

@@ -1,0 +1,145 @@
+.form-submitted-feedback {
+  flex: 1 1 0;
+  width: auto;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--coder-main);
+  justify-content: center;
+  color: var(--coder-white);
+  text-align: center;
+  padding: 1rem;
+}
+
+.form-submitted-feedback img {
+  display: block;
+  width: 10rem;
+  height: 10rem;
+}
+
+/* site wide form classes  */
+.wrap-image-form {
+  /* background-color: red; */
+  display: flex;
+  gap: 1rem;
+  height: auto;
+}
+
+.wrap-image-form form {
+  flex: 1 1 0;
+  width: 0;
+
+  flex-direction: column;
+  gap: 0.25rem;
+  /* height: auto; */
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.wrap-image-form img {
+  flex: 1 1 0;
+  width: 0;
+}
+
+/* .wrap-image-form .form-submitted-feedback {
+  display: none;
+} */
+
+@media (max-width: 480px) {
+  .wrap-image-form {
+    flex-direction: column;
+  }
+  .wrap-image-form form {
+    width: 80vw;
+    margin: auto;
+  }
+
+  .wrap-image-form img {
+    width: 80vw;
+
+    margin: 0 auto;
+  }
+}
+
+.wrap-image-form label {
+  padding: 0;
+  font-weight: bold;
+  /* line-height: 1.5rem; */
+}
+
+.wrap-image-form input {
+  height: 2.5rem;
+  line-height: 1.5rem;
+  border: 0.1rem solid lightgray;
+  border-radius: 2px;
+}
+
+.wrap-image-form select {
+  height: 3rem;
+  border: 0.1rem solid lightgray;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* specific classes to the contact us form  */
+/* select[data-chosen] {
+  outline-offset: 2px;
+  outline: 12px solid;
+}
+select[data-chosen="opt1"] {
+  outline: none;
+}
+select[data-chosen="opt2"] {
+  outline-color: green;
+}
+select[data-chosen="opt3"] {
+  outline-color: red;
+}
+select[data-chosen="opt4"] {
+  outline-color: steelblue;
+}
+select[data-chosen="opt5"] {
+  outline-color: orange;
+} */
+
+.selected-message {
+  display: none;
+  background-color: var(--coder-main);
+  color: var(--coder-white);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 10rem;
+}
+
+select[data-chosen] {
+  /* outline-offset: 2px;
+  outline: 12px solid; */
+}
+
+select[data-chosen="sub0"] ~ .sub0 {
+  display: flex;
+}
+select[data-chosen="sub1"] ~ .sub1 {
+  display: flex;
+}
+select[data-chosen="sub2"] ~ .sub2 {
+  display: flex;
+}
+select[data-chosen="sub3"] ~ .sub3 {
+  display: flex;
+}
+select[data-chosen="sub4"] ~ .sub4 {
+  display: flex;
+}
+select[data-chosen="sub5"] ~ .sub5 {
+  display: flex;
+  background-color: darkred;
+}
+select[data-chosen="sub6"] ~ .sub6 {
+  display: flex;
+}
+select[data-chosen="sub7"] ~ .sub7 {
+  display: flex;
+}

@@ -2,6 +2,7 @@
 @import "css/animations.css";
 @import "css/helpers.css";
 @import "css/projects.css";
+@import "css/forms.css";
 
 @import url("/css/layout-large-screen.css") only screen and (min-width: 768px);
 @import url("/css/layout-mobile-screen.css") only screen and (max-width: 480px);
