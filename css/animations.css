@@ -172,3 +172,33 @@
 .animate-jelly {
   animation: jelly 0.5s infinite;
 }
+
+/* (A) FORCE ALL ITEMS INTO SINGLE ROW */
+.ticker-move {
+  display: flex;
+  gap: 5rem;
+}
+.ticker-item {
+  /* width: 100%; */
+  flex-shrink: 0;
+}
+.ticker-wrap {
+  overflow: hidden;
+}
+
+/* (B) MOVE ITEMS FROM RIGHT TO LEFT */
+/* first item = 0, fourth item = -300% */
+@keyframes ticker {
+  0% {
+    transform: translatex(100%);
+  }
+  100% {
+    transform: translatex(-400%);
+  }
+}
+.ticker-move {
+  animation: ticker linear 30s infinite;
+}
+.ticker-move:hover {
+  animation-play-state: paused;
+}
