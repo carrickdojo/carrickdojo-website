@@ -200,9 +200,9 @@ Classes for changing the colour palette of an element.
 }
 
 .colours-terminal {
-  background-color: var(--coder-black);
+  background-color: var(--coder-black-lighter);
   border-color: silver;
-  color: lime;
+  color: #75ec21;
 }
 
 .colours-black-white {
