@@ -679,3 +679,50 @@ Site wide classes for displaying different blocks of content like examples, code
 .example a {
   color: white;
 }
+
+.warning {
+  display: flex;
+
+  /* justify-content: center; */
+  align-items: center;
+  border: 0.2rem solid red;
+  background-image: linear-gradient(
+    to right top,
+    red,
+    var(--coder-accent),
+    var(--coder-main-light),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-main-dark),
+    var(--coder-main-dark),
+    black
+  );
+  color: var(--coder-white);
+  font-size: larger;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem auto;
+}
+
+.warning::before {
+  background-image: url("../images/Robot_Body.png");
+  background-size: 8rem 8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 10rem;
+  width: 10rem;
+
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+  .warning::before {
+    display: none;
+  }
+}
+
+.warning a {
+  color: white;
+}

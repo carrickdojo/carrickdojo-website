@@ -202,3 +202,32 @@
 .ticker-move:hover {
   animation-play-state: paused;
 }
+
+.animate-traffic-light {
+  animation: changeLight 1s infinite;
+  width: 4rem;
+  height: 10rem;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 6rem;
+  position: absolute;
+  overflow: hidden;
+  -webkit-transition: background-image 2s ease-in-out;
+  transition: background-image 1s ease-in-out;
+}
+@keyframes changeLight {
+  0%,
+  100% {
+    background-image: url("/images/Traffic_Light_One.png");
+  }
+  25% {
+    background-image: url("/images/Traffic_Light_Two.png");
+  }
+  50% {
+    background-image: url("/images/Traffic_Light_Three.png");
+  }
+  75% {
+    background-image: url("/images/Traffic_Light_Four.png");
+  }
+}

@@ -19,7 +19,6 @@
 
 /* site wide form classes  */
 .wrap-image-form {
-  /* background-color: red; */
   display: flex;
   gap: 1rem;
   height: auto;
@@ -41,10 +40,6 @@
   width: 0;
 }
 
-/* .wrap-image-form .form-submitted-feedback {
-  display: none;
-} */
-
 @media (max-width: 480px) {
   .wrap-image-form {
     flex-direction: column;
@@ -56,7 +51,6 @@
 
   .wrap-image-form img {
     width: 80vw;
-
     margin: 0 auto;
   }
 }
@@ -64,7 +58,6 @@
 .wrap-image-form label {
   padding: 0;
   font-weight: bold;
-  /* line-height: 1.5rem; */
 }
 
 .wrap-image-form input {
@@ -81,27 +74,6 @@
   border-radius: 2px;
 }
 
-/* specific classes to the contact us form  */
-/* select[data-chosen] {
-  outline-offset: 2px;
-  outline: 12px solid;
-}
-select[data-chosen="opt1"] {
-  outline: none;
-}
-select[data-chosen="opt2"] {
-  outline-color: green;
-}
-select[data-chosen="opt3"] {
-  outline-color: red;
-}
-select[data-chosen="opt4"] {
-  outline-color: steelblue;
-}
-select[data-chosen="opt5"] {
-  outline-color: orange;
-} */
-
 .selected-message {
   display: none;
   background-color: var(--coder-main);
@@ -111,11 +83,25 @@ select[data-chosen="opt5"] {
   align-items: center;
   padding: 1rem;
   height: 10rem;
+  border: 0.1rem solid lightgray;
+  border-radius: 2px;
 }
 
-select[data-chosen] {
-  /* outline-offset: 2px;
-  outline: 12px solid; */
+.wrap-image-form textarea {
+  border: 0.1rem solid lightgray;
+  border-radius: 2px;
+}
+
+.wrap-image-form .contact-us-button {
+  background-color: var(--coder-main);
+  color: var(--coder-white);
+  width: 10rem;
+  border-radius: 0.5rem;
+}
+
+.wrap-image-form .contact-us-button:hover {
+  background-color: var(--coder-accent);
+  color: var(--coder-white);
 }
 
 select[data-chosen="sub0"] ~ .sub0 {
