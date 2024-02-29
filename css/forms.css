@@ -129,3 +129,7 @@ select[data-chosen="sub6"] ~ .sub6 {
 select[data-chosen="sub7"] ~ .sub7 {
   display: flex;
 }
+
+input:invalid {
+  box-shadow: 0 0 5px 1px var(--coder-main);
+}

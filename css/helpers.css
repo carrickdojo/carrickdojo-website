@@ -584,7 +584,6 @@ Site wide classes for displaying different blocks of content like examples, code
 .note {
   display: flex;
   align-items: center;
-  /* background-color: var(--coder-secondary); */
   background-image: linear-gradient(
     to right,
     var(--coder-secondary),
