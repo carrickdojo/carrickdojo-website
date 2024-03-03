@@ -19,6 +19,8 @@
   --coder-black-light: #141414;
   --coder-black-lighter: #1f1f1f;
   --coder-gold: rgba(233, 199, 9, 0.878);
+  --coder-pink: #ed70b5;
+  --coder-blue: #492994;
 }
 
 html,
@@ -37,6 +39,10 @@ main {
   display: flex;
   height: max-content;
   flex-direction: column;
+}
+
+section {
+  padding: 0;
 }
 
 .heading {

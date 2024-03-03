@@ -45,6 +45,19 @@
   font-weight: 400;
   src: url(../fonts/vt323-latin-400-normal.ttf);
 }
+
+.font-main {
+  font-family: ourMainText;
+  letter-spacing: 0rem;
+  font-weight: 400;
+}
+
+.font-emphasis {
+  font-family: ourMainText;
+  letter-spacing: 0rem;
+  font-weight: 600;
+}
+
 .font-stalinist {
   font-family: stalinist;
   letter-spacing: 0rem;
@@ -125,4 +138,46 @@
 .text-double-shadow {
   color: #dfdfdf;
   text-shadow: 4px 4px 0px #000, -4px 0 0px #000, 7px 4px 0 #fff;
+}
+
+.heading-pink {
+  background-color: var(--coder-pink);
+  color: var(--coder-white);
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+  rotate: -2deg;
+}
+
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+
+.heading-tilt-up {
+  rotate: -3deg;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+.heading-tilt-down {
+  rotate: 3deg;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .heading-tilt-up {
+    rotate: -2deg;
+  }
+}
+@media (max-width: 480px) {
+  .heading-tilt-down {
+    rotate: 2deg;
+  }
 }
