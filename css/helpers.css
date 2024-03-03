@@ -28,6 +28,22 @@
   margin-bottom: 0;
 }
 
+.tilt-left-15 {
+  rotate: -15deg;
+}
+.tilt-left-30 {
+  rotate: -30deg;
+}
+.tilt-left-45 {
+  rotate: -45deg;
+}
+.tilt-left-90 {
+  rotate: -90deg;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
 /*
 
 --------------
