@@ -17,13 +17,13 @@
 }
 
 @font-face {
-  font-family: marker;
+  font-family: permanentMarker;
   font-weight: 400;
   src: url(../fonts/PermanentMarker-Regular.ttf);
 }
 
 @font-face {
-  font-family: marker2;
+  font-family: comingSoon;
   font-weight: 400;
   src: url(../fonts/coming-soon-latin-400-normal.ttf);
 }
@@ -49,7 +49,7 @@
 .font-main {
   font-family: ourMainText;
   letter-spacing: 0rem;
-  font-weight: 400;
+  font-weight: 100;
 }
 
 .font-emphasis {
@@ -72,12 +72,12 @@
 }
 
 .text-marker {
-  font-family: marker;
+  font-family: permanentMarker;
   letter-spacing: 0.2rem;
   font-size: larger;
 }
 .text-marker2 {
-  font-family: marker2;
+  font-family: comingSoon;
   letter-spacing: 0.1rem;
   font-size: larger;
 }
@@ -89,7 +89,7 @@
 }
 
 .text-marker-big {
-  font-family: marker2;
+  font-family: comingSoon;
   letter-spacing: 0.1rem;
   font-size: x-large;
 }

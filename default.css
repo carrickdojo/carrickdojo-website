@@ -44,6 +44,8 @@ main {
 section {
   padding: 0;
 }
+p {
+}
 
 .heading {
   display: flex;
