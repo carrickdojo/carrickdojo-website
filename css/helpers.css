@@ -16,7 +16,6 @@
 
 .rounded-full {
   border-radius: 100vw;
-  /* border: 1rem solid lime; */
 }
 
 .align-top {
@@ -331,6 +330,10 @@ Image Helper Classes
 Classes for changing the images, icons and logos styles.
 -------------
  */
+
+.flip-image {
+  transform: scaleX(-1);
+}
 
 .logo-tiny {
   display: inline-block;
