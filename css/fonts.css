@@ -217,6 +217,12 @@ Text Alignment Helper Classes
 .text-right {
   text-align: right;
 }
+@media (max-width: 480px) {
+  .text-right {
+    text-align: center;
+  }
+}
+
 .text-center {
   text-align: center;
 }
@@ -265,4 +271,25 @@ Misc Helper Classes
   padding-bottom: 1rem;
   line-height: 1.5rem;
   rotate: -2deg;
+}
+
+.heading-tilt {
+  width: 300px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+  rotate: -4deg;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .heading-tilt {
+    width: 200px;
+  }
+}
+
+.heading-down {
+  rotate: 4deg;
 }
