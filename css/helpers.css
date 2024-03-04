@@ -1,3 +1,11 @@
+/*
+
+--------------
+Helper Classes
+These are classes used across the site and on all screen sizes to change the look and style of specific elements 
+--------------
+*/
+
 .hidden {
   display: none;
 }
@@ -10,12 +18,43 @@
   display: block;
 }
 
-.emoji-x-large {
-  font-size: 5rem;
-}
-
 .rounded-full {
   border-radius: 100vw;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.rounded-small {
+  border-radius: 0.5rem;
+}
+
+.shadow-small {
+  box-shadow: var(--coder-main) 0 0.25rem 1rem;
+}
+
+.shadow-small:hover {
+  box-shadow: var(--coder-secondary) 0 0.5rem 1.5rem;
+}
+
+.line-thick-big {
+  width: 100%;
+  height: 1.2rem;
+  background-color: var(--coder-main);
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 
+-------------
+Alignment Helper Classes 
+Classes for our lining things up.
+-------------
+ */
+.center {
+  margin: 0 auto;
 }
 
 .align-top {
@@ -28,29 +67,21 @@
   margin-bottom: 0;
 }
 
-.tilt-left-15 {
-  rotate: -15deg;
-}
-.tilt-left-30 {
-  rotate: -30deg;
-}
-.tilt-left-45 {
-  rotate: -45deg;
-}
-.tilt-left-90 {
-  rotate: -90deg;
+.align-center {
+  align-items: center;
+  justify-content: center;
 }
 
-.overflow-hidden {
-  overflow: hidden;
+article {
+  padding: 1rem;
 }
-/*
 
---------------
-Helper Classes
-These are classes used across the site and on all screen sizes to change the look and style of specific elements 
---------------
-*/
+@media (max-width: 480px) {
+  article {
+    /* padding: 3rem; */
+  }
+}
+
 .pad-top {
   padding-top: 1rem;
 }
@@ -69,6 +100,27 @@ These are classes used across the site and on all screen sizes to change the loo
 .pad-all {
   padding: 1rem;
 }
+
+.tilt-left-15 {
+  rotate: -15deg;
+}
+.tilt-left-30 {
+  rotate: -30deg;
+}
+.tilt-left-45 {
+  rotate: -45deg;
+}
+.tilt-left-90 {
+  rotate: -90deg;
+}
+
+/*
+
+--------------
+Wrapper Helper Classes
+These are classes used to responsively wrap content sections
+--------------
+*/
 
 .wrap-image-article {
   display: inline-flex;
@@ -136,31 +188,6 @@ h4 {
   line-height: 1.2rem;
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
-}
-
-.rounded-small {
-  border-radius: 0.5rem;
-}
-
-.shadow-small {
-  box-shadow: var(--coder-main) 0 0.25rem 1rem;
-}
-
-.shadow-small:hover {
-  box-shadow: var(--coder-secondary) 0 0.5rem 1.5rem;
-}
-
-.center {
-  margin: 0 auto;
-}
-
-.line-thick-big {
-  width: 100%;
-  height: 1.2rem;
-  background-color: var(--coder-main);
-  border-radius: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 /* 
@@ -473,27 +500,6 @@ button a {
 
 .button-action:hover {
   border: 0.5rem solid var(--coder-accent);
-}
-
-/* 
--------------
-Alignment Helper Classes 
-Classes for our lining things up.
--------------
- */
-.align-center {
-  align-items: center;
-  justify-content: center;
-}
-
-article {
-  padding: 1rem;
-}
-
-@media (max-width: 480px) {
-  article {
-    /* padding: 3rem; */
-  }
 }
 
 /* 
