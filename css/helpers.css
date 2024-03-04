@@ -123,9 +123,9 @@ These are classes used to responsively wrap content sections
 */
 
 .wrap-image-article {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  width: fit-content;
+  /* width: fit-content; */
 }
 
 .wrap-image-article article {
@@ -143,13 +143,13 @@ These are classes used to responsively wrap content sections
     flex-direction: column;
   }
   .wrap-image-article article {
-    width: 100%;
-    max-width: 100%;
+    width: 90%;
+    max-width: 90%;
   }
-  .wrap-image-article img {
-    width: 100%;
-    max-width: 100%;
-  }
+  /* .wrap-image-article img {
+    width: auto;
+    max-width: auto;
+  } */
 }
 .format-tight {
   gap: 0;
@@ -443,7 +443,7 @@ Classes for changing the images, icons and logos styles.
 
 @media (max-width: 480px) {
   .image-medium {
-    width: 160px;
+    width: 240px;
     margin: 0 auto;
   }
 }
@@ -454,7 +454,7 @@ Classes for changing the images, icons and logos styles.
 }
 
 @media (max-width: 480px) {
-  .image-medium {
+  .image-small {
     width: 60px;
     margin: 0 auto;
   }
@@ -466,7 +466,7 @@ Classes for changing the images, icons and logos styles.
 }
 
 @media (max-width: 480px) {
-  .image-medium {
+  .image-x-small {
     width: 5rem;
     margin: 0 auto;
   }

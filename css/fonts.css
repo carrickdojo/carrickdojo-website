@@ -251,6 +251,10 @@ Misc Helper Classes
 
 --------------
 */
+.break-word {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
 
 .heading-pink {
   background-color: var(--coder-pink);

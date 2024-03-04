@@ -82,6 +82,46 @@
     </nav>
 
     <main>
+      <div class="colours-main-dark pad-all">
+        <section class="">
+          <div class="wrap-image-article">
+            <img src="images/Adult02-01.webp" alt="" class="image-medium" />
+            <article>
+              <p class="colours-white-black rounded-small pad-all">
+                Please email us at
+                <a
+                  href="mailto:carrickonshannondojo@gmail.com"
+                  class="break-word">
+                  carrickonshannondojo@gmail.com</a
+                >
+                with any queries or questions you may have.
+              </p>
+
+              <p class="">
+                Our meet-ups take place at the Hive in Carrick-on-Shannon and
+                items for our Dojo can be dropped off during business hours.
+              </p>
+
+              <address class="colours-white-black rounded-small pad-all">
+                The Hive,<br />
+                Dublin Road,<br />
+                Carrick on Shannon,<br />
+                County Leitrim<br />
+                Ireland<br />
+                N41 YH72
+              </address>
+
+              <p>
+                Our volunteers, mentors and Champion all use their own phones
+                and we do not provide them publicly. We ask people to provide
+                our email address or website address as a starting point for
+                contacting us.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+
       <div class="colours-main pad-all">
         <section class="colours-white-black rounded-small pad-all">
           <div class="wrap-image-form">
@@ -95,8 +135,13 @@
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" value="" /><br />
 
-              <label for="email">Your Email</label>
-              <input type="email" id="email" name="email" value="" /><br />
+              <label for="email">Your Email (required)</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value=""
+                required /><br />
 
               <label for="phone">Your Phone Number</label>
               <input type="tel" id="phone" name="phone" value="" /><br />
@@ -109,11 +154,11 @@
                   Please select a subject:
                 </option>
                 <option value="sub1">Join our Dojo</option>
-                <option value="sub2">Become a mentor</option>
+                <option value="sub2">Become a Mentor</option>
                 <option value="sub3">Volunteer at our Dojo</option>
                 <option value="sub4">Make a data enquiry</option>
-                <option value="sub5">Raise a safeguarding concern</option>
-                <option value="sub6">Give feedback</option>
+                <option value="sub5">Raise a Safeguarding concern</option>
+                <option value="sub6">Give Feedback</option>
                 <option value="sub7">Something else</option>
               </select>
 
@@ -166,7 +211,7 @@
 
               <input
                 type="button"
-                class="signup-button font-coderdojo"
+                class="contact-us-button"
                 onclick="submitForm()"
                 value="Send Message" />
             </form>
@@ -185,16 +230,22 @@
               <p>We will endeavour to get back to you soon.</p>
             </div>
           </div>
-          <div class="example text-marker-big">
-            <div>
-              <p>A note on our Contact Form:</p>
-              <p>
-                Our website is very basic and our contact form has been
-                described as <b> a clever bit of a hack</b>.
-              </p>
-              <p>
+          <div class="warning text-emphasis-big">
+            <div class="">
+              <h2>A note on our Contact Form:</h2>
+
+              <p class="">
+                Our website avoids frameworks and is HTML and CSS where
+                possible. Our contact form has been described as
+                <i>'a clever bit of a hack'</i>. <br />
+                If you encounter an issue or bug, please let us know. <br />
                 We have further details on how it works
-                <a href="/site.html#contact-form"> here</a>
+                <a href="/site.html#contact-form"><u> here</u></a>
+              </p>
+              <hr />
+              <p>
+                Please free to email us directly using the address in our
+                footer.
               </p>
             </div>
           </div>
