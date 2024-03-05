@@ -82,6 +82,12 @@ img {
   width: calc(100vw / 11);
   margin-left: -3rem;
 }
+@media (max-width: 480px) {
+  #ninjas > img {
+    width: 12vw;
+    margin-left: -3vw;
+  }
+}
 
 #action {
   align-items: flex-end;
