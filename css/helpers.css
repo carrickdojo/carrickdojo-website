@@ -78,7 +78,7 @@ article {
 
 @media (max-width: 480px) {
   article {
-    /* padding: 3rem; */
+    padding: 0.5rem;
   }
 }
 
@@ -125,7 +125,6 @@ These are classes used to responsively wrap content sections
 .wrap-image-article {
   display: flex;
   align-items: center;
-  /* width: fit-content; */
 }
 
 .wrap-image-article article {
