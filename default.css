@@ -50,7 +50,7 @@ section {
 p {
 }
 
-.heading {
+.page-heading {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,100 +59,6 @@ p {
   text-align: center;
 }
 
-.heading a {
+.page-heading a {
   color: var(--coder-white);
 }
-
-/* common components  */
-/* .wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  gap: 0rem 0rem;
-} */
-/* 
-.card {
-  display: flex;
-  margin: 1rem;
-  flex-direction: column;
-  width: 25vw;
-  border: 0.5rem solid var(--coder-main-dark);
-  border-radius: 0.5rem;
-  background-image: linear-gradient(
-    to bottom right,
-    var(--coder-secondary),
-    var(--coder-main),
-    var(--coder-main),
-    var(--coder-main),
-    var(--coder-accent)
-  );
-}
-
-.card a {
-  text-decoration: none;
-  color: var(--coder-white);
-}
-.card-image {
-  display: flex;
-  width: 100%;
-  background-color: var(--coder-main-dark);
-}
-.card-image img {
-  display: block;
-  height: 20vh;
-  margin: 0 auto;
-}
-.card-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  flex-direction: column;
-}
-
-.card-content h1 {
-  display: inline-block;
-  text-align: center;
-  padding-bottom: 1rem;
-  border-bottom: 0.5rem solid var(--coder-main-dark);
-}
-
-.card-badges {
-  display: inline-block;
-  padding: 1rem;
-}
-.card-badge {
-  display: inline-block;
-  padding: 0.4vh;
-  border-radius: 1vh;
-  background-color: var(--coder-accent);
-  border: 0.2vh solid var(--coder-white);
-  margin: 0.2vh;
-} */
-
-/* Home Page */
-/* .call-to-action {
-  display: flex;
-  gap: 5vw;
-  justify-content: center;
-} */
-
-/* .hero {
-  display: flex;
-  color: white;
-  align-self: center;
-}
-.hero-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px;
-  font-size: larger;
-}
-
-.hero-right {
-  display: flex;
-} */
