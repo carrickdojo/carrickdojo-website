@@ -18,6 +18,15 @@ These are classes used across the site and on all screen sizes to change the loo
   display: block;
 }
 
+.width-full {
+  width: 100%;
+}
+
+.width-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .rounded-full {
   border-radius: 100vw;
 }
@@ -229,6 +238,19 @@ Classes for changing the colour palette of an element.
   color: var(--coder-black);
 }
 
+.colours-accent-white-grad {
+  background-image: linear-gradient(
+    to bottom,
+    var(--coder-accent),
+    var(--coder-secondary),
+    var(--coder-secondary),
+    var(--coder-secondary),
+    var(--coder-secondary),
+    var(--coder-secondary)
+  );
+  color: var(--coder-black);
+}
+
 .colours-secondary-grad {
   background-image: linear-gradient(
     to bottom,
@@ -262,7 +284,7 @@ Classes for changing the colour palette of an element.
 }
 
 .colours-slate-white {
-  background-color: #313b3f;
+  background-color: var(--coder-black-lighter);
   color: white;
 }
 

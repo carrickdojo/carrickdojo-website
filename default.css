@@ -68,3 +68,28 @@ img {
 .page-heading a {
   color: var(--coder-white);
 }
+
+#ninjas {
+  padding-top: 10rem;
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+}
+
+#ninjas > img {
+  width: calc(100vw / 11);
+  margin-left: -3rem;
+}
+
+#action {
+  align-items: flex-end;
+  height: 20rem;
+}
+@media (max-width: 480px) {
+  #action {
+    height: auto;
+    margin: 0 auto;
+  }
+}
