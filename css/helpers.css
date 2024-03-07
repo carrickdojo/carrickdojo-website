@@ -216,6 +216,20 @@ Classes for changing the colour palette of an element.
   background-color: var(--coder-main);
   color: var(--coder-white);
 }
+.colours-main-grad {
+  background-image: linear-gradient(
+    to right bottom,
+    var(--coder-main-dark),
+    var(--coder-main-dark),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-main-light),
+    var(--coder-main),
+    var(--coder-main-dark),
+    var(--coder-main-dark)
+  );
+  color: var(--coder-white);
+}
 
 .colours-main-light {
   background-color: var(--coder-main-light);

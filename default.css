@@ -99,3 +99,16 @@ img {
     margin: 0 auto;
   }
 }
+
+.fancy-background {
+  background-image: url("/images/animated-gradient-big.svg");
+  background-size: 1920px 1080px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.fancy-background-darker {
+  background-image: url("/images/animated-gradient-big-darker.svg");
+  background-size: 1920px 1080px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
