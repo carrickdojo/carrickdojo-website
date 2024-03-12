@@ -1,12 +1,13 @@
-@import "css/normalize.css";
+/* @import "css/normalize.css"; */
 @import "css/fonts.css";
 @import "css/animations.css";
 @import "css/helpers.css";
+/* @import "css/navbar.css"; */
 @import "css/projects.css";
 @import "css/forms.css";
 
-@import url("/css/layout-large-screen.css") only screen and (min-width: 768px);
-@import url("/css/layout-mobile-screen.css") only screen and (max-width: 480px);
+/* @import url("/css/layout-large-screen.css") only screen and (min-width: 768px);
+@import url("/css/layout-mobile-screen.css") only screen and (max-width: 480px); */
 
 :root {
   --coder-main: #642580;
@@ -27,6 +28,14 @@
   --coder-blue: #492994;
 }
 
+/* Our Website Setup */
+/* These settings will affect all our pages */
+
+/* We set our main colour scheme and font */
+/* We set more specific rules on elements if we do not want to use these */
+
+/* We remove (reset) the margin and padding as this may be different across browsers  */
+/* and we set it ourselves */
 html,
 body {
   background-color: var(--coder-main);
@@ -34,27 +43,220 @@ body {
   font-family: ourMainText, sans-serif;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+}
+body {
+  min-height: 100%;
 }
 
-main {
-  display: flex;
-  height: max-content;
-  flex-direction: column;
+/* The default value for box-sizing is content-box, which is what we are overriding here.  */
+/* This is worth investigating why we do this and some of the history of css */
+/* There is even an International Box Sizing Awareness Day */
+/* https://css-tricks.com/international-box-sizing-awareness-day/ */
+* {
+  box-sizing: border-box;
 }
 
-section {
-  padding: 0;
-}
-p {
-  margin: 0;
-}
-
+/* We never want our images to expand beyond the available space */
+/* If you disable this, some images on mobile screens particularly, will push beyond the size available  */
 img {
   max-width: 100%;
 }
+
+/* This is where the content for each specific page will go. */
+/* By making our main section a flex container, it will be responsive. */
+main {
+  display: flex;
+  /* height: max-content; */
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  background-image: linear-gradient(
+    to right,
+    white,
+    white,
+    white,
+    var(--coder-main-light),
+    var(--coder-main-light)
+  );
+  width: 100%;
+  height: 10vh;
+}
+
+footer {
+  background-color: var(--coder-black);
+  color: var(--coder-white);
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+/* This is all the parts of our footer  */
+/* Inside the footer is a CSS grid */
+/* It should be responsive across small, medium and large screens */
+/* It is mobile first, meaning it is written for mobile and media queries deal with larger screens */
+.footer-content {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.2rem 1fr 0.2rem;
+  gap: 1rem;
+  grid-template-areas:
+    ". footer-social ."
+    ". footer-links ."
+    ". footer-foundation ."
+    ". footer-licence ."
+    ". footer-about .";
+}
+
+.footer-links {
+  grid-area: footer-links;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footer-links > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links h1,
+h2,
+h3,
+h4 {
+  font-weight: bolder;
+  border-bottom: 0.1rem solid var(--coder-white);
+  font-size: smaller;
+  margin: 0.2rem 0;
+}
+.footer-links a {
+  color: var(--coder-white);
+  font-size: small;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  color: var(--coder-accent);
+}
+
+.footer-social {
+  grid-area: footer-social;
+  display: flex;
+
+  justify-content: center;
+  gap: 1rem;
+  margin: auto;
+}
+.footer-social a {
+  background-color: var(--coder-main);
+  padding: 1rem;
+  border-radius: 100%;
+  border: 0.2rem solid var(--coder-white);
+}
+.footer-social a:hover {
+  background-color: var(--coder-main-dark);
+  padding: 1rem;
+  border-radius: 100%;
+  border: 0.2rem solid var(--coder-secondary);
+}
+
+.footer-foundation {
+  grid-area: footer-foundation;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 0.1rem solid white;
+  border-radius: 0.25rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.footer-licence {
+  grid-area: footer-licence;
+  font-size: smaller;
+}
+
+.footer-about {
+  grid-area: footer-about;
+  font-size: small;
+}
+
+@media only screen and (min-width: 720px) {
+  .footer-content {
+    max-width: 70%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "footer-links footer-social"
+      "footer-links footer-foundation"
+      "footer-licence footer-licence"
+      "footer-about  footer-about";
+  }
+  .footer-links {
+    /* flex-direction: row; */
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .footer-content {
+    max-width: 70%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "footer-links footer-links footer-social"
+      "footer-links footer-links footer-foundation"
+      "footer-licence footer-licence footer-foundation"
+      "footer-about footer-about footer-foundation";
+  }
+  .footer-links {
+    flex-direction: row;
+  }
+}
+
+/* ----------------------  */
+/* Our Site Logo  */
+/* ----------------------  */
+#our-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+  padding: 0;
+  height: 10vh;
+  width: fit-content;
+  margin: 0 0.5vw;
+  text-decoration: none;
+}
+
+.our-logo:hover .logo-image {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.logo-image {
+  height: 5vh;
+  width: 5vh;
+}
+.logo-text {
+  font-family: coderDojoBrandLogo;
+  font-size: xx-large;
+  color: var(--coder-black);
+}
+@media (max-width: 480px) {
+  .logo-text {
+    display: none;
+  }
+}
+
+/* --------------  */
+/* --------------  */
+/* ---to do -----  */
+/* refactor below  */
+/* --------------  */
+/* --------------  */
 
 .page-heading {
   display: flex;
