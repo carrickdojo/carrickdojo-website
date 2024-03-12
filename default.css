@@ -1,13 +1,8 @@
-/* @import "css/normalize.css"; */
 @import "css/fonts.css";
 @import "css/animations.css";
 @import "css/helpers.css";
-/* @import "css/navbar.css"; */
 @import "css/projects.css";
 @import "css/forms.css";
-
-/* @import url("/css/layout-large-screen.css") only screen and (min-width: 768px);
-@import url("/css/layout-mobile-screen.css") only screen and (max-width: 480px); */
 
 :root {
   --coder-main: #642580;
@@ -66,32 +61,211 @@ img {
 /* By making our main section a flex container, it will be responsive. */
 main {
   display: flex;
-  /* height: max-content; */
   flex-direction: column;
 }
 
 nav {
-  display: flex;
-  background-image: linear-gradient(
-    to right,
-    white,
-    white,
-    white,
-    var(--coder-main-light),
-    var(--coder-main-light)
-  );
   width: 100%;
-  height: 10vh;
+  height: 5rem;
+  background-color: var(--coder-main-light);
 }
 
+.mobile-nav {
+  z-index: 100;
+  display: none;
+  overflow: hidden;
+  background-color: var(--coder-main-light);
+}
+
+.mobile-nav a {
+  float: left;
+  display: block;
+  color: var(--coder-white);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.mobile-nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.mobile-nav a.active {
+  background-color: var(--coder-main);
+  color: white;
+}
+
+.mobile-nav a.icon {
+  float: right;
+  display: block;
+}
+
+.mobile-nav.open {
+  display: block;
+  position: relative;
+}
+
+.mobile-nav.open a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+.nav-bar {
+  max-width: 90%;
+  height: 5rem;
+  align-items: center;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "logo mobile";
+}
+
+.navbar-mobile-icon {
+  grid-area: mobile;
+  margin-left: auto;
+}
+.navbar-mobile-icon img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.navbar-logo {
+  grid-area: logo;
+}
+.navbar-links {
+  background-color: var(--coder-main-light);
+  height: 5rem;
+  grid-area: links;
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar-links::before {
+  background-image: url("../images/nav-curve.svg");
+  background-size: 5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 5rem;
+  width: 5rem;
+  display: block;
+  content: " ";
+  vertical-align: middle;
+}
+
+.navbar-links a {
+  color: var(--coder-white);
+  text-decoration: none;
+  box-shadow: 0px 5px var(--coder-main-light);
+  transition: box-shadow 0.6s linear;
+  margin: 0.5em;
+}
+
+.navbar-links a:hover {
+  box-shadow: 0px 10px var(--coder-accent);
+}
+
+.navbar-links a.active {
+  color: var(--coder-accent);
+  box-shadow: 0px 10px var(--coder-accent);
+}
+
+.navbar-button {
+  grid-area: button;
+  background-color: var(--coder-main-light);
+  display: none;
+}
+.navbar-button > a {
+  background-color: var(--coder-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 2.5rem;
+  padding: 0.2rem;
+  border: 0.2rem solid var(--coder-main-dark);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: large;
+}
+.navbar-button > a:hover {
+  border: 0.2rem solid var(--coder-secondary);
+}
+
+.navbar-button > a > img {
+  height: 2.5rem;
+  margin-right: 0.2rem;
+}
+
+@media only screen and (min-width: 720px) {
+  nav {
+    background-image: linear-gradient(
+      to right,
+      var(--coder-white),
+      var(--coder-white),
+      var(--coder-white),
+      var(--coder-main-light),
+      var(--coder-main-light)
+    );
+  }
+  .nav-bar {
+    max-width: 90%;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "logo links button";
+  }
+  .navbar-links {
+    display: flex;
+    font-size: smaller;
+  }
+  .navbar-button {
+    display: block;
+  }
+  .navbar-mobile-icon {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  nav {
+    background-image: linear-gradient(
+      to right,
+      var(--coder-white),
+      var(--coder-white),
+      var(--coder-white),
+      var(--coder-main-light),
+      var(--coder-main-light),
+      var(--coder-main-light)
+    );
+  }
+  .nav-bar {
+    max-width: 70%;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "logo links button";
+  }
+  .navbar-links {
+    display: flex;
+    font-size: larger;
+  }
+  .navbar-button {
+    display: block;
+  }
+  .navbar-mobile-icon {
+    display: none;
+  }
+}
+
+/* ----------------------------------  */
+/* This is all the parts of our footer  */
+/* ----------------------------------  */
 footer {
   background-color: var(--coder-black);
   color: var(--coder-white);
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
-/* This is all the parts of our footer  */
 /* Inside the footer is a CSS grid */
 /* It should be responsive across small, medium and large screens */
 /* It is mobile first, meaning it is written for mobile and media queries deal with larger screens */
@@ -219,35 +393,70 @@ h4 {
 /* ----------------------  */
 /* Our Site Logo  */
 /* ----------------------  */
-#our-logo {
+.navbar-logo {
   display: flex;
   align-items: center;
-  gap: 0.5vw;
+  justify-content: center;
+  gap: 0.5rem;
   padding: 0;
-  height: 10vh;
+  height: 5rem;
   width: fit-content;
-  margin: 0 0.5vw;
+  margin: 0 0.5rem;
   text-decoration: none;
 }
 
-.our-logo:hover .logo-image {
+.navbar-logo:hover .logo-image {
   animation-name: spin;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
 
 .logo-image {
-  height: 5vh;
-  width: 5vh;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 .logo-text {
   font-family: coderDojoBrandLogo;
-  font-size: xx-large;
-  color: var(--coder-black);
+  font-size: 2.5rem;
 }
-@media (max-width: 480px) {
+
+@media only screen and (min-width: 720px) {
   .logo-text {
-    display: none;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .logo-text {
+    font-size: 2.5rem;
+  }
+}
+
+.page-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  background-color: darkred;
+  text-align: center;
+  height: 4rem;
+  font-size: small;
+}
+
+.page-heading a {
+  color: var(--coder-white);
+}
+
+@media only screen and (min-width: 720px) {
+  .page-heading {
+    height: 2.5rem;
+    font-size: smaller;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .page-heading {
+    height: 1.5rem;
+    font-size: medium;
   }
 }
 
@@ -257,19 +466,6 @@ h4 {
 /* refactor below  */
 /* --------------  */
 /* --------------  */
-
-.page-heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.2rem;
-  background-color: darkred;
-  text-align: center;
-}
-
-.page-heading a {
-  color: var(--coder-white);
-}
 
 #ninjas {
   padding-top: 10rem;

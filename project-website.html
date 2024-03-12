@@ -8,15 +8,25 @@
     <link rel="icon" href="images/logos/coderdojo-roundel.svg" />
     <link href="default.css" rel="stylesheet" type="text/css" />
   </head>
+
   <body>
+    <!-- Our page-heading is used to display our under-construction banner  -->
     <div class="page-heading">
-      <img src="images/icons/construction.svg" alt="" class="logo-tiny" /><span>
+      <img
+        src="images/icons/construction.svg"
+        alt=""
+        style="width: 1rem; height: 1rem; margin: 0 0.5rem" />
+      <span>
         Our website is in the process of being rebuilt and things may now work
         fully yet. Check out our new website
         <a href="project-website.html">project</a> progress.</span
       >
-      <img src="images/icons/construction.svg" alt="" class="logo-tiny" />
+      <img
+        src="images/icons/construction.svg"
+        alt=""
+        style="width: 1rem; height: 1rem; margin: 0 0.5rem" />
     </div>
+
     <!-- Our navigation is responsive and will display different elements based on the css classes -->
     <!-- Each page will have very similar navigation, however we need to set the active page class  -->
     <!-- ---------------- -->
@@ -25,84 +35,85 @@
     <!-- Link to example code with notes:  https://www.w3schools.com/howto/howto_js_topnav_responsive.asp  -->
     <!-- There are two sets of links to change if we want to add a page, the large screen links and the small screen links  -->
     <nav>
-      <div class="navbar">
-        <a href="/index.html" class="our-logo">
+      <!-- our navigation bar uses CSS grid -->
+      <div class="nav-bar">
+        <!-- Our logo is a link to our homepage  -->
+        <!-- we are using the same logo for all screen sizes however we hide the log-text on small screens in the css  -->
+        <a class="navbar-logo" href="/index.html">
           <img
             class="logo-image"
             src="images/logos/coderdojo-roundel.svg"
             alt="CarrickDojo Logo" />
-          <span class="logo-text">CarrickDojo</span>
+          <span class="logo-text text-leitrim">CarrickDojo</span>
         </a>
+
         <!-- The large screen links -->
         <!-- These are only seen on large screens  -->
-        <div class="mobile-hidden desktop-navbar-right" id="desktopNav">
-          <img
-            src="images/white-curve.png"
-            alt="Border curve"
-            style="height: 10vh" />
-          <div class="desktop-navbar-links">
-            <a href="/projects.html" class="active">Projects</a>
-            <a href="/ninjas.html">Ninjas</a>
-            <a href="/mentors.html">Mentors</a>
-            <a href="/resources.html">Resources</a>
-            <a href="/about.html">About Our Dojo</a>
-          </div>
-
-          <button class="desktop-navbar-button">
-            <a href="#popup" title="Get tickets to the next meetup">
-              <img src="/images/icons/ticket.svg" alt="Our Dojo Tickets" />
-              <span class="myCoolText"> Tickets</span></a
-            >
-          </button>
-        </div>
-
-        <!-- This is the mobile navigation button  -->
-        <!-- When clicked, the showMobileNavFunction code at the bottom will run  -->
-        <div class="desktop-hidden mobile-nav-icon">
-          <a href="javascript:void(0);" onclick="showMobileNavFunction()">
-            <img src="images/icons/hamburger.svg" alt="Mobile nav menu" />
-          </a>
-        </div>
-      </div>
-      <!-- The mobile screen links  -->
-      <!-- These are only seen on small screens  -->
-      <div class="desktop-hidden">
-        <div class="mobile-nav" id="mobile-nav">
-          <a href="/projects.html" class="active">Projects</a>
+        <div class="navbar-links">
+          <a href="/projects.html">Projects</a>
           <a href="/ninjas.html">Ninjas</a>
           <a href="/mentors.html">Mentors</a>
           <a href="/resources.html">Resources</a>
           <a href="/about.html">About Our Dojo</a>
-          <a href="/contact.html">Get in Touch</a>
         </div>
+
+        <!-- This is the mobile navigation button  -->
+        <!-- When clicked, the showMobileNavFunction code at the bottom will run  -->
+        <div class="navbar-mobile-icon">
+          <a href="javascript:void(0);" onclick="showMobileNavFunction()">
+            <img src="images/icons/hamburger.svg" alt="Mobile nav menu" />
+          </a>
+        </div>
+
+        <!-- This is the ticket button  -->
+        <!-- It is hidden on mobile  -->
+        <div class="navbar-button">
+          <a href="#popup" title="Get tickets to the next meetup">
+            <img src="/images/icons/ticket.svg" alt="Our Dojo Tickets" />
+            <span class="myCoolText"> Tickets</span></a
+          >
+        </div>
+      </div>
+
+      <!-- The mobile screen links  -->
+      <!-- These are only seen on small screens  -->
+      <div class="mobile-nav" id="mobile-nav">
+        <a href="/">Home</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/ninjas.html">Ninjas</a>
+        <a href="/mentors.html">Mentors</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/about.html">About Our Dojo</a>
+        <a href="/contact.html">Get in Touch</a>
       </div>
     </nav>
 
-    <main class="main">
-      <div id="popup" class="popup-overlay">
-        <div class="popup">
-          <h2 class="heading-tilt colours-pink-white">CarrickDojo Tickets</h2>
-          <a class="close" href="#">&times;</a>
-          <div class="text-center pad-all">
-            We have begun to use the CoderDojo Foundation's new ticketing
-            system. 🎟️
-            <hr />
-            Click here to goto
-            <a
-              href="https://coderdojo.com/en/dojos/ie/carrick-on-shannon/carrick-on-shannon-co-leitrim"
-              class="text-leitrim text-large">
-              our Dojo on the CoderDojo Ticketing Platform</a
-            >
-            on the coderdojo.com website.
+    <!-- Our popup window is only displayed when the ticket button is clicked -->
+    <div id="popup" class="popup-overlay">
+      <div class="popup">
+        <h2 class="heading-tilt colours-pink-white">CarrickDojo Tickets</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="text-center pad-all">
+          We have begun to use the CoderDojo Foundation's new ticketing system.
+          🎟️
+          <hr />
+          Click here to goto
+          <a
+            href="https://coderdojo.com/en/dojos/ie/carrick-on-shannon/carrick-on-shannon-co-leitrim"
+            class="text-leitrim text-large">
+            our Dojo on the CoderDojo Ticketing Platform</a
+          >
+          on the coderdojo.com website.
 
-            <hr />
-            The system is still in development with new features coming soon.
-            <br />
-            If you have any issues please let us know and we will pass them on.
-            🚀
-          </div>
+          <hr />
+          The system is still in development with new features coming soon.
+          <br />
+          If you have any issues please let us know and we will pass them on. 🚀
         </div>
       </div>
+    </div>
+
+    <main class="main">
       <div class="bg-main">
         <div class="container">
           <div class="project">
