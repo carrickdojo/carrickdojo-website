@@ -222,14 +222,14 @@
   }
 }
 
-.card {
+.box-link {
   border-radius: 0.5rem;
   max-width: 20rem;
   font-size: 1rem;
   line-height: 1rem;
   overflow: hidden;
 }
-.card a {
+.box-link a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -238,14 +238,14 @@
   min-height: 10rem;
 }
 
-.card img {
+.box-link img {
   display: inline-block;
   margin: 0 auto;
   max-width: 4rem;
   height: 4rem;
   margin-top: 0.5rem;
 }
-.card article {
+.box-link article {
   max-width: 20rem;
   height: 10rem;
   text-align: center;
@@ -255,22 +255,22 @@
 
 /* Small devices such as large phones (640px and up) */
 @media only screen and (min-width: 40em) {
-  .card {
+  .box-link {
     font-size: 1.1rem;
     line-height: 1.1rem;
   }
-  .card a {
+  .box-link a {
     max-width: 20rem;
     min-height: 20rem;
   }
 
-  .card img {
+  .box-link img {
     margin: 0 auto;
     max-width: 8rem;
     min-height: 8rem;
     margin: 1rem auto;
   }
-  .card article {
+  .box-link article {
     max-width: 20rem;
     height: 10rem;
     padding: 0.5rem;
@@ -279,22 +279,22 @@
 
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 48em) {
-  .card {
+  .box-link {
     font-size: 1.1rem;
     line-height: 1.1rem;
   }
-  .card a {
+  .box-linka {
     max-width: 20rem;
     min-height: 20rem;
   }
 
-  .card img {
+  .box-link img {
     margin: 0 auto;
     max-width: 8rem;
     min-height: 8rem;
     margin: 1rem auto;
   }
-  .card article {
+  .box-link article {
     max-width: 20rem;
     min-height: 10rem;
     padding: 0.5rem;
@@ -303,7 +303,7 @@
 
 /* Large devices such as laptops (1024px and up) */
 @media only screen and (min-width: 64em) {
-  .card {
+  .box-link {
     font-size: 1rem;
     line-height: 1rem;
   }
@@ -311,7 +311,7 @@
 
 /* Largest devices such as desktops (1280px and up) */
 @media only screen and (min-width: 80em) {
-  .card {
+  .box-link {
     font-size: 1rem;
     line-height: 1rem;
   }

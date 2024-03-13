@@ -59,6 +59,16 @@ img {
   max-width: 100%;
 }
 
+/* We are going to remove the default are removing the default colour and underline for links  */
+/* We will have to manually turn it on to get the default browser behaviour  */
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* This is where the content for each specific page will go. */
 /* By making our main section a flex container, it will be responsive. */
 main {
