@@ -228,30 +228,62 @@ Text Alignment Helper Classes
 }
 
 .text-tilt-up {
-  rotate: -3deg;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  display: inline-block;
+  rotate: -2deg;
+  padding: 0.25rem;
   text-align: center;
 }
 .text-tilt-down {
-  rotate: 3deg;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  display: inline-block;
+  rotate: 2deg;
+  padding: 0.25rem;
   text-align: center;
 }
-
-@media (max-width: 480px) {
+/* Small devices such as large phones (640px and up) */
+@media only screen and (min-width: 40em) {
   .text-tilt-up {
     rotate: -2deg;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.25rem;
   }
-}
-@media (max-width: 480px) {
   .text-tilt-down {
     rotate: 2deg;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.25rem;
+  }
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+  .text-tilt-up {
+    rotate: -3deg;
+    padding: 0.5rem;
+  }
+  .text-tilt-down {
+    rotate: 3deg;
+    padding: 0.5rem;
+  }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em) {
+  .text-tilt-up {
+    rotate: -3deg;
+    padding: 0.75rem;
+  }
+  .text-tilt-down {
+    rotate: 3deg;
+    padding: 0.75rem;
+  }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em) {
+  .text-tilt-up {
+    rotate: -4deg;
+    padding: 1rem;
+  }
+  .text-tilt-down {
+    rotate: 4deg;
+    padding: 1rem;
   }
 }
 

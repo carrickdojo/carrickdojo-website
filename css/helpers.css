@@ -1,3 +1,31 @@
+.table-responsive {
+  padding: 0.25rem;
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  text-align: left;
+  font-size: 0.5rem;
+  background-color: var(--coder-main);
+  color: var(--coder-white);
+}
+
+.table-responsive tbody tr:nth-child(odd) {
+  background-color: var(--coder-main-light);
+}
+.table-responsive tbody tr:first-child {
+  background-color: var(--coder-main-dark);
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 40em) {
+  .table-responsive {
+    display: table;
+    font-size: 1rem;
+  }
+}
+
 .no-bullets {
   list-style: none;
   margin: 0;
