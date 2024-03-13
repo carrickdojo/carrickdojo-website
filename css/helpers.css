@@ -49,8 +49,14 @@
   margin: 0 auto;
 }
 
+.flex-bottom {
+  display: flex;
+  align-self: flex-end;
+}
+
 .flex {
   display: flex;
+  flex-direction: column;
 }
 
 .hidden {

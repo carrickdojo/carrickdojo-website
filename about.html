@@ -115,46 +115,52 @@
     <!-- Our Main section  -->
     <!-- This section contains all the content between the navigation bar and the footer -->
     <main class="main">
-      <div class="colours-main-light">
-        <div class="wrap-two-speech">
-          <div class="wrap-image-speech">
-            <img
-              src="images/coderdojo/Adult03-03.webp"
-              onmouseover="this.src='/images/coderdojo/Adult03-01.webp';"
-              onmouseout="this.src='images/coderdojo/Adult03-03.webp';"
-              alt=""
-              class="image-medium" />
-            <div class="speech-right">
-              <p class="font-schoolbell text-x-large">
-                Our next meet-up is this Tuesday!
-              </p>
+      <section class="colours-main-light">
+        <div class="wrapper">
+          <div class="cols-2">
+            <div class="wrapper-image-speech">
+              <img
+                src="images/coderdojo/Adult03-03.webp"
+                onmouseover="this.src='/images/coderdojo/Adult03-01.webp';"
+                onmouseout="this.src='images/coderdojo/Adult03-03.webp';"
+                alt=""
+                class="image-medium" />
+              <div class="box-speech box-speech-right">
+                <p class="font-schoolbell text-x-large">
+                  Our next meet-up is this Tuesday!
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="wrap-image-speech">
-            <div class="speech-left">
-              <p class="font-schoolbell text-large">
-                Our Dojo is open to new Ninjas!
-              </p>
-              <p class="font-schoolbell text-large">
-                Do you want to code something cool?
-              </p>
+            <div class="wrapper-image-speech">
+              <div class="box-speech box-speech-left">
+                <p class="font-schoolbell text-large">
+                  Our Dojo is open to new Ninjas!
+                </p>
+                <p class="font-schoolbell text-large">
+                  Do you want to code something cool?
+                </p>
+              </div>
+              <img
+                src="images/coderdojo/Adult04-01.webp"
+                onmouseover="this.src='/images/coderdojo/Adult04-02.webp';"
+                onmouseout="this.src='images/coderdojo/Adult04-01.webp';"
+                alt=""
+                class="image-medium flip-image" />
             </div>
-            <img
-              src="images/coderdojo/Adult04-01.webp"
-              onmouseover="this.src='/images/coderdojo/Adult04-02.webp';"
-              onmouseout="this.src='images/coderdojo/Adult04-01.webp';"
-              alt=""
-              class="image-medium flip-image" />
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="colours-main-dark">
-        <h1 class="heading-tilt heading-down colours-pink-white">
+      <section class="colours-main-dark flex">
+        <h1
+          class="text-tilt-down text-xx-large font-schoolbell center colours-pink-white">
           Our Dojo Meet-ups
         </h1>
-        <section class="format-tight font-main pad-all">
-          <div class="wrap-image-article">
+      </section>
+
+      <section class="colours-main-dark">
+        <div class="wrapper">
+          <div class="cols-2">
             <img
               src="images/coderdojo/Adult02-02.webp"
               alt=""
@@ -183,12 +189,12 @@
               </p>
             </article>
           </div>
+        </div>
+      </section>
 
-          <div class="wrap-image-article">
-            <img
-              src="images/coderdojo/Adult03-02.webp"
-              alt=""
-              class="image-medium desktop-hidden" />
+      <section class="">
+        <div class="wrapper">
+          <div class="cols-2">
             <article class="text-right">
               <h2>How Much?</h2>
               <p>
@@ -214,12 +220,16 @@
             <img
               src="images/coderdojo/Adult03-02.webp"
               alt=""
-              class="image-medium mobile-hidden" />
+              class="image-medium" />
           </div>
+        </div>
+      </section>
 
-          <div class="wrap-image-article">
+      <section class="colours-main-dark">
+        <div class="wrapper">
+          <div class="cols-2">
             <img
-              src="images/coderdojo/Adult04-05.webp"
+              src="images/Robot_Body.png"
               alt=""
               class="image-medium flip-image" />
             <article>
@@ -234,6 +244,7 @@
                 more prone to issues logging in to Scratch or the Raspberry Pi
                 Projects and Editor.
               </p>
+              <hr />
               <p>
                 If you are thinking of buying a laptop, it is worth considering
                 a refurbished laptop. Their are companies that refurbish laptops
@@ -250,19 +261,23 @@
                 has a 'Refurbished Laptop Section' that could provide a starting
                 point.
               </p>
+              <hr />
               <p>
-                Memory is probably the critical factor for entry level laptops
-                and, in 2024 the recommended minimum RAM is 8GB . We are more
-                than happy to chat about these things at our meet-ups.
+                Memory is probably the most critical factor for entry level
+                laptops and (in 2024) the recommended minimum RAM is 8GB .
+              </p>
+              <p>
+                We are more than happy to chat about these things at our
+                meet-ups.
               </p>
             </article>
           </div>
+        </div>
+      </section>
 
-          <div class="wrap-image-article">
-            <img
-              src="images/coderdojo/Adult03-03.webp"
-              alt=""
-              class="image-medium desktop-hidden" />
+      <section class="colours-main-light">
+        <div class="wrapper">
+          <div class="cols-2">
             <article>
               <h2>Online Accounts</h2>
               <p>
@@ -284,14 +299,18 @@
               </ul>
             </article>
             <img
-              src="images/coderdojo/Adult03-03.webp"
+              src="images/Shark.png"
               alt=""
               class="image-medium mobile-hidden" />
           </div>
+        </div>
+      </section>
 
-          <div class="wrap-image-article">
+      <section class="colours-main pad-all">
+        <div class="wrapper">
+          <div class="cols-2">
             <img
-              src="images/coderdojo/Adult01-03.webp"
+              src="images/Group_Hug.png"
               alt=""
               class="image-medium flip-image" />
             <article>
@@ -310,60 +329,75 @@
               </p>
             </article>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="colours-accent pad-all" id="tickets">
-        <h1 class="heading-tilt heading-down colours-leitrim font-schoolbell">
+      <section class="colours-accent flex" id="tickets">
+        <h1
+          class="text-tilt-up text-xx-large font-schoolbell colours-leitrim center">
           Booking Tickets
         </h1>
-        <section class="colours-main-dark pad-all rounded-small">
-          <div class="wrap-image-article">
-            <div class="rounded-full colours-white-black pad-all">
-              <img src="images/icons/ticket.svg" alt="" class="image-small" />
+      </section>
+
+      <section class="colours-accent pad-all">
+        <div class="wrapper">
+          <div class="colours-main-dark rounded-small">
+            <div class="cols-2 pad-all">
+              <article
+                class="text-center colours-white-black rounded-small pad-all">
+                <h2
+                  class="text-tilt-up colours-blue-white text-x-large font-schoolbell">
+                  Updates to Tickets
+                </h2>
+                <p>
+                  The CoderDojo Foundation are rolling out a new ticketing
+                  system that all the Dojo's can use.
+                </p>
+                <p>
+                  For each meetup, we will create an event on the new platform
+                  and parents with an account can book tickets.
+                </p>
+
+                <div class="colours-blue-white rounded-small pad-all">
+                  <a
+                    href="https://coderdojo.com/en/dojos/ie/carrick-on-shannon/carrick-on-shannon-co-leitrim"
+                    class="text-emphasis-big pad-left text-leitrim">
+                    Our Dojo on the CoderDojo Ticketing Platform
+                  </a>
+                </div>
+              </article>
+              <div class="flex-bottom">
+                <div class="box-info colours-white-black">
+                  <p>
+                    We also use Whatsapp to communicate with parents. If you
+                    would like to be on the CarrickDojo Parents Whatsapp Group,
+                    please ask at a meetup. We are more than happy to keep
+                    people updated through other methods if preferred.
+                  </p>
+                </div>
+              </div>
             </div>
-            <article class="text-center">
-              <h2 class="heading-tilt colours-blue-white font-schoolbell">
-                Updates to Tickets
-              </h2>
-              <p>
-                The CoderDojo Foundation are rolling out a new ticketing system
-                that all the Dojo's can use.
-              </p>
-              <p>
-                For each meetup, we will create an event on the new platform and
-                parents with an account can book tickets.
-              </p>
-
-              <a
-                href="https://coderdojo.com/en/dojos/ie/carrick-on-shannon/carrick-on-shannon-co-leitrim"
-                class="text-emphasis-big pad-left text-leitrim">
-                Our Dojo on the CoderDojo Ticketing Platform
-              </a>
-
-              <p>
-                We also use Whatsapp to communicate with parents. If you would
-                like to be on the CarrickDojo Parents Whatsapp Group, please ask
-                at a meetup. We are more than happy to keep people updated
-                through other methods if preferred.
-              </p>
-            </article>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="colours-secondary pad-all" id="join">
-        <h1 class="heading-tilt colours-pink-white font-schoolbell">
+      <section class="colours-main-dark flex" id="join">
+        <h1
+          class="text-tilt-down text-xx-large font-schoolbell colours-pink-white center">
           Joining our Dojo
         </h1>
-        <section class="colours-main-dark pad-all rounded-small">
-          <div class="wrap-image-article">
+      </section>
+
+      <section class="colours-main-dark pad-all">
+        <div class="wrapper">
+          <div class="cols-2">
             <img
               src="images/coderdojo/Kid02.webp"
               alt=""
               class="image-medium flip-image" />
-            <article class="text-center">
-              <h2 class="heading-tilt colours-blue-white font-schoolbell">
+            <article class="flex colours-green-white pad-all text-large">
+              <h2
+                class="text-tilt-up text-x-large colours-blue-white font-schoolbell">
                 What is a Ninja?
               </h2>
               <p>
@@ -385,15 +419,16 @@
               </p>
             </article>
           </div>
+        </div>
+      </section>
 
-          <div class="wrap-image-article">
-            <img
-              src="images/coderdojo/Kid01.webp"
-              alt=""
-              class="image-medium flip-image desktop-hidden" />
-            <article class="">
+      <section class="colours-main pad-all">
+        <div class="wrapper">
+          <div class="cols-2">
+            <article
+              class="colours-main-dark flex text-large text-right pad-all rounded-small">
               <h2
-                class="heading-tilt heading-down colours-green-white font-schoolbell">
+                class="text-tilt-down text-x-large colours-green-white font-schoolbell">
                 Why are they called Ninjas?
               </h2>
 
@@ -411,16 +446,21 @@
             <img
               src="images/coderdojo/Kid01.webp"
               alt=""
-              class="image-medium flip-image mobile-hidden" />
+              class="image-medium flip-image" />
           </div>
+        </div>
+      </section>
 
-          <div class="wrap-image-article">
+      <section class="colours-main-light pad-all">
+        <div class="wrapper">
+          <div class="cols-2">
             <img
               src="images/coderdojo/Kid04.webp"
               alt=""
               class="image-medium flip-image" />
-            <article class="text-center">
-              <h2 class="heading-tilt colours-blue-white font-schoolbell">
+            <article class="colours-pink-white pad-all rounded-small">
+              <h2
+                class="text-tilt-up text-x-large colours-blue-white font-schoolbell">
                 What is coding?
               </h2>
               <p>
@@ -430,21 +470,29 @@
               </p>
 
               <h2
-                class="heading-tilt heading-down colours-pink-white font-schoolbell">
+                class="text-tilt-down text-x-large colours-leitrim font-schoolbell">
                 Can anyone be a Ninja?
               </h2>
               <p>Yes! Anyone aged between 7 and 17 can join our Dojo</p>
             </article>
           </div>
+        </div>
+      </section>
 
-          <div class="wrap-image-article">
-            <article class="text-center">
-              <h2 class="heading-tilt colours-leitrim font-schoolbell">
-                Signing Up
-              </h2>
+      <section class="colours-secondary flex">
+        <h1
+          class="text-tilt-down text-xx-large font-schoolbell colours-pink-white center">
+          Signing Up
+        </h1>
+      </section>
+
+      <section class="colours-main pad-all">
+        <div class="wrapper">
+          <div class="cols-2">
+            <article class="text-center colours-main-dark pad-all">
               <p>
                 Parents can complete the signup for our Dojo on the CoderDojo
-                Foundation platform
+                Foundation platform.
               </p>
               <a
                 href="https://coderdojo.com/en/dojos/ie/carrick-on-shannon/carrick-on-shannon-co-leitrim"
@@ -453,14 +501,20 @@
                 Our Dojo on the CoderDojo Platform
               </a>
               <p>We will get in contact once we receive signup details.</p>
+              <div class="box-info colours-blue-white">
+                <p>
+                  Please email us if you would like to discuss joining our Dojo
+                  before registering.
+                </p>
+              </div>
             </article>
             <img
               src="images/coderdojo/Kid03.webp"
               alt=""
               class="image-medium flip-image" />
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
     <!-- Our Footer section does not change across our site  -->
