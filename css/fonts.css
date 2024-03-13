@@ -243,11 +243,15 @@ Text Alignment Helper Classes
 @media (max-width: 480px) {
   .text-tilt-up {
     rotate: -2deg;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 @media (max-width: 480px) {
   .text-tilt-down {
     rotate: 2deg;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 

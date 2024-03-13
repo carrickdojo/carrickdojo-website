@@ -613,31 +613,6 @@ Classes for our lining things up.
   }
 }
 
-.card-information {
-}
-
-.card-information::after {
-  background-image: url("../images/Star.png");
-  background-size: 10rem 10rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: jelly 1s infinite;
-  width: 12rem;
-  height: 80%;
-  height: 15rem;
-  width: 20rem;
-  padding-right: 1vw;
-  display: inline-block;
-  content: " ";
-  vertical-align: middle;
-}
-
-@media (max-width: 480px) {
-  .card-information::after {
-    display: none;
-  }
-}
-
 /* 
 -------------
 Utility classes
@@ -857,7 +832,7 @@ Site wide classes for displaying different blocks of content like examples, code
 .warning a {
   color: white;
 }
-
+/* 
 .wrap-two-speech {
   display: flex;
   justify-content: center;
@@ -935,7 +910,6 @@ Site wide classes for displaying different blocks of content like examples, code
     width: 50%;
     padding: 10px;
     font-size: smaller;
-    /* margin: 20px auto; */
   }
   .wrap-image-speech {
     justify-content: center;
@@ -954,7 +928,7 @@ Site wide classes for displaying different blocks of content like examples, code
   .speech-right::after {
     top: 40%;
   }
-}
+} */
 
 /* Alert modal  */
 .popup-overlay {
