@@ -221,3 +221,98 @@
     top: 25%;
   }
 }
+
+.card {
+  border-radius: 0.5rem;
+  max-width: 20rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  overflow: hidden;
+}
+.card a {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-decoration: none;
+  max-width: 20rem;
+  min-height: 10rem;
+}
+
+.card img {
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 4rem;
+  height: 4rem;
+  margin-top: 0.5rem;
+}
+.card article {
+  max-width: 20rem;
+  height: 10rem;
+  text-align: center;
+  padding: 0.5rem;
+  vertical-align: top;
+}
+
+/* Small devices such as large phones (640px and up) */
+@media only screen and (min-width: 40em) {
+  .card {
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+  }
+  .card a {
+    max-width: 20rem;
+    min-height: 20rem;
+  }
+
+  .card img {
+    margin: 0 auto;
+    max-width: 8rem;
+    min-height: 8rem;
+    margin: 1rem auto;
+  }
+  .card article {
+    max-width: 20rem;
+    height: 10rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+  .card {
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+  }
+  .card a {
+    max-width: 20rem;
+    min-height: 20rem;
+  }
+
+  .card img {
+    margin: 0 auto;
+    max-width: 8rem;
+    min-height: 8rem;
+    margin: 1rem auto;
+  }
+  .card article {
+    max-width: 20rem;
+    min-height: 10rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em) {
+  .card {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em) {
+  .card {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
