@@ -118,7 +118,7 @@
     <!-- Our Main section  -->
     <!-- This section contains all the content between the navigation bar and the footer -->
     <main class="main">
-      <section id="hero" class="pad-top colours-main-grad">
+      <section id="hero" class="colours-main-grad pad-vertical">
         <div class="wrapper">
           <div class="columns">
             <article class="font-main text-larger">
@@ -144,7 +144,7 @@
             <img
               src="images/logos/coderdojo-roundel.svg"
               alt="CoderDojo Logo"
-              class="logo-wide animate-invert" />
+              class="image-medium animate-invert" />
           </div>
         </div>
 
@@ -153,20 +153,24 @@
             <img
               src="images/Spaceship.png"
               alt="join us section"
-              class="logo-wide animate-spaceship" />
+              class="image-small animate-spaceship" />
+
             <button class="button-action text-emphasis-big">
               <a href="/about.html#join">
-                Become a <span class="myCoolText">Ninja</span>.</a
+                Become a <span class="">Ninja</span>.</a
               >
             </button>
-            <button class="button-action text-emphasis-big">
-              <a href="/mentors.html" class="myCoolText">Become a mentor.</a>
+
+            <button
+              class="button-action text-emphasis-big"
+              style="--c: var(--coder-accent)">
+              <a href="/mentors.html" class="">Become a mentor.</a>
             </button>
           </div>
         </div>
       </section>
 
-      <section id="ninjas" class="fancy-background-darker pad-top">
+      <section id="ninjas" class="fancy-background-darker">
         <img
           src="images/coderdojo/Kid01.webp"
           alt="A Ninja"
@@ -183,7 +187,7 @@
         <img src="images/coderdojo/Kid11.webp" alt="A Ninja" />
       </section>
 
-      <section id="rules" class="colours-slate-white pad-all">
+      <section id="rules" class="colours-slate-white pad-vertical">
         <div class="wrapper">
           <div class="columns">
             <div class="wrapper-image-speech">
@@ -191,7 +195,7 @@
                 src="images/coderdojo/Adult04-04.webp"
                 onmouseover="this.src='/images/coderdojo/Adult04-03.webp';"
                 onmouseout="this.src='images/coderdojo/Adult04-04.webp';"
-                alt="" />
+                alt="Mentor Speaking" />
               <div class="box-speech">
                 <p class="text-tilt-up font-schoolbell colours-accent">
                   Anyone can learn to code
@@ -224,16 +228,16 @@
                 src="images/coderdojo/Adult02-03.webp"
                 onmouseover="this.src='/images/coderdojo/Adult02-04.webp';"
                 onmouseout="this.src='images/coderdojo/Adult02-03.webp';"
-                alt="" />
+                alt="Mentor Speaking" />
             </div>
           </div>
         </div>
       </section>
 
-      <section id="thanks" class="colours-main-dark">
-        <div class="pad-top pad-bottom wrapper">
+      <section id="thanks" class="colours-main-dark pad-vertical">
+        <div class="wrapper">
           <div class="box-star colours-white-black font-schoolbell">
-            <span class="">
+            <span>
               A huge thanks to all the amazing sponsors of our Dojo and to all
               the volunteers for their help and assistance.</span
             >
@@ -241,43 +245,42 @@
         </div>
       </section>
 
-      <section id="sponsors" class="colours-main-dark">
-        <div class="wrapper pad-top pad-bottom">
-          <div class="columns colours-white-black rounded-small">
+      <section id="sponsors" class="colours-main-dark pad-vertical">
+        <div class="wrapper">
+          <div class="columns colours-white-black rounded-small pad-all">
             <a href="https://the-hive.ie/">
               <img
                 src="images/logos/sponsors/the-hive-logo.png"
                 alt="The Hive"
-                class="logo-wide colours-white-black rounded-small"
+                class="image-small"
             /></a>
             <a href="https://www.ldco.ie/">
               <img
                 src="images/logos/sponsors/leitrim-development-company-logo.png"
                 alt="Leitrim Development Company"
-                class="logo-wide colours-white-black rounded-small" />
+                class="image-small" />
             </a>
             <a href="http://www.ncycs.ie/">
               <img
                 src="images/logos/sponsors/ncycs-logo.png"
                 alt="North Connaught Youth and Community Services"
-                class="logo-wide colours-white-black rounded-small" />
+                class="image-small" />
             </a>
           </div>
         </div>
       </section>
 
-      <section id="action" class="fancy-background pad-all">
+      <section id="action" class="fancy-background pad-top">
         <div class="wrapper">
           <div class="columns">
             <div class="wrapper-image-speech">
               <div class="box-speech box-speech-left">
-                <p
-                  class="font-main pad-all font-schoolbell text-larger text-center">
+                <p class="font-main font-schoolbell text-larger text-center">
                   We love all positive and constructive feedback.
                 </p>
                 <p
                   class="colours-main-dark pad-all rounded-small shadow-small text-center">
-                  <a href="/contact.html" class="text-leitrim"
+                  <a href="/contact.html" class="text-leitrim no-underline"
                     >Get in touch on our contact-us page.</a
                   >
                 </p>

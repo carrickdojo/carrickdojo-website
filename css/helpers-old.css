@@ -1,0 +1,931 @@
+/*
+
+--------------
+Helper Classes
+These are classes used across the site and on all screen sizes to change the look and style of specific elements 
+--------------
+*/
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.width-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.rounded-full {
+  border-radius: 100vw;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.rounded-small {
+  border-radius: 0.5rem;
+}
+
+.shadow-small {
+  box-shadow: var(--coder-main) 0 0.25rem 1rem;
+}
+
+.shadow-small:hover {
+  box-shadow: var(--coder-secondary) 0 0.5rem 1.5rem;
+}
+
+.line-thick-big {
+  width: 100%;
+  height: 1.2rem;
+  background-color: var(--coder-main);
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 
+-------------
+Alignment Helper Classes 
+Classes for our lining things up.
+-------------
+ */
+.center {
+  margin: 0 auto;
+}
+
+.align-top {
+  margin: auto;
+  margin-top: 0;
+}
+
+.align-bottom {
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.align-center {
+  align-items: center;
+  justify-content: center;
+}
+
+article {
+  padding: 1rem;
+}
+
+article p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 480px) {
+  article {
+    padding: 0.5rem;
+  }
+  article p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.pad-top {
+  padding-top: 1rem;
+}
+
+.pad-bottom {
+  padding-bottom: 1rem;
+}
+.pad-left {
+  padding-left: 1rem;
+}
+
+.pad-right {
+  padding-right: 1rem;
+}
+
+.pad-all {
+  padding: 1rem;
+}
+
+.tilt-left-15 {
+  rotate: -15deg;
+}
+.tilt-left-30 {
+  rotate: -30deg;
+}
+.tilt-left-45 {
+  rotate: -45deg;
+}
+.tilt-left-90 {
+  rotate: -90deg;
+}
+
+/*
+
+--------------
+Wrapper Helper Classes
+These are classes used to responsively wrap content sections
+--------------
+*/
+
+.wrap-image-article {
+  display: flex;
+  align-items: center;
+}
+
+.wrap-image-article article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+  max-width: 70%;
+  font-size: larger;
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .wrap-image-article {
+    flex-direction: column;
+  }
+  .wrap-image-article article {
+    width: 90%;
+    max-width: 90%;
+  }
+  /* .wrap-image-article img {
+    width: auto;
+    max-width: auto;
+  } */
+}
+.format-tight {
+  gap: 0;
+}
+
+.format-tight article {
+  width: 80%;
+  margin: auto;
+}
+
+.format-tight h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+}
+
+.format-tight h1 {
+  width: auto;
+  background-color: var(--coder-main-dark);
+  font-size: xx-large;
+}
+
+.format-tight h2 {
+  width: auto;
+  background-color: var(--coder-secondary);
+  padding-right: 0.4rem;
+  padding: 0.2rem;
+  text-align: center;
+}
+
+.format-tight p {
+  padding: 0;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  line-height: 1.2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+/* 
+-------------
+Colour Helper Classes 
+Classes for changing the colour palette of an element.
+-------------
+ */
+.colours-main {
+  background-color: var(--coder-main);
+  color: var(--coder-white);
+}
+.colours-main-grad {
+  background-image: linear-gradient(
+    to right bottom,
+    var(--coder-main-dark),
+    var(--coder-main-dark),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-main-light),
+    var(--coder-main),
+    var(--coder-main-dark),
+    var(--coder-main-dark)
+  );
+  color: var(--coder-white);
+}
+
+.colours-main-light {
+  background-color: var(--coder-main-light);
+  color: var(--coder-white);
+  /* note - using the CoderDojo light purple and the small white text, will fail a contrast accessibility */
+  font-size: large;
+}
+
+.colours-main-dark {
+  background-color: var(--coder-main-dark);
+  color: var(--coder-white);
+}
+
+.colours-main-dark a {
+  color: var(--coder-white);
+}
+
+.colours-secondary {
+  background-color: var(--coder-secondary);
+  color: var(--coder-black);
+}
+
+.colours-accent-white-grad {
+  background-image: linear-gradient(
+    to bottom,
+    var(--coder-accent),
+    var(--coder-secondary),
+    var(--coder-secondary),
+    var(--coder-secondary),
+    var(--coder-secondary),
+    var(--coder-secondary)
+  );
+  color: var(--coder-black);
+}
+
+.colours-secondary-grad {
+  background-image: linear-gradient(
+    to bottom,
+    var(--coder-accent),
+    var(--coder-accent),
+    var(--coder-accent),
+    var(--coder-secondary),
+    var(--coder-secondary)
+  );
+  color: var(--coder-black);
+}
+
+.colours-accent {
+  background-color: var(--coder-accent);
+  color: var(--coder-white);
+}
+.colours-accent-grad {
+  background-image: linear-gradient(
+    to bottom,
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-accent)
+  );
+  color: var(--coder-white);
+}
+
+.colours-leitrim {
+  background-color: var(--coder-leitrim-green);
+  color: var(--coder-leitrim-gold);
+}
+
+.colours-slate-white {
+  background-color: var(--coder-black-lighter);
+  color: white;
+}
+
+.colours-pink-white {
+  background-color: var(--coder-pink);
+  color: white;
+}
+
+.colours-blue-white {
+  background-color: var(--coder-blue);
+  color: white;
+}
+.colours-green-white {
+  background-color: var(--coder-leitrim-green);
+  color: white;
+}
+
+.colours-vibrant {
+  background-color: lime;
+  border-color: #57206f;
+  color: darkorchid;
+}
+
+.colours-terminal {
+  background-color: var(--coder-black-lighter);
+  border-color: silver;
+  color: #75ec21;
+}
+
+.colours-black-white {
+  background-color: black;
+  color: white;
+}
+
+.colours-white-black {
+  background-color: white;
+  color: black;
+}
+
+.colours-white-black a {
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+
+.filter-white {
+  filter: invert(99%) sepia(4%) saturate(2140%) hue-rotate(303deg)
+    brightness(115%) contrast(100%);
+}
+.filter-green {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+    brightness(118%) contrast(119%);
+}
+.filter-coder-main {
+  filter: invert(20%) sepia(19%) saturate(6161%) hue-rotate(262deg)
+    brightness(90%) contrast(97%);
+}
+
+.filter-coder-secondary {
+  filter: invert(94%) sepia(15%) saturate(5311%) hue-rotate(147deg)
+    brightness(81%) contrast(82%);
+}
+
+.filter-coder-accent {
+  filter: invert(57%) sepia(20%) saturate(7496%) hue-rotate(333deg)
+    brightness(99%) contrast(87%);
+}
+
+/* 
+-------------
+Table Helper Classes 
+Classes for changing the images, icons and logos styles.
+-------------
+ */
+
+.table-accent,
+table {
+  /* background-color: slategray;
+  color: var(--coder-accent); */
+  text-align: left;
+  position: relative;
+  border-collapse: collapse;
+}
+.table-accent,
+table td + td {
+  border-left: 2px solid var(--coder-accent);
+  padding: 0 1rem;
+}
+
+.table-accent,
+table td:first-child {
+  border-left: none;
+}
+
+.table-accent th {
+  padding: 0 1rem;
+}
+.table-accent th span {
+  background-color: var(--coder-accent);
+  color: var(--coder-white);
+  padding: 0.2rem 1rem;
+  font-size: large;
+  display: inline-block;
+}
+.table-accent tr td:first-child {
+  background-color: var(--coder-white);
+  padding-left: 1rem;
+}
+
+.table-accent tr td:last-child {
+  background-color: var(--coder-white);
+  padding-right: 0.5rem;
+}
+
+.table-accent tr:first-child {
+  background-color: white;
+}
+.table-accent tr:nth-child(2) td {
+  padding-top: 0.5rem;
+}
+.table-accent tr:last-child td {
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .table-accent {
+    font-size: small;
+  }
+  .table-accent,
+  table td + td {
+    border-left: 0;
+    padding: 1rem 0;
+  }
+}
+
+/* 
+-------------
+Image Helper Classes 
+Classes for changing the images, icons and logos styles.
+-------------
+ */
+
+.flip-image {
+  transform: scaleX(-1);
+}
+
+.logo-tiny {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transform: translateY(0.1rem);
+}
+
+.logo-small {
+  display: block;
+  height: fit-content;
+  width: 6rem;
+  height: 6rem;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+.logo {
+  display: block;
+  height: fit-content;
+  width: 8rem;
+  height: 8rem;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+.logo-wide {
+  display: block;
+  height: fit-content;
+  width: 15rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.image-big {
+  width: 720px;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .image-big {
+    width: 240px;
+    margin: 0 auto;
+  }
+}
+
+.image-large {
+  width: 480px;
+  margin: 0 auto;
+}
+@media (max-width: 480px) {
+  .image-large {
+    width: 320px;
+    margin: 0 auto;
+  }
+}
+
+.image-medium {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .image-medium {
+    width: 240px;
+    margin: 0 auto;
+  }
+}
+
+.image-small {
+  width: 160px;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .image-small {
+    width: 60px;
+    margin: 0 auto;
+  }
+}
+
+.image-x-small {
+  width: 5rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .image-x-small {
+    width: 5rem;
+    margin: 0 auto;
+  }
+}
+
+/* 
+-------------
+Button Helper Classes 
+Classes for our buttons.
+-------------
+ */
+
+main > button {
+  height: 5rem;
+}
+
+button a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Specific Site Buttons */
+.button-action {
+  display: block;
+  border-radius: 2rem;
+  height: 5rem;
+  border: 0.5rem solid var(--coder-secondary);
+  background-color: var(--coder-secondary);
+  padding: 1rem;
+}
+
+.button-action:hover {
+  border: 0.5rem solid var(--coder-accent);
+}
+
+/* 
+-------------
+Card Helper Classes 
+Classes for our lining things up.
+-------------
+ */
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card-badges {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.card-badge {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 0.25rem solid var(--coder-white);
+  margin: 0.25rem;
+}
+
+.card-small {
+  display: flex;
+  width: 20rem;
+  height: 20rem;
+}
+
+@media (max-width: 480px) {
+  .card-small {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+/* 
+-------------
+Utility classes
+Site wide classes for displaying different blocks of content like examples, codeblocks and notes.
+-------------
+ */
+
+.factoid {
+  display: flex;
+  width: 40rem;
+  align-items: center;
+  border: 0.25rem solid var(--coder-secondary);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.factoid::before {
+  background-image: url("../images/Dog.png");
+  background-size: 8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 8rem;
+  width: 8rem;
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .factoid::before {
+    display: block;
+    width: 100%;
+    background-size: 5rem;
+  }
+  .factoid {
+    width: auto;
+  }
+}
+
+.whiteboard {
+  background-image: url("../images/whiteboard-stickers.webp");
+  background-size: 800px 600px;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 800px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.whiteboard p {
+  width: 600px;
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .whiteboard {
+    width: 300px;
+    height: 225px;
+    background-size: 300px 225px;
+  }
+
+  .whiteboard p {
+    width: 240px;
+    font-size: 10px !important;
+  }
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    var(--coder-secondary),
+    var(--coder-main),
+    var(--coder-main-dark),
+    var(--coder-main),
+    var(--coder-secondary)
+  );
+  color: var(--coder-white);
+  text-align: center;
+  padding: 1rem;
+  color: " ";
+  margin: 0 auto;
+}
+
+.note a {
+  color: var(--coder-white);
+}
+
+.note::before {
+  background-image: url("../images/stars-and-lightning-reversed.svg");
+  background-size: 10rem 10rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 10rem;
+  width: 20rem;
+  padding-right: 1rem;
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+.note::after {
+  background-image: url("../images/stars-and-lightning.svg");
+  background-size: 10rem 10rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 10rem;
+  width: 20rem;
+  padding-right: 1rem;
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+  .note::before,
+  .note::after {
+    display: none;
+  }
+}
+
+.example {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    var(--coder-accent),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-main)
+  );
+  color: var(--coder-white);
+  font-size: larger;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem auto;
+}
+
+.example::before {
+  background-image: url("../images/Star.png");
+  background-size: 8rem 8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 10rem;
+  width: 10rem;
+
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+  .example::before {
+    display: none;
+  }
+}
+
+.example a {
+  color: white;
+}
+
+.warning {
+  display: flex;
+
+  /* justify-content: center; */
+  align-items: center;
+  border: 0.2rem solid red;
+  background-image: linear-gradient(
+    to right top,
+    red,
+    var(--coder-accent),
+    var(--coder-main-light),
+    var(--coder-main),
+    var(--coder-main),
+    var(--coder-main-dark),
+    var(--coder-main-dark),
+    black
+  );
+  color: var(--coder-white);
+  font-size: larger;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem auto;
+}
+
+.warning::before {
+  background-image: url("../images/Robot_Body.png");
+  background-size: 8rem 8rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 10rem;
+  width: 10rem;
+
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+  .warning::before {
+    display: none;
+  }
+}
+
+.warning a {
+  color: white;
+}
+/* 
+.wrap-two-speech {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 480px) {
+  .wrap-two-speech {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.wrap-image-speech {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+.speech-right {
+  width: 300px;
+  margin: 50px auto;
+  background: var(--coder-secondary);
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: var(--coder-white);
+  font-family: arial;
+  position: relative;
+}
+
+.speech-right::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid var(--coder-secondary);
+  border-top: 10px solid var(--coder-secondary);
+  border-bottom: 10px solid transparent;
+  left: -19px;
+  top: 20%;
+}
+
+.speech-left {
+  width: 300px;
+  margin: 50px auto;
+  background: var(--coder-secondary);
+  padding: 20px;
+  text-align: right;
+  font-weight: 900;
+  color: var(--coder-white);
+  font-family: arial;
+  position: relative;
+}
+
+.speech-left::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-right: 10px solid transparent;
+  border-left: 10px solid var(--coder-secondary);
+  border-top: 10px solid var(--coder-secondary);
+  border-bottom: 10px solid transparent;
+  right: -19px;
+  top: 25%;
+}
+
+@media (max-width: 480px) {
+  .speech-left,
+  .speech-right {
+    width: 50%;
+    padding: 10px;
+    font-size: smaller;
+  }
+  .wrap-image-speech {
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-self: center;
+  }
+  .wrap-image-speech img {
+    width: 50%;
+    align-self: center;
+  }
+
+  .speech-left::after {
+    top: 40%;
+  }
+  .speech-right::after {
+    top: 40%;
+  }
+} */
