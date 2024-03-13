@@ -40,6 +40,10 @@
   width: 0;
 }
 
+.wrap-image-form * {
+  max-width: 100%;
+}
+
 @media (max-width: 480px) {
   .wrap-image-form {
     flex-direction: column;

@@ -41,11 +41,20 @@
 }
 
 .shadow-small {
-  box-shadow: var(--coder-main) 0 0.25rem 1rem;
+  --c: var(--coder-main);
+  box-shadow: var(--c) 0 0.25rem 1rem;
 }
 
 .center {
   margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .button-action {

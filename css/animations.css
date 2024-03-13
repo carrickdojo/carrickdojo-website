@@ -224,7 +224,7 @@
 }
 
 .animate-shake {
-  animation: shake 2s ease infinite;
+  animation: shake 10s ease infinite;
 }
 
 /* (A) FORCE ALL ITEMS INTO SINGLE ROW */
