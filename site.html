@@ -115,17 +115,33 @@
     <!-- Our Main section  -->
     <!-- This section contains all the content between the navigation bar and the footer -->
     <main class="main">
-      <div class="colours-main-dark pad-all">
-        <img
-          src="images/Chip.png"
-          alt="Site Information"
-          class="image-x-small center block" />
-      </div>
-      <div class="colours-main">
-        <section class="">
+      <section class="colours-main-dark">
+        <div class="wrapper">
+          <div
+            class="columns"
+            style="--gap: 0.25rem; --min-column-size: 10rem; --column-count: 3">
+            <img
+              src="images/stars-and-lightning-reversed.svg"
+              alt="Site Information"
+              class="image-small" />
+
+            <h1
+              class="text-tilt-up colours-green-white text-xx-large font-schoolbell">
+              Site Information
+            </h1>
+            <img
+              src="images/stars-and-lightning.svg"
+              alt="Site Information"
+              class="image-small" />
+          </div>
+        </div>
+      </section>
+
+      <section class="colours-main-dark pad-vertical">
+        <div class="wrapper">
           <article
-            class="colours-terminal font-terminal text-x-large rounded-small">
-            <b>Site Information</b>
+            class="colours-terminal font-terminal text-x-large rounded-small pad-all">
+            <b></b>
             <p>
               This site is currently under development. The project page for
               updating our website is <a href="/project-website.html">here.</a>
@@ -144,21 +160,35 @@
               page.
             </p>
           </article>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="colours-main-dark pad-all">
-        <img
-          src="images/Raspberry-Pi.png"
-          alt="Site Information"
-          class="image-x-small center block" />
-      </div>
+      <section class="colours-main">
+        <div class="wrapper">
+          <div
+            class="columns"
+            style="--gap: 0.25rem; --min-column-size: 5rem; --column-count: 3">
+            <img
+              src="images/Chip.png"
+              alt="Site Information"
+              class="image-small" />
 
-      <div class="colours-main">
-        <section class="">
+            <h1
+              class="text-tilt-down colours-blue-white text-xx-large font-schoolbell">
+              Our Site
+            </h1>
+            <img
+              src="images/Raspberry-Pi.png"
+              alt="Site Information"
+              class="image-small" />
+          </div>
+        </div>
+      </section>
+
+      <section class="colours-main pad-vertical">
+        <div class="wrapper">
           <article
-            class="colours-terminal font-terminal text-x-large rounded-small">
-            <h3>Our Site:</h3>
+            class="colours-terminal font-terminal text-x-large rounded-small pad-all">
             <ul>
               <li>
                 The pages are all written in HTML and CSS with a little bit of
@@ -179,7 +209,9 @@
               <li>
                 The mentor form uses an AWS API endpoint to run an AWS Lambda
                 function to email the
-                <a href="mailto:carrickonshannondojo@gmail.com">
+                <a
+                  style="word-break: break-word"
+                  href="mailto:carrickonshannondojo@gmail.com">
                   carrickonshannondojo@gmail.com</a
                 >
                 address and the address supplied by the user. While the AWS
@@ -194,67 +226,86 @@
               and updates.
             </h4>
           </article>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="colours-main-dark">
-        <section>
-          <div class="ticker-wrap">
-            <div class="ticker-move">
-              <img
-                src="/images/logos/html5.svg"
-                alt=""
-                class="image-x-small ticker-item" />
-              <img
-                src="/images/logos/css3.svg"
-                alt=""
-                class="image-x-small ticker-item" />
-              <img
-                src="/images/logos/javascript.svg"
-                alt=""
-                class="image-x-small ticker-item" />
-              <img
-                src="/images/logos/vercel-small.svg"
-                alt=""
-                class="image-x-small filter-white ticker-item" />
+      <section class="colours-main pad-vertical">
+        <div class="ticker-wrap">
+          <div class="ticker-move">
+            <img
+              src="/images/logos/html5.svg"
+              alt=""
+              class="image-small ticker-item" />
+            <img
+              src="/images/logos/css3.svg"
+              alt=""
+              class="image-small ticker-item" />
+            <img
+              src="/images/logos/javascript.svg"
+              alt=""
+              class="image-small ticker-item" />
+            <img
+              src="/images/logos/vercel-small.svg"
+              alt=""
+              class="image-small filter-white ticker-item" />
 
-              <img
-                src="/images/logos/git.svg"
-                alt=""
-                class="image-x-small ticker-item" />
-              <img
-                src="/images/logos/github.svg"
-                alt=""
-                class="image-x-small filter-white ticker-item" />
-              <img
-                src="/images/logos/aws.svg"
-                alt=""
-                class="image-x-small ticker-item" />
-              <img
-                src="/images/logos/visualstudiocode.svg"
-                alt=""
-                class="image-x-small ticker-item" />
-              <img
-                src="/images/logos/nodejs.svg"
-                alt=""
-                class="image-x-small ticker-item" />
-              <img
-                src="/images/logos/coderdojo-roundel.svg"
-                alt=""
-                class="image-x-small ticker-item" />
-              <img
-                src="/images/logos/raspberry-pi-colour.svg"
-                alt=""
-                class="image-x-small ticker-item" />
-            </div>
+            <img
+              src="/images/logos/git.svg"
+              alt=""
+              class="image-small ticker-item" />
+            <img
+              src="/images/logos/github.svg"
+              alt=""
+              class="image-small filter-white ticker-item" />
+            <img
+              src="/images/logos/aws.svg"
+              alt=""
+              class="image-small ticker-item" />
+            <img
+              src="/images/logos/visualstudiocode.svg"
+              alt=""
+              class="image-small ticker-item" />
+            <img
+              src="/images/logos/nodejs.svg"
+              alt=""
+              class="image-small ticker-item" />
+            <img
+              src="/images/logos/coderdojo-roundel.svg"
+              alt=""
+              class="image-small ticker-item" />
+            <img
+              src="/images/logos/raspberry-pi-colour.svg"
+              alt=""
+              class="image-small ticker-item" />
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="colours-main" id="contact-form">
-        <section>
+      <section class="colours-main-light pad-vertical">
+        <div class="wrapper">
+          <div
+            class="columns"
+            style="--gap: 0.25rem; --min-column-size: 5rem; --column-count: 3">
+            <img
+              src="images/Raspberry-Pi.png"
+              alt="Site Information"
+              class="image-small" />
+            <h1
+              class="text-tilt-up colours-pink-white text-xx-large font-schoolbell">
+              Our Forms
+            </h1>
+            <img
+              src="images/Chip.png"
+              alt="Site Information"
+              class="image-small" />
+          </div>
+        </div>
+      </section>
+
+      <section class="colours-main-light pad-vertical" id="contact-form">
+        <div class="wrapper">
           <article
-            class="colours-terminal font-terminal text-x-large rounded-small">
+            class="colours-terminal font-terminal text-x-large rounded-small pad-all">
             <h1>How our Contact Form Works:</h1>
             <p>
               Our form is a very simple interface to an API we setup on AWS.
@@ -323,31 +374,50 @@
               <li>Responses and errors handling not right.</li>
             </ul>
           </article>
-        </section>
-      </div>
-      <div class="colours-main-dark pad-all">
-        <section>
-          <img
-            src="images/Chip.png"
-            alt="Site Information"
-            class="image-small" />
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="colours-main">
-        <section>
+      <section class="colours-main pad-vertical">
+        <div class="wrapper">
+          <div
+            class="columns"
+            style="--gap: 0.25rem; --min-column-size: 6rem; --column-count: 3">
+            <img
+              src="images/Chip.png"
+              alt="Site Information"
+              class="image-small" />
+
+            <h1
+              class="text-tilt-down colours-leitrim text-xx-large font-schoolbell">
+              Content Licences
+            </h1>
+            <img
+              src="images/Raspberry-Pi.png"
+              alt="Site Information"
+              class="image-small" />
+          </div>
+        </div>
+      </section>
+
+      <section class="colours-main pad-vertical">
+        <div class="wrapper">
           <article
-            class="colours-terminal font-terminal text-x-large rounded-small">
+            class="colours-terminal font-terminal text-x-large rounded-small pad-all">
             <h1>Content Licences</h1>
-            <p>
-              This site is open source and a public project. Feel free to
-              examine the code and reuse any bits you like.
-            </p>
-            <p>
-              We support an open web and endeavour to only use images on our
-              site that are in the public domain.
-            </p>
-
+            <ul>
+              <li>
+                This site is open source and a public project. Feel free to
+                examine the code and reuse any bits you like.
+              </li>
+              <li>
+                We support an open web and endeavour to only use images on our
+                site that are in the public domain.
+              </li>
+              <li>
+                The use of the CoderDojo logo and branding is only available to
+                active CoderDojo branches.
+              </li>
+            </ul>
             <h3>
               We thank all the programmers and content creators out there
               sharing their work freely with everyone.
@@ -355,28 +425,31 @@
             <ul>
               <li>
                 A big thank you to the people at the CoderDojo who created
-                <a href="https://coderdojo.com/en/key-resources">
+                <a
+                  class="text-xx-large myCoolText"
+                  href="https://coderdojo.com/en/key-resources">
                   the resource packs</a
                 >
                 containing the majority of our site images.
               </li>
               <li>
                 We use some very nice icons from
-                <a href="https://lucide.dev/icons">Lucide</a> provided under an
-                MIT <a href="https://lucide.dev/license"> licence</a>.
+                <a
+                  class="text-xx-large myCoolText"
+                  href="https://lucide.dev/icons"
+                  >Lucide</a
+                >
+                provided under an MIT
+                <a href="https://lucide.dev/license"> licence</a>.
               </li>
             </ul>
           </article>
-        </section>
-      </div>
-      <div class="colours-black-white pad-all">
-        <section>
-          <img
-            src="images/LEDs.png"
-            alt="Site Information"
-            class="image-small" />
-        </section>
-      </div>
+        </div>
+      </section>
+
+      <section class="colours-slate-white pad-vertical">
+        <img src="images/LEDs.png" alt="Site Information" class="image-small" />
+      </section>
     </main>
 
     <!-- Our Footer section does not change across our site  -->
