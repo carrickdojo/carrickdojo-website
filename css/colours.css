@@ -116,6 +116,18 @@ Classes for changing the colour palette of an element.
   background-color: var(--coder-leitrim-green);
   color: white;
 }
+.colours-red-white {
+  background-color: var(--coder-red);
+  color: white;
+}
+.colours-gold-white {
+  background-color: var(--coder-leitrim-gold);
+  color: white;
+}
+.colours-gold-red {
+  background-color: var(--coder-leitrim-gold);
+  color: var(--coder-red);
+}
 
 .colours-vibrant {
   background-color: lime;

@@ -2,9 +2,7 @@
 @import "css/fonts.css";
 @import "css/animations.css";
 @import "css/helpers.css";
-@import "css/utils.css";
-@import "css/projects.css";
-@import "css/forms.css";
+@import "css/shapes.css";
 
 :root {
   --coder-main: #642580;
@@ -23,6 +21,7 @@
 
   --coder-pink: #ed70b5;
   --coder-blue: #492994;
+  --coder-red: #dc2f02;
 }
 
 /* Our Website Setup */

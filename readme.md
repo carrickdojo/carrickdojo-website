@@ -21,14 +21,14 @@ This site aims to build off the [HTML and CSS CoderDojo Projects](https://projec
 - [ ] Create root css variables from CoderDojo style guide
 - [x] Add a responsive css page for mobile screens
 - [ ] Ensure accessibility
-- [ ] Add Ninja Registration Page
+- [x] Add Ninja Registration Page
 - [x] Add Mentor Page
-- [ ] Add Links Page
-- [ ] Add Resources Page
-- [ ] Add Tickets Page
-- [ ] Add About Page
-- [ ] Add Privacy Page
+- [x] Add Links Page
+- [x] Add Resources Page
+- [x] Add Tickets Page
+- [x] Add About Page
+- [x] Add Privacy Page
 - [x] Configure Mentor Signup API
 - [x] Add Mentor Signup form
-- [ ] Hide Mentor Signup form on submission
-- [ ] Configure Get in Touch API
+- [x] Hide Mentor Signup form on submission
+- [x] Configure Get in Touch API

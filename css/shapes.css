@@ -1,3 +1,17 @@
+/* ----------------------------------------------  */
+/* Containers, boxes and reusable components  */
+/* ----------------------------------------------  */
+/* These shapes and containers should all work responsively across screens */
+
+/* 
+Shapes and Containers:
+  box-star  
+  box-info
+  box-speech
+  box-link
+  wrapper-image-speech
+*/
+
 .box-star {
   display: flex;
   align-items: center;

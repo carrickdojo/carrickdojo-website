@@ -1,3 +1,72 @@
+/* This file is for helper or utility classes */
+/* These can be assigned to elements in the HTML markup using classes  */
+
+/* This is still a very messy file and could be improved on in many ways. */
+
+.no-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.rounded-small {
+  border-radius: 0.5rem;
+}
+
+.shadow-small {
+  --c: var(--coder-main);
+  box-shadow: var(--c) 0 0.25rem 1rem;
+}
+
+.tilt-left-x-small {
+  rotate: -2deg;
+}
+.tilt-right-x-small {
+  rotate: 2deg;
+}
+.tilt-left-small {
+  rotate: -4deg;
+}
+.tilt-right-small {
+  rotate: 4deg;
+}
+
+/* Simple containers and layout helpers  */
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-bottom {
+  display: flex;
+  align-self: flex-end;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.badges {
+  display: inline-block;
+  padding: 0.25rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem;
+  border-radius: 1rem;
+  border: 0.25rem solid var(--coder-white);
+  margin: 0.25rem;
+}
+
 .table-responsive {
   padding: 0.25rem;
   width: 100%;
@@ -24,56 +93,6 @@
     display: table;
     font-size: 1rem;
   }
-}
-
-.no-bullets {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.no-underline {
-  text-decoration: none;
-}
-
-.tilt-left-x-small {
-  rotate: -2deg;
-}
-.tilt-right-x-small {
-  rotate: 2deg;
-}
-.tilt-left-small {
-  rotate: -4deg;
-}
-.tilt-right-small {
-  rotate: 4deg;
-}
-
-.rounded-small {
-  border-radius: 0.5rem;
-}
-
-.shadow-small {
-  --c: var(--coder-main);
-  box-shadow: var(--c) 0 0.25rem 1rem;
-}
-
-.center {
-  margin: 0 auto;
-}
-
-.flex-bottom {
-  display: flex;
-  align-self: flex-end;
-}
-
-.flex {
-  display: flex;
-  flex-direction: column;
-}
-
-.hidden {
-  display: none;
 }
 
 .button-action {
@@ -162,7 +181,6 @@
   margin: 0 auto;
 }
 
-/* Small devices such as large phones (640px and up) */
 @media only screen and (min-width: 40em) {
   .image-small {
     width: 5rem;
@@ -172,7 +190,6 @@
   }
 }
 
-/* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 48em) {
   .image-small {
     width: 5rem;
@@ -182,7 +199,6 @@
   }
 }
 
-/* Large devices such as laptops (1024px and up) */
 @media only screen and (min-width: 64em) {
   .image-small {
     width: 7.5rem;
@@ -192,7 +208,6 @@
   }
 }
 
-/* Largest devices such as desktops (1280px and up) */
 @media only screen and (min-width: 80em) {
   .image-small {
     width: 10rem;
@@ -200,17 +215,4 @@
   .image-medium {
     width: 15rem;
   }
-}
-
-.badges {
-  display: inline-block;
-  padding: 0.25rem;
-}
-
-.badge {
-  display: inline-block;
-  padding: 0.25rem;
-  border-radius: 1rem;
-  border: 0.25rem solid var(--coder-white);
-  margin: 0.25rem;
 }
