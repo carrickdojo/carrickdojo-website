@@ -180,7 +180,7 @@
 }
 
 .animate-jelly {
-  animation: jelly 0.5s infinite;
+  animation: jelly 2s infinite;
 }
 
 @keyframes shake {

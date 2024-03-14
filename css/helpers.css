@@ -36,6 +36,19 @@
   text-decoration: none;
 }
 
+.tilt-left-x-small {
+  rotate: -2deg;
+}
+.tilt-right-x-small {
+  rotate: 2deg;
+}
+.tilt-left-small {
+  rotate: -4deg;
+}
+.tilt-right-small {
+  rotate: 4deg;
+}
+
 .rounded-small {
   border-radius: 0.5rem;
 }
@@ -174,4 +187,17 @@
   .image-medium {
     width: 20rem;
   }
+}
+
+.badges {
+  display: inline-block;
+  padding: 0.25rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem;
+  border-radius: 1rem;
+  border: 0.25rem solid var(--coder-white);
+  margin: 0.25rem;
 }
