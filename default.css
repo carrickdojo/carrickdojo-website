@@ -154,7 +154,7 @@ section {
 }
 
 .columns {
-  --min-column-size: 200px;
+  --min-column-size: 12rem;
   --column-count: 3;
   --gap: 2rem;
   --align: center;
