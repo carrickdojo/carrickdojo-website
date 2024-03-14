@@ -457,7 +457,7 @@ footer {
 
 .footer-links h3 {
   font-weight: bolder;
-  color: var(--coder-secondary);
+  /* color: var(--coder-secondary); */
   border-bottom: 0.1rem solid var(--coder-white);
   font-size: smaller;
   margin: 0.2rem 0;
