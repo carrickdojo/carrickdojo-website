@@ -107,6 +107,10 @@ Classes for changing the colour palette of an element.
   background-color: var(--coder-pink);
   color: white;
 }
+.colours-pink-white-grad {
+  background: var(--coder-pink-grad);
+  color: white;
+}
 
 .colours-blue-white {
   background-color: var(--coder-blue);

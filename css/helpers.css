@@ -8,6 +8,9 @@
   margin: 0;
   padding: 0;
 }
+.max-width {
+  max-width: 100%;
+}
 
 .no-underline {
   text-decoration: none;
@@ -157,6 +160,9 @@
 }
 
 /* image sizes  */
+.image-flip {
+  transform: scaleX(-1);
+}
 
 .image-xx-small {
   display: block;

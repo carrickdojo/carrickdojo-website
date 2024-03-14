@@ -12,6 +12,8 @@
   --coder-accent: #ed684a;
   --coder-accent-light: #f0836a;
   --coder-white: #f5f5f5;
+  --coder-white-darker: #f8f9fa;
+  --coder-white-dark: #e9ecef;
   --coder-black: #1a1a1a;
   --coder-black-light: #141414;
   --coder-black-lighter: #1f1f1f;
@@ -22,6 +24,26 @@
   --coder-pink: #ed70b5;
   --coder-blue: #492994;
   --coder-red: #dc2f02;
+
+  --coder-pink-grad: radial-gradient(
+    at top left,
+    var(--coder-pink),
+    var(--coder-pink),
+    var(--coder-main-light)
+  );
+  --coder-main-grad: radial-gradient(
+    var(--coder-main-light),
+    var(--coder-main)
+  );
+  --coder-main-grad-dark: radial-gradient(
+    var(--coder-main),
+    var(--coder-main-dark)
+  );
+  --coder-accent-grad: radial-gradient(var(--coder-red), var(--coder-accent));
+  --coder-accent-grad-dark: radial-gradient(
+    var(--coder-accent),
+    var(--coder-red)
+  );
 }
 
 /* Our Website Setup */
@@ -132,11 +154,11 @@ section {
 }
 
 .columns {
-  /* background-color: blue; */
-
   --min-column-size: 200px;
   --column-count: 3;
   --gap: 2rem;
+  --align: center;
+  --justify: center;
 
   --breakpoint: calc(
     var(--min-column-size) * var(--column-count) +
@@ -145,7 +167,8 @@ section {
   --column-size: calc((100% / var(--column-count)) - var(--gap));
 
   display: grid;
-  align-items: center;
+  align-items: var(--align);
+  justify-content: var(--justify);
   gap: var(--gap);
 
   grid-template-columns: repeat(
