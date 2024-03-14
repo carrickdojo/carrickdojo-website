@@ -9,14 +9,7 @@
     <link href="default.css" rel="stylesheet" type="text/css" />
     <link href="css/forms.css" rel="stylesheet" type="text/css" />
   </head>
-  <div class="page-heading">
-    <img src="images/icons/construction.svg" alt="" class="logo-tiny" /><span>
-      Our website is in the process of being rebuilt and things may now work
-      fully yet. Check out our new website
-      <a href="project-website.html">project</a> progress.</span
-    >
-    <img src="images/icons/construction.svg" alt="" class="logo-tiny" />
-  </div>
+
   <body>
     <!-- Our page-heading is used to display our under-construction banner  -->
     <div class="page-heading">
@@ -124,135 +117,156 @@
     <!-- Our Main section  -->
     <!-- This section contains all the content between the navigation bar and the footer -->
     <main class="main">
-      <div class="colours-main pad-all">
-        <section class="colours-white-black rounded-small pad-all">
-          <div class="wrap-image-form">
-            <img
-              src="images/CoderDojo_Contact_Us.jpg"
-              alt=""
-              class="image-big rounded-small" />
+      <section class="colours-main pad-vertical">
+        <div class="wrapper">
+          <div class="colours-white-black rounded-small">
+            <div class="wrap-image-form pad-all">
+              <img
+                src="images/CoderDojo_Contact_Us.jpg"
+                alt=""
+                class="image-big rounded-small" />
 
-            <form class="flex" id="contact-form">
-              <h1>Get in touch</h1>
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" value="" /><br />
+              <form class="flex" id="contact-form">
+                <h1>Get in touch</h1>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" value="" /><br />
 
-              <label for="email">Your Email (required)</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value=""
-                required /><br />
+                <label for="email">Your Email (required)</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value=""
+                  required /><br />
 
-              <label for="phone">Your Phone Number</label>
-              <input type="tel" id="phone" name="phone" value="" /><br />
+                <label for="phone">Your Phone Number</label>
+                <input type="tel" id="phone" name="phone" value="" /><br />
 
-              <label for="subject">Subject</label>
-              <select
-                id="subject"
-                onchange=" this.dataset.chosen = this.value; ">
-                <option selected="selected" value="sub0">
-                  Please select a subject:
-                </option>
-                <option value="sub1">Join our Dojo</option>
-                <option value="sub2">Become a Mentor</option>
-                <option value="sub3">Volunteer at our Dojo</option>
-                <option value="sub4">Make a data enquiry</option>
-                <option value="sub5">Raise a Safeguarding concern</option>
-                <option value="sub6">Give Feedback</option>
-                <option value="sub7">Something else</option>
-              </select>
+                <label for="subject">Subject</label>
+                <select
+                  id="subject"
+                  onchange=" this.dataset.chosen = this.value; ">
+                  <option selected="selected" value="sub0">
+                    Please select a subject:
+                  </option>
+                  <option value="sub1">Join our Dojo</option>
+                  <option value="sub2">Become a Mentor</option>
+                  <option value="sub3">Volunteer at our Dojo</option>
+                  <option value="sub4">Make a data enquiry</option>
+                  <option value="sub5">Raise a Safeguarding concern</option>
+                  <option value="sub6">Give Feedback</option>
+                  <option value="sub7">Something else</option>
+                </select>
 
-              <span class="selected-message sub0">
-                Please select a subject for your message.
-              </span>
-              <span class="selected-message sub1">
-                Super! Joining our Dojo is a great idea.
-              </span>
-              <span class="selected-message sub2">
-                Awesome! It’s thanks to people like you that CoderDojo is able
-                to reach and impact young people all around the world.
-              </span>
-              <span class="selected-message sub3">
-                Amazing! There are lots of ways to volunteer with our Dojo.
-              </span>
-              <span class="selected-message sub4">
-                Privacy is super important! It is best to ask for a callback for
-                data queries, please do not use this form to submit anyone
-                else's personal information.
-              </span>
-              <span class="selected-message sub5"
-                ><span>
-                  We take safeguarding concerns very seriously and will
-                  endeavour to respond as a matter of urgency. <br />
-                  Please read our
-                  <a href="/safeguarding.html#reporting"
-                    >safeguarding page for more information.</a
-                  ><br />
-                  Please do not use this form to submit anyone else's personal
-                  information</span
-                >
-              </span>
-              <span class="selected-message sub6">
-                We would love to hear ways to improve our club and welcome all
-                feedback.
-              </span>
-              <span class="selected-message sub7">
-                Something else on your mind? How are you doing today?
-              </span>
+                <span class="selected-message sub0">
+                  Please select a subject for your message.
+                </span>
+                <span class="selected-message sub1">
+                  Super! Joining our Dojo is a great idea.
+                </span>
+                <span class="selected-message sub2">
+                  Awesome! It’s thanks to people like you that CoderDojo is able
+                  to reach and impact young people all around the world.
+                </span>
+                <span class="selected-message sub3">
+                  Amazing! There are lots of ways to volunteer with our Dojo.
+                </span>
+                <span class="selected-message sub4">
+                  Privacy is super important! It is best to ask for a callback
+                  for data queries, please do not use this form to submit anyone
+                  else's personal information.
+                </span>
+                <span class="selected-message sub5"
+                  ><span>
+                    We take safeguarding concerns very seriously and will
+                    endeavour to respond as a matter of urgency. <br />
+                    Please read our
+                    <a href="/safeguarding.html#reporting"
+                      >safeguarding page for more information.</a
+                    ><br />
+                    Please do not use this form to submit anyone else's personal
+                    information</span
+                  >
+                </span>
+                <span class="selected-message sub6">
+                  We would love to hear ways to improve our club and welcome all
+                  feedback.
+                </span>
+                <span class="selected-message sub7">
+                  Something else on your mind? How are you doing today?
+                </span>
 
-              <label for="message">Your Message</label>
-              <textarea
-                rows="10"
-                cols="30"
-                id="message"
-                name="message"
-                value=""></textarea
-              ><br />
+                <label for="message">Your Message</label>
+                <textarea
+                  rows="10"
+                  cols="30"
+                  id="message"
+                  name="message"
+                  value=""></textarea
+                ><br />
 
-              <input
-                type="button"
-                class="contact-us-button"
-                onclick="submitForm()"
-                value="Send Message" />
-            </form>
+                <input
+                  type="button"
+                  class="contact-us-button"
+                  onclick="submitForm()"
+                  value="Send Message" />
+              </form>
 
-            <div
-              class="form-submitted-feedback text-marker-big rounded-small hidden"
-              id="form-submitted-feedback">
-              <p>Thanks for getting in touch</p>
+              <div
+                class="form-submitted-feedback text-marker-big rounded-small hidden"
+                id="form-submitted-feedback">
+                <p>Thanks for getting in touch</p>
 
-              <p class="emoji-x-large">🚀</p>
+                <p class="emoji-x-large">🚀</p>
 
-              <p>
-                You should shortly receive an email with the information
-                provided as sent to CarrickDojo.
-              </p>
-              <p>We will endeavour to get back to you soon.</p>
+                <p>
+                  You should shortly receive an email with the information
+                  provided as sent to CarrickDojo.
+                </p>
+                <p>We will endeavour to get back to you soon.</p>
+              </div>
             </div>
           </div>
-          <div class="warning text-emphasis-big">
-            <div class="">
-              <h2>A note on our Contact Form:</h2>
+        </div>
+      </section>
+
+      <section class="pad-vertical">
+        <div class="flex wrapper">
+          <div class="box-info colours-slate-white center">
+            <article>
+              <h2 class="text-tilt-up colours-blue-white">
+                A note on our Contact Form:
+              </h2>
 
               <p class="">
                 Our website avoids frameworks and is HTML and CSS where
                 possible. Our contact form has been described as
-                <i>'a clever bit of a hack'</i>. <br />
-                If you encounter an issue or bug, please let us know. <br />
-                We have further details on how it works
-                <a href="/site.html#contact-form"><u> here</u></a>
+                <i>'a clever bit of a hack'</i>.
               </p>
+              <ul>
+                <li>
+                  Please be careful with the information entered as our form
+                  uses very limited client-validation only.
+                </li>
+                <li>
+                  If you do not get a confirmation email using this form, please
+                  assume it did not work.
+                </li>
+                <li>If you encounter an issue or bug, please let us know.</li>
+                <li>
+                  We have further details on how it works
+                  <a href="/site.html#contact-form"><u> here</u></a>
+                </li>
+              </ul>
               <hr />
               <p>
                 Please free to email us directly using the address in our
                 footer.
               </p>
-            </div>
+            </article>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
     <!-- Our Footer section does not change across our site  -->
