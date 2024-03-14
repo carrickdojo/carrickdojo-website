@@ -8,14 +8,7 @@
     <link rel="icon" href="images/logos/coderdojo-roundel.svg" />
     <link href="default.css" rel="stylesheet" type="text/css" />
   </head>
-  <div class="page-heading">
-    <img src="images/icons/construction.svg" alt="" class="logo-tiny" /><span>
-      Our website is in the process of being rebuilt and things may now work
-      fully yet. Check out our new website
-      <a href="project-website.html">project</a> progress.</span
-    >
-    <img src="images/icons/construction.svg" alt="" class="logo-tiny" />
-  </div>
+
   <body>
     <!-- Our page-heading is used to display our under-construction banner  -->
     <div class="page-heading">
@@ -123,24 +116,29 @@
     <!-- Our Main section  -->
     <!-- This section contains all the content between the navigation bar and the footer -->
     <main class="main">
-      <div class="colours-main-dark">
-        <section>
-          <div class="wrap-image-article">
-            <article>
-              <h1>Supporting Us and Our Dojo</h1>
-            </article>
-            <img src="images/Globe_Smiling.png" alt="" class="image-small" />
-          </div>
-        </section>
-      </div>
+      <section class="colours-main-dark">
+        <div class="wrapper flex">
+          <h1
+            class="text-tilt-up colours-green-white center text-xx-large font-schoolbell">
+            Supporting Us and Our Dojo
+          </h1>
+        </div>
+      </section>
 
-      <div class="colours-white-black" id="volunteer">
-        <section>
-          <div class="wrap-image-article">
+      <section class="colours-white-black" id="volunteer">
+        <div class="wrapper">
+          <div class="cols-2">
+            <img
+              src="images/coderdojo/Adult02-01.webp"
+              alt=""
+              class="image-medium" />
+
             <article class="colours-white-black rounded-small">
-              <h2 class="text-tilt-up colours-main">
-                Volunteering and Helping Out
-              </h2>
+              <div class="font-schoolbell">
+                <h2 class="text-tilt-up colours-blue-white">Volunteering</h2>
+                <h2 class="text-tilt-down colours-pink-white">and</h2>
+                <h2 class="text-tilt-up colours-green-white">Helping Out</h2>
+              </div>
               <p>
                 Who are the volunteers? We are a group of local people that are
                 passionate about coding and sharing our knowledge.
@@ -151,7 +149,7 @@
                 up to date. Dojos benefit from having volunteers with a wide
                 array of skills, and you can help out in lots of ways.
               </p>
-              <ul>
+              <ul class="text-small colours-main-dark rounded-small">
                 <li>Leading icebreaker activities</li>
                 <li>
                   Designing fliers, posters, and other promotional material
@@ -164,22 +162,22 @@
                 <li>Leading parents’ orientation sessions for newcomers</li>
               </ul>
             </article>
-            <img
-              src="images/coderdojo/Adult02-01.webp"
-              alt=""
-              class="image-medium" />
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="colours-white-black">
-        <section class="pad-bottom">
-          <table class="table-accent">
+      <section class="colours-main-dark">
+        <div class="wrapper pad-vertical">
+          <table class="table-responsive rounded-small">
             <tr>
               <th>
-                <span class="text-tilt-up">Surprisingly useful skill</span>
+                <span class="text-tilt-up colours-blue-white"
+                  >Surprisingly useful skill</span
+                >
               </th>
-              <th><span class="text-tilt-up">In-Dojo use</span></th>
+              <th>
+                <span class="text-tilt-up colours-pink-white">In-Dojo use</span>
+              </th>
             </tr>
 
             <tr>
@@ -223,14 +221,14 @@
               </td>
             </tr>
           </table>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="colours-main">
-        <section class="pad-top pad-bottom">
-          <div class="wrapper">
-            <div class="wrap-image-speech">
-              <div class="speech-left font-main">
+      <section class="colours-main">
+        <div class="wrapper">
+          <div class="cols-2">
+            <div class="wrapper-image-speech">
+              <div class="box-speech box-speech-left font-main">
                 <p class="font-schoolbell text-large">
                   We welcome all help and support and would love to hear from
                   you if you can help with our club.
@@ -246,20 +244,24 @@
             <img
               src="images/Kid_Flying_One.png"
               alt=""
-              class="image-medium flip-image tilt-left-15" />
+              class="image-medium flip-image" />
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="colours-main-dark" id="sponsor">
-        <section>
-          <div class="center colours-accent pad-all text-tilt-down">
-            <h1 class="font-emphasis-big pad-all">Sponsors and Donations</h1>
-          </div>
-        </section>
-        <section class="pad-bottom">
-          <div class="colours-white-black pad-all rounded-small">
-            <p class="text-center font-terminal text-large">
+      <section class="colours-main-dark">
+        <div class="wrapper flex">
+          <h1
+            class="text-tilt-up colours-leitrim center text-xx-large font-schoolbell">
+            Sponsors and Donations
+          </h1>
+        </div>
+      </section>
+
+      <section class="colours-main-dark">
+        <div class="wrapper pad-vertical">
+          <div class="box-star colours-white-black pad-all rounded-small">
+            <p class="text-center text-x-large font-terminal">
               CoderDojo is a global, volunteer-led movement that organises free
               computer clubs for young people aged 7-17. There are more than
               1600 clubs (Dojos) operating all over the world, creating
@@ -269,12 +271,19 @@
               children who might not otherwise have such learning opportunities.
             </p>
           </div>
-        </section>
-      </div>
-      <div class="colour-main-light">
-        <section>
-          <div class="wrap-image-article">
-            <img src="images/coderdojo/Adult01-01.webp" alt="" />
+        </div>
+      </section>
+
+      <section class="colour-main-light">
+        <div class="wrapper flex">
+          <h2 class="text-tilt-down colours-green-white center">
+            Providing Sponsorship
+          </h2>
+          <div class="cols-2">
+            <img
+              src="images/coderdojo/Adult01-01.webp"
+              alt=""
+              class="image-medium" />
             <article>
               <p>
                 Dojos are organised, run, and mentored by volunteers, and since
@@ -303,14 +312,16 @@
               </ul>
             </article>
           </div>
-        </section>
-
-        <section>
-          <div class="wrap-image-article">
-            <article>
+        </div>
+      </section>
+      <section class="colours-main pad-vertical">
+        <div class="wrapper colours-main-dark rounded-small pad-all">
+          <div class="cols-2">
+            <article class="">
               <p>
-                There are many benefits for you in sponsoring our local
-                CoderDojo:
+                There are
+                <span class="myCoolText text-x-large">many benefits</span> to
+                sponsoring our local CoderDojo:
               </p>
               <ul>
                 <li>
@@ -332,67 +343,63 @@
               alt=""
               class="image-small animate-bounce-in" />
           </div>
-        </section>
-      </div>
-      <div class="colours-main-dark">
-        <section class="pad-bottom pad-top">
-          <div class="wrapper colours-white-black rounded-small">
+        </div>
+      </section>
+
+      <section id="sponsors" class="colours-main-dark pad-vertical">
+        <div class="wrapper">
+          <div class="columns colours-white-black rounded-small pad-all">
             <a href="https://the-hive.ie/">
               <img
                 src="images/logos/sponsors/the-hive-logo.png"
                 alt="The Hive"
-                class="logo-wide colours-white-black rounded-small"
+                class="image-small"
             /></a>
             <a href="https://www.ldco.ie/">
               <img
                 src="images/logos/sponsors/leitrim-development-company-logo.png"
                 alt="Leitrim Development Company"
-                class="logo-wide colours-white-black rounded-small" />
+                class="image-small" />
             </a>
             <a href="http://www.ncycs.ie/">
               <img
                 src="images/logos/sponsors/ncycs-logo.png"
                 alt="North Connaught Youth and Community Services"
-                class="logo-wide colours-white-black rounded-small" />
+                class="image-small" />
             </a>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="colours-main-dark">
-        <section class="pad-top pad-bottom">
-          <div
-            class="colours-slate-white pad-top pad-bottom rounded-small"
-            id="hardware">
-            <div class="wrap-image-article pad-all">
-              <img
-                src="images/Heart.png"
-                alt=""
-                class="image-medium animate-jelly" />
-              <article class="pad-all">
-                <h2>Gifting Laptops and Equipment</h2>
-                <p>
-                  If you or your organisation are updating or replacing your
-                  computers, laptops or network equipment; we would be happy to
-                  accept equipment with we can stretch a bit of extra life out
-                  of.
-                </p>
-                <p>We will completely wipe any machines gifted before use.</p>
-                <p>Our wish list: 🎁</p>
-                <ul>
-                  <li>We will happily take any laptop with 8GB of memory.</li>
-                  <li>Laptops with 4GB of memory that are upgradable.</li>
-                  <li>Recent laptops with broken hard disks.</li>
-                  <li>
-                    Unwanted Raspberry Pi, Arduinos, MicroBits or
-                    single-board-computers.
-                  </li>
-                </ul>
-              </article>
-            </div>
+      <section class="colours-main-dark pad-vertical" id="hardware">
+        <div class="wrapper colours-slate-white rounded-small">
+          <div class="cols-2">
+            <img
+              src="images/Heart.png"
+              alt=""
+              class="image-medium animate-jelly" />
+            <article class="pad-all">
+              <h2>Gifting Laptops and Equipment</h2>
+              <p>
+                If you or your organisation are updating or replacing your
+                computers, laptops or network equipment; we would be happy to
+                accept equipment with we can stretch a bit of extra life out of.
+              </p>
+              <p>We will completely wipe any machines gifted before use.</p>
+              <p>Our wish list: 🎁</p>
+              <ul>
+                <li>We will happily take any laptop with 8GB of memory.</li>
+                <li>Laptops with 4GB of memory that are upgradable.</li>
+                <li>Recent laptops with broken hard disks.</li>
+                <li>
+                  Unwanted Raspberry Pi, Arduinos, MicroBits or
+                  single-board-computers.
+                </li>
+              </ul>
+            </article>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
     <!-- Our Footer section does not change across our site  -->
