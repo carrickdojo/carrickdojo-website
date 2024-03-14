@@ -12,6 +12,13 @@
   max-width: 100%;
 }
 
+.no-overflow {
+  overflow: hidden;
+}
+.no-overflow-clip {
+  clip: rect(auto, auto, auto, auto);
+}
+
 .no-underline {
   text-decoration: none;
 }
