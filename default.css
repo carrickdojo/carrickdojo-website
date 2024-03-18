@@ -117,27 +117,48 @@ main {
   flex-direction: column;
 }
 
+.main-with-aside {
+  display: grid;
+  grid-template-columns: 0.2em 1fr 0.2em;
+  grid-template-areas:
+    ". aside ."
+    ". main .";
+}
+
+.main-with-aside aside {
+  grid-area: aside;
+  background-color: #ed70b5;
+}
+
+.main-with-aside main {
+  grid-area: main;
+  background-color: #41bac1;
+}
+
+@media only screen and (min-width: 40em) {
+}
+
+@media only screen and (min-width: 48em) {
+}
+
+@media only screen and (min-width: 64em) {
+  .main-with-aside {
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "aside main";
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  .main-with-aside {
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "aside  main ";
+  }
+}
+
 section {
 }
 
-/* @media only screen and (min-width: 720px) {
-  section {
-    background-color: lime;
-    flex-direction: row;
-    max-width: 80%;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  section {
-    background-color: pink;
-    flex-direction: row;
-    max-width: 70%;
-  }
-} */
-
 .wrapper {
-  /* width: 90%; */
   max-width: 90%;
   margin: 0 auto;
 }
@@ -203,15 +224,6 @@ section {
     )
   );
 }
-
-/* .cols-2 > *:first-child {
-  align-items: right;
-  border: 1rem solid lime;
-}
-.cols-2 > *:last-child {
-  align-items: left;
-  border: 1rem solid red;
-} */
 
 /* Alert modal  */
 .popup-overlay {
@@ -687,17 +699,6 @@ footer {
     margin-left: -3vw;
   }
 }
-
-/* #action {
-  align-items: flex-end;
-  height: 20rem;
-}
-@media (max-width: 480px) {
-  #action {
-    height: auto;
-    margin: 0 auto;
-  }
-} */
 
 .fancy-background {
   background-image: url("/images/animated-gradient-big.svg");
