@@ -16,7 +16,8 @@
       <img
         src="images/icons/construction.svg"
         alt=""
-        style="width: 1rem; height: 1rem; margin: 0 0.5rem" />
+        style="width: 1rem; height: 1rem; margin: 0 0.5rem"
+      />
       <span>
         Our website is in the process of being rebuilt and things may now work
         fully yet. Check out our new website
@@ -25,7 +26,8 @@
       <img
         src="images/icons/construction.svg"
         alt=""
-        style="width: 1rem; height: 1rem; margin: 0 0.5rem" />
+        style="width: 1rem; height: 1rem; margin: 0 0.5rem"
+      />
     </div>
 
     <!-- Our navigation is responsive and will display different elements based on the css classes -->
@@ -44,7 +46,8 @@
           <img
             class="logo-image"
             src="images/logos/coderdojo-roundel.svg"
-            alt="CarrickDojo Logo" />
+            alt="CarrickDojo Logo"
+          />
           <span class="logo-text text-leitrim">CarrickDojo</span>
         </a>
 
@@ -101,7 +104,8 @@
           Click here to goto
           <a
             href="https://coderdojo.com/en/dojos/ie/carrick-on-shannon/carrick-on-shannon-co-leitrim"
-            class="text-leitrim text-large">
+            class="text-leitrim text-large"
+          >
             our Dojo on the CoderDojo Ticketing Platform</a
           >
           on the coderdojo.com website.
@@ -117,7 +121,24 @@
     <!-- Our Main section  -->
     <!-- This section contains all the content between the navigation bar and the footer -->
     <main class="main">
-      <section class="colours-main pad-vertical">
+      <section class="wrapper">
+        <iframe
+          width="640px"
+          height="480px"
+          src="https://forms.office.com/Pages/ResponsePage.aspx?id=NA2rrduLvEyDwHLhm1uwzgMEoa6R_BxAnfZgqZaLN4lUMzBHMzFKNVFBSzNHNUFKRUEwQU85MVFDSC4u&embed=true"
+          frameborder="0"
+          marginwidth="0"
+          marginheight="0"
+          style="border: none; max-width: 100%; max-height: 100vh"
+          allowfullscreen
+          webkitallowfullscreen
+          mozallowfullscreen
+          msallowfullscreen
+        >
+        </iframe>
+      </section>
+
+      <!-- <section class="colours-main pad-vertical">
         <div class="wrapper">
           <div class="colours-white-black rounded-small">
             <div class="wrap-image-form pad-all">
@@ -266,7 +287,7 @@
             </article>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <!-- Our Footer section does not change across our site  -->
@@ -321,7 +342,8 @@
               position: relative;
               top: 0.2rem;
             "
-            alt="Creative Commons" />
+            alt="Creative Commons"
+          />
           <span>
             This site is open source and a public project. Feel free to examine
             the code and reuse any bits you like. All images have been created
@@ -335,7 +357,8 @@
             <img
               src="images/icons/email.svg"
               alt="Email CarrickDojo"
-              style="width: 1.5rem; height: 1.5rem" />
+              style="width: 1.5rem; height: 1.5rem"
+            />
           </a>
 
           <a href="https://github.com/carrickdojo">
@@ -351,21 +374,13 @@
             <img
               src="images/logos/coderdojo-roundel.svg"
               alt="CoderDojo logo"
-              style="
-                width: 4rem;
-                height: 4rem;
-                position: relative;
-                top: 0.2rem;
-              " />
+              style="width: 4rem; height: 4rem; position: relative; top: 0.2rem"
+            />
             <img
               src="images/logos/raspberry-pi.svg"
               alt="Raspberry Pi logo"
-              style="
-                width: 4rem;
-                height: 4rem;
-                position: relative;
-                top: 0.2rem;
-              " />
+              style="width: 4rem; height: 4rem; position: relative; top: 0.2rem"
+            />
           </div>
           <div class="foundation-text">
             <span>
@@ -387,22 +402,22 @@
     <!-- This is our javascript function to submit our contact form to our AWS API-->
     <script>
       function submitForm() {
-        let name = document.getElementById("name").value
-        let email = document.getElementById("email").value
-        let phone = document.getElementById("phone").value
-        let subjectFull = document.getElementById("subject")
-        let subject = subjectFull.options[subjectFull.selectedIndex].text
-        let message = document.getElementById("message").value
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let subjectFull = document.getElementById("subject");
+        let subject = subjectFull.options[subjectFull.selectedIndex].text;
+        let message = document.getElementById("message").value;
 
-        console.log("Form submitted")
-        let contactForm = document.getElementById("contact-form")
-        let feedbackDiv = document.getElementById("form-submitted-feedback")
-        contactForm.classList.remove("flex")
-        contactForm.classList.add("hidden")
-        feedbackDiv.classList.remove("hidden")
-        feedbackDiv.classList.add("flex")
+        console.log("Form submitted");
+        let contactForm = document.getElementById("contact-form");
+        let feedbackDiv = document.getElementById("form-submitted-feedback");
+        contactForm.classList.remove("flex");
+        contactForm.classList.add("hidden");
+        feedbackDiv.classList.remove("hidden");
+        feedbackDiv.classList.add("flex");
 
-        console.log("Form should be gone now...")
+        console.log("Form should be gone now...");
 
         fetch(
           "https://bvawggfvdl.execute-api.eu-west-1.amazonaws.com/prod/mentor-signup",
@@ -422,12 +437,12 @@
             }),
           }
         ).then(async (response) => {
-          await response.json()
+          await response.json();
           if (!response.ok) {
-            return
+            return;
           }
-          return response.ok
-        })
+          return response.ok;
+        });
       }
     </script>
 
@@ -436,11 +451,11 @@
     <!-- We then check the className of the variable and either add open, or set back to the default  -->
     <script>
       function showMobileNavFunction() {
-        var x = document.getElementById("mobile-nav")
+        var x = document.getElementById("mobile-nav");
         if (x.className === "mobile-nav") {
-          x.className += " open"
+          x.className += " open";
         } else {
-          x.className = "mobile-nav"
+          x.className = "mobile-nav";
         }
       }
     </script>
