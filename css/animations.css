@@ -11,13 +11,20 @@
 /* Animations */
 @keyframes colorChanger {
   0% {
-    color: var(--coder-main);
+    color: var(--coder-gold);
+  }
+  25% {
+    color: var(--coder-pink);
   }
   50% {
-    color: var(--coder-accent);
+    color: var(--coder-red);
   }
+  75% {
+    color: var(--coder-secondary);
+  }
+
   100% {
-    color: var(--coder-main);
+    color: var(--coder-gold);
   }
 }
 
@@ -25,6 +32,7 @@
   animation-name: colorChanger;
   animation-duration: 3s;
   animation-iteration-count: infinite;
+  text-shadow: 1px 1px var(--coder-white);
 }
 
 @keyframes spin {

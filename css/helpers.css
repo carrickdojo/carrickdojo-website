@@ -108,8 +108,9 @@
 .button-action {
   --c: var(--coder-secondary);
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   min-height: 5rem;
+  min-width: 10rem;
   white-space: nowrap;
   width: fit-content;
   font-family: schoolbell;

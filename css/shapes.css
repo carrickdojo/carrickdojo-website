@@ -351,3 +351,27 @@ Shapes and Containers:
     line-height: 1rem;
   }
 }
+
+
+
+
+
+blockquote {
+  color: var(--coder-white);
+  background: var(--coder-main-dark);
+  border-left: 10px solid var(--coder-accent);
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: var(--coder-main-light);
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.75em;
+}
+blockquote p cite {
+  display: inline;
+}

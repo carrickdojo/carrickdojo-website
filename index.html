@@ -7,18 +7,20 @@
     <title>CarrickDojo</title>
     <meta
       name="description"
-      content="CarrickDojo is a coding club in the Carrick-on-Shannon, County Leitrim.  We are a branch of CoderDojo and provide free coding lessons to children from 7 to 17." />
+      content="CarrickDojo is a coding club in the Carrick-on-Shannon, County Leitrim.  We are a branch of CoderDojo and provide free coding lessons to children from 7 to 17."
+    />
     <link rel="icon" href="images/logos/coderdojo-roundel.svg" />
     <link href="default.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
-    <!-- Our page-heading is used to display our under-construction banner  -->
-    <div class="page-heading">
+    <!-- Our page-heading is currently being used to display our under-construction banner  -->
+    <header class="page-heading">
       <img
         src="images/icons/construction.svg"
         alt
-        style="width: 1rem; height: 1rem; margin: 0 0.5rem" />
+        style="width: 1rem; height: 1rem; margin: 0 0.5rem"
+      />
       <span>
         Our website is in the process of being rebuilt and things may now work
         fully yet. Check out our new website
@@ -27,8 +29,9 @@
       <img
         src="images/icons/construction.svg"
         alt
-        style="width: 1rem; height: 1rem; margin: 0 0.5rem" />
-    </div>
+        style="width: 1rem; height: 1rem; margin: 0 0.5rem"
+      />
+    </header>
 
     <!-- Our navigation is responsive and will display different elements based on the css classes -->
     <!-- Each page will have very similar navigation, however we need to set the active page class  -->
@@ -46,7 +49,8 @@
           <img
             class="logo-image"
             src="images/logos/coderdojo-roundel.svg"
-            alt="CarrickDojo Logo" />
+            alt="CarrickDojo Logo"
+          />
           <span class="logo-text text-leitrim">CarrickDojo</span>
         </a>
 
@@ -103,7 +107,8 @@
           Click here to goto
           <a
             href="https://coderdojo.com/en/dojos/ie/carrick-on-shannon/carrick-on-shannon-co-leitrim"
-            class="text-leitrim text-large">
+            class="text-leitrim text-large"
+          >
             our Dojo on the CoderDojo Ticketing Platform</a
           >
           on the coderdojo.com website.
@@ -118,7 +123,7 @@
 
     <!-- Our Main section  -->
     <!-- This section contains all the content between the navigation bar and the footer -->
-    <main class="main">
+    <main>
       <section id="hero" class="colours-main-grad pad-vertical">
         <div class="wrapper">
           <div class="columns">
@@ -128,6 +133,7 @@
                 where young people learn to code, hack, develop websites, apps,
                 games & more!
               </p>
+
               <p>
                 <span class="text-leitrim logo-text">CarrickDojo</span>
                 has been running in <b>Carrick-On-Shannon</b> since January
@@ -143,23 +149,25 @@
             </article>
             <div
               class="animate-roll-in-right center"
-              style="display: inline-block; width: fit-content">
+              style="display: inline-block; width: fit-content"
+            >
               <img
                 src="images/logos/coderdojo-roundel.svg"
                 alt="CoderDojo Logo"
-                class="image-medium animate-invert" />
+                class="image-medium animate-invert"
+              />
             </div>
           </div>
 
-          <div class="wrapper">
-            <div class="columns">
-              <a href="/asteroid/asteroid.html" class="">
-                <img
-                  src="images/Spaceship.png"
-                  alt="join us section"
-                  class="image-small animate-spaceship"
-              /></a>
+          <div class="columns">
+            <a href="/asteroid/asteroid.html">
+              <img
+                src="images/Spaceship.png"
+                alt="a Spaceship"
+                class="image-small animate-spaceship"
+            /></a>
 
+            <div class="columns" style="--column-count: 2">
               <button class="button-action text-large">
                 <a href="/about.html#join">
                   Become a <span class="myCoolText">Ninja</span>.</a
@@ -168,7 +176,8 @@
 
               <button
                 class="button-action text-emphasis-big"
-                style="--c: var(--coder-accent)">
+                style="--c: var(--coder-accent)"
+              >
                 <a href="/mentors.html" class
                   >Become a <span class="myCoolText">mentor</span>.</a
                 >
@@ -182,7 +191,8 @@
         <img
           src="images/coderdojo/Kid01.webp"
           alt="A Ninja"
-          class="animate-jump" />
+          class="animate-jump"
+        />
         <img src="images/coderdojo/Kid02.webp" alt="A Ninja" />
         <img src="images/coderdojo/Kid03.webp" alt="A Ninja" />
         <img src="images/coderdojo/Kid04.webp" alt="A Ninja" />
@@ -203,23 +213,24 @@
                 src="images/coderdojo/Adult04-04.webp"
                 onmouseover="this.src='/images/coderdojo/Adult04-03.webp';"
                 onmouseout="this.src='images/coderdojo/Adult04-04.webp';"
-                alt="Mentor Speaking" />
-              <div class="box-speech">
-                <p class="text-tilt-up font-schoolbell colours-accent">
+                alt="Mentor Speaking"
+              />
+              <div class="font-schoolbell box-speech">
+                <p class="text-large text-tilt-up colours-accent">
                   Anyone can learn to code
                 </p>
-                <p class="font-main pad-all">
+                <p class="pad-horizontal">
                   Many great professional programmers, including CoderDojo
                   founder James Whelton, are self-taught.
                 </p>
               </div>
             </div>
             <div class="wrapper-image-speech">
-              <div class="box-speech box-speech-left">
-                <p class="text-tilt-down font-schoolbell colours-main">
+              <div class="font-schoolbell box-speech box-speech-left">
+                <p class="text-large text-tilt-down colours-main">
                   One rule: be cool!
                 </p>
-                <p class="font-main pad-all">
+                <p class="pad-horizontal">
                   This is the oldest of CoderDojo's principles and in short, it
                   means that we should behave well towards each other.
                 </p>
@@ -228,7 +239,7 @@
                   being kind are all very cool. Bullying, lying, time-wasting,
                   and disrupting the Dojo are all considered uncool.”
                 </p>
-                <p class="font-emphasis">
+                <p class="font-emphasis text-small">
                   - CoderDojo co-founder <br />Bill Liao
                 </p>
               </div>
@@ -236,7 +247,8 @@
                 src="images/coderdojo/Adult02-03.webp"
                 onmouseover="this.src='/images/coderdojo/Adult02-04.webp';"
                 onmouseout="this.src='images/coderdojo/Adult02-03.webp';"
-                alt="Mentor Speaking" />
+                alt="Mentor Speaking"
+              />
             </div>
           </div>
         </div>
@@ -255,7 +267,10 @@
 
       <section id="sponsors" class="colours-main-dark pad-vertical">
         <div class="wrapper">
-          <div class="columns colours-white-black rounded-small pad-all">
+          <div
+            class="columns colours-white-black rounded-small pad-all"
+            style="--gap: 0.25rem; --min-column-size: 10rem; --column-count: 4"
+          >
             <a href="https://the-hive.ie/">
               <img
                 src="images/logos/sponsors/the-hive-logo.png"
@@ -266,13 +281,24 @@
               <img
                 src="images/logos/sponsors/leitrim-development-company-logo.png"
                 alt="Leitrim Development Company"
-                class="image-small" />
+                class="image-small"
+              />
             </a>
             <a href="http://www.ncycs.ie/">
               <img
                 src="images/logos/sponsors/ncycs-logo.png"
                 alt="North Connaught Youth and Community Services"
-                class="image-small" />
+                class="image-small"
+              />
+            </a>
+            <a
+              href="https://partner.microsoft.com/en-ie/asset/collection/partners-for-social-impact-community-news#/"
+            >
+              <img
+                src="images/logos/sponsors/microsoft-tech-for-social-impact.png"
+                alt="Microsoft Tech for Social Impact"
+                class="image-small"
+              />
             </a>
           </div>
         </div>
@@ -285,16 +311,18 @@
               <img
                 src="images/Robot_Body.png"
                 alt=""
-                class="image-small no-overflow-clip" />
+                class="image-small no-overflow-clip"
+              />
             </div>
 
             <div class="wrapper-image-speech">
-              <div class="box-speech box-speech-left">
-                <p class="font-main font-schoolbell text-larger text-center">
+              <div class="font-schoolbell box-speech box-speech-left">
+                <p class="text-larger text-center">
                   We love all positive and constructive feedback.
                 </p>
                 <p
-                  class="colours-main-dark pad-all rounded-small shadow-small text-center">
+                  class="colours-main-dark pad-all rounded-small shadow-small text-center"
+                >
                   <a href="/contact.html" class="text-leitrim no-underline"
                     >Get in touch on our contact-us page.</a
                   >
@@ -305,7 +333,8 @@
                 onmouseover="this.src='/images/coderdojo/Adult02-04.webp';"
                 onmouseout="this.src='images/coderdojo/Adult02-03.webp';"
                 alt
-                class="image-medium" />
+                class="image-medium"
+              />
             </div>
           </div>
         </div>
@@ -364,7 +393,8 @@
               position: relative;
               top: 0.2rem;
             "
-            alt="Creative Commons" />
+            alt="Creative Commons"
+          />
           <span>
             This site is open source and a public project. Feel free to examine
             the code and reuse any bits you like. All images have been created
@@ -378,7 +408,8 @@
             <img
               src="images/icons/email.svg"
               alt="Email CarrickDojo"
-              style="width: 1.5rem; height: 1.5rem" />
+              style="width: 1.5rem; height: 1.5rem"
+            />
           </a>
 
           <a href="https://github.com/carrickdojo">
@@ -394,21 +425,13 @@
             <img
               src="images/logos/coderdojo-roundel.svg"
               alt="CoderDojo logo"
-              style="
-                width: 4rem;
-                height: 4rem;
-                position: relative;
-                top: 0.2rem;
-              " />
+              style="width: 4rem; height: 4rem; position: relative; top: 0.2rem"
+            />
             <img
               src="images/logos/raspberry-pi.svg"
               alt="Raspberry Pi logo"
-              style="
-                width: 4rem;
-                height: 4rem;
-                position: relative;
-                top: 0.2rem;
-              " />
+              style="width: 4rem; height: 4rem; position: relative; top: 0.2rem"
+            />
           </div>
           <div class="foundation-text">
             <span>
@@ -432,11 +455,11 @@
     <!-- We then check the className of the variable and either add open, or set back to the default  -->
     <script>
       function showMobileNavFunction() {
-        var x = document.getElementById("mobile-nav")
+        var x = document.getElementById("mobile-nav");
         if (x.className === "mobile-nav") {
-          x.className += " open"
+          x.className += " open";
         } else {
-          x.className = "mobile-nav"
+          x.className = "mobile-nav";
         }
       }
     </script>
