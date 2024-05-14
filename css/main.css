@@ -9,12 +9,12 @@
     - We 'reset' the HTML, Body, Image and Box elements to ensure no browser specific styling affects our CSS
 */
 
-@import "css/layout.css";
-@import "css/colours.css";
-@import "css/fonts.css";
-@import "css/animations.css";
-@import "css/helpers.css";
-@import "css/shapes.css";
+@import "layout.css";
+@import "colours.css";
+@import "fonts.css";
+@import "animations.css";
+@import "helpers.css";
+@import "shapes.css";
 
 :root {
   --coder-main: #642580;

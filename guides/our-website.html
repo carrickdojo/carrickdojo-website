@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CarrickDojo - Our Website</title>
     <link rel="icon" href="images/logos/coderdojo-roundel.svg" />
-    <link href="default.css" rel="stylesheet" type="text/css" />
+    <link href="../default.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <!-- Our page-heading is used to display our under-construction banner  -->
@@ -122,120 +122,205 @@
       <aside>
         <details>
           <summary>
-            <a href="#background">Project Goals</a>
+            <a href="#background">Overview</a>
           </summary>
-          <a href="#background">Project Background</a>
-          <a href="#goals">Project Goals</a>
         </details>
 
         <details>
           <summary>
-            <a href="#web">The Web and HTML</a>
+            <a href="#web">Style</a>
           </summary>
-          <a href="#the-web">The Web</a>
-          <a href="#creating-html">Creating HTML</a>
-          <a href="#code-editors">Code Editors</a>
-          <a href="#creating-css">Creating CSS</a>
         </details>
 
         <details>
           <summary>
-            <a href="#design">Designing Our Site</a>
+            <a href="#web">Layout</a>
           </summary>
-          <a href="#planning">Planning</a>
-          <a href="#fonts-colours">Picking Fonts and Colours</a>
-          <a href="#variables">Setting Our Site Variables</a>
         </details>
 
         <details>
           <summary>
-            <a href="#site-layout">Our Site Layout</a>
+            <a href="#design">HTML</a>
           </summary>
-          <a href="#responsive">Responsive Design</a>
-          <a href="#fonts-colours">Different Screen Sizes</a>
-          <a href="#our-layout">Our Page Layout</a>
-          <a href="#main-section">The Main Section</a>
-          <a href="#folder-structure">Our Folder Layout</a>
         </details>
 
         <details>
           <summary>
-            <a href="#git">Collaboration and Git</a>
+            <a href="#site-layout">CSS</a>
           </summary>
-          <a href="#what-is-git">What is Git?</a>
-          <a href="#git-hosting">Git Hosting</a>
-          <a href="#our-git">Our Git Repository</a>
-          <a href="#code-licence">Licencing Code</a>
         </details>
 
         <details>
           <summary>
             <a href="#hosting">Website Hosting</a>
           </summary>
-          <a href="#hosting-considerations">Hosting Considerations</a>
-          <a href="#our-hosting">Our Website Hosting</a>
         </details>
 
         <details>
           <summary>
             <a href="#domain-names">Domain Names</a>
           </summary>
-          <a href="#our-domain-name">Our Domain Name</a>
-          <a href="#dns">Domain Naming Service</a>
-          <a href="#domain-registrars">Domain Registrars</a>
-          <a href="#our-dns">Our DNS Records</a>
         </details>
 
         <details>
           <summary>
-            <a href="#testing">Testing Our Website</a>
+            <a href="#testing">Updating a Section</a>
           </summary>
-          <a href="#checks">Website Checks</a>
-          <a href="#testing-tools">Testing Tools</a>
         </details>
 
         <details>
           <summary>
-            <a href="#outcome">Project Outcome</a>
+            <a href="#outcome">Adding A Page</a>
           </summary>
-          <a href="#project-outcome">Our New Website</a>
-          <a href="#possible-improvements">Future Plans</a>
         </details>
       </aside>
 
       <main>
-        <section class="">
+        <section id="overivew" class="">
           <article class="colours-white-black pad-all">
             <h1 class="heading-tilt colours-pink-white">
               The CarrickDojo Website
             </h1>
             <hr />
-            <h2 class="project-section-title">Project Background</h2>
+            <h2 class="project-section-title">Background</h2>
 
             <p>
-              With our website's 10 year birthday coming this year. We are
-              looking to move away from Wordpress for our website, and create a
-              new site based on the Raspberry Pi Web Design Projects that can be
-              administered by the Ninjas directly.
+              With our website's 10 year birthday coming this year, we decided
+              to move away from WordPress for our website, and create a new site
+              in HTML and CSS based on the Raspberry Pi Web Design Projects that
+              can be administered by the Ninjas directly.
             </p>
             <p>
               There is a wealth of amazing resources from CoderDojo and the
-              Raspberry Pi projects pages on web design. We hope to create a
-              site that builds on them, and provides some additional information
-              on how and why we host our site.
+              Raspberry Pi projects pages on web design. Our site has been built
+              using parts of from lots of different projects.
             </p>
             <p>
-              The code behind the websites we view was generated by a computer.
-              By writing the CarrickDojo.com in clean HTML and CSS, Ninja's can
-              inspect the pages and follow the code.
+              By writing the carrickdojo.com in HTML and CSS, Ninja's can
+              inspect the pages and follow the code. We welcome everyone to make
+              changes and add content to our site and help improve it.
             </p>
+            <p></p>
+          </article>
+        </section>
+
+        <section id="layout" class="">
+          <article>
+            <h1 class="heading-tilt heading-down colours-blue-white">Layout</h1>
+            <hr />
+            <h2 class="project-section-title">Our Home Page</h2>
+            <p>
+              When you go to carrickdojo.com, your web browser will
+              automatically look for a page called index.html and if it exists
+              it will display it.
+            </p>
+            <p>
+              There is no rule to say browsers should do this, but it became a
+              convention (a way of doing things) because it made sense and so
+              all browsers choose to do this.
+            </p>
+            <p>
+              Our index.html is also called out homepage and is our most
+              important page as it will be viewed the most.
+            </p>
+
+            <h2 class="project-section-title">Site Map</h2>
+            <p>
+              We can create any page we want for carrickdojo.com. You are
+              currently reading the page our-website.html. Our website is a
+              folder of different pages that we host on a web server.
+            </p>
+            <p>
+              A website is a collection of pages, and as some websites can grow
+              to be hundreds or thousands of pages, it is good to have a map. We
+              call the website map a sitemap and it just lists all the pages we
+              have and the folders they are in.
+            </p>
+            <p>
+              A sitemap can be very useful for people working together on a
+              website, but it is especially useful for bots. Bots are automated
+              software programs that crawl the Internet for new pages and
+              content. Some bots are useful and needed to create search engines
+              and map the Internet; and some are bad, looking to steal sensitive
+              user information or other malicious activities.
+            </p>
+            <p></p>
+
+            <ul>
+              <li>index.html</li>
+              <li>404.html</li>
+              <li>about.html</li>
+              <li>charter.html</li>
+              <li>contact.html</li>
+              <li>mentors.html</li>
+              <li>ninjas.html</li>
+              <li>privacy.html</li>
+              <li>projects.html</li>
+              <li>resources.html</li>
+              <li>safeguarding.html</li>
+              <li>site.html</li>
+              <li>support.html</li>
+              <li>
+                projects
+                <ul>
+                  <li>our-website.html</li>
+                  <li>style-guide.html</li>
+                </ul>
+              </li>
+              <li>
+                css
+                <ul>
+                  <li>default.css</li>
+                  <li>animations.css</li>
+                  <li>fonts.css</li>
+                  <li>helpers.css</li>
+                  <li>layout.css</li>
+                  <li>shapes.css</li>
+                  <li>projects.css</li>
+                </ul>
+              </li>
+              <li>
+                images
+                <ul>
+                  <li>
+                    <ul>
+                      <li>coderdojo</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li>logos</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul>
+                      <li>projects</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                fonts
+
+                <ul>
+                  <li>... our font files</li>
+                </ul>
+              </li>
+            </ul>
 
             <p>
-              At the moment this is just a big overview of our website, however
-              making a step-by-step guide to our website is a goal!
+              All our main HTML pages sit in the root folder along with folders
+              for css, fonts, images and projects. The root folder is the name
+              given to the first or top-most directory in a hierarchy. It can be
+              likened to the trunk of a tree, as the starting point where all
+              branches originate from it.
             </p>
 
-            <h1 class="heading-tilt heading-down colours-blue-white">
+            <h2 class="project-section-title">Page Layout</h2>
+          </article>
+        </section>
+
+        <!-- <h1 class="heading-tilt heading-down colours-blue-white">
               The Web and HTML
             </h1>
             <hr />
@@ -434,8 +519,7 @@
             <div class="whiteboard">
               <span class="text-rainbow text-marker-big">CSS is Cool</span>
             </div>
-          </article>
-        </section>
+          </article> -->
       </main>
     </div>
 
