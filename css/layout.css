@@ -320,12 +320,13 @@ main {
 .main-with-aside aside {
   grid-area: aside;
   padding: 1rem;
-  position: -webkit-sticky;
-  position: sticky;
+  /* position: -webkit-sticky; */
+  position: fixed;
 }
 
 .main-with-aside main {
   grid-area: main;
+  padding-right: 20%;
 }
 
 @media only screen and (min-width: 40em) {

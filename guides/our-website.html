@@ -119,34 +119,34 @@
     <!-- Our Main section  -->
     <!-- This section contains all the content between the navigation bar and the footer -->
     <div class="main-with-aside">
-      <aside>
+      <aside class="pad-all">
         <details>
           <summary>
-            <a href="#background">Overview</a>
+            <a href="#our-website">Our Website</a>
           </summary>
         </details>
 
         <details>
           <summary>
-            <a href="#web">Style</a>
+            <a href="#web-history">A Bit of Web History</a>
           </summary>
         </details>
 
         <details>
           <summary>
-            <a href="#web">Layout</a>
+            <a href="#layout">Our Website Layout</a>
           </summary>
         </details>
 
         <details>
           <summary>
-            <a href="#design">HTML</a>
+            <a href="#style">Our Style</a>
           </summary>
         </details>
 
         <details>
           <summary>
-            <a href="#site-layout">CSS</a>
+            <a href="#code">Code Repository</a>
           </summary>
         </details>
 
@@ -158,7 +158,7 @@
 
         <details>
           <summary>
-            <a href="#domain-names">Domain Names</a>
+            <a href="#dns">Domain Names</a>
           </summary>
         </details>
 
@@ -175,14 +175,15 @@
         </details>
       </aside>
 
-      <main>
-        <section id="overivew" class="">
-          <article class="colours-white-black pad-all">
+      <main class="colours-main-dark">
+        <div class="pad-top"></div>
+        <section id="our-website" class="colours-main">
+          <article class="pad-all">
             <h1 class="heading-tilt colours-pink-white">
               The CarrickDojo Website
             </h1>
-            <hr />
-            <h2 class="project-section-title">Background</h2>
+
+            <h2 class="">Background</h2>
 
             <p>
               With our website's 10 year birthday coming this year, we decided
@@ -193,26 +194,163 @@
             <p>
               There is a wealth of amazing resources from CoderDojo and the
               Raspberry Pi projects pages on web design. Our site has been built
-              using parts of from lots of different projects.
+              using parts from lots of different projects.
             </p>
             <p>
               By writing the carrickdojo.com in HTML and CSS, Ninja's can
               inspect the pages and follow the code. We welcome everyone to make
               changes and add content to our site and help improve it.
             </p>
-            <p></p>
+
+            <h2 class="">Website Goals</h2>
+            <ul>
+              <li>
+                Have a website so people can learn about our Dojo, what we do
+                and how to join or help out.
+              </li>
+              <li>
+                Write the website code in HTML and CSS to better align with the
+                Raspberry Pi Web Design projects.
+              </li>
+              <li>
+                Ensure best practices with a child-first led approach to data
+                and content that is understandable by everyone.
+              </li>
+              <li>
+                Make the website accessible ensuring visitors can navigate our
+                website and access our content with screen readers and other
+                technologies.
+              </li>
+              <li>
+                Design the website with a similar style to the CoderDojo
+                foundation website.
+              </li>
+              <li>
+                Document our website from first-principles with the aim of
+                Ninja's being able to get further involved.
+              </li>
+            </ul>
           </article>
         </section>
 
-        <section id="layout" class="">
-          <article>
-            <h1 class="heading-tilt heading-down colours-blue-white">Layout</h1>
-            <hr />
+        <div class="pad-top" />
+        <section id="web-history" class="colours-main">
+          <article class="pad-all">
+            <h1 class="heading-tilt heading-down colours-blue-white">
+              A Little Bit of Web History
+            </h1>
+
+            <h2 id="the-web">The World Wide Web</h2>
+            <p>
+              Our website is for sharing information with anyone who wants to
+              know more about what we are and what we do.
+            </p>
+            <p>
+              Before we jump into our web site, we need to know a little bit
+              about what web sites are, why they were created like they are and
+              how can people make their own webs pages.
+            </p>
+
+            <h3>Why did we need webpages?</h3>
+            <p>
+              In the late 1980's lots of people where sharing their work with
+              each other by sending text files over the Internet. They wanted a
+              way to share files that could link (hyperlinks) to other peoples
+              files.
+            </p>
+            <p>
+              <span>
+                The World Wide Web was developed at CERN (The European
+                Organization for Nuclear Research) by Tim Berners-Lee and his
+                team between 1989-1991. In
+                <a href="https://www.w3.org/History/1989/proposal.html">
+                  the proposal</a
+                >, Tim lays out the need and the benefits of linked information
+                systems and hypertext. His idea of "a web of notes with links
+                (like references) between them".</span
+              >
+            </p>
+
+            <h3>How do webpages work?</h3>
+
+            <p>There are four keys parts to the world wide web.</p>
+            <ul>
+              <li>
+                <b>The browser</b> - this is software for our computers for
+                viewing webpages. For me this is Firefox (Brave, Chrome, Edge,
+                Safari and Opera and all browsers)
+              </li>
+              <li>
+                <b>The web pages</b> - these are the HTML (Hypertext Markup
+                Language) files we create for our websites containing the
+                information we want to share (you are currently visiting the
+                HTML page called project-website.html)
+              </li>
+              <li>
+                <b>The server</b> - the server is where we put our webpages
+                (this website is using a Vercel server with more detail in the
+                hosting section)
+              </li>
+              <li>
+                <b>The web protocol</b> - a protocol is a set of rules to
+                follow. The HyperText Transfer Protocol is a set of rules used
+                by browsers and web servers to communicate and transfer the HTML
+                pages over the Internet (this website uses HTTPS a secure HTTP
+                connection)
+              </li>
+            </ul>
+
+            <p>
+              <span>
+                The World Wide Web was originally created for use within CERN,
+                however they realised other people would pay to use it. CERN
+                licenced the World Wide Web for the first few years competing
+                with other linked information systems. In April 1993,
+                <a href="https://cds.cern.ch/record/1164399/">
+                  CERN released the World Wide Web</a
+                >
+                into the public domain. Thousands of websites popped up within a
+                year.</span
+              >
+            </p>
+            <ul>
+              <li>The first ever website went live in August, 1991</li>
+              <li>
+                The milestone of 1 billion websites was reached in September
+                2014
+              </li>
+              <li>There were around 1.2 billion websites at the end of 2023</li>
+              <li>
+                There were around 200 million active websites at the end of 2023
+                (about 4/5 of websites are inactive)
+              </li>
+              <li>Approximately 150,000 new websites are created everyday</li>
+            </ul>
+            <p>
+              The Web is an essential part of the modern world and everyday, the
+              majority of people in the world use it. When developing websites,
+              learning the history helps us to understand why things are as they
+              are. The original idea of the web never considered using images
+              (and definitely not video); over the last three decades, countless
+              people have extended the Web beyond anything that was originally
+              considered.
+            </p>
+          </article>
+        </section>
+
+        <div class="pad-top" />
+        <section id="layout" class="colours-main">
+          <article class="pad-all">
+            <h1 class="heading-tilt heading-down colours-blue-white">
+              Our Website Layout
+            </h1>
+
             <h2 class="project-section-title">Our Home Page</h2>
             <p>
-              When you go to carrickdojo.com, your web browser will
-              automatically look for a page called index.html and if it exists
-              it will display it.
+              When you go to
+              <a href="carrickdojo.com" class="text-leitrim">carrickdojo.com</a>
+              , your web browser will automatically look for a page called
+              <b>index.html</b> and if it exists it will display it.
             </p>
             <p>
               There is no rule to say browsers should do this, but it became a
@@ -220,21 +358,21 @@
               all browsers choose to do this.
             </p>
             <p>
-              Our index.html is also called out homepage and is our most
-              important page as it will be viewed the most.
+              Our index.html is also called our homepage and is our most
+              important page as it will be viewed by most of our visitors.
             </p>
 
             <h2 class="project-section-title">Site Map</h2>
             <p>
               We can create any page we want for carrickdojo.com. You are
-              currently reading the page our-website.html. Our website is a
-              folder of different pages that we host on a web server.
+              currently reading the page our-website.html in our guides folder.
+              A website is a collection of different pages and folders of pages
+              that we host on a web server.
             </p>
             <p>
-              A website is a collection of pages, and as some websites can grow
-              to be hundreds or thousands of pages, it is good to have a map. We
-              call the website map a sitemap and it just lists all the pages we
-              have and the folders they are in.
+              As some websites can grow to be hundreds or thousands of pages, it
+              is good to have a map. We call the website map a sitemap and it
+              just lists all the pages we have and the folders they are in.
             </p>
             <p>
               A sitemap can be very useful for people working together on a
@@ -244,7 +382,10 @@
               and map the Internet; and some are bad, looking to steal sensitive
               user information or other malicious activities.
             </p>
-            <p></p>
+            <p>
+              There are no rules on the layout and folder structure of website
+              and there are lots of different approaches.
+            </p>
 
             <ul>
               <li>index.html</li>
@@ -261,10 +402,11 @@
               <li>site.html</li>
               <li>support.html</li>
               <li>
-                projects
+                guides
                 <ul>
                   <li>our-website.html</li>
-                  <li>style-guide.html</li>
+                  <li>our-hosting.html</li>
+                  <li>our-style-guide.html</li>
                 </ul>
               </li>
               <li>
@@ -310,13 +452,291 @@
 
             <p>
               All our main HTML pages sit in the root folder along with folders
-              for css, fonts, images and projects. The root folder is the name
+              for css, fonts, images and guides. The root folder is the name
               given to the first or top-most directory in a hierarchy. It can be
               likened to the trunk of a tree, as the starting point where all
               branches originate from it.
             </p>
 
-            <h2 class="project-section-title">Page Layout</h2>
+            <h2 class="">Page Layout</h2>
+            <p>
+              HTML is all about layout and how content gets displayed on a page.
+              Most modern web development frameworks help programmers write less
+              code and a core principle of coding is DRY (Do Not Repeat
+              Yourself).
+            </p>
+            <p>
+              We are not using any frameworks and have no simple way to create
+              reusable components without increasing our website complexity.
+              This means we need to write the header, navigation bar and footer
+              for each page.
+            </p>
+
+            <h3>Page Components</h3>
+            <p>
+              Page components or page elements are the main building blocks of
+              our website. They consist of our header, navigation, main section,
+              (possible a side section) and a footer.
+            </p>
+            <ul>
+              <li>
+                At the top of each page is the <b>header</b>. We are using this
+                currently to alert people the site is under development.
+              </li>
+              <li>
+                Below the <b>header</b> comes our <b>navigation bar</b>. This
+                component uses a small bit of Java Script to handle the mobile
+                screen menu.
+              </li>
+              <li>
+                There are two types of main section that we use. Our standard
+                <b>main</b> displays just a single column (like our homepage).
+                We use a <b>main with aside</b> to create pages with a left hand
+                navigation section (just like this page).
+              </li>
+              <li>
+                Our footer sits at the bottom of the page and is the same across
+                all pages. It contains are key links and information on getting
+                in touch.
+              </li>
+            </ul>
+
+            <p></p>
+          </article>
+        </section>
+
+        <div class="pad-top" />
+        <section id="style" class="colours-main">
+          <article class="pad-all">
+            <h1 class="heading-tilt colours-green-white">Our Style</h1>
+            <p>
+              While HTML is all about the layout of our content, CSS is about
+              how it looks.
+            </p>
+            <p>
+              Each page loads the main.css file from our css folder and uses it
+              for styling the content. If this file is not loaded, our site will
+              look very messy.
+            </p>
+            <p>
+              Our main.css file calls other css files for handling different
+              areas of our styling. We have a css files called colours.css that
+              we use to store all our colours and colour schemes together.
+              Likewise, we have a fonts.css file to keep all our font css
+              together.
+            </p>
+            <p>
+              Having lots of little css files can be a bad thing for the
+              performance of our site as the main.css needs to load before it,
+              goes looking for the extra css files. We have separated the css in
+              order to make it easier to manage and for new people to understand
+              as opposed to one giant css file.
+            </p>
+            <p></p>
+          </article>
+        </section>
+
+        <div class="pad-top" />
+        <section id="code" class="colours-main">
+          <article class="pad-all">
+            <h1 class="heading-tilt heading-down colours-red-white">
+              Our Website Code
+            </h1>
+            <p>
+              All the files that makeup are website, including all the images,
+              the fonts and all the HTML and CSS, are all stored together in a
+              software repository. We store our software repository (or repo) on
+              the Internet and we use a tool called Git to manage and track the
+              changes made.
+            </p>
+            <div class="colours-slate-white pad-all">
+              <h2 id="what-is-git">What is Git?</h2>
+              <p>
+                Git is a system designed to help people collaborate (work
+                together) on shared files and code.
+              </p>
+              <p>
+                Git is a version control system. This means if someone changes a
+                file it records the differences between the new version and the
+                old version, and maintains a history.
+              </p>
+              <p>
+                <span>
+                  A Git Repository (a repo) is folder or collection of files
+                  that are being tracked with Git. All the files HTML, CSS and
+                  image files for this website are in our
+                  <a
+                    href="https://github.com/carrickdojo/carrickdojo-website"
+                    class="text-leitrim"
+                  >
+                    Website Git Repository</a
+                  >
+                  on Github.</span
+                >
+              </p>
+            </div>
+
+            <p>
+              Git works across platforms and can be used on Windows, Mac OS and
+              Linux however each has slightly different methods of installing.
+            </p>
+            <p>
+              With Git installed, you can open a terminal (command prompt) and
+              use the command
+              <span class=""
+                >git clone
+                https://github.com/carrickdojo/carrickdojo-website.git</span
+              >. This will pull copy our public software repo to your computer.
+            </p>
+            <p>
+              In order to make changes to our website repo, you will need access
+              granted by the CarrickDojo webmaster. We encourage all ninja's to
+              contribute to our website once we are happy they understand our
+              Internet Usage Policy and the CoderDojo Charter.
+            </p>
+          </article>
+        </section>
+
+        <div class="pad-top" />
+        <section id="hosting" class="colours-main">
+          <article class="pad-all">
+            <h1 class="heading-tilt heading-down colours-red-white">
+              Our Website Hosting
+            </h1>
+            <h2 id="our-hosting">Our Website Hosting</h2>
+            <p>
+              For the development of the site, we have decided to use Vercel.
+              Vercel are the developers of Next.Js and provide a very good free
+              tier offering that does not require a credit card.
+            </p>
+            <a href="https://vercel.com/">
+              <img
+                src="../images/logos/vercel.svg"
+                class="image-small pad-all colours-black-white"
+                alt="vercel logo"
+            /></a>
+
+            <p>Key reasons for going with Vercel:</p>
+            <ul>
+              <li>
+                The free tier hobby account should meet our traffic needs.
+              </li>
+              <li>
+                Integration with Github - when we update our Website Git Repo,
+                Vercel will see the changes, and deploy a new version of our
+                site.
+              </li>
+              <li>Following Domain Verification, HTTPS is automatic.</li>
+            </ul>
+
+            <img
+              src="../images/projects/project-website/05-hosting-vercel.webp"
+              alt="Our hosting"
+              class="image-big"
+            />
+
+            <h2 id="our-hosting">Website Hosting Access</h2>
+            <p>
+              Our website hosting is authenticated through email and can be
+              accessed by anyone with access to the
+              <a mailto="webmaster@carrickdojo.com"
+                >webmaster@carrickdojo.com</a
+              >
+              emails.
+            </p>
+            <p>
+              The hosting is currently pulling the main (only branch) of our
+              website software repository from Github. We may update this at a
+              later point, but for the time being the main branch is
+              automatically deployed when updated.
+            </p>
+            <p class="colours-secondary pad-all text-center">
+              It should not be necessary to make changes to the hosting, however
+              ensuring access before committing code to the software repository
+              will allow for an <b>instant rollback</b> if necessary.
+            </p>
+          </article>
+        </section>
+
+        <div class="pad-top" />
+        <section id="dns" class="colours-main">
+          <article class="pad-all">
+            <h1 class="heading-tilt heading-down colours-red-white">
+              Our Domain Name
+            </h1>
+            <h2 id="#our-domain-name">Our Domain Name</h2>
+            <p>
+              Our domain name is carrickdojo.com; our first Dojo Champion
+              registered the domain on Friday 21st of November 2014.
+            </p>
+
+            <p>
+              Domain names provide us a way to create helpful names for Internet
+              resources so we can easily remember them.
+            </p>
+            <div class="factoid">
+              Domain names are older than webpages and one of the key parts of
+              the Internet.
+            </div>
+
+            <p>
+              To understand this more, we need to learn a little bit about the
+              Domain Naming System (normally just called DNS).
+            </p>
+
+            <h2 id="dns">Domain Naming Service</h2>
+            <p>
+              When computers talk to each other over the Internet, they all use
+              the Internet Protocol (IP) a set of rules everyone agreed to.
+            </p>
+            <p>
+              Each computer has an IP address that is unique to that computer
+              just like a telephone has a unique telephone number.
+            </p>
+            <p>
+              DNS allows us to assign real names to a computer resources so we
+              don't need to remember all the different IP addresses of the
+              different servers.
+            </p>
+            <p>
+              Our webserver has an IP address of 76.76.21.9. It is a lot easier
+              for me to tell people our website is at www.carrickdojo.com and
+              not 76.76.21.9.
+            </p>
+            <p>
+              DNS can be looked at like a phone book for all the different
+              computer IP addresses.
+            </p>
+
+            <img
+              src="../images/guides/carrickdojo-dns-zones.webp"
+              alt="Updating our DNS Records"
+              class="image-big"
+            />
+            <p>
+              Anyone can lookup the records of a domain as the information has
+              to be public in order to function and allow visitors to find
+              Internet resources.
+            </p>
+            <ul>
+              <li>
+                Our DNS records contain an A record that tells users our website
+                (carrickdojo.com) is at 76.76.21.21. This points to Vercel our
+                web hosting provider.
+              </li>
+              <li>
+                The second entry is an MX (a mail exchanger) record that points
+                our users to our email server for (carrickdojo.com) managed by
+                Microsoft.
+              </li>
+              <li>
+                The third record is a CNAME (Canonical Name) record that tells
+                users trying to access www.carrickdojo.com to use the same
+                record as carrickdojo.com. This prevents users getting a page
+                not found, if they go to www.carrickdojo.com they are redirected
+                to our site carrickdojo.com.
+              </li>
+            </ul>
           </article>
         </section>
 
