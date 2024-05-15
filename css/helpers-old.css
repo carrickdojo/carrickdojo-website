@@ -1,0 +1,233 @@
+/* This file is for helper or utility classes */
+/* These can be assigned to elements in the HTML markup using classes  */
+
+/* This is still a very messy file and could be improved on in many ways. */
+
+.no-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.max-width {
+  max-width: 100%;
+}
+
+.no-overflow {
+  overflow: hidden;
+}
+.no-overflow-clip {
+  clip: rect(auto, auto, auto, auto);
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.rounded-small {
+  border-radius: 0.5rem;
+}
+
+.shadow-small {
+  --c: var(--coder-main);
+  box-shadow: var(--c) 0 0.25rem 1rem;
+}
+
+.tilt-left-x-small {
+  rotate: -2deg;
+}
+.tilt-right-x-small {
+  rotate: 2deg;
+}
+.tilt-left-small {
+  rotate: -4deg;
+}
+.tilt-right-small {
+  rotate: 4deg;
+}
+
+/* Simple containers and layout helpers  */
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-bottom {
+  display: flex;
+  align-self: flex-end;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.badges {
+  display: inline-block;
+  padding: 0.25rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem;
+  border-radius: 1rem;
+  border: 0.25rem solid var(--coder-white);
+  margin: 0.25rem;
+}
+
+.table-responsive {
+  padding: 0.25rem;
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  text-align: left;
+  font-size: 0.5rem;
+  background-color: var(--coder-main);
+  color: var(--coder-white);
+}
+
+.table-responsive tbody tr:nth-child(odd) {
+  background-color: var(--coder-main-light);
+}
+.table-responsive tbody tr:first-child {
+  background-color: var(--coder-main-dark);
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 40em) {
+  .table-responsive {
+    display: table;
+    font-size: 1rem;
+  }
+}
+
+.button-action {
+  --c: var(--coder-secondary);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  min-height: 5rem;
+  /* min-width: 10rem; */
+  white-space: nowrap;
+  width: fit-content;
+  font-family: schoolbell;
+  font-size: 2rem;
+  box-shadow: 0 0 0 0.25rem inset var(--c);
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p, 0%)) 0%,
+    var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p, 0%)) 100%;
+  background-size: 50.5% calc(var(--_p, 0%) / 2 + 0.5%);
+  outline-offset: 0.1em;
+  transition: background-size 0.4s, background-position 0s 0.4s;
+}
+
+.button-action a {
+  text-decoration: none;
+  color: var(--coder-white);
+}
+.button-action:hover {
+  --_p: 100%;
+  transition: background-position 0.4s, background-size 0s;
+}
+.button-action:active {
+  box-shadow: 0 0 9e9Q inset var(--coder-main-dark);
+  background-color: var(--c);
+  color: var(--coder-main);
+}
+
+/* padding  */
+.pad-top {
+  padding-top: 1rem;
+}
+
+.pad-bottom {
+  padding-bottom: 1rem;
+}
+.pad-left {
+  padding-left: 1rem;
+}
+
+.pad-right {
+  padding-right: 1rem;
+}
+
+.pad-vertical {
+  padding: 1rem 0;
+}
+
+.pad-horizontal {
+  padding: 0 1rem;
+}
+
+.pad-all {
+  padding: 1rem;
+}
+
+/* image sizes  */
+.image-flip {
+  transform: scaleX(-1);
+}
+
+.image-xx-small {
+  display: block;
+  width: 1rem;
+  margin: 0 auto;
+}
+
+.image-x-small {
+  display: block;
+  width: 2.5rem;
+  margin: 0 auto;
+}
+
+.image-small {
+  display: block;
+  width: 5rem;
+  margin: 0 auto;
+}
+
+.image-medium {
+  width: 7.5rem;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 40em) {
+  .image-small {
+    width: 5rem;
+  }
+  .image-medium {
+    width: 10rem;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .image-small {
+    width: 5rem;
+  }
+  .image-medium {
+    width: 10rem;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .image-small {
+    width: 7.5rem;
+  }
+  .image-medium {
+    width: 12.5rem;
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  .image-small {
+    width: 10rem;
+  }
+  .image-medium {
+    width: 15rem;
+  }
+}

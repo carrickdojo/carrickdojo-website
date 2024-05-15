@@ -8,9 +8,9 @@
     and one without that uses the full width.
 
     - Page Heading
+    - Alert Modal
     - Navigation
     - Site Logo
-    - Alert Modal
     - Main
     - Main with Aside
     - Footer
@@ -26,22 +26,76 @@
   padding: 0.2rem;
   background-color: darkred;
   text-align: center;
-  height: var(--height, 4rem);
-  font-size: var(--font-size, small);
-
-  @media (min-width: 720px) {
-    --height: 2.5rem;
-    --font-size: smaller;
-  }
-  @media (min-width: 960px) {
-    --height: 2rem;
-    --font-size: small;
-  }
+  height: 4rem;
+  font-size: small;
 }
 
 .page-heading a {
   color: var(--coder-white);
-  text-decoration: underline;
+}
+
+@media only screen and (min-width: 720px) {
+  .page-heading {
+    height: 2.5rem;
+    font-size: smaller;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .page-heading {
+    height: 1.5rem;
+    font-size: medium;
+  }
+}
+
+/* ----------------------------------  */
+/* CSS for our Alert modal (popup)     */
+/* ----------------------------------  */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+.popup-overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 10rem auto;
+  padding: 20px;
+  background: var(--coder-main);
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--coder-white);
+}
+.popup .close:hover {
+  color: #06d85f;
+}
+
+@media screen and (max-width: 700px) {
+  .popup {
+    width: 70%;
+  }
 }
 
 /* ---------------------------------------  */
@@ -65,31 +119,24 @@ nav {
   display: block;
   color: var(--coder-white);
   text-align: center;
-  padding: 0.5rem;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.5rem;
-  font-family: schoolbell;
+  font-size: 17px;
 }
 
 .mobile-nav a:hover {
-  background-color: var(--coder-white);
-  color: var(--coder-black);
+  background-color: #ddd;
+  color: black;
 }
 
 .mobile-nav a.active {
   background-color: var(--coder-main);
-  color: var(--coder-white);
+  color: white;
 }
 
-.mobile-nav a > img {
+.mobile-nav a.icon {
   float: right;
   display: block;
-  width: 2rem;
-  filter: invert(1);
-}
-
-.mobile-nav a:hover > img {
-  filter: invert(0);
 }
 
 .mobile-nav.open {
@@ -206,7 +253,7 @@ nav {
   }
   .navbar-links {
     display: flex;
-    font-size: small;
+    font-size: smaller;
   }
   .navbar-button {
     display: block;
@@ -272,64 +319,18 @@ nav {
 }
 .logo-text {
   font-family: coderDojoBrandLogo;
-  font-size: var(--font-size, 2.5rem);
-
-  @media only screen and (min-width: 720px) {
-    --font-size: 2rem;
-  }
-  @media only screen and (min-width: 960px) {
-    --font-size: 2.5rem;
-  }
+  font-size: 2.5rem;
 }
 
-/* ----------------------------------  */
-/* CSS for our Alert modal (popup)     */
-/* ----------------------------------  */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 1;
-}
-.popup-overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  margin: 10rem auto;
-  padding: 1rem;
-  background: var(--coder-main);
-  border-radius: 0.5rem;
-  width: var(--width, 80%);
-  position: relative;
-  transition: all 5s ease-in-out;
-
-  @media (min-width: 720px) {
-    --width: 50%;
-  }
-  @media (min-width: 960px) {
-    --width: 40%;
+@media only screen and (min-width: 720px) {
+  .logo-text {
+    font-size: 1.5rem;
   }
 }
-.popup .close {
-  position: absolute;
-  top: 2rem;
-  right: 3rem;
-  transition: all 200ms;
-  font-size: 2rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--coder-white);
-}
-.popup .close:hover {
-  color: var(--coder-main-dark);
+@media only screen and (min-width: 960px) {
+  .logo-text {
+    font-size: 2.5rem;
+  }
 }
 
 /* ------------------------------------  */
@@ -351,7 +352,8 @@ main {
 .main-with-aside aside {
   grid-area: aside;
   padding: 1rem;
-  position: relative;
+  /* position: -webkit-sticky; */
+  position: fixed;
 }
 
 .main-with-aside main {
@@ -359,44 +361,67 @@ main {
   padding-right: 20%;
 }
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 40em) {
+}
+
+@media only screen and (min-width: 48em) {
+}
+
+@media only screen and (min-width: 64em) {
   .main-with-aside {
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-areas: "aside main";
-  }
-  .main-with-aside aside {
-    position: fixed;
   }
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 80em) {
   .main-with-aside {
     grid-template-columns: 1fr 4fr;
     grid-template-areas: "aside  main ";
   }
-  .main-with-aside aside {
-    position: fixed;
+}
+
+.wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 720px) {
+  .wrapper {
+    max-width: 80%;
   }
 }
 
-#ninjas {
-  padding-top: 10rem;
-  width: 100%;
-  overflow: hidden;
-
-  display: flex;
-  justify-content: center;
-}
-
-#ninjas > img {
-  width: calc(100vw / 11);
-  margin-left: -3rem;
-}
-@media (max-width: 480px) {
-  #ninjas > img {
-    width: 12vw;
-    margin-left: -3vw;
+@media only screen and (min-width: 960px) {
+  .wrapper {
+    max-width: 70%;
   }
+}
+
+.columns {
+  --min-column-size: 12rem;
+  --column-count: 3;
+  --gap: 2rem;
+  --align: center;
+  --justify: center;
+
+  --breakpoint: calc(
+    var(--min-column-size) * var(--column-count) +
+      (var(--gap) * (var(--column-count) - 1))
+  );
+  --column-size: calc((100% / var(--column-count)) - var(--gap));
+
+  display: grid;
+  align-items: var(--align);
+  justify-content: var(--justify);
+  gap: var(--gap);
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      min(max(var(--column-size), (100% - var(--breakpoint)) * -999), 100%),
+      1fr
+    )
+  );
 }
 
 /* -------------------------------  */
@@ -442,6 +467,7 @@ footer {
 
 .footer-links h3 {
   font-weight: bolder;
+  /* color: var(--coder-secondary); */
   border-bottom: 0.1rem solid var(--coder-white);
   font-size: smaller;
   margin: 0.2rem 0;
@@ -525,47 +551,4 @@ footer {
   .footer-links {
     flex-direction: row;
   }
-}
-
-/* ------------------------------------  */
-/* CSS for containers and wrappers       */
-/* ------------------------------------  */
-.wrapper {
-  max-width: var(--max-width, 90%);
-  margin: 0 auto;
-
-  @media only screen and (min-width: 720px) {
-    --max-width: 80%;
-  }
-
-  @media only screen and (min-width: 960px) {
-    --max-width: 70%;
-  }
-}
-
-.columns {
-  --min-column-size: 12rem;
-  --column-count: 3;
-  --gap: 1rem;
-  --align: center;
-  --justify: center;
-
-  --breakpoint: calc(
-    var(--min-column-size) * var(--column-count) +
-      (var(--gap) * (var(--column-count) - 1))
-  );
-  --column-size: calc((100% / var(--column-count)) - var(--gap));
-
-  display: grid;
-  align-items: var(--align);
-  justify-content: var(--justify);
-  gap: var(--gap);
-
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(
-      min(max(var(--column-size), (100% - var(--breakpoint)) * -999), 100%),
-      1fr
-    )
-  );
 }

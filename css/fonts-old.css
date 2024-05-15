@@ -1,0 +1,360 @@
+/*
+--------------
+Font and Text Import and Helper Classes
+These are classes used to import our fonts, and change how they are displayed
+--------------
+*/
+
+/*
+--------------
+Font Imports
+We are importing the fonts we use from our fonts folder
+--------------
+*/
+@font-face {
+  font-family: coderDojoBrandLogo;
+  font-weight: 400;
+  src: url(../fonts/LeagueGothic-Regular.ttf);
+}
+
+@font-face {
+  font-family: ourMainText;
+  font-weight: 400;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: emphasis;
+  font-weight: 700;
+  src: url(../fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: permanentMarker;
+  font-weight: 400;
+  src: url(../fonts/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+  font-family: comingSoon;
+  font-weight: 400;
+  src: url(../fonts/coming-soon-latin-400-normal.ttf);
+}
+
+@font-face {
+  font-family: stalinist;
+  font-weight: 400;
+  src: url(../fonts/stalinist-one-latin-400-normal.ttf);
+}
+
+@font-face {
+  font-family: schoolbell;
+  font-weight: 400;
+  src: url(../fonts/schoolbell-latin-400-normal.ttf);
+}
+
+@font-face {
+  font-family: terminal;
+  font-weight: 400;
+  src: url(../fonts/vt323-latin-400-normal.ttf);
+}
+
+@font-face {
+  font-family: "Josefin Sans Variable";
+  font-weight: 400;
+  src: url(../fonts/josefin-sans-latin-400-normal.ttf);
+}
+
+@font-face {
+  font-family: "Patrick Hand";
+  font-weight: 400;
+  src: url(../fonts/patrick-hand-latin-400-normal.ttf);
+}
+
+/*
+--------------
+Font Helper Classes
+We create classes for each font and weight (the boldness) we use
+--------------
+*/
+
+.font-article-heading {
+  font-family: "Josefin Sans Variable";
+  letter-spacing: 0rem;
+  font-weight: 400;
+}
+.font-article-main {
+  font-family: "Patrick Hand";
+  font-style: normal;
+  font-display: swap;
+  letter-spacing: 0rem;
+  font-weight: 400;
+}
+
+.font-logo {
+  font-family: coderDojoBrandLogo;
+  letter-spacing: 0rem;
+  font-weight: 400;
+}
+
+.font-main {
+  font-family: ourMainText;
+  letter-spacing: 0rem;
+  font-weight: 100;
+}
+
+.font-emphasis {
+  font-family: ourMainText;
+  letter-spacing: 0rem;
+  font-weight: 600;
+}
+
+.font-stalinist {
+  font-family: stalinist;
+  letter-spacing: 0rem;
+}
+.font-schoolbell {
+  font-family: schoolbell;
+  letter-spacing: 0rem;
+}
+.font-terminal {
+  font-family: terminal;
+  letter-spacing: 0rem;
+}
+
+.text-marker {
+  font-family: permanentMarker;
+  letter-spacing: 0.2rem;
+  font-size: larger;
+}
+.text-marker2 {
+  font-family: comingSoon;
+  letter-spacing: 0.1rem;
+  font-size: larger;
+}
+
+.text-emphasis-big {
+  font-family: emphasis;
+  font-weight: 900;
+  font-size: x-large;
+}
+
+.text-marker-big {
+  font-family: comingSoon;
+  letter-spacing: 0.1rem;
+  font-size: x-large;
+}
+
+@media (max-width: 480px) {
+  .text-marker-big {
+    letter-spacing: 0;
+    font-size: small;
+  }
+}
+
+/*
+--------------
+Font Size Helper Classes
+
+--------------
+*/
+
+.text-xx-large {
+  font-size: xx-large;
+}
+.text-x-large {
+  font-size: x-large;
+}
+.text-larger {
+  font-size: larger;
+}
+.text-large {
+  font-size: large;
+}
+.text-small {
+  font-size: small;
+}
+
+.emoji-x-large {
+  font-size: 5rem;
+}
+
+/*
+--------------
+Text Effects Helper Classes
+
+--------------
+*/
+
+.text-emboss {
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.text-glow {
+  color: var(--coder-main-dark);
+  text-shadow: 0.2rem 0.2rem 1.2rem var(--coder-main),
+    -0.1rem 0.1rem 2rem var(--coder-accent);
+}
+.text-glow-strong {
+  text-shadow: 3px 3px 20px var(--coder-main), -2px 1px 30px var(--coder-main);
+}
+
+.text-rainbow {
+  color: #ff0000;
+  text-shadow: 0 2px 2px #ff0000, -2px 5px 0 #ff7f00, -4px 10px 0 #ffff00,
+    -8px 15px 0 #00ff00, -12px 20px 0 #0000ff, -16px 25px 0 #4b0082,
+    -20px 30px 0 #9400d3;
+}
+
+.text-double-shadow {
+  color: #dfdfdf;
+  text-shadow: 4px 4px 0px #000, -4px 0 0px #000, 7px 4px 0 #fff;
+}
+
+.text-leitrim {
+  background-image: linear-gradient(
+    to right,
+    var(--coder-leitrim-green),
+    var(--coder-leitrim-gold)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-leitrim-large {
+  font-size: 6rem;
+  background-image: linear-gradient(
+    to right,
+    var(--coder-leitrim-green),
+    var(--coder-leitrim-gold)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*
+--------------
+Text Alignment Helper Classes
+
+--------------
+*/
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+@media (max-width: 480px) {
+  .text-right {
+    text-align: center;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-tilt-up {
+  display: inline-block;
+  rotate: -2deg;
+  padding: 0.25rem;
+  text-align: center;
+}
+.text-tilt-down {
+  display: inline-block;
+  rotate: 2deg;
+  padding: 0.25rem;
+  text-align: center;
+}
+/* Small devices such as large phones (640px and up) */
+@media only screen and (min-width: 40em) {
+  .text-tilt-up {
+    rotate: -2deg;
+    padding: 0.25rem;
+  }
+  .text-tilt-down {
+    rotate: 2deg;
+    padding: 0.25rem;
+  }
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+  .text-tilt-up {
+    rotate: -3deg;
+    padding: 0.5rem;
+  }
+  .text-tilt-down {
+    rotate: 3deg;
+    padding: 0.5rem;
+  }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em) {
+  .text-tilt-up {
+    rotate: -3deg;
+    padding: 0.75rem;
+  }
+  .text-tilt-down {
+    rotate: 3deg;
+    padding: 0.75rem;
+  }
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em) {
+  .text-tilt-up {
+    rotate: -4deg;
+    padding: 1rem;
+  }
+  .text-tilt-down {
+    rotate: 4deg;
+    padding: 1rem;
+  }
+}
+
+/*
+--------------
+Misc Helper Classes
+
+--------------
+*/
+.break-word {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.heading-pink {
+  background-color: var(--coder-pink);
+  color: var(--coder-white);
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+  rotate: -2deg;
+}
+
+.heading-tilt {
+  width: 300px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+  rotate: -4deg;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .heading-tilt {
+    width: 200px;
+  }
+}
+
+.heading-down {
+  rotate: 4deg;
+}

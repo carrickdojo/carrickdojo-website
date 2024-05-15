@@ -77,7 +77,7 @@
         <div class="navbar-button">
           <a href="#popup" title="Get tickets to the next meetup">
             <img src="/images/icons/ticket.svg" alt="Our Dojo Tickets" />
-            <span class="myCoolText"> Tickets</span></a
+            <span class="text-leitrim"> Tickets</span></a
           >
         </div>
       </div>
@@ -85,20 +85,39 @@
       <!-- The mobile screen links  -->
       <!-- These are only seen on small screens  -->
       <div class="mobile-nav" id="mobile-nav">
-        <a href="/" class="active">Home</a>
-        <a href="/projects.html">Projects</a>
-        <a href="/ninjas.html">Ninjas</a>
-        <a href="/mentors.html">Mentors</a>
-        <a href="/resources.html">Resources</a>
-        <a href="/about.html">About Our Dojo</a>
-        <a href="/contact.html">Get in Touch</a>
+        <a href="/" class="active"
+          ><img src="images/icons/home.svg" alt="Home" />Home</a
+        >
+        <a href="/about.html#tickets"
+          ><img src="images/icons/ticket.svg" alt="Tickets" />Tickets</a
+        >
+        <a href="/projects.html"
+          ><img src="images/icons/presentation.svg" alt="Projects" />Projects</a
+        >
+        <a href="/ninjas.html"
+          ><img src="images/icons/person.svg" alt="Ninjas" />Ninjas</a
+        >
+        <a href="/mentors.html"
+          ><img src="images/icons/laugh.svg" alt="Mentors" />Mentors</a
+        >
+        <a href="/resources.html"
+          ><img src="images/icons/lightbulb.svg" alt="Resources" />Resources</a
+        >
+        <a href="/about.html"
+          ><img src="images/icons/star.svg" alt="About" />About Our Dojo</a
+        >
+        <a href="/contact.html"
+          ><img src="images/icons/email.svg" alt="Contact Us" />Get in Touch</a
+        >
       </div>
     </nav>
 
     <!-- Our popup window is only displayed when the ticket button is clicked -->
     <div id="popup" class="popup-overlay">
       <div class="popup">
-        <h2 class="heading-tilt colours-pink-white">CarrickDojo Tickets</h2>
+        <h2 class="text-tilt-up text-center colours-pink-white pad-all">
+          CarrickDojo Tickets
+        </h2>
         <a class="close" href="#">&times;</a>
         <div class="text-center pad-all">
           We have begun to use the CoderDojo Foundation's new ticketing system.
@@ -124,10 +143,10 @@
     <!-- Our Main section  -->
     <!-- This section contains all the content between the navigation bar and the footer -->
     <main>
-      <section id="hero" class="colours-main-grad pad-vertical">
-        <div class="wrapper">
-          <div class="columns">
-            <article class="font-main text-larger">
+      <section id="hero" class="colours-main-grad">
+        <div class="wrapper pad-vertical">
+          <div class="columns" style="--column-count: 2">
+            <article class="text-larger">
               <p>
                 CoderDojo is a global movement of free volunteer coding clubs
                 where young people learn to code, hack, develop websites, apps,
@@ -135,7 +154,9 @@
               </p>
 
               <p>
-                <span class="text-leitrim logo-text">CarrickDojo</span>
+                <span class="text-leitrim logo-text text-xx-large"
+                  >CarrickDojo</span
+                >
                 has been running in <b>Carrick-On-Shannon</b> since January
                 2015. We want to bring to the community an environment where
                 children from 7 to 17 years old can share passions for coding,
@@ -147,10 +168,7 @@
                 the languages of the future.
               </p>
             </article>
-            <div
-              class="animate-roll-in-right center"
-              style="display: inline-block; width: fit-content"
-            >
+            <div class="animate-roll-in-right">
               <img
                 src="images/logos/coderdojo-roundel.svg"
                 alt="CoderDojo Logo"
@@ -167,27 +185,22 @@
                 class="image-small animate-spaceship"
             /></a>
 
-            <div class="columns" style="--column-count: 2">
-              <button class="button-action text-large">
-                <a href="/about.html#join">
-                  Become a <span class="myCoolText">Ninja</span>.</a
-                >
-              </button>
-
-              <button
-                class="button-action text-emphasis-big"
-                style="--c: var(--coder-accent)"
+            <button class="button-action">
+              <a href="/about.html#join">
+                Become a <span class="myCoolText">Ninja</span>.</a
               >
-                <a href="/mentors.html" class
-                  >Become a <span class="myCoolText">mentor</span>.</a
-                >
-              </button>
-            </div>
+            </button>
+
+            <button class="button-action" style="--colour: var(--coder-accent)">
+              <a href="/mentors.html" class
+                >Become a <span class="myCoolText">mentor</span>.</a
+              >
+            </button>
           </div>
         </div>
       </section>
 
-      <section id="ninjas" class="fancy-background-darker">
+      <section id="ninjas" class="bg-changing-colours-dark">
         <img
           src="images/coderdojo/Kid01.webp"
           alt="A Ninja"
@@ -205,58 +218,57 @@
         <img src="images/coderdojo/Kid11.webp" alt="A Ninja" />
       </section>
 
-      <section id="rules" class="colours-slate-white pad-vertical">
-        <div class="wrapper">
-          <div class="columns">
-            <div class="wrapper-image-speech">
-              <img
-                src="images/coderdojo/Adult04-04.webp"
-                onmouseover="this.src='/images/coderdojo/Adult04-03.webp';"
-                onmouseout="this.src='images/coderdojo/Adult04-04.webp';"
-                alt="Mentor Speaking"
-              />
-              <div class="font-schoolbell box-speech">
-                <p class="text-large text-tilt-up colours-accent">
-                  Anyone can learn to code
-                </p>
-                <p class="pad-horizontal">
-                  Many great professional programmers, including CoderDojo
-                  founder James Whelton, are self-taught.
-                </p>
-              </div>
+      <section id="rules" class="colours-coder-black-white pad-vertical">
+        <div class="columns">
+          <div class="wrapper-image-speech">
+            <img
+              src="images/coderdojo/Adult04-04.webp"
+              onmouseover="this.src='/images/coderdojo/Adult04-03.webp';"
+              onmouseout="this.src='images/coderdojo/Adult04-04.webp';"
+              alt="Mentor Speaking"
+            />
+            <div class="box-speech">
+              <h3 class="text-tilt-up pad-all-sm colours-accent">
+                Anyone can learn to code
+              </h3>
+              <p class="pad-horizontal">
+                Many great professional programmers, including CoderDojo founder
+                James Whelton, are self-taught.
+              </p>
             </div>
-            <div class="wrapper-image-speech">
-              <div class="font-schoolbell box-speech box-speech-left">
-                <p class="text-large text-tilt-down colours-main">
-                  One rule: be cool!
-                </p>
-                <p class="pad-horizontal">
-                  This is the oldest of CoderDojo's principles and in short, it
-                  means that we should behave well towards each other.
-                </p>
-                <p class="font-emphasis">
-                  “Helping, sharing, supporting, encouraging, cooperating, and
-                  being kind are all very cool. Bullying, lying, time-wasting,
-                  and disrupting the Dojo are all considered uncool.”
-                </p>
-                <p class="font-emphasis text-small">
-                  - CoderDojo co-founder <br />Bill Liao
-                </p>
-              </div>
-              <img
-                src="images/coderdojo/Adult02-03.webp"
-                onmouseover="this.src='/images/coderdojo/Adult02-04.webp';"
-                onmouseout="this.src='images/coderdojo/Adult02-03.webp';"
-                alt="Mentor Speaking"
-              />
+          </div>
+
+          <div class="wrapper-image-speech">
+            <div class="box-speech box-speech-left">
+              <h3 class="text-tilt-down pad-all-sm colours-main">
+                One rule: be cool!
+              </h3>
+              <p class="pad-horizontal">
+                This is the oldest of CoderDojo's principles and in short, it
+                means that we should behave well towards each other.
+              </p>
+              <p class="font-emphasis">
+                “Helping, sharing, supporting, encouraging, cooperating, and
+                being kind are all very cool. Bullying, lying, time-wasting, and
+                disrupting the Dojo are all considered uncool.”
+              </p>
+              <p class="font-emphasis text-small">
+                - CoderDojo co-founder <br />Bill Liao
+              </p>
             </div>
+            <img
+              src="images/coderdojo/Adult02-03.webp"
+              onmouseover="this.src='/images/coderdojo/Adult02-04.webp';"
+              onmouseout="this.src='images/coderdojo/Adult02-03.webp';"
+              alt="Mentor Speaking"
+            />
           </div>
         </div>
       </section>
 
       <section id="thanks" class="colours-main-dark pad-vertical">
         <div class="wrapper">
-          <div class="box-star colours-white-black font-schoolbell">
+          <div class="box-star colours-coder-white-black font-writing">
             <span>
               A huge thanks to all the amazing sponsors of our Dojo and to all
               the volunteers for their help and assistance.</span
@@ -266,41 +278,44 @@
       </section>
 
       <section id="sponsors" class="colours-main-dark pad-vertical">
-        <div class="wrapper">
-          <div
-            class="columns colours-white-black rounded-small pad-all"
-            style="--gap: 0.25rem; --min-column-size: 10rem; --column-count: 4"
+        <div
+          class="columns colours-white-black pad-all"
+          style="
+            --gap: 0.5rem;
+            --min-column-size: 10rem;
+            --column-count: 4;
+            --justify: center;
+          "
+        >
+          <a href="https://the-hive.ie/">
+            <img
+              src="images/logos/sponsors/the-hive-logo.png"
+              alt="The Hive"
+              class="image-small"
+          /></a>
+          <a href="https://www.ldco.ie/">
+            <img
+              src="images/logos/sponsors/leitrim-development-company-logo.png"
+              alt="Leitrim Development Company"
+              class="image-small"
+            />
+          </a>
+          <a href="http://www.ncycs.ie/">
+            <img
+              src="images/logos/sponsors/ncycs-logo.png"
+              alt="North Connaught Youth and Community Services"
+              class="image-small"
+            />
+          </a>
+          <a
+            href="https://partner.microsoft.com/en-ie/asset/collection/partners-for-social-impact-community-news#/"
           >
-            <a href="https://the-hive.ie/">
-              <img
-                src="images/logos/sponsors/the-hive-logo.png"
-                alt="The Hive"
-                class="image-small"
-            /></a>
-            <a href="https://www.ldco.ie/">
-              <img
-                src="images/logos/sponsors/leitrim-development-company-logo.png"
-                alt="Leitrim Development Company"
-                class="image-small"
-              />
-            </a>
-            <a href="http://www.ncycs.ie/">
-              <img
-                src="images/logos/sponsors/ncycs-logo.png"
-                alt="North Connaught Youth and Community Services"
-                class="image-small"
-              />
-            </a>
-            <a
-              href="https://partner.microsoft.com/en-ie/asset/collection/partners-for-social-impact-community-news#/"
-            >
-              <img
-                src="images/logos/sponsors/microsoft-tech-for-social-impact.png"
-                alt="Microsoft Tech for Social Impact"
-                class="image-small"
-              />
-            </a>
-          </div>
+            <img
+              src="images/logos/sponsors/microsoft-tech-for-social-impact.png"
+              alt="Microsoft Tech for Social Impact"
+              class="image-small"
+            />
+          </a>
         </div>
       </section>
 
@@ -316,8 +331,8 @@
             </div>
 
             <div class="wrapper-image-speech">
-              <div class="font-schoolbell box-speech box-speech-left">
-                <p class="text-larger text-center">
+              <div class="font-writing box-speech box-speech-left">
+                <p class="text-larger">
                   We love all positive and constructive feedback.
                 </p>
                 <p

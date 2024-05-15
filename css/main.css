@@ -102,36 +102,3 @@ a:active {
 /* refactor below  */
 /* --------------  */
 /* --------------  */
-
-#ninjas {
-  padding-top: 10rem;
-  width: 100%;
-  overflow: hidden;
-
-  display: flex;
-  justify-content: center;
-}
-
-#ninjas > img {
-  width: calc(100vw / 11);
-  margin-left: -3rem;
-}
-@media (max-width: 480px) {
-  #ninjas > img {
-    width: 12vw;
-    margin-left: -3vw;
-  }
-}
-
-.fancy-background {
-  background-image: url("/images/animated-gradient-big.svg");
-  background-size: 1920px 1080px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.fancy-background-darker {
-  background-image: url("/images/animated-gradient-big-darker.svg");
-  background-size: 1920px 1080px;
-  background-repeat: no-repeat;
-  background-position: center;
-}

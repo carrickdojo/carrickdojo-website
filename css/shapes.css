@@ -12,115 +12,48 @@ Shapes and Containers:
   wrapper-image-speech
 */
 
-.box-star {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  text-align: center;
+.button-action {
+  --colour: var(--coder-secondary);
   border-radius: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1.1rem;
-}
+  padding: 0.5rem 1rem;
+  min-height: var(--min-height, 5rem);
+  white-space: nowrap;
+  width: fit-content;
+  font-family: schoolbell;
+  font-size: var(--font-size, 2rem);
+  box-shadow: 0 0 0 0.25rem inset var(--colour);
+  --background: linear-gradient(var(--colour) 0 0) no-repeat;
+  background: var(--background) calc(var(--position, 0%) - 100%) 0%,
+    var(--background) calc(200% - var(--position, 0%)) 0%,
+    var(--background) calc(var(--position, 0%) - 100%) 100%,
+    var(--background) calc(200% - var(--position, 0%)) 100%;
+  background-size: 50.5% calc(var(--position, 0%) / 2 + 0.5%);
+  outline-offset: 0.1em;
+  transition: background-size 0.4s, background-position 0s 0.4s;
+  margin: 0 auto;
 
-.box-star::after {
-  background-image: url("../images/Star.png");
-  background-size: 5rem 5rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: jelly 1s infinite;
-  width: 15rem;
-  min-height: 5rem;
-  padding-right: 1rem;
-  display: inline-block;
-  content: " ";
-  vertical-align: middle;
-}
-
-@media only screen and (min-width: 720px) {
-  .box-star {
-    font-size: 1.5rem;
-    line-height: 1.3rem;
-    padding: 0 2rem;
+  @media (min-width: 720px) {
+    --font-size: 1.5rem;
+    --min-height: 4rem;
   }
-  .box-star::after {
-    background-size: 7.5rem 7.5rem;
-    width: 15rem;
-    min-height: 7.5rem;
+  @media (min-width: 960px) {
+    --font-size: 2rem;
+    --min-height: 5rem;
   }
 }
 
-@media only screen and (min-width: 960px) {
-  .box-star {
-    font-size: 1.8rem;
-    line-height: 1.6rem;
-    padding: 0 5rem;
-  }
-  .box-star::after {
-    background-size: 10rem 10rem;
-    width: 10rem;
-    min-height: 10rem;
-    padding: 0 2rem;
-  }
+.button-action a {
+  text-decoration: none;
+  color: var(--coder-white);
 }
-
-.box-info {
-  position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  /* max-width: 90%; */
-  min-height: 2.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 3.5rem;
-  padding-right: 0.5rem;
-  border-radius: 0.5rem;
-  text-align: left;
-  font-size: 0.8rem;
-  font-weight: 400;
-  line-height: 0.9rem;
+.button-action:hover {
+  --position: 100%;
+  transition: background-position 0.4s, background-size 0s;
 }
-
-.box-info::before {
-  background-image: url("../images/Circle_Girl.png");
-  background-size: 2.5rem 2.5rem;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  left: 0.5rem;
-  top: 0;
-  min-width: 2.5rem;
-  min-height: 2.5rem;
-  display: inline-block;
-  content: " ";
-}
-
-@media only screen and (min-width: 720px) {
-  .box-info {
-    font-size: 0.9rem;
-    line-height: 0.9rem;
-    padding-left: 5rem;
-    padding-right: 1rem;
-  }
-  .box-info::before {
-    background-size: 3.5rem 3.5rem;
-    min-width: 3.5rem;
-    min-height: 3.5rem;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  .box-info {
-    font-size: 1rem;
-    line-height: 1rem;
-    padding-left: 6rem;
-    min-height: 6rem;
-  }
-  .box-info::before {
-    background-size: 5rem 5rem;
-    min-width: 5rem;
-    min-height: 5rem;
-  }
+.button-action:active {
+  box-shadow: 0 0 9e9Q inset var(--coder-main-dark);
+  background-color: var(--colour);
+  color: var(--coder-main);
 }
 
 /* Images and Speech Bubbles  */
@@ -129,26 +62,51 @@ Shapes and Containers:
   display: inline-flex;
   margin: 0 auto;
   align-items: center;
+  justify-items: end;
   width: fit-content;
   max-width: 100%;
 }
 .wrapper-image-speech img {
   width: auto;
-  height: 10rem;
-}
-.box-speech {
-  width: 20rem;
-  background: var(--coder-secondary);
-  padding: 0.5rem;
-  text-align: center;
-  color: var(--coder-white);
-  font-size: 0.75rem;
-  line-height: 0.75rem;
-  position: relative;
-  border-radius: 0.25rem;
+  height: var(--height, 10rem);
+
+  @media (min-width: 720px) {
+    --height: 10rem;
+  }
+  @media (min-width: 960px) {
+    --height: 20rem;
+  }
 }
 
-.box-speech::before {
+.wrapper-image-speech .box-speech {
+  width: var(--width, 15rem);
+  background: var(--coder-secondary);
+  padding: var(--padding, 0.2rem);
+  text-align: center;
+  color: var(--coder-white);
+
+  line-height: var(--line-height, 0.75rem);
+  position: relative;
+  border-radius: 0.25rem;
+  font-family: schoolbell;
+  font-size: var(--font-size, 0.75rem);
+
+  @media (min-width: 720px) {
+    --font-size: 1rem;
+    --line-height: 1rem;
+    --width: 16rem;
+    --padding: 0.25rem;
+  }
+
+  @media (min-width: 960px) {
+    --font-size: 1.2rem;
+    --line-height: 1.2rem;
+    --width: 20rem;
+    --padding: 0.4rem;
+  }
+}
+
+.wrapper-image-speech .box-speech::before {
   content: "";
   width: 0px;
   height: 0px;
@@ -181,197 +139,55 @@ Shapes and Containers:
   top: 40%;
 }
 
+.box-star {
+  display: flex;
+  align-items: center;
+  padding: var(--padding, 1rem);
+  text-align: center;
+  border-radius: 0.5rem;
+  font-size: var(--font-size, 1.2rem);
+  font-weight: 600;
+  line-height: var(--line-height, 1.1rem);
+  @media (min-width: 720px) {
+    --font-size: 1.5rem;
+    --line-height: 1.3rem;
+    --padding: 1rem 2rem;
+  }
+
+  @media (min-width: 960px) {
+    --font-size: 1.8rem;
+    --line-height: 1.7rem;
+    --padding: 1rem 2rem;
+  }
+}
+
+.box-star::after {
+  background-image: url("../images/Star.png");
+  background-size: var(--background-size, 5rem 5rem);
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: jelly 1s infinite;
+  width: var(--width, 5rem);
+  min-height: var(--min-height, 5rem);
+  padding: var(--padding, 1rem);
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
 @media only screen and (min-width: 720px) {
-  .wrapper-image-speech img {
-    height: 15rem;
-  }
-  .box-speech {
+  .box-star::after {
+    background-size: 7.5rem 7.5rem;
     width: 15rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-    line-height: 1rem;
-  }
-  .box-speech::before {
-    border-left: 0.75rem solid transparent;
-    border-right: 0.75rem solid var(--coder-secondary);
-    border-top: 0.75rem solid var(--coder-secondary);
-    border-bottom: 0.75rem solid transparent;
-    left: -1rem;
-    top: 20%;
-  }
-  .box-speech-left::after {
-    border-right: 0.75rem solid transparent;
-    border-left: 0.75rem solid var(--coder-secondary);
-    border-top: 0.75rem solid var(--coder-secondary);
-    border-bottom: 0.75rem solid transparent;
-    right: -1rem;
-    top: 25%;
+    min-height: 7.5rem;
   }
 }
 
 @media only screen and (min-width: 960px) {
-  .wrapper-image-speech img {
-    height: 15rem;
-  }
-  .box-speech {
-    width: 15rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-    line-height: 1rem;
-  }
-  .box-speech::before {
-    border-left: 0.75rem solid transparent;
-    border-right: 0.75rem solid var(--coder-secondary);
-    border-top: 0.75rem solid var(--coder-secondary);
-    border-bottom: 0.75rem solid transparent;
-    left: -1rem;
-    top: 20%;
-  }
-  .box-speech-left::after {
-    border-right: 0.75rem solid transparent;
-    border-left: 0.75rem solid var(--coder-secondary);
-    border-top: 0.75rem solid var(--coder-secondary);
-    border-bottom: 0.75rem solid transparent;
-    right: -1rem;
-    top: 25%;
-  }
-}
-
-.box-link {
-  --fc: var(coder-white);
-  --bc: var(--coder-main);
-  --hfc: var(--coder-white-dark);
-  --hbc: var(--coder-main-dark);
-  border-radius: 0.5rem;
-  color: var(--fc);
-  background: var(--bc);
-
-  max-width: 20rem;
-  font-size: 1rem;
-  line-height: 1rem;
-  font-weight: 500;
-  overflow: hidden;
-}
-
-.box-link a:hover {
-  background: var(--hbc);
-  color: var(--hfc);
-  transition: background 1s ease-in-out;
-}
-.box-link a {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-decoration: none;
-  max-width: 20rem;
-  min-height: 10rem;
-}
-
-.box-link img {
-  display: inline-block;
-  background-color: var(--coder-white);
-  -webkit-box-shadow: 0 0 0.5rem 0.25rem var(--coder-black);
-  -moz-box-shadow: 0 0 0.5rem 0.25rem var(--coder-black);
-  box-shadow: 0 0 0.5rem 0.25rem var(--coder-black);
-  padding: 1rem;
-  border-radius: 1rem;
-  margin: 0 auto;
-  max-width: 4rem;
-  height: 4rem;
-  margin-top: 0.5rem;
-}
-.box-link article {
-  max-width: 20rem;
-  height: 10rem;
-  text-align: center;
-  padding: 0.5rem;
-  vertical-align: top;
-}
-
-/* Small devices such as large phones (640px and up) */
-@media only screen and (min-width: 40em) {
-  .box-link {
-    font-size: 1.1rem;
-    line-height: 1.1rem;
-  }
-  .box-link a {
-    max-width: 20rem;
-    min-height: 20rem;
-  }
-
-  .box-link img {
-    margin: 0 auto;
-    max-width: 8rem;
-    min-height: 8rem;
-    margin: 1rem auto;
-  }
-  .box-link article {
-    max-width: 20rem;
-    height: 10rem;
-    padding: 0.5rem;
-  }
-}
-
-/* Medium devices such as tablets (768px and up) */
-@media only screen and (min-width: 48em) {
-  .box-link {
-    font-size: 1.1rem;
-    line-height: 1.1rem;
-  }
-  .box-linka {
-    max-width: 20rem;
-    min-height: 20rem;
-  }
-
-  .box-link img {
-    margin: 0 auto;
-    max-width: 8rem;
-    min-height: 8rem;
-    margin: 1rem auto;
-  }
-  .box-link article {
-    max-width: 20rem;
+  .box-star::after {
+    background-size: 10rem 10rem;
+    width: 10rem;
     min-height: 10rem;
-    padding: 0.5rem;
+    padding: 0 2rem;
   }
-}
-
-/* Large devices such as laptops (1024px and up) */
-@media only screen and (min-width: 64em) {
-  .box-link {
-    font-size: 1rem;
-    line-height: 1rem;
-  }
-}
-
-/* Largest devices such as desktops (1280px and up) */
-@media only screen and (min-width: 80em) {
-  .box-link {
-    font-size: 1rem;
-    line-height: 1rem;
-  }
-}
-
-
-
-
-
-blockquote {
-  color: var(--coder-white);
-  background: var(--coder-main-dark);
-  border-left: 10px solid var(--coder-accent);
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-}
-blockquote:before {
-  color: var(--coder-main-light);
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.75em;
-}
-blockquote p cite {
-  display: inline;
 }
