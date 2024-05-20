@@ -215,11 +215,11 @@ Shapes and Containers:
 }
 .box-link a {
   display: flex;
+  padding-top: 1rem;
   flex-direction: column;
   justify-content: flex-start;
   text-decoration: none;
   max-width: 20rem;
-  min-height: 10rem;
 }
 
 .box-link img {
@@ -231,8 +231,8 @@ Shapes and Containers:
   padding: 1rem;
   border-radius: 1rem;
   margin: 0 auto;
-  max-width: 4rem;
-  height: 4rem;
+  max-width: 10rem;
+  height: 10rem;
   margin-top: 0.5rem;
 }
 .box-link article {
@@ -240,5 +240,16 @@ Shapes and Containers:
   height: 10rem;
   text-align: center;
   padding: 0.5rem;
-  vertical-align: top;
+  vertical-align: bottom;
+  line-height: var(--line-height, 1rem);
+  font-size: var(--font-size, 1rem);
+
+  @media (min-width: 720px) {
+    --line-height: 0.8rem;
+    --font-size: 0.8rem;
+  }
+  @media (min-width: 960px) {
+    --line-height: 1rem;
+    --font-size: 1rem;
+  }
 }
