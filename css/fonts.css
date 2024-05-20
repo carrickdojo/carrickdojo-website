@@ -29,6 +29,13 @@ We are importing the fonts we use from our fonts folder
   font-weight: 400;
   src: url(../fonts/schoolbell-latin-400-normal.ttf);
 }
+
+@font-face {
+  font-family: terminal;
+  font-weight: 400;
+  src: url(../fonts/vt323-latin-400-normal.ttf);
+}
+
 /*
 --------------
 Font Helper Classes
@@ -48,6 +55,12 @@ We create classes for each font and weight (the boldness) we use
   font-weight: 100;
 }
 
+.font-terminal {
+  font-family: terminal;
+  letter-spacing: 0rem;
+  font-size: 1.5rem;
+}
+
 /*
 --------------
 Text Effects Helper Classes
@@ -63,6 +76,12 @@ Text Effects Helper Classes
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.text-coder-glow {
+  color: var(--coder-main-dark);
+  text-shadow: 0.2rem 0.2rem 1.2rem var(--coder-main),
+    -0.1rem 0.1rem 2rem var(--coder-accent);
 }
 
 /*

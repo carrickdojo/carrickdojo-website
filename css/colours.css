@@ -32,6 +32,10 @@ Classes for changing the colour palette of an element.
   );
   color: var(--coder-white);
 }
+.colours-secondary {
+  background-color: var(--coder-secondary);
+  color: var(--coder-black);
+}
 
 .colours-accent {
   background-color: var(--coder-accent);
@@ -73,6 +77,10 @@ Classes for changing the colour palette of an element.
   color: black;
 }
 
+.colours-green-white {
+  background-color: var(--coder-leitrim-green);
+  color: white;
+}
 .bg-changing-colours-dark {
   background-image: url("../images/animated-gradient-big-darker.svg");
   background-size: 1920px 1080px;
