@@ -6,11 +6,16 @@
   border-radius: 0.5rem;
 }
 
+.shadow-small {
+  --colour: var(--coder-main);
+  box-shadow: var(--colour) 0 0.25rem 1rem;
+}
+
 .text-center {
   text-align: center;
 }
 
-.text-tilt-up {
+.tilt-up {
   rotate: var(--rotation, -2deg);
   @media (min-width: 720px) {
     --rotation: -3deg;
@@ -19,7 +24,7 @@
     --rotation: -4deg;
   }
 }
-.text-tilt-down {
+.tilt-down {
   rotate: var(--rotation, 2deg);
   @media (min-width: 720px) {
     --rotation: 3deg;

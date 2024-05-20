@@ -191,3 +191,54 @@ Shapes and Containers:
     padding: 0 2rem;
   }
 }
+
+.box-link {
+  --fc: var(coder-white);
+  --bc: var(--coder-main);
+  --hfc: var(--coder-white-dark);
+  --hbc: var(--coder-main-dark);
+  border-radius: 0.5rem;
+  color: var(--fc);
+  background: var(--bc);
+
+  max-width: 20rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.box-link a:hover {
+  background: var(--hbc);
+  color: var(--hfc);
+  transition: background 1s ease-in-out;
+}
+.box-link a {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-decoration: none;
+  max-width: 20rem;
+  min-height: 10rem;
+}
+
+.box-link img {
+  display: inline-block;
+  background-color: var(--coder-white);
+  -webkit-box-shadow: 0 0 0.5rem 0.25rem var(--coder-black);
+  -moz-box-shadow: 0 0 0.5rem 0.25rem var(--coder-black);
+  box-shadow: 0 0 0.5rem 0.25rem var(--coder-black);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 0 auto;
+  max-width: 4rem;
+  height: 4rem;
+  margin-top: 0.5rem;
+}
+.box-link article {
+  max-width: 20rem;
+  height: 10rem;
+  text-align: center;
+  padding: 0.5rem;
+  vertical-align: top;
+}
