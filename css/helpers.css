@@ -2,8 +2,28 @@
   clip: rect(auto, auto, auto, auto);
 }
 
+.title {
+  width: 20rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .rounded-small {
   border-radius: 0.5rem;
+}
+
+.rounded-left-small {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+
+.rounded-right-small {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
 }
 
 .shadow-small {

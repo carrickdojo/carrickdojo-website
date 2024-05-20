@@ -106,6 +106,13 @@ Font Size Helper Classes
 .text-small {
   font-size: small;
 }
+.emoji-medium {
+  font-size: 1rem;
+}
+
+.emoji-large {
+  font-size: 2rem;
+}
 
 .emoji-x-large {
   font-size: 5rem;

@@ -81,9 +81,20 @@ Classes for changing the colour palette of an element.
   background-color: var(--coder-leitrim-green);
   color: white;
 }
+
+.colours-blue-white {
+  background-color: var(--coder-blue);
+  color: white;
+}
+
 .bg-changing-colours-dark {
   background-image: url("../images/animated-gradient-big-darker.svg");
   background-size: 1920px 1080px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.colours-leitrim {
+  background-color: var(--coder-leitrim-green);
+  color: var(--coder-leitrim-gold);
 }
