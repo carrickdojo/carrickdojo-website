@@ -169,7 +169,7 @@ Shapes and Containers:
   animation: jelly 1s infinite;
   width: var(--width, 5rem);
   min-height: var(--min-height, 5rem);
-  padding: var(--padding, 1rem);
+  padding: var(--padding, 2rem);
   display: inline-block;
   content: " ";
   vertical-align: middle;
@@ -188,7 +188,7 @@ Shapes and Containers:
     background-size: 10rem 10rem;
     width: 10rem;
     min-height: 10rem;
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
 }
 
