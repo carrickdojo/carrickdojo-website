@@ -117,3 +117,7 @@ Font Size Helper Classes
 .emoji-x-large {
   font-size: 5rem;
 }
+
+.text-left {
+  text-align: left;
+}
