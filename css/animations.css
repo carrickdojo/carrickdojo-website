@@ -271,6 +271,29 @@
   animation: shake 10s ease infinite;
 }
 
+.flipper {
+  position: relative;
+  letter-spacing: -0.25rem;
+  word-spacing: -0.25rem;
+  padding-right: 0.25rem;
+}
+.flipper > span {
+  position: relative;
+  display: inline-block;
+  /* font-size: 1.2rem; */
+  /* color: #fff; */
+  /* text-transform: uppercase; */
+  animation: flip 2s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+
 /* (A) FORCE ALL ITEMS INTO SINGLE ROW */
 .ticker-move {
   display: flex;

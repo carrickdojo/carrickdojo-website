@@ -56,7 +56,7 @@
 
 /* padding  */
 .pad-top {
-  padding-top: 1rem;
+  padding-top: var(--pad, 1rem);
 }
 
 .pad-bottom {

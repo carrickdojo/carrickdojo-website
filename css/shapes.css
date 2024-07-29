@@ -202,7 +202,7 @@ Shapes and Containers:
   background: var(--bc);
 
   max-width: 20rem;
-  font-size: 1rem;
+  font-size: 0.7rem;
   line-height: 1rem;
   font-weight: 500;
   overflow: hidden;
@@ -242,7 +242,7 @@ Shapes and Containers:
   padding: 0.5rem;
   vertical-align: bottom;
   line-height: var(--line-height, 1rem);
-  font-size: var(--font-size, 1rem);
+  font-size: var(--font-size, 0.8rem);
 
   @media (min-width: 720px) {
     --line-height: 0.8rem;
@@ -250,7 +250,7 @@ Shapes and Containers:
   }
   @media (min-width: 960px) {
     --line-height: 1rem;
-    --font-size: 1rem;
+    --font-size: 0.8rem;
   }
 }
 
@@ -268,9 +268,7 @@ Shapes and Containers:
   text-align: left;
   font-size: 0.8rem;
   line-height: 0.9rem;
-  font-family: schoolbell;
   letter-spacing: 0rem;
-  font-weight: 800;
 }
 
 .box-info::before {

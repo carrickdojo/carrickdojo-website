@@ -134,3 +134,7 @@ Font Size Helper Classes
 .text-left {
   text-align: left;
 }
+
+.text-spacing-large {
+  letter-spacing: 1rem;
+}
