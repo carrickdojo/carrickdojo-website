@@ -118,7 +118,7 @@
 
     <!-- Our Main section  -->
     <!-- This section contains all the content between the navigation bar and the footer -->
-    <div class="main-with-aside font-type">
+    <div class="main-with-aside font-type colours-grey-white">
       <aside class="pad-all">
         <details>
           <summary>
@@ -175,11 +175,10 @@
         </details>
       </aside>
 
-      <main class="colours-main-dark">
-        <div class="pad-top"></div>
-        <section id="our-website" class="colours-main">
+      <main class="">
+        <section id="our-website" class="pad-top">
           <article class="pad-all">
-            <h1 class="heading-tilt colours-pink-white">
+            <h1 class="title tilt-up pad-all colours-pink-white">
               The CarrickDojo Website
             </h1>
 
@@ -234,9 +233,9 @@
         </section>
 
         <div class="pad-top" />
-        <section id="web-history" class="colours-main">
+        <section id="web-history" class="colours-main-dark pad-all">
           <article class="pad-all">
-            <h1 class="heading-tilt heading-down colours-blue-white">
+            <h1 class="title tilt-down pad-all colours-blue-white">
               A Little Bit of Web History
             </h1>
 
@@ -338,10 +337,9 @@
           </article>
         </section>
 
-        <div class="pad-top" />
-        <section id="layout" class="colours-main">
+        <section id="layout" class="pad-top">
           <article class="pad-all">
-            <h1 class="heading-tilt heading-down colours-blue-white">
+            <h1 class="title pad-all tilt-down colours-blue-white">
               Our Website Layout
             </h1>
 
@@ -506,9 +504,9 @@
         </section>
 
         <div class="pad-top" />
-        <section id="style" class="colours-main">
-          <article class="pad-all">
-            <h1 class="heading-tilt colours-green-white">Our Style</h1>
+        <section id="style" class="bg-changing-colours-dark pad-all">
+          <article class="">
+            <h1 class="title tilt-up pad-all colours-green-white">Our Style</h1>
             <p>
               While HTML is all about the layout of our content, CSS is about
               how it looks.
@@ -525,21 +523,19 @@
               Likewise, we have a fonts.css file to keep all our font css
               together.
             </p>
-            <p>
+            <div class="box-advanced colours-grey-white">
               Having lots of little css files can be a bad thing for the
               performance of our site as the main.css needs to load before it,
               goes looking for the extra css files. We have separated the css in
               order to make it easier to manage and for new people to understand
               as opposed to one giant css file.
-            </p>
-            <p></p>
+            </div>
           </article>
         </section>
 
-        <div class="pad-top" />
-        <section id="code" class="colours-main">
-          <article class="pad-all">
-            <h1 class="heading-tilt heading-down colours-red-white">
+        <section id="code" class="pad-top">
+          <article class="pad-top">
+            <h1 class="title tilt-down pad-all colours-red-white">
               Our Website Code
             </h1>
             <p>
@@ -549,7 +545,7 @@
               the Internet and we use a tool called Git to manage and track the
               changes made.
             </p>
-            <div class="colours-slate-white pad-all">
+            <div class="colours-main-dark pad-all">
               <h2 id="what-is-git">What is Git?</h2>
               <p>
                 Git is a system designed to help people collaborate (work
@@ -597,10 +593,9 @@
           </article>
         </section>
 
-        <div class="pad-top" />
-        <section id="hosting" class="colours-main">
-          <article class="pad-all">
-            <h1 class="heading-tilt heading-down colours-red-white">
+        <section id="hosting" class="pad-top">
+          <article class="pad-top">
+            <h1 class="title tilt-down pad-all colours-leitrim">
               Our Website Hosting
             </h1>
             <h2 id="our-hosting">Our Website Hosting</h2>
@@ -659,9 +654,9 @@
         </section>
 
         <div class="pad-top" />
-        <section id="dns" class="colours-main">
+        <section id="dns" class="pad-top">
           <article class="pad-all">
-            <h1 class="heading-tilt heading-down colours-red-white">
+            <h1 class="title tilt-up pad-all colours-red-white">
               Our Domain Name
             </h1>
             <h2 id="#our-domain-name">Our Domain Name</h2>
@@ -674,7 +669,7 @@
               Domain names provide us a way to create helpful names for Internet
               resources so we can easily remember them.
             </p>
-            <div class="factoid">
+            <div class="box-info colours-blue-white">
               Domain names are older than webpages and one of the key parts of
               the Internet.
             </div>
@@ -684,40 +679,43 @@
               Domain Naming System (normally just called DNS).
             </p>
 
-            <h2 id="dns">Domain Naming Service</h2>
-            <p>
-              When computers talk to each other over the Internet, they all use
-              the Internet Protocol (IP) a set of rules everyone agreed to.
-            </p>
-            <p>
-              Each computer has an IP address that is unique to that computer
-              just like a telephone has a unique telephone number.
-            </p>
-            <p>
-              DNS allows us to assign real names to a computer resources so we
-              don't need to remember all the different IP addresses of the
-              different servers.
-            </p>
-            <p>
-              Our webserver has an IP address of 76.76.21.9. It is a lot easier
-              for me to tell people our website is at www.carrickdojo.com and
-              not 76.76.21.9.
-            </p>
-            <p>
-              DNS can be looked at like a phone book for all the different
-              computer IP addresses.
-            </p>
+            <div class="colours-main-dark pad-all">
+              <h2 id="dns">Domain Naming Service</h2>
+              <p>
+                When computers talk to each other over the Internet, they all
+                use the Internet Protocol (IP) a set of rules everyone agreed
+                to.
+              </p>
+              <p>
+                Each computer has an IP address that is unique to that computer
+                just like a telephone has a unique telephone number.
+              </p>
+              <p>
+                DNS allows us to assign real names to a computer resources so we
+                don't need to remember all the different IP addresses of the
+                different servers.
+              </p>
+              <p>
+                Our webserver has an IP address of 76.76.21.9. It is a lot
+                easier for me to tell people our website is at
+                www.carrickdojo.com and not 76.76.21.9.
+              </p>
+              <p>
+                DNS can be looked at like a phone book for all the different
+                computer IP addresses.
+              </p>
 
-            <img
-              src="../images/guides/carrickdojo-dns-zones.webp"
-              alt="Updating our DNS Records"
-              class="image-big"
-            />
-            <p>
-              Anyone can lookup the records of a domain as the information has
-              to be public in order to function and allow visitors to find
-              Internet resources.
-            </p>
+              <img
+                src="../images/guides/carrickdojo-dns-zones.webp"
+                alt="Updating our DNS Records"
+                class="image-big"
+              />
+              <p>
+                Anyone can lookup the records of a domain as the information has
+                to be public in order to function and allow visitors to find
+                Internet resources.
+              </p>
+            </div>
             <ul>
               <li>
                 Our DNS records contain an A record that tells users our website

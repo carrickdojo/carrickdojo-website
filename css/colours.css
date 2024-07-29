@@ -72,6 +72,11 @@ Classes for changing the colour palette of an element.
   color: white;
 }
 
+.colours-grey-white {
+  background-color: rgb(37, 37, 37);
+  color: rgb(250, 245, 246);
+}
+
 .colours-white-black {
   background-color: white;
   color: black;

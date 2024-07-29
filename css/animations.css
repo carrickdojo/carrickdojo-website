@@ -191,6 +191,26 @@
   animation: jelly 2s infinite;
 }
 
+@keyframes grow {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.99, 1.05);
+  }
+  50% {
+    transform: scale(1.01, 0.95);
+  }
+  75% {
+    transform: scale(0.99, 1.05);
+  }
+}
+
+.animate-grow {
+  animation: grow 2s infinite;
+}
+
 @keyframes shake {
   0%,
   100% {

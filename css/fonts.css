@@ -65,6 +65,7 @@ We create classes for each font and weight (the boldness) we use
   font-family: "iA Writer Mono", monospace;
   letter-spacing: 0rem;
   font-weight: 400;
+  line-height: 1.5rem;
 }
 
 .font-terminal {

@@ -258,7 +258,8 @@ Shapes and Containers:
   position: relative;
   display: inline-flex;
   flex-direction: column;
-  min-height: 2.5rem;
+  justify-content: center;
+  min-height: 5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 3.5rem;
@@ -279,7 +280,6 @@ Shapes and Containers:
   background-position: center;
   position: absolute;
   left: 0.5rem;
-  top: 0.5rem;
   min-width: 2.5rem;
   min-height: 2.5rem;
   display: inline-block;
@@ -311,6 +311,49 @@ Shapes and Containers:
     background-size: 5rem 5rem;
     min-width: 6rem;
     min-height: 6rem;
+  }
+}
+
+.box-advanced {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+
+  border-radius: 0.5rem;
+  @media (min-width: 720px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 960px) {
+    flex-direction: row;
+  }
+}
+
+.box-advanced::before {
+  background-image: url("../images/LEDs.png");
+  background-size: 5rem 5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: grow 3s infinite;
+  width: 5rem;
+  min-height: 5rem;
+
+  display: inline-block;
+  content: " ";
+  vertical-align: middle;
+}
+
+@media only screen and (min-width: 720px) {
+  .box-advanced::before {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .box-advanced::before {
+    padding: 2rem;
   }
 }
 
