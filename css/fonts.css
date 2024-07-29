@@ -36,6 +36,12 @@ We are importing the fonts we use from our fonts folder
   src: url(../fonts/vt323-latin-400-normal.ttf);
 }
 
+@font-face {
+  font-family: "iA Writer Mono", monospace;
+  font-weight: 400;
+  src: url(../fonts/ia-writer-mono-latin-400-normal.ttf);
+}
+
 /*
 --------------
 Font Helper Classes
@@ -53,6 +59,12 @@ We create classes for each font and weight (the boldness) we use
   font-family: schoolbell;
   letter-spacing: 0rem;
   font-weight: 100;
+}
+
+.font-type {
+  font-family: "iA Writer Mono", monospace;
+  letter-spacing: 0rem;
+  font-weight: 400;
 }
 
 .font-terminal {
