@@ -274,11 +274,13 @@ Shapes and Containers:
 }
 
 .box-info::before {
-  background-image: url("../images/Circle_Girl.png");
+  background-image: url("../images/SENSEI_WOMAN_ALT.png");
   background-size: 2.5rem 2.5rem;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
+  transform-origin: 50% 50%;
+  animation: jump 3s linear alternate infinite;
   left: 0.5rem;
   min-width: 2.5rem;
   min-height: 2.5rem;
@@ -332,11 +334,12 @@ Shapes and Containers:
 }
 
 .box-advanced::before {
-  background-image: url("../images/LEDs.png");
+  background-image: url("../images/SENSEI_MAN_ALT.png");
   background-size: 5rem 5rem;
   background-repeat: no-repeat;
   background-position: center;
-  animation: grow 3s infinite;
+  transform-origin: 50% 50%;
+  animation: jump 2s linear alternate infinite;
   width: 5rem;
   min-height: 5rem;
 
