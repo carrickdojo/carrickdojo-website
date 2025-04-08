@@ -115,7 +115,7 @@
     <!-- Our Main section  -->
     <!-- This section contains all the content between the navigation bar and the footer -->
     <main class="main">
-      <section class="colours-white-black">
+      <!-- <section class="colours-white-black">
         <div class="wrapper">
           <div class="columns">
             <img src="images/Dog.png" alt="A Dog" class="image-medium" />
@@ -134,9 +134,41 @@
             </article>
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="wrapper pad-all">
-        <iframe
+        <form action="/api/contact" method="POST">
+          <label for="to">To:</label><br />
+          <input
+            type="email"
+            id="to"
+            name="to"
+            placeholder="recipient@example.com"
+            required
+          /><br /><br />
+
+          <label for="subject">Subject:</label><br />
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Your email subject"
+            required
+          /><br /><br />
+
+          <label for="message">Message:</label><br />
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            cols="40"
+            placeholder="Type your message here..."
+            required
+          ></textarea>
+          <br /><br />
+
+          <button type="submit">Send Email</button>
+        </form>
+        <!-- <iframe
           width="640px"
           height="480px"
           src="https://forms.office.com/Pages/ResponsePage.aspx?id=NA2rrduLvEyDwHLhm1uwzgMEoa6R_BxAnfZgqZaLN4lUMzBHMzFKNVFBSzNHNUFKRUEwQU85MVFDSC4u&embed=true"
@@ -149,7 +181,7 @@
           mozallowfullscreen
           msallowfullscreen
         >
-        </iframe>
+        </iframe> -->
       </section>
     </main>
 
