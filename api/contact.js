@@ -38,51 +38,36 @@ async function send365Email(from, to, subject, html, text) {
 
 
 export default async function contact(req, res) {
-  if (req.method === "POST") {
-    try {
-      const { from, subject, message } = req.body;
+  // Only allow POST
+  if (req.method !== "POST") {
+    return res.status(405).end(); // Method Not Allowed
+  }
 
-      // Combine the user-provided "from" address and "hello@carrickdojo.com"
-      // into a single array or comma-separated list (NodeMailer supports both).
-      const recipients = [from, "hello@carrickdojo.com"];
+  try {
+    // Extract fields from POST body
+    const { from, subject, message } = req.body;
 
-      // Note:
-      // - The actual SMTP "from" is process.env.email (your Office365 account).
-      // - "replyTo" is set to the user’s email so you can hit "Reply" in your inbox.
-      await send365Email(
-        process.env.email,              // SMTP "from"
-        recipients.join(","),           // "to" - multiple recipients
-        subject,
-        `<p>${message}</p>`,           // HTML body
-        message                         // text body
-      );
+    // Combine the user's address with your internal address
+    const recipients = [from, "hello@carrickdojo.com"];
 
-      return res.status(200).json({ message: "Email sent successfully!" });
-    } catch (error) {
-      console.error("Error sending email:", error);
-      return res.status(500).json({ error: "Failed to send email" });
-    }
-  } else {
-    return res.status(405).json({ error: "Method Not Allowed" });
+    // Send the email. The first argument is the actual sending address (Office365),
+    // the second is the recipients array (or comma-separated list).
+    await send365Email(
+      process.env.email,       // SMTP "from" (your Office365 account)
+      recipients.join(","),    // "to" - multiple recipients
+      subject,
+      `<p>${message}</p>`,     // HTML body
+      message                  // text body
+    );
+
+    // Redirect to a Thank You page (HTML file or Next.js page).
+    res.writeHead(303, { Location: "/thank-you.html" });
+    res.end();
+  } catch (error) {
+    console.error("Error sending email:", error);
+
+    // On error, redirect to an Error page
+    res.writeHead(303, { Location: "/error.html" });
+    res.end();
   }
 }
-
-
-
-
-
-
-// export default async function contact(req, res) {
-//   try {
-//     await send365Email(
-//       process.env.email,
-//       "test@blob.ie",
-//       "Subject",
-//       "<i>Hello World</i>",
-//       "Hello World"
-//     );
-//     res.status(200).json({ message: "It works" });
-//   } catch (err) {
-//     res.status(500).json({ message: "Email send failed", error: err.message });
-//   }
-// }
