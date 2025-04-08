@@ -29,13 +29,32 @@ const nodemailer = require("nodemailer");
 
 async function send365Email(from, to, subject, html, text) {
     try { 
-        const transportOptions = {
-            host: 'smtp.office365.com',
-            port: '587',
-            auth: { user: process.env.email, pass: process.env.password },
-            secureConnection: true,
-            tls: { ciphers: 'SSLv3' }
-        };
+        const transportOptions = 
+        {
+          host: 'smtp.office365.com',
+          secure: false,
+          port: '587',
+          tls: {
+          ciphers: "SSLv3",
+          rejectUnauthorized: false,
+          },
+          auth: {
+          user: process.env.email,
+          pass: process.env.password,
+          },
+          debug: true,
+          logger:true,
+          }
+        
+        
+        
+        // {
+        //     host: 'smtp.office365.com',
+        //     port: '587',
+        //     auth: { user: process.env.email, pass: process.env.password },
+        //     secureConnection: true,
+        //     tls: { ciphers: 'SSLv3' }
+        // };
     
         const mailTransport = nodemailer.createTransport(transportOptions);
     
