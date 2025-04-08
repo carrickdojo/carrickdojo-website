@@ -40,26 +40,29 @@ async function send365Email(from, to, subject, html, text) {
 export default async function contact(req, res) {
   if (req.method === "POST") {
     try {
-      // Depending on Next.js version, body parsing might be automatic.
-      // If not, you may need a body parser, or enable Next.js built-in with config.
-      const { to, subject, message } = req.body;
+      const { from, subject, message } = req.body;
 
-      // Suppose your send365Email signature is:
-      // send365Email(from, to, subject, html, text)
+      // Combine the user-provided "from" address and "hello@carrickdojo.com"
+      // into a single array or comma-separated list (NodeMailer supports both).
+      const recipients = [from, "hello@carrickdojo.com"];
+
+      // Note:
+      // - The actual SMTP "from" is process.env.email (your Office365 account).
+      // - "replyTo" is set to the user’s email so you can hit "Reply" in your inbox.
       await send365Email(
-        process.env.email,   // from
-        to,                  // to
-        subject,             // subject
-        `<p>${message}</p>`, // html
-        message              // text
+        process.env.email,              // SMTP "from"
+        recipients.join(","),           // "to" - multiple recipients
+        subject,
+        `<p>${message}</p>`,           // HTML body
+        message                         // text body
       );
+
       return res.status(200).json({ message: "Email sent successfully!" });
     } catch (error) {
       console.error("Error sending email:", error);
       return res.status(500).json({ error: "Failed to send email" });
     }
   } else {
-    // Handle non-POST requests
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 }

@@ -115,15 +115,14 @@
     <!-- Our Main section  -->
     <!-- This section contains all the content between the navigation bar and the footer -->
     <main class="main">
-      <!-- <section class="colours-white-black">
+      <section class="colours-white-black">
         <div class="wrapper">
           <div class="columns">
             <img src="images/Dog.png" alt="A Dog" class="image-medium" />
             <article class="font-terminal text-x-large text-emboss">
               <p>
-                CarrickDojo recently joined the Microsoft Tech for Social Change
-                program and we are looking at using Microsoft Forms to make
-                administering our Dojo easier.
+                We are just updating our contact us form (it stopped working)
+                and are currently testing a new approach.
               </p>
               <p>
                 You can continue to get in touch by email at
@@ -134,15 +133,15 @@
             </article>
           </div>
         </div>
-      </section> -->
+      </section>
       <section class="wrapper pad-all">
         <form action="/api/contact" method="POST">
-          <label for="to">To:</label><br />
+          <label for="from">Your Email:</label><br />
           <input
             type="email"
-            id="to"
-            name="to"
-            placeholder="recipient@example.com"
+            id="from"
+            name="from"
+            placeholder="yourname@example.com"
             required
           /><br /><br />
 
@@ -168,20 +167,6 @@
 
           <button type="submit">Send Email</button>
         </form>
-        <!-- <iframe
-          width="640px"
-          height="480px"
-          src="https://forms.office.com/Pages/ResponsePage.aspx?id=NA2rrduLvEyDwHLhm1uwzgMEoa6R_BxAnfZgqZaLN4lUMzBHMzFKNVFBSzNHNUFKRUEwQU85MVFDSC4u&embed=true"
-          frameborder="0"
-          marginwidth="0"
-          marginheight="0"
-          style="border: none; max-width: 100%; max-height: 100vh"
-          allowfullscreen
-          webkitallowfullscreen
-          mozallowfullscreen
-          msallowfullscreen
-        >
-        </iframe> -->
       </section>
     </main>
 
