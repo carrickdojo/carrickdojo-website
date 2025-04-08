@@ -6,7 +6,7 @@ async function send365Email(from, to, subject, html, text) {
     try { 
         const transportOptions = 
         {
-          host: 'smtp.office365.com',
+          host: 'smtp-legacy.office365.com',
           secure: false,
           port: '587',
           secure: false,
