@@ -24,7 +24,7 @@
 //   }
 // });
 
-
+const nodemailer = require("nodemailer");
 
 
 async function send365Email(from, to, subject, html, text) {
