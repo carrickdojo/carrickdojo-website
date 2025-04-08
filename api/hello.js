@@ -1,28 +1,3 @@
-// // Create a transporter object
-// const transporter = nodemailer.createTransport({
-//   service: 'gmail', // Use Gmail as the email service
-//   auth: {
-//     user: process.env.email, // Your Gmail email address
-//     pass: process.env.password // Your Gmail password
-//   }
-// });
-
-// // Define the email options
-// const mailOptions = {
-//   from: process.env.email, // Sender's email address
-//   to: 'test@blob.ie', // Recipient's email address
-//   subject: 'Hello from Nodemailer', // Subject line
-//   text: 'This is a test email sent using Nodemailer!' // Plain text body
-// };
-
-// // Send the email
-// transporter.sendMail(mailOptions, (error, info) => {
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log('Email sent: ' + info.response);
-//   }
-// });
 
 const nodemailer = require("nodemailer");
 
@@ -46,15 +21,7 @@ async function send365Email(from, to, subject, html, text) {
           logger:true,
           }
         
-        
-        
-        // {
-        //     host: 'smtp.office365.com',
-        //     port: '587',
-        //     auth: { user: process.env.email, pass: process.env.password },
-        //     secureConnection: true,
-        //     tls: { ciphers: 'SSLv3' }
-        // };
+
     
         const mailTransport = nodemailer.createTransport(transportOptions);
     
@@ -72,10 +39,17 @@ async function send365Email(from, to, subject, html, text) {
 }
 
 
-
-
-export default function hello(req, res) {
-  send365Email(process.env.email, "test@blob.ie", "Subject", "<i>Hello World</i>", "Hello World");
-  res.statusCode = 200;
-  res.json({ message: 'It works' });
+export default async function hello(req, res) {
+  try {
+    await send365Email(
+      process.env.email,
+      "test@blob.ie",
+      "Subject",
+      "<i>Hello World</i>",
+      "Hello World"
+    );
+    res.status(200).json({ message: "It works" });
+  } catch (err) {
+    res.status(500).json({ message: "Email send failed", error: err.message });
+  }
 }
