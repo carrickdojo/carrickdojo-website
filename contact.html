@@ -9,6 +9,50 @@
     <link href="css/main.css" rel="stylesheet" type="text/css" />
   </head>
 
+  <script>
+    // Intercept the form's submit event:
+    document
+      .getElementById("contactForm")
+      .addEventListener("submit", async (event) => {
+        event.preventDefault(); // Prevent normal form submission
+
+        // Grab form fields
+        const formData = new FormData(event.target);
+        const from = formData.get("from");
+        const subject = formData.get("subject");
+        const message = formData.get("message");
+
+        try {
+          // Send the data to /api/contact via fetch
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ from, subject, message }),
+          });
+
+          if (!response.ok) {
+            // If the response is not ok, show an error
+            // You could redirect to an error page, or display a message:
+            alert("Failed to send email. Please try again later.");
+            return;
+          }
+
+          // Otherwise, handle success
+          // Option A: Redirect to a thank you page
+          window.location.href = "/thank-you";
+
+          // Option B: Show an inline success message
+          // const result = await response.json();
+          // alert(result.message); // e.g. "Email sent successfully!"
+        } catch (error) {
+          console.error(error);
+          alert("An error occurred. Please try again later.");
+        }
+      });
+  </script>
+
   <body>
     <!-- Our page-heading is used to display our top most banner  -->
     <div class="page-heading colours-accent font-writing">
@@ -135,7 +179,7 @@
         </div>
       </section>
       <section class="wrapper pad-all">
-        <form action="/api/contact" method="POST">
+        <form id="contactForm">
           <label for="from">Your Email:</label><br />
           <input
             type="email"
