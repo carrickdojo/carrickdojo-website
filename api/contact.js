@@ -9,10 +9,7 @@ async function send365Email(from, to, subject, html, text) {
           host: 'smtp.office365.com',
           secure: false,
           port: '587',
-          tls: {
-          ciphers: "SSLv3",
-          rejectUnauthorized: false,
-          },
+          secure: false,
           auth: {
           user: process.env.email,
           pass: process.env.password,
@@ -39,7 +36,7 @@ async function send365Email(from, to, subject, html, text) {
 }
 
 
-export default async function hello(req, res) {
+export default async function contact(req, res) {
   try {
     await send365Email(
       process.env.email,
