@@ -42,5 +42,6 @@ Additionally, we had created an AWS Lambda function to manage the 'get in touch'
 
 - [x] Ensure privacy policy covers usage of embedded MS Form iFrame
 
+- [x] Add vercel.json
 - [ ] Add robots.txt, security.txt, etc., document usage
 - [ ] Add sitemap.xml, update our-website sitemap
