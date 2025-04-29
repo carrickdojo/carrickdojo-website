@@ -26,8 +26,8 @@
     }
   ],
   "redirects": [
-    { "source": "/.env", "statusCode": 410 },
-    { "source": "/.git/(.*)", "statusCode": 410 }
+    { "source": "/.env", "destination": "/", "statusCode": 410 },
+    { "source": "/.git/(.*)", "destination": "/", "statusCode": 410 }
   ],
   "routes": [
     { "src": "/api/contact", "methods": ["POST"], "dest": "/api/contact" },
