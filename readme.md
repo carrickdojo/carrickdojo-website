@@ -13,8 +13,6 @@ This site aims to build off the [HTML and CSS CoderDojo Projects](https://projec
 
 A key factor in migrating from Wordpress to a HTML and CSS site was the moving of our Dojo ticketing to the new CoderDojo Foundation ticketing platform. As the platform matures, we will add additional functionality to hopefully allow a more seamless experience.
 
-Additionally, we had created an AWS Lambda function to manage the 'get in touch' functionality, however are currently exploring options to reduce complexity and are currently using an iFrame to an MS Form.
-
 > [!WARNING]
 > This site breaks some rules and principles of good programming for the sake of simplicity. The plan is to fully document this project and provide context on DRY and SOLID programming and why we use frameworks and tools for developing websites.
 
@@ -43,5 +41,17 @@ Additionally, we had created an AWS Lambda function to manage the 'get in touch'
 - [x] Ensure privacy policy covers usage of embedded MS Form iFrame
 
 - [x] Add vercel.json
-- [ ] Add robots.txt, security.txt, etc., document usage
-- [ ] Add sitemap.xml, update our-website sitemap
+- [x] Add robots.txt, security.txt, etc., document usage
+- [x] Add sitemap.xml, update our-website sitemap
+
+
+
+## Change Control
+**15-10-2025: Sitemap, Robots.txt, and Security.txt**
+
+- Introduced `sitemap.xml` to map out all public pages—homepage, about, contact, resources, and more—making it easier for search engines to find and index our content.  
+- Added `robots.txt` to give search engines a green light to crawl the site and point them straight to our sitemap.  
+- Added `security.txt` to provide a clear contact for anyone discovering a security issue.
+
+**Why this matters:** These changes improve search visibility, ensure proper indexing of all pages, and give a simple, real-world example of basic SEO and web security practices for learners exploring HTML and CSS.
+
