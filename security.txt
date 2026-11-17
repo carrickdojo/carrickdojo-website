@@ -1,4 +1,4 @@
 # CarrickDojo Security Contact
-Contact: security@carrickdojo.com
+Contact: webmaster@carrickdojo.com
 Preferred-Languages: en
 Canonical: https://carrickdojo.com/security.txt

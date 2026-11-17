@@ -11,7 +11,7 @@ This site aims to build off the [HTML and CSS CoderDojo Projects](https://projec
 > [!NOTE]
 > A key goal is to provide a functional site **without any frameworks** or transpiling that anyone can inspect the page and easily understand the underlying code.
 
-A key factor in migrating from Wordpress to a HTML and CSS site was the moving of our Dojo ticketing to the new CoderDojo Foundation ticketing platform. As the platform matures, we will add additional functionality to hopefully allow a more seamless experience.
+
 
 > [!WARNING]
 > This site breaks some rules and principles of good programming for the sake of simplicity. The plan is to fully document this project and provide context on DRY and SOLID programming and why we use frameworks and tools for developing websites.
@@ -55,3 +55,12 @@ A key factor in migrating from Wordpress to a HTML and CSS site was the moving o
 
 **Why this matters:** These changes improve search visibility, ensure proper indexing of all pages, and give a simple, real-world example of basic SEO and web security practices for learners exploring HTML and CSS.
 
+
+**17-11-2026:  Refactor and Cleanup**
+
+- We are launching our new site, club.carrickdojo.com alongside our main website.  This site will be a WordPress backend (cms.carrickdojo.com) and a SvelteKit frontend (club.carrickdojo.com).  
+- All the guides and projects are being migrated to the new club site.
+- We will start testing the new ticketing systems and registration system, ensuring proper handling of all data.
+- Ensuring HSTS (HTTP Strict Transport Security) is correctly configured to cover our domains. 
+
+**Why this matters:** We need to ensure all data is handled correctly and need new functionality.  WordPress is a tried and tested solution, however needs very careful care in ensuring security.  We have a single WordPress plugin for our club to handle all our functionality so we are completely in control of the code and data access.
