@@ -139,3 +139,15 @@
     font-size: 1rem;
   }
 }
+
+/* Swap an image on hover, with no JavaScript */
+/* Put two images inside <span class="image-swap">: normal first, hover second */
+.image-swap {
+  display: contents; /* the span adds no box, so the layout doesn't change */
+}
+.image-swap:not(:hover) > img + img {
+  display: none; /* hide the second image until hovered */
+}
+.image-swap:hover > img:first-child {
+  display: none; /* when hovered, hide the first image */
+}
