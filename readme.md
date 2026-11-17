@@ -64,3 +64,17 @@ This site aims to build off the [HTML and CSS CoderDojo Projects](https://projec
 - Ensuring HSTS (HTTP Strict Transport Security) is correctly configured to cover our domains. 
 
 **Why this matters:** We need to ensure all data is handled correctly and need new functionality.  WordPress is a tried and tested solution, however needs very careful care in ensuring security.  We have a single WordPress plugin for our club to handle all our functionality so we are completely in control of the code and data access.
+
+
+**17-11-2026: Code Review Changes**
+
+- Removed all JavaScript from the main site. The mobile menu now uses the CSS `:target` selector, and the mentor images swap on hover with CSS (`.image-swap`).
+- Removed tickets from the nav (moving to the club site) and made the nav the same on every page, with `aria-current="page"` on the active link.
+- Moved projects and guides to the club site. The asteroid game stays as an easter egg at `/games/asteroid/`.
+- Tightened our security headers: a strict Content Security Policy (no inline scripts), Permissions-Policy, and HSTS set in both Cloudflare and Vercel. Cloudflare SSL is now Full (strict).
+- Updated `security.txt` (RFC 9116 format), `sitemap.xml` and `robots.txt` to use `www.carrickdojo.com`.
+- Fixed page titles, added meta descriptions to every page, and fixed broken links and image paths (all local paths now start with `/`).
+- Converted large PNG images to WebP (up to 79% smaller) and added `width` and `height` to stop the page jumping while images load.
+- Fixed the `iA Writer Mono` font, added real Lato Bold, removed unused fonts and `projects.css`, and turned on `prefers-reduced-motion`.
+
+**Why this matters:** A site with no JavaScript is faster, safer and easier for ninjas to read with "View Source". It also lets our security policy block any script we didn't write. The fixes show real habits: one source of truth, consistent paths, and checking that a change works rather than assuming it does.
