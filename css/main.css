@@ -84,6 +84,7 @@ body {
 /* If we disable this, some images on mobile screens may push beyond the size available  */
 img {
   max-width: 100%;
+  height: auto;
 }
 
 /* We are removing the default colour and underline for links  */
