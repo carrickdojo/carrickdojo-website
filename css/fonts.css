@@ -25,6 +25,12 @@ We are importing the fonts we use from our fonts folder
 }
 
 @font-face {
+  font-family: ourMainText;
+  font-weight: 700;
+  src: url(../fonts/Lato-Bold.ttf);
+}
+
+@font-face {
   font-family: schoolbell;
   font-weight: 400;
   src: url(../fonts/schoolbell-latin-400-normal.ttf);
@@ -37,7 +43,7 @@ We are importing the fonts we use from our fonts folder
 }
 
 @font-face {
-  font-family: "iA Writer Mono", monospace;
+  font-family: "iA Writer Mono";
   font-weight: 400;
   src: url(../fonts/ia-writer-mono-latin-400-normal.ttf);
 }
@@ -93,7 +99,8 @@ Text Effects Helper Classes
 
 .text-coder-glow {
   color: var(--coder-main-dark);
-  text-shadow: 0.2rem 0.2rem 1.2rem var(--coder-main),
+  text-shadow:
+    0.2rem 0.2rem 1.2rem var(--coder-main),
     -0.1rem 0.1rem 2rem var(--coder-accent);
 }
 
