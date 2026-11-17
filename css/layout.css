@@ -91,12 +91,12 @@ nav {
   filter: invert(0);
 }
 
-.mobile-nav.open {
+.mobile-nav:target {
   display: block;
   position: relative;
 }
 
-.mobile-nav.open a {
+.mobile-nav:target a {
   float: none;
   display: block;
   text-align: left;
