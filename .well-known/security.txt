@@ -1,0 +1,7 @@
+# CarrickDojo security contact
+# Format: RFC 9116 (https://www.rfc-editor.org/rfc/rfc9116)
+
+Contact: mailto:webmaster@carrickdojo.com
+Expires: 2027-11-17T00:00:00Z
+Preferred-Languages: en
+Canonical: https://www.carrickdojo.com/.well-known/security.txt
